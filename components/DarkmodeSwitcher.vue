@@ -57,7 +57,8 @@
     --bg-planet-lightshadow: #D7D7D820;
     display: inline-block;
     cursor: pointer;
-    font-size: 16px;
+    // Use this to change size of switcher
+    font-size: 12px;
     padding: 1em;
     position: relative;
 

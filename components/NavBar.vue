@@ -6,6 +6,7 @@
           <nuxt-link class="navbar-item" to="/">
 <!--            <img src="@/assets/img/logo.png" class="logo">-->
 <!--            <img src="@/assets/img/logo_white.png" class="logo logo-white">-->
+            <b>EFFECT NETWORK</b>
           </nuxt-link>
 
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
