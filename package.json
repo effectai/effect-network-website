@@ -9,8 +9,14 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "bulma": "^0.9.1",
     "core-js": "^3.8.2",
     "nuxt": "^2.14.12"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxtjs/color-mode": "^2.0.2",
+    "node-sass": "^5.0.0",
+    "push-dir": "^0.4.1",
+    "sass-loader": "^10.1.1"
+  }
 }

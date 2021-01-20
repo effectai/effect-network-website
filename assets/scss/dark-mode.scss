@@ -1,0 +1,18 @@
+html {
+  transition: background 0.2s;
+  &.dark-mode {
+    background: #242424;
+    body {
+      color: $primary-invert;
+    }
+    .title, h1, h2, h3, h4, h5, h6 {
+      color: $primary-invert;
+    }
+    .button {
+      &.is-primary {
+        background-color: $primary-invert;
+        color: $primary;
+      }
+    }
+  }
+}

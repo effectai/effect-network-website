@@ -1,6 +1,12 @@
 export default {
+  ssr: false,
+
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
+
+  generate: {
+    fallback: true
+  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -20,6 +26,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/scss/global.scss',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -31,6 +38,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    // Doc: https://color-mode.nuxtjs.org/
+    '@nuxtjs/color-mode'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -39,5 +48,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    loaders: {
+      scss: {
+        additionalData: "@import '~assets/scss/variables.scss';"
+      }
+    }
   }
 }

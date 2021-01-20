@@ -1,0 +1,23 @@
+/* Import the rest of Bulma */
+@import '../../node_modules/bulma';
+@import 'dark-mode';
+
+a {
+  outline: 0;
+}
+
+.notification {
+  &.is-primary {
+    &.is-outlined {
+      border: 2px solid $primary;
+      color: $text;
+      background: none;
+    }
+  }
+}
+
+.button {
+  &.is-wide {
+    min-width: 200px;
+  }
+}

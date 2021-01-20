@@ -1,0 +1,22 @@
+/* Import Bulma Utilities */
+@import '../../node_modules/bulma/sass/utilities/initial-variables';
+@import '../../node_modules/bulma/sass/utilities/functions';
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+$family-sans-serif: 'Space Grotesk', sans-serif;
+
+// Colors
+$primary: black;
+$secondary: #f5381c;
+$secondary-invert: findColorInvert($secondary) !default;
+$accent: #5fdaef;
+$accent-invert: findColorInvert($accent) !default;;
+
+$custom-colors: (
+  "secondary":($secondary, $secondary-invert),
+  "accent":($accent, $accent-invert),
+);
+
+//$desktop: 920px;
+
