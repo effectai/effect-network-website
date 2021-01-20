@@ -28,7 +28,7 @@
             </nuxt-link>
           </div>
           <div class="navbar-end">
-            <small class="is-size-7">&copy; {{ new Date().getFullYear() }} <b>THE EFFECT NETWORK</b></small>
+            <small class="is-size-7">&copy; {{ new Date().getFullYear() }} <b>THE EFFECT NETWORK</b> by EFFECT.AI</small>
           </div>
         </div>
       </div>
