@@ -79,6 +79,13 @@
     .logo-white {
       display:none;
     }
+    .navbar-brand {
+      .navbar-item {
+        &.is-active, &:hover {
+          color: $primary;
+        }
+      }
+    }
 
     .navbar-menu {
       margin-top: 8px;
@@ -142,6 +149,14 @@
           &:after {
             background: white;
           }
+          &.is-active, &:hover {
+            color: white;
+          }
+        }
+      }
+      .navbar-brand {
+        .navbar-item {
+          color: white;
           &.is-active, &:hover {
             color: white;
           }
