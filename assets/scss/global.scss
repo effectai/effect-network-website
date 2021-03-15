@@ -6,6 +6,11 @@ a {
   outline: 0;
 }
 
+.has-limited-width {
+  width: 600px;
+  max-width: 100%;
+}
+
 .notification {
   &.is-primary {
     &.is-outlined {

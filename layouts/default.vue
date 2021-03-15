@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div id="app">
     <nav-bar/>
-    <div class="container is-max-widescreen content">
+    <section class="section">
       <Nuxt/>
-    </div>
+    </section>
     <foot/>
   </div>
 </template>
@@ -31,3 +31,10 @@
     }
   };
 </script>
+
+<style scoped>
+#app {
+  /*background: url('~assets/img/grid.png');*/
+  min-height: 100vh;
+}
+</style>

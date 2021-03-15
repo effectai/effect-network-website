@@ -4,9 +4,8 @@
       <div class="container">
         <div class="navbar-brand">
           <nuxt-link class="navbar-item" to="/">
-<!--            <img src="@/assets/img/logo.png" class="logo">-->
-<!--            <img src="@/assets/img/logo_white.png" class="logo logo-white">-->
-            <b>EFFECT NETWORK</b>
+            <img src="@/assets/img/logo.svg" class="logo">
+            <img src="@/assets/img/logo_part-white.svg" class="logo logo-white">
           </nuxt-link>
 
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -18,25 +17,34 @@
         </div>
 
 
-        <div id="navbar" class="navbar-menu navbar-centered" :class="{'is-active': mobileMenu}">
+        <div id="navbar" class="navbar-menu" :class="{'is-active': mobileMenu}">
           <div class="navbar-start">
-            <nuxt-link class="navbar-item" to="/" exact-active-class="is-active">
-              Home
-            </nuxt-link>
-            <nuxt-link class="navbar-item" to="/about" exact-active-class="is-active">
-              About
-            </nuxt-link>
 
-            <nuxt-link class="navbar-item" to="/token" exact-active-class="is-active">
-              Token
-            </nuxt-link>
-
-            <nuxt-link class="navbar-item" to="/contact" exact-active-class="is-active">
-              Contact
-            </nuxt-link>
           </div>
-          <div class="navbar-end">
-            <darkmode-switcher />
+          <div class="navbar-end is-align-items-center">
+            <nuxt-link class="navbar-item" to="/force" exact-active-class="is-active">
+              Work 2.0
+            </nuxt-link>
+            <nuxt-link class="navbar-item" to="/token-page" exact-active-class="is-active">
+              Tokenomics
+            </nuxt-link>
+
+            <nuxt-link class="navbar-item" to="/developers" exact-active-class="is-active">
+              Build
+            </nuxt-link>
+
+            <nuxt-link class="navbar-item" to="/dao" exact-active-class="is-active">
+              DAO
+            </nuxt-link>
+            <nuxt-link class="navbar-item" to="/dapps" exact-active-class="is-active">
+              dApps
+            </nuxt-link>
+            <div class="navbar-item" exact-active-class="is-active">
+              <nuxt-link class="button is-secondary is-outlined" to="/dao" exact-active-class="is-active">
+                Demo
+              </nuxt-link>
+            </div>
+            <darkmode-switcher class="ml-4" />
           </div>
         </div>
       </div>
@@ -71,9 +79,10 @@
       background: transparent;
     }
     .logo {
-      height: 40px;
+      height: 45px;
       max-width: none;
       max-height: none;
+      margin-top: 5px;
       margin-right: 8px;
     }
     .logo-white {
@@ -93,7 +102,8 @@
 
       .navbar-item {
         font-weight: 500;
-
+        padding: 10px 20px;
+        text-align: center;
         &:after {
           display: block;
           width: 0;
@@ -101,7 +111,7 @@
           position: absolute;
           transition: width 0.5s;
           bottom: 10px;
-          background: $accent;
+          background: $secondary;
           content: "";
         }
 
@@ -110,26 +120,7 @@
           font-weight: 700;
 
           &:after {
-            width: calc(100% - 1.5rem);
-          }
-        }
-      }
-    }
-    @media screen and (min-width: $desktop) {
-      .navbar-centered {
-        .navbar-start {
-          justify-content: center;
-          margin-left: auto;
-          margin-right: 0;
-        }
-      }
-    }
-
-    @media all and (max-width: $desktop) {
-      .navbar-menu {
-        .navbar-item {
-          &:after {
-            display: none;
+            width: calc(100% - 1.5rem - 15px);
           }
         }
       }

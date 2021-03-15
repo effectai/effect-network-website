@@ -59,4 +59,11 @@
       }
     }
   }
+  .dark-mode {
+    .footer {
+      .navbar {
+        border-top: 2px solid white;
+      }
+    }
+  }
 </style>

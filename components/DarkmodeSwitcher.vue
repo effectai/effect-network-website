@@ -55,6 +55,7 @@
     --bg-planet-bright: #F2C94C;
     --bg-planet-shadow: #828894;
     --bg-planet-lightshadow: #D7D7D820;
+    margin-top: 5px;
     display: inline-block;
     cursor: pointer;
     // Use this to change size of switcher
