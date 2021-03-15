@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <nav-bar/>
-    <section class="section">
+    <div>
       <Nuxt/>
-    </section>
+    </div>
     <foot/>
   </div>
 </template>

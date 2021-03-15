@@ -7,7 +7,7 @@ a {
 }
 
 .has-limited-width {
-  width: 600px;
+  width: 670px;
   max-width: 100%;
 }
 
@@ -20,9 +20,39 @@ a {
     }
   }
 }
+.input {
+  &.is-primary {
+    &.is-outlined {
+      border: 1px solid $primary;
+      color: $primary;
+      background: none;
+
+    }
+  }
+  &.is-white {
+    &.is-outlined {
+      border: 1px solid $white;
+      color: $white;
+      background: none;
+      &::placeholder {
+        color: white;
+        opacity: 0.5;
+      }
+    }
+  }
+}
 
 .button {
   &.is-wide {
     min-width: 200px;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
   }
 }

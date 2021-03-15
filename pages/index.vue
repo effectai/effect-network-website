@@ -1,17 +1,40 @@
 <template>
-  <div class="banner py-6">
-    <div class="container is-max-widescreen my-6">
-      <div class="has-limited-width">
-        <h1 class="title site-title">The Perfect Combination of Human and Machine</h1>
-        <p>Helping data science teams succeed with structuring data and the deployment of AI automation</p>
-        <br>
-        <nuxt-link to="/" class="button is-secondary">Learn more</nuxt-link>
+  <div>
+    <div class="banner pb-6">
+      <section class="section">
+        <div class="container is-max-widescreen my-6">
+          <div class="has-limited-width">
+            <h1 class="title site-title">Freedom To Work<br>From Anywhere At Anytime</h1>
+            <h1 class="subtitle mt-2">The first Blockchain based framework for the Future-of-Work</h1>
+  <!--          <p>Helping data science teams succeed with structuring data and the deployment of AI automation</p>-->
+            <br>
+            <nuxt-link to="/" class="button is-secondary">Learn more</nuxt-link>
+          </div>
+        </div>
+      </section>
+      <div class="circle-container">
+        <div class="circle"></div>
       </div>
+      <br><br><br><br>
     </div>
-    <div class="circle-container">
-      <div class="circle"></div>
-    </div>
-    <br><br><br><br>
+    <section class="hero is-primary">
+      <div class="hero-body container has-text-centered">
+        <h1 class="title">
+          Join our mailing list
+        </h1>
+        <h3 class="subtitle">
+          Get the latest news from across The Effect Network.
+        </h3>
+        <div class="field has-addons is-justify-content-center">
+          <div class="control">
+            <input type="email" class="input is-white is-outlined" placeholder="Enter your email">
+          </div>
+          <div class="control">
+            <a class="button is-accent">Subscribe</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -23,22 +46,30 @@ export default {}
 .banner {
   position: relative;
   overflow: hidden;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    z-index:-2;
+    top: 0;
+    right: 0;
+    background: url("~assets/img/circle.png");
+    background-size: cover;
+
+  }
 
 }
-@keyframes rotate {
-  0% {
-    transform: rotate(-60deg)
-  }
-  100% {
-    transform: rotate(300deg)
-  }
-}
+
 .circle-container {
   position: absolute;
   right: 0;
+  display: none;
   top: 0;
   margin:10px;
   width: 100%;
+  z-index: -1;
   .circle {
     margin-left: auto;
     position: relative;
@@ -91,9 +122,6 @@ export default {}
   }
 }
 .site-title {
-  font-size: 60px;
-  font-weight: 400;
-  width: 600px;
-  max-width: 100%;
+  font-size: 50px;
 }
 </style>
