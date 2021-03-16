@@ -3,7 +3,7 @@
     <section class="section">
       <div class="container is-max-widescreen my-6">
         <div class="has-limited-width">
-          <h1 class="title is-1 is-spaced">Freedom To Work<br>From Anywhere At Anytime</h1>
+          <h1 class="title is-1 is-spaced">Freedom To Work From Anywhere At Anytime</h1>
           <h1 class="subtitle">The first Blockchain based framework for the Future-of-Work</h1>
           <!--          <p>Helping data science teams succeed with structuring data and the deployment of AI automation</p>-->
           <br>

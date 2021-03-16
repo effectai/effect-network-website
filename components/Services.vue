@@ -152,7 +152,7 @@
 
 <style lang="scss" scoped>
   .dapp-logo, .dapp-logo-white {
-    height: 70px;
+    max-height: 70px;
   }
   .card {
     .dapp-logo-white {
