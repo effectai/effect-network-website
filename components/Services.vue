@@ -11,7 +11,7 @@
           <div class="card">
             <header class="card-header">
               <div class="card-header-title">
-                <img src="~assets/img/effect-force_h100.png" style="height: 80px;"/>
+                <img src="~assets/img/dapps/effect-force_h100.png" style="height: 80px;"/>
               </div>
             </header>
             <div class="card-content">
@@ -33,7 +33,7 @@
           <div class="card">
             <header class="card-header">
               <div class="card-header-title">
-                <img src="~assets/img/effect-dao_h100.png" style="height: 80px;"/>
+                <img src="~assets/img/dapps/effect-dao_h100.png" style="height: 80px;"/>
               </div>
             </header>
             <div class="card-content">
@@ -55,7 +55,7 @@
           <div class="card">
             <header class="card-header">
               <div class="card-header-title">
-                <img src="~assets/img/effect-translate_h100.png" style="height: 80px;"/>
+                <img src="~assets/img/dapps/effect-translate_h100.png" style="height: 80px;"/>
               </div>
             </header>
             <div class="card-content">
@@ -77,7 +77,7 @@
           <div class="card">
             <header class="card-header">
               <div class="card-header-title">
-                <img src="~assets/img/effect-socials_h100.png" style="height: 80px;"/>
+                <img src="~assets/img/dapps/effect-socials_h100.png" style="height: 80px;"/>
               </div>
             </header>
             <div class="card-content">
@@ -99,7 +99,7 @@
           <div class="card">
             <header class="card-header">
               <div class="card-header-title">
-                <img src="~assets/img/effect-captions_h100.png" style="height: 80px;"/>
+                <img src="~assets/img/dapps/effect-captions_h100.png" style="height: 80px;"/>
               </div>
             </header>
             <div class="card-content">
@@ -121,7 +121,7 @@
           <div class="card">
             <header class="card-header">
               <div class="card-header-title">
-                <img src="~assets/img/effect-pieces_h100.png" style="height: 80px;"/>
+                <img src="~assets/img/dapps/effect-pieces_h100.png" style="height: 80px;"/>
               </div>
             </header>
             <div class="card-content">

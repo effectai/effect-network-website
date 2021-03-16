@@ -43,22 +43,22 @@
 
               <div class="navbar-dropdown">
                 <nuxt-link to="/force" class="navbar-item">
-                  <img src="~assets/img/effect-force_h100.png" />
+                  <img src="~assets/img/dapps/effect-force_h100.png" />
                 </nuxt-link>
                 <nuxt-link to="/dao" class="navbar-item">
-                  <img src="~assets/img/effect-dao_h100.png" />
+                  <img src="~assets/img/dapps/effect-dao_h100.png" />
                 </nuxt-link>
                 <nuxt-link to="/translate" class="navbar-item">
-                  <img src="~assets/img/effect-translate_h100.png" />
+                  <img src="~assets/img/dapps/effect-translate_h100.png" />
                 </nuxt-link>
                 <nuxt-link to="/socials" class="navbar-item">
-                  <img src="~assets/img/effect-socials_h100.png" />
+                  <img src="~assets/img/dapps/effect-socials_h100.png" />
                 </nuxt-link>
                 <nuxt-link to="/captions" class="navbar-item">
-                  <img src="~assets/img/effect-captions_h100.png" />
+                  <img src="~assets/img/dapps/effect-captions_h100.png" />
                 </nuxt-link>
                 <nuxt-link to="/pieces" class="navbar-item">
-                  <img src="~assets/img/effect-pieces_h100.png" />
+                  <img src="~assets/img/dapps/effect-pieces_h100.png" />
                 </nuxt-link>
               </div>
             </div>
