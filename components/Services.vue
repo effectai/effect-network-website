@@ -171,6 +171,7 @@
     &.is-hoverable:hover {
       .card-header {
         background: $secondary;
+        transition: background 0.1s;
       }
       &.dapp-force {
         .card-header {
