@@ -43,3 +43,5 @@ $pieces-color: #999999;
 $dao-color: #d7ac00;
 $captions-color: #e06375;
 
+@import '../../node_modules/bulma/sass/utilities/derived-variables';
+$card-footer-border-top: 1px solid rgba($border-light, 0.5);

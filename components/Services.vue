@@ -12,6 +12,7 @@
             <header class="card-header">
               <div class="card-header-title">
                 <img src="~assets/img/dapps/effect-force_h100.png" class="dapp-logo"/>
+                <img src="~assets/img/dapps/effect-force_part-white_h100.png" class="dapp-logo-part-white"/>
                 <img src="~assets/img/dapps/effect-force_white_h100.png" class="dapp-logo-white"/>
               </div>
             </header>
@@ -35,6 +36,7 @@
             <header class="card-header">
               <div class="card-header-title">
                 <img src="~assets/img/dapps/effect-dao_h100.png" class="dapp-logo"/>
+                <img src="~assets/img/dapps/effect-dao_part-white_h100.png" class="dapp-logo-part-white"/>
                 <img src="~assets/img/dapps/effect-dao_white_h100.png" class="dapp-logo-white"/>
               </div>
             </header>
@@ -58,6 +60,7 @@
             <header class="card-header">
               <div class="card-header-title">
                 <img src="~assets/img/dapps/effect-translate_h100.png" class="dapp-logo"/>
+                <img src="~assets/img/dapps/effect-translate_part-white_h100.png" class="dapp-logo-part-white"/>
                 <img src="~assets/img/dapps/effect-translate_white_h100.png" class="dapp-logo-white"/>
               </div>
             </header>
@@ -81,6 +84,7 @@
             <header class="card-header">
               <div class="card-header-title">
                 <img src="~assets/img/dapps/effect-socials_h100.png" class="dapp-logo"/>
+                <img src="~assets/img/dapps/effect-socials_part-white_h100.png" class="dapp-logo-part-white"/>
                 <img src="~assets/img/dapps/effect-socials_white_h100.png" class="dapp-logo-white"/>
               </div>
             </header>
@@ -104,6 +108,7 @@
             <header class="card-header">
               <div class="card-header-title">
                 <img src="~assets/img/dapps/effect-captions_h100.png" class="dapp-logo"/>
+                <img src="~assets/img/dapps/effect-captions_part-white_h100.png" class="dapp-logo-part-white"/>
                 <img src="~assets/img/dapps/effect-captions_white_h100.png" class="dapp-logo-white"/>
               </div>
             </header>
@@ -127,6 +132,7 @@
             <header class="card-header">
               <div class="card-header-title">
                 <img src="~assets/img/dapps/effect-pieces_h100.png" class="dapp-logo"/>
+                <img src="~assets/img/dapps/effect-pieces_part-white_h100.png" class="dapp-logo-part-white"/>
                 <img src="~assets/img/dapps/effect-pieces_white_h100.png" class="dapp-logo-white"/>
               </div>
             </header>
@@ -151,11 +157,15 @@
 </template>
 
 <style lang="scss" scoped>
-  .dapp-logo, .dapp-logo-white {
+  .dapp-logo, .dapp-logo-white, .dapp-logo-part-white {
     max-height: 70px;
   }
+
   .card {
     .dapp-logo-white {
+      display: none;
+    }
+    .dapp-logo-part-white {
       display: none;
     }
     &.is-hoverable:hover {
@@ -192,10 +202,20 @@
           background: $pieces-color;
         }
       }
+      .dapp-logo, .dapp-logo-part-white {
+        display: none !important;
+      }
+      .dapp-logo-white {
+        display: block;
+      }
+    }
+  }
+  .dark-mode {
+    .card {
       .dapp-logo {
         display: none;
       }
-      .dapp-logo-white {
+      .dapp-logo-part-white {
         display: block;
       }
     }
