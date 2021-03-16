@@ -36,9 +36,32 @@
             <nuxt-link class="navbar-item" to="/dao" exact-active-class="is-active">
               DAO
             </nuxt-link>
-            <nuxt-link class="navbar-item" to="/dapps" exact-active-class="is-active">
-              dApps
-            </nuxt-link>
+            <div class="navbar-item has-dropdown is-hoverable dapps">
+              <nuxt-link to="/dapps" class="navbar-link">
+                dApps
+              </nuxt-link>
+
+              <div class="navbar-dropdown">
+                <nuxt-link to="/force" class="navbar-item">
+                  <img src="~assets/img/effect-force_h100.png" />
+                </nuxt-link>
+                <nuxt-link to="/dao" class="navbar-item">
+                  <img src="~assets/img/effect-dao_h100.png" />
+                </nuxt-link>
+                <nuxt-link to="/translate" class="navbar-item">
+                  <img src="~assets/img/effect-translate_h100.png" />
+                </nuxt-link>
+                <nuxt-link to="/socials" class="navbar-item">
+                  <img src="~assets/img/effect-socials_h100.png" />
+                </nuxt-link>
+                <nuxt-link to="/captions" class="navbar-item">
+                  <img src="~assets/img/effect-captions_h100.png" />
+                </nuxt-link>
+                <nuxt-link to="/pieces" class="navbar-item">
+                  <img src="~assets/img/effect-pieces_h100.png" />
+                </nuxt-link>
+              </div>
+            </div>
             <div class="navbar-item" exact-active-class="is-active">
               <nuxt-link class="button is-secondary is-outlined" to="/dao" exact-active-class="is-active">
                 Demo
@@ -104,6 +127,16 @@
         font-weight: 500;
         padding: 10px 20px;
         text-align: center;
+        &.dapps {
+          img {
+            max-height: 2.5rem;
+            width: auto;
+            max-width: none;
+          }
+          .navbar-item:hover {
+            background-color: whitesmoke !important;
+          }
+        }
         &:after {
           display: block;
           width: 0;
