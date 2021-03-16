@@ -17,6 +17,7 @@ a {
 
 .card {
   //transition: box-shadow 0.2s;
+  display: block;
   &.is-flat {
     border: 1px solid rgba($scheme-invert, 0.1);
     box-shadow: none;
@@ -24,9 +25,12 @@ a {
       box-shadow: none;
       border-bottom: 1px solid rgba($scheme-invert, 0.1);
     }
-    &.is-hoverable:hover {
-      //border: 1px solid rgba($scheme-invert, 0);
-      box-shadow: 0 0.5em 1em -0.125em rgba($scheme-invert, 0.1), 0 0px 0 1px rgba($scheme-invert, 0.02);
+    &.is-hoverable {
+      cursor: pointer;
+      &:hover {
+        //border: 1px solid rgba($scheme-invert, 0);
+        box-shadow: 0 0.5em 1em -0.125em rgba($scheme-invert, 0.1), 0 0px 0 1px rgba($scheme-invert, 0.02);
+      }
     }
   }
 }

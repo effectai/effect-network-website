@@ -8,10 +8,11 @@
       </div>
       <div class="columns is-multiline is-variable is-6 mt-6">
         <div class="column is-4">
-          <div class="card is-flat is-hoverable">
+          <nuxt-link to="/force" class="card is-flat is-hoverable dapp-force">
             <header class="card-header">
               <div class="card-header-title">
                 <img src="~assets/img/dapps/effect-force_h100.png" class="dapp-logo"/>
+                <img src="~assets/img/dapps/effect-force_white_h100.png" class="dapp-logo-white"/>
               </div>
             </header>
             <div class="card-content">
@@ -27,13 +28,14 @@
                 <b> <a href="https://force.effect.ai" target="_blank">EXPLORE EFFECT FORCE</a> </b>
               </p>
             </footer>
-          </div>
+          </nuxt-link>
         </div>
         <div class="column is-4">
-          <div class="card is-flat is-hoverable">
+          <div class="card is-flat is-hoverable dapp-dao">
             <header class="card-header">
               <div class="card-header-title">
                 <img src="~assets/img/dapps/effect-dao_h100.png" class="dapp-logo"/>
+                <img src="~assets/img/dapps/effect-dao_white_h100.png" class="dapp-logo-white"/>
               </div>
             </header>
             <div class="card-content">
@@ -52,10 +54,11 @@
           </div>
         </div>
         <div class="column is-4">
-          <div class="card is-flat is-hoverable">
+          <div class="card is-flat is-hoverable dapp-translate">
             <header class="card-header">
               <div class="card-header-title">
                 <img src="~assets/img/dapps/effect-translate_h100.png" class="dapp-logo"/>
+                <img src="~assets/img/dapps/effect-translate_white_h100.png" class="dapp-logo-white"/>
               </div>
             </header>
             <div class="card-content">
@@ -74,10 +77,11 @@
           </div>
         </div>
         <div class="column is-4">
-          <div class="card">
+          <div class="card dapp-socials">
             <header class="card-header">
               <div class="card-header-title">
                 <img src="~assets/img/dapps/effect-socials_h100.png" class="dapp-logo"/>
+                <img src="~assets/img/dapps/effect-socials_white_h100.png" class="dapp-logo-white"/>
               </div>
             </header>
             <div class="card-content">
@@ -96,10 +100,11 @@
           </div>
         </div>
         <div class="column is-4">
-          <div class="card">
+          <div class="card dapp-captions">
             <header class="card-header">
               <div class="card-header-title">
                 <img src="~assets/img/dapps/effect-captions_h100.png" class="dapp-logo"/>
+                <img src="~assets/img/dapps/effect-captions_white_h100.png" class="dapp-logo-white"/>
               </div>
             </header>
             <div class="card-content">
@@ -118,10 +123,11 @@
           </div>
         </div>
         <div class="column is-4">
-          <div class="card">
+          <div class="card dapp-pieces">
             <header class="card-header">
               <div class="card-header-title">
                 <img src="~assets/img/dapps/effect-pieces_h100.png" class="dapp-logo"/>
+                <img src="~assets/img/dapps/effect-pieces_white_h100.png" class="dapp-logo-white"/>
               </div>
             </header>
             <div class="card-content">
@@ -145,7 +151,53 @@
 </template>
 
 <style lang="scss" scoped>
-  .dapp-logo {
+  .dapp-logo, .dapp-logo-white {
     height: 70px;
+  }
+  .card {
+    .dapp-logo-white {
+      display: none;
+    }
+    &.is-hoverable:hover {
+      .card-header {
+        background: $secondary;
+      }
+      &.dapp-force {
+        .card-header {
+          background: $force-color;
+        }
+      }
+      &.dapp-dao {
+        .card-header {
+          background: $dao-color;
+        }
+      }
+      &.dapp-translate {
+        .card-header {
+          background: $translate-color;
+        }
+      }
+      &.dapp-socials {
+        .card-header {
+          background: $socials-color;
+        }
+      }
+      &.dapp-captions {
+        .card-header {
+          background: $captions-color;
+        }
+      }
+      &.dapp-pieces {
+        .card-header {
+          background: $pieces-color;
+        }
+      }
+      .dapp-logo {
+        display: none;
+      }
+      .dapp-logo-white {
+        display: block;
+      }
+    }
   }
 </style>
