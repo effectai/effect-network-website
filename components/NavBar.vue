@@ -63,9 +63,10 @@
               </div>
             </div>
             <div class="navbar-item" exact-active-class="is-active">
-              <nuxt-link class="button is-secondary is-outlined" to="/dao" exact-active-class="is-active">
+              <nuxt-link class="button is-secondary is" :class="{'is-outlined': $colorMode.value === 'light'}" to="/dao" exact-active-class="is-active">
                 Demo
               </nuxt-link>
+
             </div>
             <darkmode-switcher class="ml-4" />
           </div>
