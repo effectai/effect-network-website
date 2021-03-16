@@ -168,6 +168,18 @@
     }
     .navbar {
       .navbar-menu {
+        .navbar-link {
+          color: $grey-light;
+          &:after {
+            border-color: $grey-light;
+          }
+          &.is-active, &:hover {
+            color: white;
+            &:after {
+              border-color: white;
+            }
+          }
+        }
         .navbar-item {
           color: $grey-light;
           &:after {
