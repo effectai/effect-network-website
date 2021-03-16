@@ -34,6 +34,9 @@ a {
     }
   }
 }
+a.card {
+  color: $text;
+}
 
 .notification {
   &.is-primary {

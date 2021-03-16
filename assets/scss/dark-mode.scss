@@ -17,6 +17,9 @@ html {
     .card {
       background-color: $scheme-invert;
       color: white;
+      &:hover {
+        color: white;
+      }
     }
   }
 }

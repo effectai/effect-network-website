@@ -24,6 +24,11 @@ $custom-colors: (
 $text: #363636;
 // $body-background-color: #FFFDF7;
 
+$link: $secondary;
+$link-hover: lighten($secondary, 20%);
+$link-focus: lighten($secondary, 20%);
+$link-active: lighten($secondary, 20%);
+
 $title-weight: 400;
 $title-color: $primary;
 //$subtitle-color: $secondary;
@@ -45,3 +50,5 @@ $captions-color: #e06375;
 
 @import '../../node_modules/bulma/sass/utilities/derived-variables';
 $card-footer-border-top: 1px solid rgba($border-light, 0.5);
+
+
