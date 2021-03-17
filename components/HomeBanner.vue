@@ -7,7 +7,7 @@
           <h1 class="subtitle">The first Blockchain based framework for the Future-of-Work</h1>
           <!--          <p>Helping data science teams succeed with structuring data and the deployment of AI automation</p>-->
           <br>
-          <nuxt-link to="/" class="button is-secondary">Learn more</nuxt-link>
+          <nuxt-link to="/" class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Learn more</nuxt-link>
         </div>
       </div>
     </section>
@@ -69,7 +69,7 @@
       transition: background 2s;
       transform: rotate(-100deg);
       //background: linear-gradient(150deg, rgba($secondary, 0) 0%, rgba($secondary, 0) 5%, rgba($secondary, 0.1) 20%, $secondary 100%);
-      background: radial-gradient(circle at top, rgba(#ffe700,0) 0%, rgba(#ffe700,0.05) 7%, rgba(17,72,235,1) 30%, rgba(17,72,235,1) 50%, rgba(16,29,86,1) 100%);
+      background: radial-gradient(circle at top, rgba(#ffffff,1) 0%, rgba(#fffef7,1) 7%, rgba(17,72,235,1) 30%, rgba(17,72,235,1) 50%, rgba(16,29,86,1) 100%);
       background-size: 150% 400%;
       background-position: 10% 0%;
       animation: gradiendt 4.5s ease infinite, rotate 45s linear infinite;

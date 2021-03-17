@@ -4,7 +4,7 @@
       <div class="container">
         <div class="navbar-brand">
           <nuxt-link class="navbar-item" to="/">
-            <img :src="$colorMode.value === 'dark' ? require('@/assets/img/logo_part-white.svg') : require('@/assets/img/logo.svg')"  class="logo">
+            <img :src="$colorMode.value === 'dark' ? require('@/assets/img/logo_white.svg') : require('@/assets/img/logo.svg')"  class="logo">
           </nuxt-link>
 
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -62,7 +62,7 @@
               </div>
             </div>
             <div class="navbar-item" exact-active-class="is-active">
-              <nuxt-link class="button is-secondary is" :class="{'is-outlined': $colorMode.value === 'light'}" to="/dao" exact-active-class="is-active">
+              <nuxt-link class="button is-secondary is" :class="{'is-accent': $colorMode.value === 'dark'}" to="/dao" exact-active-class="is-active">
                 Demo
               </nuxt-link>
 

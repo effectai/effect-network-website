@@ -25,7 +25,7 @@
             </div>
             <footer class="card-footer">
               <p class="card-footer-item">
-                <b> <a href="https://force.effect.ai" target="_blank">EXPLORE EFFECT FORCE</a> </b>
+                <b> <a href="https://force.effect.ai" :class="{'has-text-accent': $colorMode.value === 'dark'}" target="_blank">EXPLORE EFFECT FORCE</a> </b>
               </p>
             </footer>
           </nuxt-link>
@@ -48,7 +48,7 @@
             </div>
             <footer class="card-footer">
               <p class="card-footer-item">
-                <b> <a href="https://force.effect.ai" target="_blank">EXPLORE EFFECT FORCE</a> </b>
+                <b> <a href="https://force.effect.ai" :class="{'has-text-accent': $colorMode.value === 'dark'}" target="_blank">EXPLORE EFFECT FORCE</a> </b>
               </p>
             </footer>
           </div>
@@ -71,7 +71,7 @@
             </div>
             <footer class="card-footer">
               <p class="card-footer-item">
-                <b> <a href="https://force.effect.ai" target="_blank">EXPLORE EFFECT FORCE</a> </b>
+                <b> <a href="https://force.effect.ai" :class="{'has-text-accent': $colorMode.value === 'dark'}" target="_blank">EXPLORE EFFECT FORCE</a> </b>
               </p>
             </footer>
           </div>
@@ -94,7 +94,7 @@
             </div>
             <footer class="card-footer">
               <p class="card-footer-item">
-                <b> <a href="https://force.effect.ai" target="_blank">EXPLORE EFFECT FORCE</a> </b>
+                <b> <a href="https://force.effect.ai" :class="{'has-text-accent': $colorMode.value === 'dark'}" target="_blank">EXPLORE EFFECT FORCE</a> </b>
               </p>
             </footer>
           </div>
@@ -117,7 +117,7 @@
             </div>
             <footer class="card-footer">
               <p class="card-footer-item">
-                <b> <a href="https://force.effect.ai" target="_blank">EXPLORE EFFECT FORCE</a> </b>
+                <b> <a href="https://force.effect.ai" :class="{'has-text-accent': $colorMode.value === 'dark'}" target="_blank">EXPLORE EFFECT FORCE</a> </b>
               </p>
             </footer>
           </div>
@@ -140,7 +140,7 @@
             </div>
             <footer class="card-footer">
               <p class="card-footer-item">
-                <b> <a href="https://force.effect.ai" target="_blank">EXPLORE EFFECT FORCE</a> </b>
+                <b> <a href="https://force.effect.ai" :class="{'has-text-accent': $colorMode.value === 'dark'}" target="_blank">EXPLORE EFFECT FORCE</a> </b>
               </p>
             </footer>
           </div>

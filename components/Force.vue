@@ -12,7 +12,7 @@
           <h2 class="title is-2">Work 2.0</h2>
           <h4 class="subtitle">Earn crypto from anywhere</h4>
           <p>Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. Lorem ipsum. </p>
-          <a href="https://worker.effect.ai" target="_blank" class="button is-secondary mt-5">Join the WorkForce</a>
+          <a href="https://worker.effect.ai" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}">Join the WorkForce</a>
         </div>
       </div>
     </div>

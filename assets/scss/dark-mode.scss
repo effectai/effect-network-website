@@ -18,7 +18,7 @@ html {
       color: $primary-invert !important;
     }
     .card {
-      background-color: black;
+      background-color: darken($dark-mode-background, 5%);
       color: white;
       &:hover {
         color: white;
