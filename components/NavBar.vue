@@ -25,7 +25,7 @@
               Work 2.0
             </nuxt-link>
             <nuxt-link class="navbar-item" to="/token-page" exact-active-class="is-active">
-              Tokenomics
+              EFX Token
             </nuxt-link>
 
             <nuxt-link class="navbar-item" to="/developers" exact-active-class="is-active">
