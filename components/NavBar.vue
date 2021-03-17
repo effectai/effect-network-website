@@ -62,7 +62,7 @@
               </div>
             </div>
             <div class="navbar-item" exact-active-class="is-active">
-              <nuxt-link class="button is-secondary is" :class="{'is-accent': $colorMode.value === 'dark'}" to="/dao" exact-active-class="is-active">
+              <nuxt-link class="button is-secondary is-outlined" :class="{'is-accent': $colorMode.value === 'dark'}" to="/dao" exact-active-class="is-active">
                 Demo
               </nuxt-link>
 
