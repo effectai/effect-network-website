@@ -28,8 +28,8 @@
               EFX Token
             </nuxt-link>
 
-            <nuxt-link class="navbar-item" to="/developers" exact-active-class="is-active">
-              Build
+            <nuxt-link class="navbar-item" to="/for-developers" exact-active-class="is-active">
+              Develop
             </nuxt-link>
 
             <nuxt-link class="navbar-item" to="/dao" exact-active-class="is-active">
