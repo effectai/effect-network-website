@@ -14,11 +14,25 @@ html {
         color: $primary;
       }
     }
+    .has-text-primary {
+      color: $primary-invert !important;
+    }
     .card {
-      background-color: $scheme-invert;
+      background-color: black;
       color: white;
       &:hover {
         color: white;
+      }
+    }
+    .menu-label {
+      color: white;
+    }
+    .menu-list {
+      a {
+        color: white;
+        &:hover {
+          color: $menu-item-hover-color;
+        }
       }
     }
   }
