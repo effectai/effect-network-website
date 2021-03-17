@@ -2,6 +2,7 @@
   <div>
     <home-banner />
     <three-blocks />
+    <force />
     <services />
     <clients />
     <mailing-list />
@@ -11,6 +12,7 @@
 <script>
   import HomeBanner from '@/components/HomeBanner';
   import ThreeBlocks from '@/components/ThreeBlocks';
+  import Force from '@/components/Force';
   import Services from '@/components/Services';
   import Clients from '@/components/Clients';
   import MailingList from '@/components/MailingList';
@@ -19,6 +21,7 @@
     components: {
       HomeBanner,
       ThreeBlocks,
+      Force,
       Services,
       Clients,
       MailingList
