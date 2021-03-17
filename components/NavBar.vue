@@ -36,7 +36,7 @@
               DAO
             </nuxt-link>
             <div class="navbar-item has-dropdown is-hoverable dapps">
-              <nuxt-link to="/dapps" class="navbar-link">
+              <nuxt-link to="/#dapps" class="navbar-link">
                 dApps
               </nuxt-link>
 

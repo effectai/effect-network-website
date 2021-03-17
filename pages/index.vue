@@ -3,7 +3,7 @@
     <home-banner />
     <three-blocks />
     <force />
-    <services />
+    <services id="dapps" />
     <efx />
     <clients />
     <mailing-list />
