@@ -32,8 +32,8 @@
       z-index: -2;
       top: 0;
       right: 0;
-      background: url("~assets/img/circle.png");
-      background-size: cover;
+      //background: url("~assets/img/circle.png");
+      //background-size: cover;
 
     }
 
@@ -42,7 +42,6 @@
   .circle-container {
     position: absolute;
     right: 0;
-    display: none;
     top: 0;
     margin: 10px;
     width: 100%;

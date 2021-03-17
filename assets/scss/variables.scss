@@ -48,6 +48,11 @@ $pieces-color: #999999;
 $dao-color: #d7ac00;
 $captions-color: #e06375;
 
+$menu-label-color: black;
+$menu-label-font-size: 0.9em;
+$menu-label-letter-spacing: 0.05em;
+$menu-list-link-padding: 0.5em 0.5em;
+
 @import '../../node_modules/bulma/sass/utilities/derived-variables';
 $card-footer-border-top: 1px solid rgba($border-light, 0.5);
 
