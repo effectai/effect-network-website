@@ -4,8 +4,7 @@
       <div class="container">
         <div class="navbar-brand">
           <nuxt-link class="navbar-item" to="/">
-            <img src="@/assets/img/logo.svg" class="logo">
-            <img src="@/assets/img/logo_part-white.svg" class="logo logo-white">
+            <img :src="$colorMode.value === 'dark' ? require('@/assets/img/logo_part-white.svg') : require('@/assets/img/logo.svg')"  class="logo">
           </nuxt-link>
 
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -109,9 +108,6 @@
       margin-top: 5px;
       margin-right: 8px;
     }
-    .logo-white {
-      display:none;
-    }
     .navbar-brand {
       .navbar-item {
         &.is-active, &:hover {
@@ -161,12 +157,6 @@
     }
   }
   .dark-mode {
-    .logo {
-      display:none;
-    }
-    .logo-white {
-      display:block;
-    }
     .navbar {
       .navbar-menu {
         .navbar-link {
