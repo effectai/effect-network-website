@@ -1,7 +1,7 @@
 html {
   transition: background 0.2s;
   &.dark-mode {
-    background: #242424;
+    background: $dark-mode-background;
     body {
       color: $primary-invert;
     }

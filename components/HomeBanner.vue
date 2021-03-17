@@ -38,12 +38,18 @@
     }
 
   }
-
+  @keyframes gradient {
+    0%{background-position:100% 170%}
+    50%{background-position:-20% 100%}
+    100%{background-position:100% 170%}
+  }
   .circle-container {
     position: absolute;
     right: 0;
     top: 0;
     margin: 10px;
+    opacity: 0.7;
+
     width: 100%;
     z-index: -1;
 
@@ -61,9 +67,13 @@
       border-radius: 100%;
       background: $secondary;
       transition: background 2s;
-      background: linear-gradient(150deg, rgba($secondary, 0) 0%, rgba($secondary, 0.02) 20%, rgba($secondary, 0.1) 30%, $secondary 100%);
-      //background-size: 200%;
-      animation: rotate 35s linear infinite;
+      transform: rotate(-100deg);
+      //background: linear-gradient(150deg, rgba($secondary, 0) 0%, rgba($secondary, 0) 5%, rgba($secondary, 0.1) 20%, $secondary 100%);
+      background: radial-gradient(circle at top, rgba(#ffe700,0) 0%, rgba(#ffe700,0.05) 7%, rgba(17,72,235,1) 30%, rgba(17,72,235,1) 50%, rgba(16,29,86,1) 100%);
+      background-size: 150% 400%;
+      background-position: 10% 0%;
+      animation: gradiendt 4.5s ease infinite, rotate 45s linear infinite;
+      //animation-delay: 0s, 1.0s;
 
       &:before {
         content: "";
@@ -95,8 +105,21 @@
       bottom: 400px;
       right: -20px;
       width: 300px;
-      height: 200px;
+      height: 250px;
       background: white;
+    }
+  }
+  .dark-mode {
+    .circle-container {
+      .circle {
+        &:before {
+          background: $dark-mode-background;
+        }
+      }
+
+      &:after {
+        background: $dark-mode-background;
+      }
     }
   }
 </style>
