@@ -1,11 +1,5 @@
 <template>
-  <div>
-    <img
-      style="margin-top:-328px; padding-top: 228px"
-      position="top center"
-      contain
-      class="pb-12 primary"
-      :src="require('@/assets/img/efx-bg.jpg')" />
+  <div class="efx-bg">
       <div class="container py-6 has-text-white">
         <div class="columns">
           <div class="column">
@@ -296,3 +290,13 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+.efx-bg {
+  background-image: url("~assets/img/efx-bg.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: -67px;
+  padding-top: 67px;
+}
+</style>
