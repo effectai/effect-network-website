@@ -80,6 +80,14 @@ a.card {
   }
 }
 
+.has-radius {
+  border-radius: 7px;
+}
+
+.has-shadow {
+  box-shadow: $box-shadow;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(-40deg)

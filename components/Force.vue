@@ -4,7 +4,7 @@
       <div class="columns is-centered is-vcentered">
         <div class="column is-half p-6">
           <figure class="image is-4by5 is-rounded">
-            <img src="https://bulma.io/images/placeholders/480x600.png" style="border-radius: 7px;">
+            <img src="https://bulma.io/images/placeholders/480x600.png" class="has-radius has-shadow">
           </figure>
         </div>
         <div class="column is-half">
