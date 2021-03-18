@@ -2,7 +2,7 @@
   <div>
     <home-banner />
     <three-blocks />
-    <force />
+    <force id="force" />
     <services id="dapps" />
     <efx />
     <clients />

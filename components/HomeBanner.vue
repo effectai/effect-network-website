@@ -7,7 +7,7 @@
           <h1 class="subtitle">The first Blockchain based framework for the Future-of-Work</h1>
           <!--          <p>Helping data science teams succeed with structuring data and the deployment of AI automation</p>-->
           <br>
-          <nuxt-link to="/" class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Learn more
+          <nuxt-link to="/#force" class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Work 2.0
           </nuxt-link>
         </div>
       </div>
