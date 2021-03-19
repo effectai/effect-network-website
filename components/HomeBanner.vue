@@ -12,8 +12,9 @@
             <nuxt-link to="/#force" class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Work 2.0
             </nuxt-link>
           </div>
-          <div class="column is-two-thirds">
-            <network />
+          <div class="column is-half">
+<!--            <network />-->
+            <img src="~assets/img/women-bedroom-work.jpg"  class="has-radius has-shadow"/>
           </div>
         </div>
       </div>
@@ -34,6 +35,11 @@ export default {
 </script>
 
 <style lang="scss">
+.dark-mode {
+  #XMLID_64_, #XMLID_5_, #XMLID_81_ {
+    fill: white;
+  }
+}
 #Layer_1 {
   width: 150%;
   margin-left: -30%;
