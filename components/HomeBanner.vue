@@ -1,7 +1,7 @@
 <template>
-  <div class="banner pb-6">
+  <div class="banner">
     <section class="section">
-      <div class="container is-max-widescreen my-6">
+      <div class="container is-max-widescreen mt-6">
         <div class="columns">
           <div class="column is-three-fifths">
             <h1 class="title is-1 is-spaced">Freedom To Work From Anywhere At Anytime</h1>
@@ -453,6 +453,10 @@ export default {
       width: 300px;
       height: 250px;
       background: white;
+      -webkit-filter: blur(5px);
+      -moz-filter: blur(5px);
+      -o-filter: blur(5px);
+      -ms-filter: blur(5px);
     }
   }
 
