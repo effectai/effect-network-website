@@ -79,19 +79,23 @@
           <div class="column is-half is-flex is-align-items-start is-justify-content-center">
             <img width="30" src="~assets/img/pin.png" contain class="mr-4 mt-2"/>
             <div>
-              <div class="menu-label mb-0">European Office</div>
-              <div class="">Prinsengracht 201A</div>
-              <div class="">Amsterdam, 1015 DT</div>
-              <div class="">The Netherlands</div>
+              <div class="menu-label mb-0">Europe Office</div>
+              <u>Effect.AI B.V.</u>
+              <div>Prinsengracht 201A</div>
+              <div>Amsterdam, 1015 DT</div>
+              <div>&nbsp;</div>
+              <div>The Netherlands</div>
             </div>
           </div>
           <div class="column is-half is-flex is-align-items-start is-justify-content-center">
             <img width="30" src="~assets/img/pin.png" contain class="mr-4 mt-2"/>
             <div>
               <div class="menu-label mb-0">Asia Office</div>
-              <div class="">Prinsengracht 201A</div>
-              <div class="">Amsterdam, 1015 DT</div>
-              <div class="">Hong Kong</div>
+              <u>Effect Network Limited</u>
+              <div>Unit B, 12/F, Hang Seng</div>
+              <div>Causeway Bay Building, 28 YEE</div>
+              <div>Wo Street, Causeway Bay</div>
+              <div>Hong Kong</div>
             </div>
           </div>
         </div>

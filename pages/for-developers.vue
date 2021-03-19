@@ -6,7 +6,7 @@
           <h4 class="title is-4">The Effect Network</h4>
           <h1 class="subtitle is-1">For Developers</h1>
         </div>
-        <div class="columns py-6">
+        <div class="columns pb-6 is-vcentered">
           <div class="column is-half">
             <h3 class="title"><b class="is-family-sans-serif">Build</b> on The Effect Network Protocol</h3>
             <p class="block">
@@ -20,6 +20,9 @@
             <p class="block">
               <b>An open-source development portal to build a Decentralized Network for Artificial Intelligence.</b>
             </p>
+          </div>
+          <div class="column">
+            <network />
           </div>
         </div>
         <div class="columns my-6">
@@ -45,7 +48,19 @@
             <a href="/download/effect_whitepaper.pdf" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}" >Technical Whitepaper</a>
           </div>
         </div>
-
+        <div class="columns has-text-left is-vcentered is-variable is-8 my-6 py-6">
+          <div class="column is-three-fifths">
+            <h2 class="title is-2">Smart Contracts</h2>
+            <h2 class="subtitle">Smart Contract Stack on the EOS blockchain</h2>
+            <p class="block">
+              The Effect Network is an open protocol built with a technology stack of Smart Contracts. The TEN protocol allows anyone to build decentralized applications and connect their interface to the network.
+            </p>
+            <a class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" href="https://github.com/effectai/effect-network-eos" target="_blank">Smart Contracts</a>
+          </div>
+          <div class="column is-two-fifths">
+            <img src="~assets/img/smart-contracts.png"/>
+          </div>
+        </div>
       </div>
     </section>
     <whitepaper/>
@@ -54,10 +69,72 @@
 
 <script>
 import Whitepaper from '@/components/Whitepaper';
+import Network from "~/assets/img/developers.svg?inline";
 
 export default {
   components: {
-    Whitepaper
+    Whitepaper,
+    Network
   }
 }
 </script>
+
+
+<style lang="scss">
+#developers {
+  max-width: 140%;
+  height: 100%;
+  display: block;
+  margin-left: -40%;
+}
+
+#developers polyline, #developers path:not(.ignore) {
+  stroke-dasharray: 310;
+  stroke-dashoffset: -310;
+  animation-delay: 0.5s;
+  animation-name: drawline;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+#developers polyline {
+  animation-delay: 2s;
+}
+
+#developers ellipse {
+  opacity: 0;
+  animation-delay: 1s;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#developers path.ignore {
+  stroke-dashoffset: -310;
+  animation-delay: 0s;
+  animation-name: drawline;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes drawline {
+  from {
+    stroke-dashoffset: -310;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+</style>

@@ -28,8 +28,7 @@
             <div class="column is-one-third" v-for="post in posts" v-if="post.featured" :key="post.title">
               <div class="card" :href="post.href" target="_blank" min-height="500">
                 <div class="card-image">
-                  <figure class="image is-5by3">
-                    <img :src="post.img">
+                  <figure class="image is-5by3 background-image" :style="'background-image: url(\''+post.img+'\')'">
                   </figure>
                 </div>
                 <div class="card-content" style="min-height: 350px;">
