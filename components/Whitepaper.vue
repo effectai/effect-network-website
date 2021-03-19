@@ -3,7 +3,7 @@
     <div class="hero-body container is-max-widescreen">
       <div class="columns is-centered is-vcentered is-variable is-8">
         <div class="column is-two-fifths my-5">
-          <figure class="image is-4by5 is-rounded">
+          <figure class="image is-rounded">
             <a href="/download/effect_whitepaper.pdf" target="_blank">
               <img src="~assets/img/whitepaper.png" class="has-radius has-shadow">
             </a>
