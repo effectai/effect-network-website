@@ -156,6 +156,9 @@
   }
 
   .card {
+    .card-content {
+      padding: 1.25rem 2.25rem;
+    }
     .dapp-logo-white {
       display: none;
     }

@@ -74,6 +74,21 @@ a.card {
   }
 }
 
+.image {
+  overflow: hidden;
+  img {
+    height: auto !important;
+  }
+}
+.background-image {
+  background-size: cover;
+  background-position: top center;
+}
+
+.card-content {
+  position: relative;
+}
+
 .button {
   &.is-wide {
     min-width: 200px;
