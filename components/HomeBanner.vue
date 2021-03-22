@@ -418,7 +418,7 @@ export default {
       -moz-filter: blur(5px);
       -o-filter: blur(5px);
       -ms-filter: blur(5px);
-      // mask: $noise, radial-gradient(circle at 50% 0, transparent 30%, #000 (65% + 15%)) 0 0 / 50% 100%;
+      //mask: $noise, radial-gradient(circle at 50% 0, transparent 30%, #000 (65% + 15%)) 0 0 / 50% 100%;
 
       opacity: 0.9;
       filter: blur(5px);

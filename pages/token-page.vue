@@ -16,6 +16,11 @@
               solutions. EFX can be earned or bought and can be used in a decentralized ecosystem of AI related
               services.</p>
           </div>
+          <div class="columns">
+            <div class="column is-half">
+              <div class="coinmarketcap-currency-widget has-background-primary" data-currencyid="2666" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
+            </div>
+          </div>
           <div class="my-6">
             <div class="columns has-text-left is-vcentered is-multiline">
               <div class="column is-two-thirds">
@@ -124,6 +129,11 @@
     head() {
       return {
         title: 'EFX Token',
+        script: [
+          {
+            src: 'https://files.coinmarketcap.com/static/widget/currency.js'
+          }
+        ],
         meta: [
           // hid is used as unique identifier. Do not use `vmid` for it as it will not work
           {
