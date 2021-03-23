@@ -1,5 +1,5 @@
 <template>
-  <section class="hero is-white my-6">
+  <section class="hero is-white has-background-white-ter my-6">
     <div class="hero-body container has-text-centered" style="width: 100%">
       <h1 class="title">
         Clients & Partners

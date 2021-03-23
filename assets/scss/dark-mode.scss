@@ -14,6 +14,9 @@ html {
         color: $primary;
       }
     }
+    .has-background-white-bis {
+      background: $dark !important;
+    }
     .has-text-primary {
       color: $primary-invert !important;
     }
