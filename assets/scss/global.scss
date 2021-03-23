@@ -54,6 +54,11 @@ a.card {
     background: white;
   }
 }
+.dark-mode {
+  .has-background-white-blur:before {
+    background: $dark-mode-background;
+  }
+}
 
 .notification {
   &.is-primary {
