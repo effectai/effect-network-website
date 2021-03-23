@@ -33,7 +33,7 @@
             </nuxt-link>
 
             <nuxt-link class="navbar-item" to="/news" exact-active-class="is-active">
-              News
+              Blog
             </nuxt-link>
             <div class="navbar-item has-dropdown is-hoverable dapps">
               <nuxt-link to="/#dapps" class="navbar-link">

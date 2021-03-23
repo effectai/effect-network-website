@@ -3,7 +3,7 @@
     <section class="section">
       <div class="container is-max-widescreen mt-6">
         <div class="columns">
-          <div class="column is-three-fifths">
+          <div class="column is-half">
             <h1 class="title is-1 is-spaced has-background-white-blur">Freedom To Work From Anywhere At Anytime</h1>
             <h1 class="subtitle has-background-white-blur">The first Blockchain based framework for the Future-of-Work.</h1>
             <h1 class="subtitle has-background-white-blur">Access to a global, on-demand, 24x7 scalable WorkForce.</h1>
@@ -12,6 +12,7 @@
             <nuxt-link to="/#force" class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Work 3.0
             </nuxt-link>
           </div>
+          <div class="column"></div>
           <div class="column is-two-fifths">
 <!--            <network />-->
             <img src="~assets/img/women-bedroom-work.jpg"  class="has-radius has-shadow"/>
