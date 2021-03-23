@@ -4,29 +4,28 @@
       <div class="container is-max-widescreen mt-6">
         <div class="columns">
           <div class="column is-half">
-            <h1 class="title is-1 is-spaced has-background-white-blur">Freedom To Work From Anywhere At Anytime</h1>
-            <h1 class="subtitle has-background-white-blur">The first Blockchain based framework for the Future-of-Work.</h1>
-            <h1 class="subtitle has-background-white-blur">Access to a global, on-demand, 24x7 scalable WorkForce.</h1>
-            <!--          <p>Helping data science teams succeed with structuring data and the deployment of AI automation</p>-->
+            <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-force_part-white_h100.png') : require('@/assets/img/dapps/effect-force_h100.png')" width="170" class="mb-4" />
+            <h1 class="title is-1 is-spaced has-background-white-blur">Work 3.0</h1>
+            <h1 class="subtitle has-background-white-blur">Global WorkForce to Structure Data</h1>
+            <p>Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. </p>
             <br>
-            <nuxt-link to="/#force" class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Work 3.0
-            </nuxt-link>
+            <a href="https://worker.effect.ai" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}">Join the WorkForce</a>
           </div>
           <div class="column"></div>
-          <div class="column is-two-fifths">
-<!--            <network />-->
-            <img src="~assets/img/women-bedroom-work.jpg"  class="has-radius has-shadow"/>
-            <br>
+          <div class="column is-half pt-6 is-hidden-mobile">
+            <br><br><br>
+            <img src="~assets/img/threepeople.jpg"  class="has-radius has-shadow"/>
           </div>
         </div>
-        <div class="is-flex is-justify-content-flex-end is-hidden-mobile" style="margin-right: -100px">
-          <div class="mx-4 ">
-            <img width="500" src="~assets/img/women-bedroom-work.jpg"  class="has-radius has-shadow"/>
-          </div>
-          <div class="mx-4">
-            <img width="300" src="~assets/img/women-bedroom-work.jpg"  class="has-radius has-shadow"/>
-          </div>
-        </div>
+
+<!--        <div class="is-flex is-justify-content-flex-end" style="margin-right: -100px">-->
+<!--          <div class="mx-4 ">-->
+<!--            <img width="500" src="~assets/img/women-bedroom-work.jpg"  class="has-radius has-shadow"/>-->
+<!--          </div>-->
+<!--          <div class="mx-4">-->
+<!--            <img width="300" src="~assets/img/women-bedroom-work.jpg"  class="has-radius has-shadow"/>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
     </section>
     <div class="circle-container">
@@ -35,309 +34,13 @@
   </div>
 </template>
 <script>
-import Network from "~/assets/img/network.svg?inline";
 
 export default {
   components: {
-    Network
   }
 }
 </script>
 
-<style lang="scss">
-.dark-mode {
-  #XMLID_64_, #XMLID_5_, #XMLID_81_ {
-    fill: white;
-  }
-}
-#Layer_1 {
-  width: 150%;
-  margin-left: -30%;
-}
-#Layer_1 circle {
-  r: 0;
-}
-
-#Layer_1.animate circle {
-  animation-delay: 1s;
-  animation-name: radius;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-#layer1, #layer2, #layer3 {
-  transform: none;
-}
-
-#Layer_1.animate #layer1, #Layer_1.animate #layer2, #Layer_1.animate #layer3 {
-  animation-name: float;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
-#XMLID_345_ {
-  transform: translate3d(-18px, -11px, 0);
-
-}
-
-#Layer_1.animate #XMLID_345_ {
-  animation-name: move1;
-  animation-delay: 2s;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
-#XMLID_317_ {
-  transform: translate3d(-48px, 23px, 0);
-}
-
-#Layer_1.animate #XMLID_317_ {
-  animation-name: move2;
-  animation-delay: 1.5s;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
-#XMLID_339_ {
-  transform: none;
-}
-
-#Layer_1.animate #XMLID_339_ {
-  animation-name: move3;
-  animation-delay: 1s;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-}
-
-#layer1 {
-  animation-delay: 1.5s;
-}
-
-#layer2 {
-  animation-delay: 2s;
-}
-
-#layer3 {
-  animation-delay: 2.5s;
-}
-
-#XMLID_1_ {
-  transform: translate3d(0, 59px, 0);
-}
-
-#Layer_1.animate #XMLID_1_ {
-  animation-name: layer1;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-#XMLID_4_ {
-  transform: translate3d(0, -59px, 0);
-}
-
-#Layer_1.animate #XMLID_4_ {
-  animation-name: layer3;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-#XMLID_351_, #XMLID_352_, #XMLID_300_ {
-  stroke-dasharray: 170;
-  stroke-dashoffset: -170;
-}
-
-#Layer_1.animate #XMLID_351_, #Layer_1.animate #XMLID_352_, #Layer_1.animate #XMLID_300_ {
-  animation-delay: 0.5s;
-  animation-name: line;
-  animation-duration: 0.6s;
-  animation-fill-mode: forwards;
-}
-
-#XMLID_398_, #top_291_, #XMLID_61_, #XMLID_63_, #XMLID_59_, #XMLID_55_ {
-  pointer-events: none;
-}
-
-#top_291_ {
-  opacity: 0;
-}
-
-#Layer_1.animate #top_291_ {
-  animation-delay: 0.3s;
-  animation-name: fadein;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-#XMLID_5_, #XMLID_64_, #XMLID_81_, #XMLID_598_, #XMLID_590_ {
-  opacity: 0;
-}
-
-#Layer_1.animate #XMLID_5_, #Layer_1.animate #XMLID_64_, #Layer_1.animate #XMLID_81_, #Layer_1.animate #XMLID_598_, #Layer_1.animate #XMLID_590_ {
-  animation-delay: 1.3s;
-  animation-name: fadein;
-  animation-duration: 0.3s;
-  animation-fill-mode: forwards;
-}
-
-#XMLID_448_ > g > g polygon {
-  transition: 0.2s;
-}
-
-#XMLID_448_ > g > g:hover polygon {
-  fill: rgb(85, 110, 160);
-  opacity: 1;
-}
-
-.tower polygon {
-  transition: 0.3s;
-}
-
-.tower:hover polygon {
-  opacity: 1;
-}
-
-.smart-contract polygon {
-  transition: 0.3s;
-}
-
-.smart-contract polygon:hover {
-  fill: rgb(144, 163, 203);
-}
-
-.smart-contract image {
-  transition: 0.3s;
-}
-
-.smart-contract:hover image {
-  opacity: 1;
-}
-
-@keyframes layer1 {
-  from {
-    transform: translate3d(0, 59px, 0);
-  }
-  to {
-    transform: none;
-  }
-}
-
-@keyframes layer3 {
-  from {
-    transform: translate3d(0, -59px, 0);
-  }
-  to {
-    transform: none;
-  }
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes radius {
-  from {
-    r: 0;
-  }
-  to {
-    r: 3;
-  }
-}
-
-@keyframes line {
-  from {
-    stroke-dashoffset: -170;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes float {
-  from {
-    transform: none;
-  }
-  to {
-    transform: translate3d(0, 5px, 0);
-  }
-}
-
-@keyframes move1 {
-  0% {
-    transform: translate3d(-18px, -11px, 0);
-  }
-  25% {
-    transform: translate3d(77px, 43px, 0);
-  }
-  50% {
-    transform: translate3d(171px, -10px, 0);
-  }
-  75% {
-    transform: translate3d(76px, -66px, 0);
-  }
-  100% {
-    transform: translate3d(-18px, -11px, 0);
-  }
-}
-
-@keyframes move2 {
-  0% {
-    transform: translate3d(-48px, 23px, 0);
-  }
-  25% {
-    transform: translate3d(66px, -32px, 0);
-  }
-  50% {
-    transform: translate3d(-27px, -86px, 0);
-  }
-  75% {
-    transform: translate3d(-138px, -20px, 0);
-  }
-  100% {
-    transform: translate3d(-48px, 23px, 0);
-  }
-}
-
-@keyframes move3 {
-  0% {
-    transform: none;
-  }
-  25% {
-    transform: translate3d(-113px, -59px, 0);
-  }
-  50% {
-    transform: translate3d(-244px, 22px, 0);
-  }
-  75% {
-    transform: translate3d(-153px, 74px, 0);
-  }
-  100% {
-    transform: none;
-  }
-}
-
-@keyframes movebgleft {
-  from {
-    background-position: -60%;
-  }
-  to {
-    background-position: 120%;
-  }
-}
-</style>
 <style type="text/css" id="grained-animation">
     @keyframes grained {
     0% {
@@ -436,7 +139,7 @@ export default {
       transition: background 2s;
       transform: rotate(-100deg);
       //background: linear-gradient(150deg, rgba($secondary, 0) 0%, rgba($secondary, 0) 5%, rgba($secondary, 0.1) 20%, $secondary 100%);
-      background: radial-gradient(circle at top, rgba(#ffffff, 1) 0%, rgba(#fffef7, 1) 7%, rgba(17, 72, 235, 1) 30%, rgba(17, 72, 235, 1) 50%, rgba(16, 29, 86, 1) 100%);
+      background: radial-gradient(circle at top, rgba(#ffffff, 1) 0%, rgba(#fffef7, 1) 7%, rgba($force-color, 1) 30%, rgba($force-color, 1) 50%, rgba($force-color, 1) 100%);
       background-size: 150% 400%;
       background-position: 10% 0%;
       animation: grained 0.2s linear infinite, rotate 45s linear infinite;
