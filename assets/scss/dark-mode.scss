@@ -23,6 +23,9 @@ html {
     .card {
       background-color: darken($dark-mode-background, 5%);
       color: white;
+      .card-header-title {
+        color: white;
+      }
       &:hover {
         color: white;
       }

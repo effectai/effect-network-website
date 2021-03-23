@@ -25,29 +25,7 @@
             <network />
           </div>
         </div>
-        <div class="columns my-6">
-          <div class="column is-one-third has-text-centered">
-            <i class="fab fa-github is-size-1 has-text-secondary" :class="{'has-text-accent': $colorMode.value === 'dark'}"></i>
-            <h3 class="title is-4 mt-4 has-text-weight-semibold">Effect Github</h3>
-            <p>Join the Effect.AI development effort by contributing to one of the open source
-              projects on the public effect repositories.
-            </p>
-            <a target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}" href="https://github.com/effectai">Explore Github</a>
-          </div>
-          <div class="column is-one-third has-text-centered">
-            <i class="fas fa-file-alt is-size-1 has-text-secondary" :class="{'has-text-accent': $colorMode.value === 'dark'}"></i>
-            <h3 class="title is-4 mt-4 has-text-weight-semibold">API Documentation</h3>
-            <p>Connect your applications to Effect Force to access a global human workforce or learn more about other dApps like EffectDAO.</p>
-            <a href="https://docs.effect.ai" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}" >Documentation</a>
-          </div>
-          <div class="column is-one-third has-text-centered">
-            <i class="fas fa-square-root-alt is-size-1 has-text-secondary" :class="{'has-text-accent': $colorMode.value === 'dark'}"></i>
-            <h3 class="title is-4 mt-4 has-text-weight-semibold">Technical Whitepaper</h3>
-            <p>Read the original Effect Whitepaper for a technical and mathematical description of The Effect Network.
-            </p>
-            <a href="/download/effect_whitepaper.pdf" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}" >Technical Whitepaper</a>
-          </div>
-        </div>
+        <develop-blocks />
         <div class="columns has-text-left is-vcentered is-variable is-8 my-6 py-6">
           <div class="column is-three-fifths">
             <h2 class="title is-2">Smart Contracts</h2>
@@ -69,12 +47,14 @@
 
 <script>
 import Whitepaper from '@/components/Whitepaper';
+import DevelopBlocks from '@/components/DevelopBlocks';
 import Network from "~/assets/img/blockchain.svg?inline";
 
 export default {
   components: {
     Whitepaper,
-    Network
+    Network,
+    DevelopBlocks
   }
 }
 </script>

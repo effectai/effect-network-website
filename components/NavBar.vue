@@ -22,7 +22,7 @@
           </div>
           <div class="navbar-end is-align-items-center">
             <nuxt-link class="navbar-item" to="/#force" exact-active-class="is-active">
-              Work 2.0
+              Work 3.0
             </nuxt-link>
             <nuxt-link class="navbar-item" to="/token-page" exact-active-class="is-active">
               EFX Token
