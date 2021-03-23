@@ -4,17 +4,26 @@
       <div class="container is-max-widescreen mt-6">
         <div class="columns">
           <div class="column is-three-fifths">
-            <h1 class="title is-1 is-spaced">Freedom To Work From Anywhere At Anytime</h1>
-            <h1 class="subtitle">The first Blockchain based framework for the Future-of-Work.</h1>
-            <p>Access to a global, on-demand, 24x7 scalable WorkForce with fair payments for our workers.</p>
+            <h1 class="title is-1 is-spaced has-background-white-blur">Freedom To Work From Anywhere At Anytime</h1>
+            <h1 class="subtitle has-background-white-blur">The first Blockchain based framework for the Future-of-Work.</h1>
+            <h1 class="subtitle has-background-white-blur">Access to a global, on-demand, 24x7 scalable WorkForce.</h1>
             <!--          <p>Helping data science teams succeed with structuring data and the deployment of AI automation</p>-->
             <br>
-            <nuxt-link to="/#force" class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Work 2.0
+            <nuxt-link to="/#force" class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Work 3.0
             </nuxt-link>
           </div>
-          <div class="column is-half">
+          <div class="column is-two-fifths">
 <!--            <network />-->
             <img src="~assets/img/women-bedroom-work.jpg"  class="has-radius has-shadow"/>
+            <br>
+          </div>
+        </div>
+        <div class="is-flex is-justify-content-flex-end" style="margin-right: -100px">
+          <div class="mx-4 ">
+            <img width="500" src="~assets/img/women-bedroom-work.jpg"  class="has-radius has-shadow"/>
+          </div>
+          <div class="mx-4">
+            <img width="300" src="~assets/img/women-bedroom-work.jpg"  class="has-radius has-shadow"/>
           </div>
         </div>
       </div>
@@ -370,7 +379,7 @@ export default {
   .banner {
     position: relative;
     overflow: hidden;
-
+    min-height: calc(100vh - 70px);
     &:before {
       content: "";
       display: block;
@@ -404,7 +413,6 @@ export default {
     right: 0;
     top: 0;
     margin: 10px;
-    opacity: 0.7;
 
     width: 100%;
     z-index: -1;
@@ -412,16 +420,16 @@ export default {
     .circle {
       margin-left: auto;
       position: relative;
-      width: 1100px;
-      height: 1100px;
-      -webkit-filter: blur(5px);
-      -moz-filter: blur(5px);
-      -o-filter: blur(5px);
-      -ms-filter: blur(5px);
+      width: 1400px;
+      height: 1400px;
+      margin-right: -10px;
+      -webkit-filter: blur(7px);
+      -moz-filter: blur(7px);
+      -o-filter: blur(7px);
+      -ms-filter: blur(7px);
+      filter: blur(7px);
       //mask: $noise, radial-gradient(circle at 50% 0, transparent 30%, #000 (65% + 15%)) 0 0 / 50% 100%;
 
-      opacity: 0.9;
-      filter: blur(5px);
       border-radius: 100%;
       background: $secondary;
       transition: background 2s;
@@ -434,17 +442,17 @@ export default {
       //animation-delay: 0s, 1.0s;
       &:before {
         content: "";
-        -webkit-filter: blur(5px);
-        -moz-filter: blur(5px);
-        -o-filter: blur(5px);
-        -ms-filter: blur(5px);
-        filter: blur(5px);
+        -webkit-filter: blur(7px);
+        -moz-filter: blur(7px);
+        -o-filter: blur(7px);
+        -ms-filter: blur(7px);
+        filter: blur(7px);
         display: block;
         position: absolute;
-        top: 180px;
-        left: 180px;
-        width: 740px;
-        height: 740px;
+        top: 220px;
+        left: 220px;
+        width: 920px;
+        height: 920px;
         background: white;
         border-radius: 100%;
       }
@@ -455,14 +463,19 @@ export default {
       display: block;
       position: absolute;
       bottom: 400px;
-      right: -20px;
-      width: 300px;
-      height: 250px;
+      right: -30px;
+      width: 350px;
+      height: 350px;
       background: white;
-      -webkit-filter: blur(5px);
-      -moz-filter: blur(5px);
-      -o-filter: blur(5px);
-      -ms-filter: blur(5px);
+      -webkit-filter: blur(7px);
+      -moz-filter: blur(7px);
+      -o-filter: blur(7px);
+      -ms-filter: blur(7px);
+    }
+  }
+  @media all and (max-width: 770px) {
+    .circle-container:after {
+      display: none;
     }
   }
 

@@ -38,6 +38,23 @@ a.card {
   color: $text;
 }
 
+.has-background-white-blur {
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    opacity: 0.7;
+    z-index: -1;
+    top: 0;
+    filter: blur(50px);
+    left: 0;
+    background: white;
+  }
+}
+
 .notification {
   &.is-primary {
     &.is-outlined {
