@@ -416,7 +416,7 @@ export default {
     margin: 10px;
 
     width: 100%;
-    z-index: -1;
+    z-index: -2;
 
     .circle {
       margin-left: auto;
