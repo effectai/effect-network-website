@@ -9,7 +9,7 @@
             <h1 class="subtitle has-background-white-blur">Access to a global, on-demand, 24x7 scalable WorkForce.</h1>
             <!--          <p>Helping data science teams succeed with structuring data and the deployment of AI automation</p>-->
             <br>
-            <nuxt-link to="/#force" class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Work 3.0
+            <nuxt-link to="/force" class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Work 3.0
             </nuxt-link>
           </div>
           <div class="column"></div>
