@@ -1,17 +1,33 @@
 <template>
-  <section class="hero is-primary">
-    <div class="hero-body container">
-        <div class="columns is-vcentered is-variable is-8">
-          <div class="column is-one-third">
-            <h2 class="title is-2 has-text-weight-light"><b>Powered</b> by the<br>digital asset <b class="is-family-sans-serif">EFX</b></h2>
-            <nuxt-link to="/token-page" class="button is-accent">Discover the EFX Token</nuxt-link>
-          </div>
-          <div class="column is-narrow"></div>
-          <div class="column is-two-third">
-            <img :src="require('@/assets/img/efx-3d.png')"/>
-          </div>
-        </div>
+  <section class="hero is-secondary mb-6">
+    <div class="hero-body container has-text-centered">
+      <h2 class="title is-2 is-spaced">EFX Token</h2>
+      <h4 class="subtitle">The digital asset that powers the Effect Network</h4>
+      <nuxt-link to="/token-page" class="button is-accent block is-wide">Discover EFX</nuxt-link>
+      <div class="coinmarketcap-currency-widget has-background-white has-text-black has-radius" data-currencyid="2666" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
+      <img src="~assets/img/tokenomics.png" class="mt-6" style="margin-bottom: -120px;" />
     </div>
   </section>
 
 </template>
+
+<style lang="scss">
+  .coinmarketcap-currency-widget {
+    width: 710px;
+    max-width: 100%;
+    margin: 0 auto;
+    > div {
+      display: flex;
+      > div:nth-child(1) {
+        min-width: 300px;
+        padding: 8px 0 0 !important;
+      }
+      > div:nth-child(2) {
+        min-width: 400px;
+      }
+      > div:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+</style>

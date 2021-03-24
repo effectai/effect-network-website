@@ -37,6 +37,22 @@
   import MailingList from '@/components/MailingList';
 
   export default {
+    head() {
+      return {
+        title: 'Effect Network - Blockchain based framework for the Future-of-Work',
+        script: [
+          { src: 'https://files.coinmarketcap.com/static/widget/currency.js' }
+        ],
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Freedom To Work From Anywhere At Anytime. Effect Network is the first Blockchain based framework for the Future-of-Work. Access to a global, on-demand, 24x7 scalable WorkForce.'
+          }
+        ]
+      }
+    },
     components: {
       HomeBanner,
       Clients,
