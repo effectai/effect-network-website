@@ -14,7 +14,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'effect-network-website',
+    titleTemplate: '%s - Effect Network',
+    title: 'Effect Network',
     htmlAttrs: {
       lang: 'en'
     },
