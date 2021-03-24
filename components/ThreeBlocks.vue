@@ -1,5 +1,5 @@
 <template>
-  <section class="section my-6">
+  <section class="section py-6">
     <div class="container is-max-widescreen">
       <div class="columns">
         <div class="column is-one-third has-text-centered">

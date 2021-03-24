@@ -1,12 +1,12 @@
 <template>
-  <section class="hero is-white has-background-white-ter">
+  <section class="hero is-white">
     <div class="hero-body container has-text-centered" style="width: 100%">
-      <h1 class="title">
-        Clients & Partners
-      </h1>
-      <h3 class="subtitle">
-        Companies and projects we have worked with
-      </h3>
+<!--      <h1 class="title">-->
+<!--        Clients & Partners-->
+<!--      </h1>-->
+<!--      <h3 class="subtitle">-->
+<!--        Companies and projects we have worked with-->
+<!--      </h3>-->
       <div class="columns is-mobile">
         <div class="column">
           <nuxt-link to="/cases">

@@ -1,5 +1,5 @@
 <template>
-  <div class="dao-circle has-background-white-bis">
+  <div class="dao-circle has-background-light">
     <section class="section">
       <div class="container is-max-widescreen">
         <div class="columns is-centered is-vcentered is-variable is-8">

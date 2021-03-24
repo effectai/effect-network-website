@@ -1,7 +1,9 @@
 <template>
   <div>
+    <div class="has-background-light">
     <home-banner />
-    <div class="has-background-white-bis">
+    </div>
+    <div class="has-background-light">
       <clients />
       <ten-video />
       <three-blocks />

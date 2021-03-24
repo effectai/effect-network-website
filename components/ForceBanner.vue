@@ -1,13 +1,16 @@
 <template>
-  <div class="banner">
+  <div class="banner has-background-light">
+    <div class="circle-container">
+      <div class="circle"></div>
+    </div>
     <section class="section">
       <div class="container is-max-widescreen mt-6">
         <div class="columns">
           <div class="column is-half">
             <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-force_part-white_h100.png') : require('@/assets/img/dapps/effect-force_h100.png')" width="170" class="mb-4" />
-            <h1 class="title is-1 is-spaced has-background-white-blur">Work 3.0</h1>
-            <h1 class="subtitle has-background-white-blur">Global WorkForce to Structure Data</h1>
-            <p>Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. </p>
+            <h1 class="title is-1 is-spaced has-background-white-blur"><span>Work 3.0</span></h1>
+            <h1 class="subtitle has-background-white-blur"><span>Global WorkForce to Structure Data</span></h1>
+            <p class="has-background-white-blur"><span>Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. </span></p>
             <br>
             <a href="https://worker.effect.ai" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}">Join the WorkForce</a>
           </div>
@@ -28,9 +31,6 @@
 <!--        </div>-->
       </div>
     </section>
-    <div class="circle-container">
-      <div class="circle"></div>
-    </div>
   </div>
 </template>
 <script>
@@ -119,7 +119,6 @@ export default {
     margin: 20px 10px;
 
     width: 100%;
-    z-index: -2;
 
     .circle {
       margin-left: auto;
@@ -138,11 +137,11 @@ export default {
       background: $secondary;
       transition: background 2s;
       transform: rotate(-100deg);
-      //background: linear-gradient(150deg, rgba($secondary, 0) 0%, rgba($secondary, 0) 5%, rgba($secondary, 0.1) 20%, $secondary 100%);
-      background: radial-gradient(circle at top, rgba(#ffffff, 1) 0%, rgba(#fffef7, 1) 7%, rgba($force-color, 1) 30%, rgba($force-color, 1) 50%, rgba($force-color, 1) 100%);
+      //background: radial-gradient(circle at top, rgba(#ffffff, 1) 0%, rgba(#fffef7, 1) 7%, rgba($force-color, 1) 30%, rgba($force-color, 1) 50%, rgba($force-color, 1) 100%);
+      background: linear-gradient(-40deg, #0A7CFF 44%, rgba(84,194,255,0.20) 84%, rgba(255,251,241,0.00) 100%);
       background-size: 150% 400%;
       background-position: 10% 0%;
-      animation: grained 0.2s linear infinite, rotate 45s linear infinite;
+      animation: grained 0.2s linear infinite, rotate 35s linear infinite;
       //animation-delay: 0s, 1.0s;
       &:before {
         content: "";

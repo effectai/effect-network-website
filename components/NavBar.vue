@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="has-background-light">
     <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
       <div class="container">
         <div class="navbar-brand">

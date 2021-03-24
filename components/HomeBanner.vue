@@ -1,12 +1,15 @@
 <template>
   <div class="banner">
+    <div class="circle-container">
+      <div class="circle"></div>
+    </div>
     <section class="section">
       <div class="container is-max-widescreen mt-6">
         <div class="columns">
           <div class="column is-half">
-            <h1 class="title is-1 is-spaced has-background-white-blur">Freedom To Work From Anywhere At Anytime</h1>
-            <h1 class="subtitle has-background-white-blur">The first Blockchain based framework for the Future-of-Work.</h1>
-            <h1 class="subtitle has-background-white-blur">Access to a global, on-demand, 24x7 scalable WorkForce.</h1>
+            <h1 class="title is-1 is-spaced has-background-white-blur"><span>Freedom To Work From Anywhere At Anytime</span></h1>
+            <h1 class="subtitle has-background-white-blur"><span>The first Blockchain based framework for the Future-of-Work.</span></h1>
+            <h1 class="subtitle has-background-white-blur"><span>Access to a global, on-demand, 24x7 scalable WorkForce.</span></h1>
             <!--          <p>Helping data science teams succeed with structuring data and the deployment of AI automation</p>-->
             <br>
             <nuxt-link to="/force" class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Work 3.0
@@ -28,9 +31,6 @@
         </div>
       </div>
     </section>
-    <div class="circle-container">
-      <div class="circle"></div>
-    </div>
   </div>
 </template>
 <script>
@@ -413,7 +413,6 @@ export default {
     margin: 20px 10px;
 
     width: 100%;
-    z-index: -2;
 
     .circle {
       margin-left: auto;
@@ -432,11 +431,11 @@ export default {
       background: $secondary;
       transition: background 2s;
       transform: rotate(-100deg);
-      //background: linear-gradient(150deg, rgba($secondary, 0) 0%, rgba($secondary, 0) 5%, rgba($secondary, 0.1) 20%, $secondary 100%);
-      background: radial-gradient(circle at top, rgba(#ffffff, 1) 0%, rgba(#fffef7, 1) 7%, rgba(17, 72, 235, 1) 30%, rgba(17, 72, 235, 1) 50%, rgba(16, 29, 86, 1) 100%);
+      background: linear-gradient(-47deg, #5158FA 47%, rgba(142,102,247,0.20) 86%, rgba(246,247,255,0.00) 100%);
+      //background: radial-gradient(circle at top, rgba(#ffffff, 1) 0%, rgba(#fffef7, 1) 7%, rgba(17, 72, 235, 1) 30%, rgba(17, 72, 235, 1) 50%, rgba(16, 29, 86, 1) 100%);
       background-size: 150% 400%;
       background-position: 10% 0%;
-      animation: grained 0.2s linear infinite, rotate 45s linear infinite;
+      animation: grained 0.2s linear infinite, rotate 30s linear infinite;
       //animation-delay: 0s, 1.0s;
       &:before {
         content: "";
