@@ -8,14 +8,14 @@
       </div>
       <div class="columns is-multiline is-variable is-6 mt-6">
         <div class="column is-4">
-          <a href="https://force.effect.ai" target="_blank" class="card is-flat is-hoverable dapp-force">
+          <nuxt-link to="/force"  class="card is-flat is-hoverable dapp-force">
             <header class="card-header">
               <div class="card-header-title ">
                 <div class="has-text-centered" style="width: 100%">
                   <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-force_part-white_h100.png') : require('@/assets/img/dapps/effect-force_h100.png')" class="dapp-logo block"/>
                   <img src="~assets/img/dapps/effect-force_white_h100.png" class="dapp-logo-white block"/>
                   <p class="has-text-weight-semibold block">A global Workforce to Structure Data</p>
-                  <b> <a href="https://force.effect.ai" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
+                  <b> <nuxt-link to="/force" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Learn More</nuxt-link> </b>
                 </div>
               </div>
             </header>
@@ -32,17 +32,17 @@
 <!--                <b> <a href="https://force.effect.ai" :class="{'has-text-accent': $colorMode.value === 'dark'}" target="_blank">EXPLORE EFFECT FORCE</a> </b>-->
 <!--              </p>-->
 <!--            </footer>-->
-          </a>
+          </nuxt-link>
         </div>
         <div class="column is-4">
-          <a href="https://dao.effect.ai" target="_blank" class="card is-flat is-hoverable dapp-dao">
+          <a href="https://dao.effect.network" target="_blank" class="card is-flat is-hoverable dapp-dao">
             <header class="card-header">
               <div class="card-header-title ">
                 <div class="has-text-centered" style="width: 100%">
                   <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-dao_part-white_h100.png') : require('@/assets/img/dapps/effect-dao_h100.png')" class="dapp-logo block"/>
                   <img src="~assets/img/dapps/effect-dao_white_h100.png" class="dapp-logo-white block"/>
                   <p class="has-text-weight-semibold block">Decentralized Proposals & Voting</p>
-                  <b> <a href="https://dao.effect.ai" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
+                  <b> <a href="https://dao.effect.network" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
                 </div>
               </div>
             </header>
@@ -89,14 +89,14 @@
           </a>
         </div>
         <div class="column is-4">
-          <a href="https://socials.effect.ai" target="_blank"  class="card is-flat is-hoverable dapp-socials">
+          <a href="https://socials.effect.network" target="_blank"  class="card is-flat is-hoverable dapp-socials">
             <header class="card-header">
               <div class="card-header-title ">
                 <div class="has-text-centered"  style="width: 100%">
                   <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-socials_part-white_h100.png') : require('@/assets/img/dapps/effect-socials_h100.png')" class="dapp-logo block"/>
                   <img src="~assets/img/dapps/effect-socials_white_h100.png" class="dapp-logo-white block"/>
                   <p class="has-text-weight-semibold block">Real Social Media Engagement</p>
-                  <b> <a href="https://socials.effect.ai" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
+                  <b> <a href="https://socials.effect.network" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
                 </div>
               </div>
             </header>
@@ -116,7 +116,7 @@
           </a>
         </div>
         <div class="column is-4">
-          <a  href="https://captions.effect.ai" target="_blank" class="card is-flat is-hoverable dapp-captions">
+          <a  href="https://captions.effect.network" target="_blank" class="card is-flat is-hoverable dapp-captions">
             <header class="card-header">
               <header class="card-header">
                 <div class="card-header-title ">
@@ -124,7 +124,7 @@
                     <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-captions_part-white_h100.png') : require('@/assets/img/dapps/effect-captions_h100.png')" class="dapp-logo block"/>
                     <img src="~assets/img/dapps/effect-captions_white_h100.png" class="dapp-logo-white block"/>
                     <p class="has-text-weight-semibold block">Perfect Subtitles for YouTube</p>
-                    <b> <a href="https://captions.effect.ai" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
+                    <b> <a href="https://captions.effect.network" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
                   </div>
                 </div>
               </header>
@@ -145,14 +145,14 @@
           </a>
         </div>
         <div class="column is-4">
-          <a href="https://pieces.effect.ai" target="_blank" class="card is-flat is-hoverable dapp-pieces">
+          <a href="https://pieces.effect.network" target="_blank" class="card is-flat is-hoverable dapp-pieces">
             <header class="card-header">
               <div class="card-header-title ">
                 <div class="has-text-centered" style="width: 100%;">
                   <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-pieces_part-white_h100.png') : require('@/assets/img/dapps/effect-pieces_h100.png')" class="dapp-logo block"/>
                   <img src="~assets/img/dapps/effect-pieces_white_h100.png" class="dapp-logo-white block"/>
                   <p class="has-text-weight-semibold block">Crowdsourced Art on the Blockchain</p>
-                  <b> <a href="https://pieces.effect.ai" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
+                  <b> <a href="https://pieces.effect.network" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
                 </div>
               </div>
             </header>

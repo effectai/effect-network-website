@@ -44,21 +44,21 @@
                 <nuxt-link to="/force" class="navbar-item">
                   <img src="~assets/img/dapps/effect-force_h100.png" />
                 </nuxt-link>
-                <nuxt-link to="/dao" class="navbar-item">
+                <a target="_blank" href="https://dao.effect.network" class="navbar-item">
                   <img src="~assets/img/dapps/effect-dao_h100.png" />
-                </nuxt-link>
+                </a>
                 <a target="_blank" href="https://translate.effect.network" class="navbar-item">
                   <img src="~assets/img/dapps/effect-translate_h100.png" />
                 </a>
-                <nuxt-link to="/socials" class="navbar-item">
+                <a href="https://socials.effect.network" target="_blank" class="navbar-item">
                   <img src="~assets/img/dapps/effect-socials_h100.png" />
-                </nuxt-link>
-                <nuxt-link to="/captions" class="navbar-item">
+                </a>
+                <a target="_blank" href="https://captions.effect.network" class="navbar-item">
                   <img src="~assets/img/dapps/effect-captions_h100.png" />
-                </nuxt-link>
-                <nuxt-link to="/pieces" class="navbar-item">
+                </a>
+                <a target="_blank" href="https://pieces.effect.network" class="navbar-item">
                   <img src="~assets/img/dapps/effect-pieces_h100.png" />
-                </nuxt-link>
+                </a>
               </div>
             </div>
             <div class="navbar-item" exact-active-class="is-active">
