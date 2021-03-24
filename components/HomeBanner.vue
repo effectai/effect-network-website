@@ -17,16 +17,16 @@
           </div>
           <div class="column"></div>
           <div class="column is-two-fifths">
-            <img src="~assets/img/women-bedroom-work.jpg"  class="has-radius has-shadow"/>
+            <img src="~assets/img/women_laptop.jpg"  class="has-radius has-shadow"/>
             <br>
           </div>
         </div>
         <div class="is-flex is-justify-content-flex-end is-hidden-mobile" style="margin-right: -100px">
           <div class="mx-4 ">
-            <img width="500" src="~assets/img/women-bedroom-work.jpg"  class="has-radius has-shadow"/>
+            <img width="500" src="~assets/img/threepeople.jpg"  class="has-radius has-shadow"/>
           </div>
           <div class="mx-4">
-            <img width="300" src="~assets/img/women-bedroom-work.jpg"  class="has-radius has-shadow"/>
+            <img width="300" src="~assets/img/person-phone-vertical.jpg"  class="has-radius has-shadow"/>
           </div>
         </div>
       </div>
