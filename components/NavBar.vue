@@ -47,9 +47,9 @@
                 <nuxt-link to="/dao" class="navbar-item">
                   <img src="~assets/img/dapps/effect-dao_h100.png" />
                 </nuxt-link>
-                <nuxt-link to="/translate" class="navbar-item">
+                <a target="_blank" href="https://translate.effect.network" class="navbar-item">
                   <img src="~assets/img/dapps/effect-translate_h100.png" />
-                </nuxt-link>
+                </a>
                 <nuxt-link to="/socials" class="navbar-item">
                   <img src="~assets/img/dapps/effect-socials_h100.png" />
                 </nuxt-link>

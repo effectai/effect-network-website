@@ -62,14 +62,14 @@
           </a>
         </div>
         <div class="column is-4">
-          <a href="https://translate.effect.ai" target="_blank" class="card is-flat is-hoverable dapp-translate">
+          <a href="https://translate.effect.network" target="_blank" class="card is-flat is-hoverable dapp-translate">
             <header class="card-header">
               <div class="card-header-title ">
                 <div class="has-text-centered" style="width: 100%">
                   <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-translate_part-white_h100.png') : require('@/assets/img/dapps/effect-translate_h100.png')" class="dapp-logo block"/>
                   <img src="~assets/img/dapps/effect-translate_white_h100.png" class="dapp-logo-white block"/>
                   <p class="has-text-weight-semibold block">The New Era of Translation</p>
-                  <b> <a href="https://translate.effect.ai" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
+                  <b> <a href="https://translate.effect.network" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
                 </div>
               </div>
             </header>
