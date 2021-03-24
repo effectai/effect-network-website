@@ -17,7 +17,7 @@
         <div class="column is-one-third has-text-centered">
           <img src="~assets/img/icons/user.svg" style="height: 50px"/>
           <h3 class="title is-4 mt-4">Requestors</h3>
-          <p>Access to a global, on-demand, 24x7 scalable WorkForce with fair payments for workers.</p>
+          <p>Access to a global, on-demand, 24x7 scalable WorkForce for all your Data Science needs.</p>
           <nuxt-link class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}" to="/#dapps">Explore Services</nuxt-link>
         </div>
       </div>
