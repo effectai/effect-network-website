@@ -14,7 +14,6 @@
           </div>
           <div class="column"></div>
           <div class="column is-two-fifths">
-<!--            <network />-->
             <img src="~assets/img/women-bedroom-work.jpg"  class="has-radius has-shadow"/>
             <br>
           </div>
@@ -35,11 +34,9 @@
   </div>
 </template>
 <script>
-import Network from "~/assets/img/network.svg?inline";
 
 export default {
   components: {
-    Network
   }
 }
 </script>

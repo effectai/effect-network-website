@@ -18,8 +18,7 @@
             directory of users, algorithms and compute nodes and the related staking and governance mechanisms of TEN.
           </p>
           <p> TEN is powered by the EFX token and governed by the Effect Council.</p>
-          <a href="/download/effect_whitepaper.pdf" target="_blank" class="button is-secondary mt-5"
-             :class="{'is-accent': $colorMode.value === 'dark'}">Download Whitepaper</a>
+          <a href="/download/effect_whitepaper.pdf" target="_blank" class="button is-secondary mt-5">Download Whitepaper</a>
         </div>
       </div>
     </div>
@@ -28,6 +27,6 @@
 
 <style lang="scss" scoped>
 .has-blue-white-background {
-  background: linear-gradient(90deg, $dark-mode-background 35%, white 35%);
+  background: linear-gradient(90deg, $secondary 35%, white 35%);
 }
 </style>

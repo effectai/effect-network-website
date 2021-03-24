@@ -18,12 +18,14 @@
     margin: 0 auto;
     > div {
       display: flex;
+      flex-wrap: wrap;
       > div:nth-child(1) {
         min-width: 300px;
         padding: 8px 0 0 !important;
       }
       > div:nth-child(2) {
-        min-width: 400px;
+        width: 400px;
+        max-width: 100%;
       }
       > div:nth-child(3) {
         display: none;
