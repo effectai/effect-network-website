@@ -4,21 +4,21 @@
       <div class="columns">
         <div class="column is-one-third has-text-centered">
           <img src="~assets/img/icons/smartphone.svg" style="height: 50px"/>
-          <h3 class="title is-4 mt-4">Work 2.0</h3>
-          <p>Helping data science teams succeed with structuring data and the deployment of AI automation.</p>
-          <nuxt-link class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}" to="/force">Explore</nuxt-link>
+          <h3 class="title is-4 mt-4">Work 3.0</h3>
+          <p>Earn EFX on the first Blockchain based framework for the Future-of-Work.</p>
+          <nuxt-link class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}" to="/force">Effect Force</nuxt-link>
         </div>
         <div class="column is-one-third has-text-centered">
           <img src="~assets/img/icons/programming.svg" style="height: 50px"/>
           <h3 class="title is-4 mt-4">Build</h3>
-          <p>Helping data science teams succeed with structuring data and the deployment of AI automation.</p>
+          <p>An open-source development portal to build on the Effect Network Protocol.</p>
           <nuxt-link class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}" to="/for-developers">For Developers</nuxt-link>
         </div>
         <div class="column is-one-third has-text-centered">
           <img src="~assets/img/icons/user.svg" style="height: 50px"/>
           <h3 class="title is-4 mt-4">Requestors</h3>
-          <p>Helping data science teams succeed with structuring data and the deployment of AI automation.</p>
-          <nuxt-link class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}" to="/force">Explore</nuxt-link>
+          <p>Access to a global, on-demand, 24x7 scalable WorkForce with fair payments for workers.</p>
+          <nuxt-link class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}" to="/#dapps">Explore Services</nuxt-link>
         </div>
       </div>
     </div>

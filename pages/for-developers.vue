@@ -48,7 +48,7 @@
 <script>
 import Whitepaper from '@/components/Whitepaper';
 import DevelopBlocks from '@/components/DevelopBlocks';
-import Network from "~/assets/img/blockchain.svg?inline";
+import Network from "~/assets/img/developers.svg?inline";
 
 export default {
   components: {
@@ -249,10 +249,10 @@ export default {
 <style lang="scss">
 
 #developers {
-  max-width: 140%;
+  max-width: 130%;
   height: 100%;
   display: block;
-  margin-left: -40%;
+  margin-left: -25%;
 }
 
 #developers polyline, #developers path:not(.ignore) {
