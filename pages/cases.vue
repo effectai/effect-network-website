@@ -28,7 +28,7 @@
                 <div class='card-footer has-text-centered py-5'>
                     <a v-if="study.usecaseLink" :href="study.usecaseLink" target="_blank" class="button is-centered is-primary">
                       <span v-if="study.usecaseLinkText">{{study.usecaseLinkText}}</span>
-                      <span v-else>Download use case</span>
+                      <span v-else>Download Use Case</span>
                     </a>
                     <br>
                     <a v-if="study.extraLink" :href="study.extraLink" target="_blank" class="button is-outlined is-secondary mt-3">{{study.extraLinkText}}</a>
