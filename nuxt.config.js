@@ -8,6 +8,10 @@ export default {
     fallback: true
   },
 
+  router: {
+    middleware: ['password-protect']
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'effect-network-website',
@@ -48,8 +52,21 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/svg'
+    '@nuxtjs/svg',
+    'nuxt-password-protect'
   ],
+  passwordProtect: {
+    enabled: true,
+    formPath: '/password',
+    password: 'hello-network',
+    tokenSeed: 101010,
+    queryString: '_pw',
+    cookieName: '_password',
+    cookie: {
+      prefix: '',
+      expires: 5
+    }
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

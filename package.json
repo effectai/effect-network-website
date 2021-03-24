@@ -10,10 +10,11 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
-    "bulma": "^0.9.1",
     "@typeform/embed": "^0.16.0",
+    "bulma": "^0.9.1",
     "core-js": "^3.8.2",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "nuxt-password-protect": "^1.2.0"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.0.2",
