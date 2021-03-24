@@ -9,6 +9,7 @@
     <force id="force" />
     <services id="dapps" />
     <efx />
+    <case-studies />
     <section class="section">
       <div class="container is-max-widescreen py-6">
         <div class="has-text-centered">
@@ -35,6 +36,7 @@
   import Efx from '@/components/Efx';
   import Dao from '@/components/Dao';
   import MailingList from '@/components/MailingList';
+  import CaseStudies from '../components/CaseStudies.vue';
 
   export default {
     head() {
@@ -63,7 +65,8 @@
       DevelopBlocks,
       Efx,
       Dao,
-      MailingList
+      MailingList,
+      CaseStudies
     }
   }
 </script>

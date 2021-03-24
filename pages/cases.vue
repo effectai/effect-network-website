@@ -4,7 +4,7 @@
       <div class="has-text-centered">
         <h3 class="title is-2">Case studies</h3>
         <h4 class="subtitle">From Innovative Startups to Multinational Companies</h4>
-        <p class="has-limited-width">With nearly <strong>8 million tasks</strong> completed, we know our business. 
+        <p class="has-limited-width is-horizontal-centered">With nearly <strong>8 million tasks</strong> completed, we know our business. 
           We proudly serve many clients worldwide, including young innovative startups and large global enterprises from a wide range of industries.</p>
       </div>
       <div class="my-6">
@@ -25,7 +25,7 @@
                     </figure>                    
                   </div>
                 </div>
-                <div class='card-footer has-text-centered px-5 py-4'>
+                <div class='card-footer has-text-centered py-5'>
                     <a v-if="study.usecaseLink" :href="study.usecaseLink" target="_blank" class="button is-centered is-primary">
                       <span v-if="study.usecaseLinkText">{{study.usecaseLinkText}}</span>
                       <span v-else>Download use case</span>
@@ -132,13 +132,10 @@
   flex-direction: column;
   height: 100%;
 }
-p.has-limited-width {
-  margin: 0 auto;
-}
 
 @media all and (max-width: 770px) {
   .card-image.px-6, .card-image.px-6 .image.px-6 {
-    padding:0;
+    padding: 0 !important;
   }
 }
 </style>
