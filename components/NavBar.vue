@@ -66,7 +66,7 @@
                 <a target="_blank" href="https://captions.effect.network" class="navbar-item">
                   <img src="~assets/img/dapps/effect-captions_h100.png" />
                 </a>
-                <a target="_blank" href="https://pieces.effect.network" class="navbar-item">
+                <a target="_blank" href="https://superrare.co/effectpieces" class="navbar-item">
                   <img src="~assets/img/dapps/effect-pieces_h100.png" />
                 </a>
               </div>

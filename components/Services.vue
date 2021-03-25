@@ -145,14 +145,14 @@
           </a>
         </div>
         <div class="column is-4">
-          <a href="https://pieces.effect.network" target="_blank" class="card is-flat is-hoverable dapp-pieces">
+          <a href="https://superrare.co/effectpieces" target="_blank" class="card is-flat is-hoverable dapp-pieces">
             <header class="card-header">
               <div class="card-header-title ">
                 <div class="has-text-centered" style="width: 100%;">
                   <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-pieces_part-white_h100.png') : require('@/assets/img/dapps/effect-pieces_h100.png')" class="dapp-logo block"/>
                   <img src="~assets/img/dapps/effect-pieces_white_h100.png" class="dapp-logo-white block"/>
                   <p class="has-text-weight-semibold block">Crowdsourced Art on the Blockchain</p>
-                  <b> <a href="https://pieces.effect.network" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
+                  <b> <a href="https://superrare.co/effectpieces" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
                 </div>
               </div>
             </header>
