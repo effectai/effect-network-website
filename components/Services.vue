@@ -6,7 +6,7 @@
         <p class="has-limited-width is-horizontal-centered">Specializing in structuring data in areas like Natural
           Language Processing, Machine Learning Training Data, Deploying AI Services, Translations, and many more.</p>
       </div>
-      <div class="columns is-multiline is-variable is-6 mt-6">
+      <div class="columns is-multiline is-variable is-5 mt-6">
         <div class="column is-4">
           <nuxt-link to="/force"  class="card is-flat is-hoverable dapp-force">
             <header class="card-header">
@@ -14,7 +14,7 @@
                 <div class="has-text-centered" style="width: 100%">
                   <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-force_part-white_h100.png') : require('@/assets/img/dapps/effect-force_h100.png')" class="dapp-logo block"/>
                   <img src="~assets/img/dapps/effect-force_white_h100.png" class="dapp-logo-white block"/>
-                  <p class="has-text-weight-semibold block">A Global Workforce to Structure Data</p>
+                  <p class="has-text-weight-semibold block">Work From Anywhere At Anytime</p>
                   <b> <nuxt-link to="/force" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Learn More</nuxt-link> </b>
                 </div>
               </div>
