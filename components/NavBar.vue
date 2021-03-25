@@ -52,22 +52,22 @@
 
               <div class="navbar-dropdown">
                 <nuxt-link to="/force" class="navbar-item">
-                  <img src="~assets/img/dapps/effect-force_h100.png" />
+                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-force_part-white_h100.png') : require('@/assets/img/dapps/effect-force_h100.png')" class="dapp-logo block"/>
                 </nuxt-link>
                 <a target="_blank" href="https://dao.effect.network" class="navbar-item">
-                  <img src="~assets/img/dapps/effect-dao_h100.png" />
+                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-dao_part-white_h100.png') : require('@/assets/img/dapps/effect-dao_h100.png')" class="dapp-logo block"/>
                 </a>
                 <a target="_blank" href="https://translate.effect.network" class="navbar-item">
-                  <img src="~assets/img/dapps/effect-translate_h100.png" />
+                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-translate_part-white_h100.png') : require('@/assets/img/dapps/effect-translate_h100.png')" class="dapp-logo block"/>
                 </a>
                 <a href="https://socials.effect.network" target="_blank" class="navbar-item">
-                  <img src="~assets/img/dapps/effect-socials_h100.png" />
+                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-socials_part-white_h100.png') : require('@/assets/img/dapps/effect-socials_h100.png')" class="dapp-logo block"/>
                 </a>
                 <a target="_blank" href="https://captions.effect.network" class="navbar-item">
-                  <img src="~assets/img/dapps/effect-captions_h100.png" />
+                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-captions_part-white_h100.png') : require('@/assets/img/dapps/effect-captions_h100.png')" class="dapp-logo block"/>
                 </a>
                 <a target="_blank" href="https://pieces.effect.network" class="navbar-item">
-                  <img src="~assets/img/dapps/effect-pieces_h100.png" />
+                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-pieces_part-white_h100.png') : require('@/assets/img/dapps/effect-pieces_h100.png')" class="dapp-logo block"/>
                 </a>
               </div>
             </div>
@@ -127,11 +127,9 @@
         }
       }
     }
-
     .navbar-menu {
       margin-top: 8px;
       justify-content: center;
-
       .navbar-item {
         font-weight: 500;
         padding: 10px 20px;
@@ -156,11 +154,9 @@
           background: $secondary;
           content: "";
         }
-
         &.is-active {
           color: $primary;
           font-weight: 700;
-
           &:after {
             width: calc(100% - 1.5rem - 15px);
           }
@@ -168,28 +164,72 @@
       }
     }
   }
+
   .dark-mode {
-    .navbar {
+    .navbar-burger {
+      color: $white;
+    }
+    .navbar-dropdown {
+      background: $primary;
+      border-top-color: $primary
+    }
+    .navbar-menu {
+      .navbar-link {
+        color: $grey-light;
+        &:after {
+          border-color: $grey-light;
+        }
+        &.is-active, &:hover {
+          color: white;
+          &:after {
+            border-color: white;
+          }
+        }
+      }
+      .navbar-item {
+        color: $grey-light;
+        &:after {
+          background: white;
+        }
+        &.is-active, &:hover {
+          color: white;
+        }
+        &.dapps .navbar-item:hover {
+          background-color:rgba(0, 0, 0, 0.3) !important
+        }
+      }
+    }
+    .navbar-brand {
+      .navbar-item {
+        color: white;
+        &.is-active, &:hover {
+          color: white;
+        }
+      }
+    }
+      
+    @media all and (max-width: 770px) {
       .navbar-menu {
+        background: $primary;
         .navbar-link {
-          color: $grey-light;
+          color: $white;
           &:after {
             border-color: $grey-light;
           }
           &.is-active, &:hover {
-            color: white;
-            &:after {
-              border-color: white;
-            }
+            color: $primary;
           }
         }
+        .navbar-link:not(.is-arrowless) {
+          padding-right: .75rem;
+        }
         .navbar-item {
-          color: $grey-light;
+          color: $white;
           &:after {
             background: white;
           }
           &.is-active, &:hover {
-            color: white;
+            color: $primary;
           }
         }
       }
@@ -197,7 +237,7 @@
         .navbar-item {
           color: white;
           &.is-active, &:hover {
-            color: white;
+            color: $primary;
           }
         }
       }
