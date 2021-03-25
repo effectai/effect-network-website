@@ -13,7 +13,7 @@
         </div>
 
         <div class="my-6" id="buy">
-          <section class="section has-background-secondary has-radius background-image efx-graph">
+          <section class="section has-background-secondary-alt has-radius background-image efx-graph">
             <div class="has-text-centered block">
               <h2 class="title is-2">Buy EFX</h2>
               <p class="subtitle">Buy EFX tokens with BTC, EOS or USDT</p>

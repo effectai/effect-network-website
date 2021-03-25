@@ -27,15 +27,15 @@
           </nuxt-link>
         </div>
         <div class="column">
-          <a href="https://rosette.ai?campaign=effect-translate" target="_blank">
+          <nuxt-link to="/cases#case-linus">
             <img width="160px" max-width="200px" height="64px" max-height="80px" contain class="ma-2 greyscale"
-                 :src="require('@/assets/img/partners/youtube_color.png')"/>
-          </a>
+                 :src="require('@/assets/img/partners/linus.png')"/>
+          </nuxt-link>
         </div>
         <div class="column">
           <nuxt-link to="/cases">
             <img width="160px" max-width="200px" height="64px" max-height="80px" contain class="ma-2 greyscale"
-                 :src="require('@/assets/img/partners/quadia_color.png')"/>
+                 :src="require('@/assets/img/partners/kraftheinz.png')"/>
           </nuxt-link>
         </div>
       </div>

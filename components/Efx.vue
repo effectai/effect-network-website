@@ -1,5 +1,5 @@
 <template>
-  <section class="hero is-secondary mb-6">
+  <section class="hero is-secondary-alt">
     <div class="hero-body container has-text-centered">
       <h2 class="title is-2 is-spaced">EFX Token</h2>
       <h4 class="subtitle">The digital asset that powers the Effect Network</h4>

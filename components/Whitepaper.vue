@@ -27,6 +27,6 @@
 
 <style lang="scss" scoped>
 .has-blue-white-background {
-  background: linear-gradient(90deg, $secondary 35%, white 35%);
+  background: linear-gradient(90deg, $secondary-alt 35%, white 35%);
 }
 </style>

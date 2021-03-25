@@ -16,7 +16,7 @@
             </nuxt-link>
           </div>
           <div class="column"></div>
-          <div class="column is-two-fifths">
+          <div class="column is-two-fifths mt-6">
             <img src="~assets/img/women_laptop.jpg"  class="has-radius has-shadow"/>
             <br>
           </div>
@@ -26,7 +26,7 @@
             <img width="500" src="~assets/img/threepeople.jpg"  class="has-radius has-shadow"/>
           </div>
           <div class="mx-4">
-            <img width="300" src="~assets/img/person-phone-vertical.jpg"  class="has-radius has-shadow"/>
+            <img width="250" src="~assets/img/person-phone-vertical.jpg"  class="has-radius has-shadow"/>
           </div>
         </div>
       </div>

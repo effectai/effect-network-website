@@ -10,14 +10,18 @@ $family-secondary: 'p22-mackinac-pro',serif;
 
 // Colors
 $primary: #101D56;
-$secondary: #5158fa;
+$secondary: #1148EB;
+$secondary-alt: #5158fa;
+
 $secondary-invert: findColorInvert($secondary) !default;
+$secondary-alt-invert: findColorInvert($secondary-alt) !default;
 $accent: #FF7C2F;
 $accent-invert: findColorInvert($accent) !default;
 $yellow-light: #FFFDF7;
 
 $custom-colors: (
   "secondary":($secondary, $secondary-invert),
+  "secondary-alt":($secondary-alt, $secondary-alt-invert),
   "accent":($accent, $accent-invert),
 );
 
