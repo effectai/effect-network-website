@@ -1,7 +1,7 @@
 <template>
   <div class="mb-6 sitemap">
-    <div class="columns is-multiline">
-      <div class="column is-narrow">
+    <div class="columns is-mobile is-multiline">
+      <div class="column is-half-mobile is-narrow">
         <div class="menu">
           <p class="menu-label">
             Get Started
@@ -17,7 +17,7 @@
           </ul>
         </div>
       </div>
-      <div class="column is-narrow">
+      <div class="column is-half-mobile is-narrow">
         <div class="menu">
           <p class="menu-label">
             dApps
@@ -32,7 +32,7 @@
           </ul>
         </div>
       </div>
-      <div class="column is-narrow">
+      <div class="column is-two-fifths-mobile is-narrow">
         <div class="menu">
           <p class="menu-label">
             SOCIALS
@@ -50,10 +50,10 @@
           </ul>
         </div>
       </div>
-      <div class="column">
-        <div class="columns">
+      <div class="column is-full-mobile ">
+        <div class="columns is-mobile">
 
-          <div class="column is-half is-flex is-align-items-start is-justify-content-center">
+          <div class="column is-half is-half-mobile is-flex is-align-items-start is-justify-content-center">
             <img width="30" src="~assets/img/icons/pin.svg" contain class="mr-4 mt-2"/>
             <div>
               <div class="menu-label mb-0">Europe Office</div>
@@ -64,7 +64,7 @@
               <div>The Netherlands</div>
             </div>
           </div>
-          <div class="column is-half is-flex is-align-items-start is-justify-content-center">
+          <div class="column is-half is-half-mobile is-flex is-align-items-start is-justify-content-center">
             <img width="30" src="~assets/img/icons/pin.svg" contain class="mr-4 mt-2"/>
             <div>
               <div class="menu-label mb-0">Asia Office</div>
@@ -116,5 +116,8 @@
 <style lang="scss" scoped>
 .sitemap * {
   color: $white;
+}
+@media all and (max-width: 770px) {
+
 }
 </style>
