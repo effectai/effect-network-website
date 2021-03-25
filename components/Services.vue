@@ -14,13 +14,13 @@
                 <div class="has-text-centered" style="width: 100%">
                   <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-force_part-white_h100.png') : require('@/assets/img/dapps/effect-force_h100.png')" class="dapp-logo block"/>
                   <img src="~assets/img/dapps/effect-force_white_h100.png" class="dapp-logo-white block"/>
-                  <p class="has-text-weight-semibold block">A global Workforce to Structure Data</p>
+                  <p class="has-text-weight-semibold block">A Global Workforce to Structure Data</p>
                   <b> <nuxt-link to="/force" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Learn More</nuxt-link> </b>
                 </div>
               </div>
             </header>
 <!--            <div class="card-content">-->
-<!--              <h4 class="subtitle is-5 has-text-weight-semibold">A global Workforce to Structure Data</h4>-->
+<!--              <h4 class="subtitle is-5 has-text-weight-semibold">A Global Workforce to Structure Data</h4>-->
 <!--              <div>-->
 <!--                Whether you need training data, sentiment analysis,-->
 <!--                translations, or survey respondents, Force has you covered. We have thousands of workers, speaking-->
@@ -47,7 +47,7 @@
               </div>
             </header>
 <!--            <div class="card-content">-->
-<!--              <h4 class="subtitle is-5 has-text-weight-semibold">A global Workforce to Structure Data</h4>-->
+<!--              <h4 class="subtitle is-5 has-text-weight-semibold">A Global Workforce to Structure Data</h4>-->
 <!--              <div>-->
 <!--                Whether you need training data, sentiment analysis,-->
 <!--                translations, or survey respondents, Force has you covered. We have thousands of workers, speaking-->
@@ -74,7 +74,7 @@
               </div>
             </header>
 <!--            <div class="card-content">-->
-<!--              <h4 class="subtitle is-5 has-text-weight-semibold">A global Workforce to Structure Data</h4>-->
+<!--              <h4 class="subtitle is-5 has-text-weight-semibold">A Global Workforce to Structure Data</h4>-->
 <!--              <div>-->
 <!--                Whether you need training data, sentiment analysis,-->
 <!--                translations, or survey respondents, Force has you covered. We have thousands of workers, speaking-->
@@ -101,7 +101,7 @@
               </div>
             </header>
 <!--            <div class="card-content">-->
-<!--              <h4 class="subtitle is-5 has-text-weight-semibold">A global Workforce to Structure Data</h4>-->
+<!--              <h4 class="subtitle is-5 has-text-weight-semibold">A Global Workforce to Structure Data</h4>-->
 <!--              <div>-->
 <!--                Whether you need training data, sentiment analysis,-->
 <!--                translations, or survey respondents, Force has you covered. We have thousands of workers, speaking-->
@@ -130,7 +130,7 @@
               </header>
             </header>
 <!--            <div class="card-content">-->
-<!--              <h4 class="subtitle is-5 has-text-weight-semibold">A global Workforce to Structure Data</h4>-->
+<!--              <h4 class="subtitle is-5 has-text-weight-semibold">A Global Workforce to Structure Data</h4>-->
 <!--              <div>-->
 <!--                Whether you need training data, sentiment analysis,-->
 <!--                translations, or survey respondents, Force has you covered. We have thousands of workers, speaking-->
@@ -157,7 +157,7 @@
               </div>
             </header>
 <!--            <div class="card-content">-->
-<!--              <h4 class="subtitle is-5 has-text-weight-semibold">A global Workforce to Structure Data</h4>-->
+<!--              <h4 class="subtitle is-5 has-text-weight-semibold">A Global Workforce to Structure Data</h4>-->
 <!--              <div>-->
 <!--                Whether you need training data, sentiment analysis,-->
 <!--                translations, or survey respondents, Force has you covered. We have thousands of workers, speaking-->
