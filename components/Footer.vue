@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer mt-6">
+  <footer class="footer pt-6">
     <div class="container">
       <sitemap />
       <div class="has-text-centered has-text-white">

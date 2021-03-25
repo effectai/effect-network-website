@@ -1,5 +1,5 @@
 <template>
-  <section class="hero is-secondary-alt is-medium">
+  <section class="hero is-secondary-alt">
     <div class="hero-body container has-text-centered">
       <h1 class="title is-2">
         Join our mailing list
