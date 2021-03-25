@@ -4,8 +4,8 @@
       <div class="container is-max-widescreen">
         <div class="columns is-centered is-vcentered is-variable is-8">
           <div class="column is-three-fifths p-6">
-            <figure class="image has-radius is-5by4 background-image force-image mx-6">
-  <!--            <img src="~assets/img/threepeople.jpg" class="has-radius">-->
+            <figure class="image has-radius is-5by4  mx-6">
+              <img src="~assets/img/force-desktop.png" class="has-radius">
             </figure>
           </div>
           <div class="column is-two-fifths">
@@ -23,7 +23,7 @@
 
 <style lang="scss" scoped>
 .force-image {
-  background-image: url('~assets/img/threepeople.jpg');
+  //background-image: url('~assets/img/force-desktop.png');
 }
 .force-circle {
   background-image: url('~assets/img/grad_home_force.png');

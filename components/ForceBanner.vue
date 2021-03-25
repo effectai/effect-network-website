@@ -18,7 +18,7 @@
           <div class="column"></div>
           <div class="column is-half pt-6 is-hidden-mobile">
             <br><br><br>
-            <img src="~assets/img/threepeople.jpg"  class="has-radius has-shadow"/>
+            <img src="~assets/img/force-mobile.jpg"  class="has-radius has-shadow"/>
           </div>
         </div>
 

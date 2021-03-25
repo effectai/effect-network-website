@@ -8,7 +8,7 @@
             <h2 class="title is-2">Effect Proposal System</h2>
             <h4 class="subtitle">Vote, Stake and Earn EFX</h4>
             <p>DAOs and distributed organizations rely heavily on the contribution of its members. A key method that allows its members to add value to the network and decide what is important to the project as a whole is a proposal system.</p>
-            <a href="https://dao.effect.ai" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}">Explore DAO</a>
+            <a href="https://dao.effect.network" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}">Explore DAO</a>
           </div>
           <div class="column is-half">
             <figure class="image has-shadow has-radius">
