@@ -33,16 +33,15 @@
                     </div>
                   </div>
                   <div class="title is-4 is-family-sans-serif">{{post.title}}</div>
-                  <div class="subtitle is-7">{{post.date}}</div>
                   <p>
                     {{post.text}}
                   </p>
                 </div>
-                <footer class="card-footer">
+                <footer class="card-footer ">
                   <a v-if="post.type == 'video'" target="_blank" :href="post.href" class="card-footer-item" :class="{'has-text-accent': $colorMode.value === 'dark'}">
                     Watch Video <i class="fab fa-youtube ml-3"></i>
                   </a>
-                  <a v-else target="_blank" :href="post.href" class="card-footer-item" :class="{'has-text-accent': $colorMode.value === 'dark'}">
+                  <a v-else target="_blank" :href="post.href" class="card-footer-item " :class="{'has-text-accent': $colorMode.value === 'dark'}">
                     Read More <i class="fas fa-chevron-right ml-3"></i>
                   </a>
                 </footer>
@@ -58,29 +57,31 @@
       <div class="">
           <div class="columns is-multiline">
             <div class="column is-one-quarter" v-for="post in posts" :key="post.title">
-              <div class="card is-flat" :href="post.href" target="_blank" style="min-height: 300px">
+              <div class="card is-flat" :href="post.href" target="_blank">
                 <div class="card-image full-image background-image" :style="'background-image: url(\''+post.img+'\')'">
 <!--                  <figure class="image is-5by3 background-image" >-->
 <!--                  </figure>-->
                 </div>
-                <div class="card-content" style="min-height: 125px">
-                  <div class="menu-label has-text-white post-type">
+                <div class="card-content is-flex is-justify-content-space-between is-flex-direction-column" style="min-height: 250px;">
+                  <div class="is-size-6 has-text-shadow has-text-white has-text-right">
                     <span v-if="post.type == 'video'">Video</span>
                     <span v-else-if="post.type == 'blog'">Blog Post</span>
                     <span v-else-if="post.type == 'press'">Press Release</span>
                     <span v-else>Post</span>
                   </div>
+                  <div>
+                  <div class="subtitle has-text-white is-7" style="margin-top:70px;">{{post.date}}</div>
                   <div class="title has-text-white is-5 is-family-sans-serif">{{post.title}}</div>
-                  <div class="subtitle has-text-white is-7">{{post.date}}</div>
+                  </div>
                 </div>
-                <footer class="card-footer">
-                  <a v-if="post.type == 'video'" target="_blank" :href="post.href" class="card-footer-item" :class="{'has-text-accent': $colorMode.value === 'dark'}">
+                <small class="card-footer">
+                  <a v-if="post.type == 'video'" target="_blank" :href="post.href" class="card-footer-item has-text-white" :class="{'has-text-accent': $colorMode.value === 'dark'}">
                     Watch Video <i class="fab fa-youtube ml-3"></i>
                   </a>
-                  <a v-else target="_blank" :href="post.href" class="card-footer-item" :class="{'has-text-accent': $colorMode.value === 'dark'}">
+                  <a v-else target="_blank" :href="post.href" class="card-footer-item has-text-white" :class="{'has-text-accent': $colorMode.value === 'dark'}">
                     Read More <i class="fas fa-chevron-right ml-3"></i>
                   </a>
-                </footer>
+                </small>
               </div>
             </div>
           </div>
@@ -280,6 +281,11 @@
   width:100%;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 }
+
+.card-footer {
+  z-index: 1;
+  position: relative;
+}
 .full-image {
   position: absolute;
   top:0;
@@ -294,7 +300,7 @@
     left:0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9));
   }
 }
 
