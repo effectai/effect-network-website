@@ -17,7 +17,7 @@
         <div class="column">
           <nuxt-link to="/cases#case-ing">
             <img width="140px" max-width="180px" height="64px" max-height="80px" contain class="ma-2 greyscale"
-                 :src="require('@/assets/img/partners/ing_color.png')"/>
+                 :src="require('@/assets/img/partners/ascendia.png')"/>
           </nuxt-link>
         </div>
         <div class="column">
