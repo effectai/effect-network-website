@@ -17,7 +17,7 @@
               Tap into the easiest, most scalable way to collect and structure your data and implement Artificial Intelligence systems
               within your company.
             </p>
-            <a href="https://worker.effect.ai" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}">Learn More</a>
+            <a href="https://force.effect.ai" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}">Learn More</a>
           </div>
         </div>
       </div>
