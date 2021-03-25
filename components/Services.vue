@@ -181,6 +181,71 @@
     max-height: 70px;
   }
 
+  .dark-mode {
+    .card {
+      &.is-hoverable {
+        .card-header {
+          background: $secondary;
+          transition: background 0.1s;
+
+          .card-header-title {
+            color: white;
+          }
+
+          .button {
+            background: white;
+            color: $secondary;
+            border: none;
+          }
+        }
+
+        &.dapp-force {
+          .card-header {
+            background: darken($force-color, 10%);
+          }
+        }
+
+        &.dapp-dao {
+          .card-header {
+            background: darken($dao-color, 10%);
+          }
+        }
+
+        &.dapp-translate {
+          .card-header {
+            background: darken($translate-color, 10%);
+          }
+        }
+
+        &.dapp-socials {
+          .card-header {
+            background: darken($socials-color, 10%);
+          }
+        }
+
+        &.dapp-captions {
+          .card-header {
+            background: darken($captions-color, 10%);
+          }
+        }
+
+        &.dapp-pieces {
+          .card-header {
+            background: darken($pieces-color, 10%);
+          }
+        }
+
+        .dapp-logo {
+          display: none !important;
+        }
+
+        .dapp-logo-white {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
   .card {
     .card-content {
       padding: 1.25rem 2.25rem;

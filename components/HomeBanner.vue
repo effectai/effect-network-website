@@ -6,10 +6,9 @@
     <section class="section">
       <div class="container is-max-widescreen mt-6">
         <div class="columns">
-          <div class="column is-half">
-            <h1 class="title is-1 is-spaced has-background-white-blur"><span>Freedom To Work From Anywhere At Anytime</span></h1>
-            <h1 class="subtitle has-background-white-blur"><span>The first Blockchain based framework for the Future-of-Work.</span></h1>
-            <h1 class="subtitle has-background-white-blur"><span>Access to a global, on-demand, 24x7 scalable WorkForce.</span></h1>
+          <div class="column is-two-fifths">
+            <h1 class="title is-1 is-spaced has-background-white-blur has-text-weight-medium"><span>Freedom To Work From Anywhere At Anytime</span></h1>
+            <h1 class="subtitle has-background-white-blur"><span>The first Blockchain based framework for the Future-of-Work. Access to a global, on-demand, 24x7 scalable WorkForce.</span></h1>
             <!--          <p>Helping data science teams succeed with structuring data and the deployment of AI automation</p>-->
             <br>
             <nuxt-link to="/force" class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Work 3.0

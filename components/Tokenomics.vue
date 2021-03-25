@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-6 has-background-primary has-radius tokenomics-container" >
+  <div class="mt-6 has-radius tokenomics-container" >
     <tokenomics />
     <lottie :options="lottieOptions" @animCreated="handleAnimation" class="tokenomics-animation"/>
   </div>

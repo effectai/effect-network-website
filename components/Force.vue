@@ -26,9 +26,7 @@
   background-image: url('~assets/img/threepeople.jpg');
 }
 .force-circle {
-  background-image: url('~assets/img/circle_force_rotated.png');
+  background-image: url('~assets/img/grad_home_force.png');
   background-repeat: no-repeat;
-  background-position: -1000px -750px;
-  background-size: 1500px;
 }
 </style>
