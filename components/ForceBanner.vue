@@ -9,8 +9,7 @@
           <div class="column is-half">
             <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-force_part-white_h100.png') : require('@/assets/img/dapps/effect-force_h100.png')" width="170" class="mb-4" />
             <h1 class="title is-1 is-spaced has-background-white-blur"><span>Work 3.0</span></h1>
-            <h1 class="subtitle has-background-white-blur"><span>Global WorkForce to Structure Data</span></h1>
-            <p class="has-background-white-blur"><span>Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. Lorem ipsum flora elipses esta much. </span></p>
+            <p class="has-background-white-blur"><span>Helping data science teams succeed with structuring data and the deployment of AI automation.</span></p>
             <br>
             <a href="https://worker.effect.ai" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}">Join the WorkForce</a>
           </div>
