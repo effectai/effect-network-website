@@ -7,36 +7,13 @@
             Get Started
           </p>
           <ul class="menu-list">
-            <li><nuxt-link to="/token-page">What is EFX?</nuxt-link></li>
-            <li><a>Customers</a></li>
-            <li><a>Dashboard</a></li>
-            <li><a>Customers</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="column is-narrow">
-        <div class="menu">
-          <p class="menu-label">
-            The Foundation
-          </p>
-          <ul class="menu-list">
-            <li><a>Dashboard</a></li>
-            <li><a>Customers</a></li>
-            <li><a>Dashboard</a></li>
-            <li><a>Customers</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="column is-narrow">
-        <div class="menu">
-          <p class="menu-label">
-            Research
-          </p>
-          <ul class="menu-list">
-            <li><a>Dashboard</a></li>
-            <li><a>Customers</a></li>
-            <li><a>Dashboard</a></li>
-            <li><a>Customers</a></li>
+            <li><nuxt-link to="/">Home</nuxt-link></li>
+            <li><nuxt-link to="/token-page">Tokenomics</nuxt-link></li>
+            <li><nuxt-link to="/for-developers">Build</nuxt-link></li>
+            <li><a target="_blank" href="https://dao.effect.network">DAO</a></li>
+            <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+            <li><nuxt-link to="/team">Team</nuxt-link></li>
+            <li><nuxt-link to="/contact">Contact</nuxt-link></li>
           </ul>
         </div>
       </div>
@@ -46,12 +23,12 @@
             dApps
           </p>
           <ul class="menu-list">
-            <li><a>Effect Force</a></li>
-            <li><a>Effect DAO</a></li>
-            <li><a>Effect Translate</a></li>
-            <li><a>Effect Socials</a></li>
-            <li><a>Effect Captions</a></li>
-            <li><a>Effect Pieces</a></li>
+            <li><a href="https://worker.effect.ai" target="_blank">Effect Force</a></li>
+            <li><a href="https://dao.effect.network" target="_blank">Effect DAO</a></li>
+            <li><a href="https://translate.effect.network" target="_blank">Effect Translate</a></li>
+            <li><a href="https://socials.effect.network" target="_blank">Effect Socials</a></li>
+            <li><a href="https://captions.effect.network" target="_blank">Effect Captions</a></li>
+            <li><a href="https://pieces.effect.network" target="_blank">Effect Pieces</a></li>
           </ul>
         </div>
       </div>

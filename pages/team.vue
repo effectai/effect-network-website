@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section has-background-light">
     <div class=" container is-max-widescreen">
       <div class="has-text-centered">
         <h3 class="title is-2">Team</h3>
@@ -21,9 +21,9 @@
           <h4 class="title is-family-sans-serif has-text-weight-bold">
             Ambassadors
           </h4>
-          <p class="has-limited-width">Right from the very beginning of Effect.AI, the project has been about community. 
-            In the true sense of decentralization we want to connect the globe. From day one there have been community members who have contributed and help spread the word on Effect.AI in many creative ways. 
-            This prompted us to create The Effect Ambassadors Movement aka T.E.A.M., a program designed to offer opportunities and incentives to those who want to be more involved in the project. 
+          <p class="has-limited-width">Right from the very beginning of Effect.AI, the project has been about community.
+            In the true sense of decentralization we want to connect the globe. From day one there have been community members who have contributed and help spread the word on Effect.AI in many creative ways.
+            This prompted us to create The Effect Ambassadors Movement aka T.E.A.M., a program designed to offer opportunities and incentives to those who want to be more involved in the project.
             T.E.A.M. is also a platform where participants are rewarded for their efforts!</p>
           <div class="columns is-multiline mt-6">
             <div class="column is-one-fifth has-text-centered px-4 mb-4" v-for="ambassador in ambassadors" :key="ambassador.name">
@@ -63,75 +63,75 @@
           {
             name: 'Chris Dawe',
             title: 'CEO',
-            link: 'http://twitter.com',
-            image: 'https://effect.ai/_nuxt/img/9513395.jpg'
+            link: 'https://www.linkedin.com/in/chris-r-dawe-b79217151/',
+            image: require('@/assets/img/team/chris.jpg')
           },
           {
             name: 'Jesse Eisses',
             title: 'CTO',
-            link: 'http://twitter.com',
-            image: 'https://effect.ai/_nuxt/img/86cc63f.jpg'
+            link: 'https://www.linkedin.com/in/jesse-eisses-9760ab48/',
+            image: require('@/assets/img/team/jesse.jpg')
           },
           {
             name: 'Laurens Verspreek',
             title: 'Chief Engineer',
-            link: 'http://twitter.com',
-            image: 'https://effect.ai/_nuxt/img/335fc5f.jpg'
+            link: 'https://www.linkedin.com/in/laurensverspeek/',
+            image: require('@/assets/img/team/laurens.jpg')
           },
-          {
-            name: 'Team member #4',
-            title: 'Chief Engineer',
-            link: 'http://twitter.com',
-            image: 'https://bulma.io/images/placeholders/128x128.png'
-          },
-          {
-            name: 'Team member #5',
-            title: 'Chief Engineer',
-            link: 'http://twitter.com',
-            image: 'https://bulma.io/images/placeholders/128x128.png'
-          },
-          {
-            name: 'Team member #6',
-            title: 'Chief Engineer',
-            link: 'http://twitter.com',
-            image: 'https://bulma.io/images/placeholders/128x128.png'
-          },
-          {
-            name: 'Team member #7',
-            title: 'Chief Engineer',
-            link: 'http://twitter.com',
-            image: 'https://bulma.io/images/placeholders/128x128.png'
-          },
-          {
-            name: 'Team member #8',
-            title: 'Chief Engineer',
-            link: 'http://twitter.com',
-            image: 'https://bulma.io/images/placeholders/128x128.png'
-          },
-          {
-            name: 'Team member #9',
-            title: 'Chief Engineer',
-            link: 'http://twitter.com',
-            image: 'https://bulma.io/images/placeholders/128x128.png'
-          },
-          {
-            name: 'Team member #10',
-            title: 'Chief Engineer',
-            link: 'http://twitter.com',
-            image: 'https://bulma.io/images/placeholders/128x128.png'
-          },
-          {
-            name: 'Team member #11',
-            title: 'Chief Engineer',
-            link: 'http://twitter.com',
-            image: 'https://bulma.io/images/placeholders/128x128.png'
-          },
-          {
-            name: 'Team member #12',
-            title: 'Chief Engineer',
-            link: 'http://twitter.com',
-            image: 'https://bulma.io/images/placeholders/128x128.png'
-          },
+          // {
+          //   name: 'Team member #4',
+          //   title: 'Chief Engineer',
+          //   link: 'http://twitter.com',
+          //   image: 'https://bulma.io/images/placeholders/128x128.png'
+          // },
+          // {
+          //   name: 'Team member #5',
+          //   title: 'Chief Engineer',
+          //   link: 'http://twitter.com',
+          //   image: 'https://bulma.io/images/placeholders/128x128.png'
+          // },
+          // {
+          //   name: 'Team member #6',
+          //   title: 'Chief Engineer',
+          //   link: 'http://twitter.com',
+          //   image: 'https://bulma.io/images/placeholders/128x128.png'
+          // },
+          // {
+          //   name: 'Team member #7',
+          //   title: 'Chief Engineer',
+          //   link: 'http://twitter.com',
+          //   image: 'https://bulma.io/images/placeholders/128x128.png'
+          // },
+          // {
+          //   name: 'Team member #8',
+          //   title: 'Chief Engineer',
+          //   link: 'http://twitter.com',
+          //   image: 'https://bulma.io/images/placeholders/128x128.png'
+          // },
+          // {
+          //   name: 'Team member #9',
+          //   title: 'Chief Engineer',
+          //   link: 'http://twitter.com',
+          //   image: 'https://bulma.io/images/placeholders/128x128.png'
+          // },
+          // {
+          //   name: 'Team member #10',
+          //   title: 'Chief Engineer',
+          //   link: 'http://twitter.com',
+          //   image: 'https://bulma.io/images/placeholders/128x128.png'
+          // },
+          // {
+          //   name: 'Team member #11',
+          //   title: 'Chief Engineer',
+          //   link: 'http://twitter.com',
+          //   image: 'https://bulma.io/images/placeholders/128x128.png'
+          // },
+          // {
+          //   name: 'Team member #12',
+          //   title: 'Chief Engineer',
+          //   link: 'http://twitter.com',
+          //   image: 'https://bulma.io/images/placeholders/128x128.png'
+          // },
         ],
         ambassadors: [
           {
