@@ -4,8 +4,8 @@
       <div class="container is-max-widescreen">
         <div class="columns is-centered is-vcentered is-variable is-8">
           <div class="column is-three-fifths p-6">
-            <figure class="image has-radius is-5by4  mx-6">
-              <img src="~assets/img/force-desktop.png" class="has-radius">
+            <figure class="image has-radius is-5by4">
+              <img src="~assets/img/force-desktop.png" class="has-radius mt-6">
             </figure>
           </div>
           <div class="column is-two-fifths">

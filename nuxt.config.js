@@ -61,7 +61,7 @@ export default {
     'nuxt-password-protect'
   ],
   passwordProtect: {
-    enabled: true,
+    enabled: false,
     formPath: '/password',
     password: 'hello-network',
     tokenSeed: 101010,
