@@ -21,24 +21,34 @@
 
           </div>
           <div class="navbar-end is-align-items-center">
+             <div @click="mobileMenu = false">
             <nuxt-link class="navbar-item" to="/force" exact-active-class="is-active">
               Work 3.0
             </nuxt-link>
+             </div>
+             <div @click="mobileMenu = false">
             <nuxt-link class="navbar-item" to="/token-page" exact-active-class="is-active">
               EFX Token
             </nuxt-link>
+             </div>
 
+             <div @click="mobileMenu = false">
             <nuxt-link class="navbar-item" to="/for-developers" exact-active-class="is-active">
               Develop
             </nuxt-link>
+             </div>
 
+             <div @click="mobileMenu = false">
             <nuxt-link class="navbar-item" to="/news" exact-active-class="is-active">
               Blog
             </nuxt-link>
+               </div>
             <div class="navbar-item has-dropdown is-hoverable dapps">
+               <div @click="mobileMenu = false">
               <nuxt-link to="/#dapps" class="navbar-link">
                 dApps
               </nuxt-link>
+                 </div>
 
               <div class="navbar-dropdown">
                 <nuxt-link to="/force" class="navbar-item">
@@ -62,9 +72,11 @@
               </div>
             </div>
             <div class="navbar-item" exact-active-class="is-active">
+               <div @click="mobileMenu = false">
               <nuxt-link class="button is-secondary is-outlined" :class="{'is-accent': $colorMode.value === 'dark'}" to="/token-page#buy" exact-active-class="is-active">
                 Buy EFX
               </nuxt-link>
+                 </div>
 
             </div>
             <darkmode-switcher class="ml-4" />
