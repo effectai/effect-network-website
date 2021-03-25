@@ -2,8 +2,8 @@
   <footer class="footer mt-6">
     <div class="container">
       <sitemap />
-      <div class="has-text-centered">
-        <small class="is-size-7">&copy; {{ new Date().getFullYear() }} <b>THE EFFECT NETWORK</b> by EFFECT.AI</small>
+      <div class="has-text-centered has-text-white">
+        <small class="is-size-7">&copy; {{ new Date().getFullYear() }} <b>EFFECT NETWORK</b> by EFFECT.AI</small>
       </div>
     </div>
   </footer>
