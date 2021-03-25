@@ -1,60 +1,69 @@
 <template>
   <div>
-    <section class="section">
-      <div class="container is-max-widescreen">
-        <div class="has-text-centered my-6">
-          <h4 class="title is-4">The Effect Network</h4>
-          <h1 class="subtitle is-1">For Developers</h1>
+    <div class="developer-hero is-primary hero">
+      <section class="section">
+        <div class="container">
+          <!-- <div class="has-text-centered my-6">
+            <h4 class="title is-4">The Effect Network</h4>
+            <h1 class="subtitle is-1">For Developers</h1>
+          </div> -->
+          <div class="columns pb-6 pt-6">
+            <div class="column is-two-fifths mt-6">
+              <h2 class="title is-1">Build on The Effect Network Protocol</h2>
+              <p class="block">
+                Whether you are a data scientist, a blockchain developer, or a software engineer, the design of The Effect
+                Network incentivizes everyone to build out the Effect ecosystem.
+              </p>
+              <p class="block">
+                The Effect Network creates new possibilities for developers to build, monetize, and power AI algorithms on a
+                decentralized network, thus opening AI development opportunities to all.
+              </p>
+            </div>
+            <div class="column is-four-fifths">
+              <network />
+            </div>
+          </div>
         </div>
-        <div class="columns pb-6 is-vcentered">
+      </section>
+    </div>
+    <section class="section always-light has-background-white">
+        <div class="container">
+            <develop-blocks-alt />
+        </div>
+    </section>
+    <section class="section always-light has-background-white">
+      <div class="container">
+        <div class="columns has-text-left is-white is-vcentered is-variable is-8 my-6 pt-4 pb-6">
           <div class="column is-two-fifths">
-            <h3 class="title"><b class="is-family-sans-serif">Build</b> on The Effect Network Protocol</h3>
-            <p class="block">
-              Whether you are a data scientist, a blockchain developer, or a software engineer, the design of The Effect
-              Network incentivizes everyone to build out the Effect ecosystem.
-            </p>
-            <p class="block">
-              The Effect Network creates new possibilities for developers to build, monetize, and power AI algorithms on a
-              decentralized network, thus opening AI development opportunities to all.
-            </p>
-            <p class="block">
-              <b>An open-source development portal to build a Decentralized Network for Artificial Intelligence.</b>
-            </p>
-          </div>
-          <div class="column is-four-fifths">
-            <network />
-          </div>
-        </div>
-        <develop-blocks />
-        <div class="columns has-text-left is-vcentered is-variable is-8 my-6 py-6">
-          <div class="column is-three-fifths">
             <h2 class="title is-2">Smart Contracts</h2>
-            <h2 class="subtitle">Smart Contract Stack on the EOS blockchain</h2>
             <p class="block">
               The Effect Network is an open protocol built with a technology stack of Smart Contracts. The TEN protocol allows anyone to build decentralized applications and connect their interface to the network.
             </p>
-            <a class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" href="https://github.com/effectai/effect-network-eos" target="_blank">Smart Contracts</a>
+            <a class="button is-secondary" href="https://github.com/effectai/effect-network-eos" target="_blank">Smart Contracts</a>
           </div>
-          <div class="column is-two-fifths">
-            <img src="~assets/img/smart-contracts.png"/>
+          <div class="column is-three-fifths">
+            <img src="~assets/img/formula.png"/>
           </div>
         </div>
       </div>
     </section>
-    <whitepaper/>
+    <mailing-list />
   </div>
 </template>
 
 <script>
 import Whitepaper from '@/components/Whitepaper';
-import DevelopBlocks from '@/components/DevelopBlocks';
+import DevelopBlocksAlt from '@/components/DevelopBlocksAlt';
 import Network from "~/assets/img/developers.svg?inline";
+import MailingList from '@/components/MailingList';
 
 export default {
+  colorMode: 'dark',
   components: {
     Whitepaper,
     Network,
-    DevelopBlocks
+    DevelopBlocksAlt,
+    MailingList
   }
 }
 </script>
@@ -304,4 +313,7 @@ export default {
   }
 }
 
+</style>
+
+<style scoped lang="scss">
 </style>
