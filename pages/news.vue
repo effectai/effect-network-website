@@ -304,4 +304,8 @@
   }
 }
 
+.background-image {
+  background-color: $white;
+}
+
 </style>
