@@ -12,10 +12,7 @@
           <div class="column is-two-fifths py-6 pl-6">
             <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-force_part-white_h100.png') : require('@/assets/img/dapps/effect-force_h100.png')" width="170" class="mb-4" />
             <h2 class="title is-2">Work 3.0</h2>
-            <p>Custom integrations to fit your Artificial Intelligence, Automation, and Data Structuring initiatives.
-              Unfortunately, 80% of all businness-relevant data remains instructured, rendering it useless for Artificial Intelligence.
-              Tap into the easiest, most scalable way to collect and structure your data and implement Artificial Intelligence systems
-              within your company.
+            <p>Effect Force is the decentralized framework for the Future-of-Work. Currently there are over 10,000 people earning great pay in the cryptocurrency $EFX. You can now work from anywhere at any time from any device. Simply create an Effect Account and sign into Effect Force to start your future today.
             </p>
             <a href="https://force.effect.ai" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}">Learn More</a>
           </div>
