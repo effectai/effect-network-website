@@ -21,6 +21,11 @@
 
           </div>
           <div class="navbar-end is-align-items-center">
+            <div @click="mobileMenu = false">
+              <nuxt-link class="navbar-item" to="/" exact-active-class="is-active">
+                Home
+              </nuxt-link>
+            </div>
              <div @click="mobileMenu = false">
             <nuxt-link class="navbar-item" to="/force" exact-active-class="is-active">
               Work 3.0
@@ -73,7 +78,7 @@
             </div>
             <div class="navbar-item" exact-active-class="is-active">
                <div @click="mobileMenu = false">
-              <nuxt-link class="button is-secondary is-outlined" :class="{'is-accent': $colorMode.value === 'dark'}" to="/token-page#buy" exact-active-class="is-active">
+              <nuxt-link class="button is-secondary is-outlined" :class="{'is-accent': $colorMode.value === 'dark'}" to="/token-page" exact-active-class="is-active">
                 Buy EFX
               </nuxt-link>
                  </div>
