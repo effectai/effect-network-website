@@ -3,8 +3,7 @@
     <div class="container is-max-widescreen my-6">
       <div class="has-text-centered">
         <h1 class="title">Effect <b>Services</b></h1>
-        <p class="has-limited-width is-horizontal-centered">Specializing in structuring data in areas like Natural
-          Language Processing, Machine Learning Training Data, Deploying AI Services, Translations, and many more.</p>
+        <p class="has-limited-width is-horizontal-centered">From high quality translations to the very best in social media engagement to Machine Learning Training Data. There are many services available for you to tap into with ease. </p>
       </div>
       <div class="columns is-multiline is-variable is-5 mt-6">
         <div class="column is-4">
