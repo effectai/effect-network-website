@@ -4,8 +4,8 @@
       <div class="column is-one-third has-text-centered">
         <img src="~assets/img/icons/github.svg" style="height: 50px"/>
         <h3 class="title is-4 mt-4">Effect Github</h3>
-        <p>Join the Effect.AI development effort by contributing to one of the open source
-          projects on the public effect repositories.
+        <p>Join the Effect.AI development effort by contributing to one of the open-source
+          projects on the public Effect repositories.
         </p>
         <a target="_blank" class="button is-text is-outlined mt-2" :class="{'is-accent': $colorMode.value === 'dark'}" href="https://github.com/effectai">Explore Github</a>
       </div>
@@ -18,7 +18,7 @@
       <div class="column is-one-third has-text-centered">
         <img src="~assets/img/icons/whitepaper.svg" style="height: 50px"/>
         <h3 class="title is-4 mt-4">Technical Whitepaper</h3>
-        <p>Read the original Effect Whitepaper for a technical and mathematical description of The Effect Network.
+        <p>Read the original Effect Whitepaper for a technical and mathematical description of the Effect Network.
         </p>
         <a href="/download/effect_whitepaper.pdf" target="_blank" class="button is-text  is-outlined mt-2" :class="{'is-accent': $colorMode.value === 'dark'}" >Technical Whitepaper</a>
       </div>

@@ -6,9 +6,9 @@
           <div class="columns has-text-centered">
             <div class="column">
               <h2 class="title is-1">EFX Token</h2>
-              <p class="has-limited-width is-horizontal-centered">EFX is the cryptographic token that fuels The Effect
+              <p class="has-limited-width is-horizontal-centered">EFX is the cryptographic token that fuels the Effect
                 Network. It offers developers and organizations a reliable option to build, monetize and power AI
-                solutions. EFX can be earned or bought and can be used in a decentralized ecosystem of AI related
+                solutions. EFX can be earned or bought and can be used in a decentralized ecosystem of AI-related
                 services.</p>
             </div>
           </div>
@@ -84,13 +84,13 @@
           <div class="column is-one-third has-text-centered">
             <img src="~assets/img/icons/stake.svg" style="height: 50px"/>
             <h3 class="title is-4 mt-4">Stake EFX</h3>
-            <p>Stake tokens to improve your rank in The Effect Network and collect fees</p>
+            <p>Stake tokens to improve your rank in the Effect Network and collect fees</p>
             <a target="_blank" class="button is-secondary mt-5"  href="https://dao.effect.network/stake">Stake EFX</a>
           </div>
           <div class="column is-one-third has-text-centered">
             <img src="~assets/img/icons/vote.svg" style="height: 50px"/>
             <h3 class="title is-4 mt-4">Governance</h3>
-            <p>Receive funding for Proposals, vote and collect fees with your NFX tokens</p>
+            <p>Receive funding for proposals, vote and collect fees with your NFX tokens</p>
             <a target="_blank" class="button is-secondary mt-5"  href="https://dao.effect.network/dao">Explore DAO</a>
           </div>
         </div>

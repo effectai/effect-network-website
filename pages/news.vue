@@ -155,7 +155,7 @@
             href: 'https://medium.com/effect-ai/the-effect-dao-phase-0-launching-are-you-ready-3ccc6283d87e',
             title: 'The Effect DAO Phase 0 Launching',
             date: 'Augustus 15 - 2020',
-            text: 'The time has come for the most exciting evolution of The Effect Network! As we close in on the launch of the Effect DAO, the excitement brewing amongst our team and community has become viral…',
+            text: 'The time has come for the most exciting evolution of the Effect Network! As we close in on the launch of the Effect DAO, the excitement brewing amongst our team and community has become viral…',
             featured: false
           },
           {
