@@ -5,7 +5,7 @@
         Join our mailing list
       </h1>
       <h4 class="subtitle is-6">
-        Get the latest news from across The Effect Network.
+        Get the latest news from across the Effect Network.
       </h4>
       <form @submit.prevent="subscribe" v-if="!subscribed">
         <div class="field has-addons is-justify-content-center">

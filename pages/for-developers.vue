@@ -9,7 +9,7 @@
           </div> -->
           <div class="columns developer-hero-content pb-6 pt-6">
             <div class="column is-two-fifths mt-6">
-              <h2 class="title is-1">Build on The Effect Network Protocol</h2>
+              <h2 class="title is-1">Build on the Effect Network Protocol</h2>
               <p class="block">
                 Whether you are a data scientist, a blockchain developer, or a software engineer, the design of The Effect
                 Network incentivizes everyone to build out the Effect ecosystem.
@@ -37,7 +37,7 @@
           <div class="column is-two-fifths">
             <h2 class="title is-2">Smart Contracts</h2>
             <p class="block">
-              The Effect Network is an open protocol built with a technology stack of Smart Contracts. The TEN protocol allows anyone to build decentralized applications and connect their interface to the network.
+              The Effect Network is an open protocol built with a technology stack of smart contracts. The TEN protocol allows anyone to build decentralized applications and connect their interface to the network.
             </p>
             <a class="button is-secondary" href="https://github.com/effectai/effect-network-eos" target="_blank">Smart Contracts</a>
           </div>
