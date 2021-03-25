@@ -3,7 +3,7 @@
     <div class="columns">
       <div class="column is-one-third">
         <div class="card is-flat always-light p-5">
-          <img src="~assets/img/icons/programming.svg" style="height: 50px"/>
+          <img src="~assets/img/icons/github.svg" style="height: 50px"/>
           <h3 class="subtitle is-4 mt-4 mb-2">Github</h3>
           <h4 class="subtitle is-5 mt-1">Explore Public Effect Repositories</h4>
           <p class="block">Join the Effect.AI development effort by contributing to one of the open-source
@@ -14,7 +14,7 @@
       </div>
       <div class="column is-one-third">
         <div class="card is-flat always-light p-5">
-          <img src="~assets/img/icons/programming.svg" style="height: 50px"/>
+          <img src="~assets/img/icons/api.svg" style="height: 50px"/>
           <h3 class="subtitle is-4 mt-4 mb-2">API Documentation</h3>
           <h4 class="subtitle is-5 mt-1">Explore Public Effect Repositories</h4>
           <p class="block">Join the Effect.AI development effort by contributing to one of the open-source
@@ -25,7 +25,7 @@
       </div>
       <div class="column is-one-third">
         <div class="card is-flat always-light p-5">
-          <img src="~assets/img/icons/programming.svg" style="height: 50px"/>
+          <img src="~assets/img/icons/whitepaper.svg" style="height: 50px"/>
           <h3 class="subtitle is-4 mt-4 mb-2">Technical Whitepaper</h3>
           <h4 class="subtitle is-5 mt-1">Explore Public Effect Repositories</h4>
           <p class="block">Join the Effect.AI development effort by contributing to one of the open-source

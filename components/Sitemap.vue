@@ -7,36 +7,13 @@
             Get Started
           </p>
           <ul class="menu-list">
-            <li><nuxt-link to="/token-page">What is EFX?</nuxt-link></li>
-            <li><a>Customers</a></li>
-            <li><a>Dashboard</a></li>
-            <li><a>Customers</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="column is-narrow">
-        <div class="menu">
-          <p class="menu-label">
-            The Foundation
-          </p>
-          <ul class="menu-list">
-            <li><a>Dashboard</a></li>
-            <li><a>Customers</a></li>
-            <li><a>Dashboard</a></li>
-            <li><a>Customers</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="column is-narrow">
-        <div class="menu">
-          <p class="menu-label">
-            Research
-          </p>
-          <ul class="menu-list">
-            <li><a>Dashboard</a></li>
-            <li><a>Customers</a></li>
-            <li><a>Dashboard</a></li>
-            <li><a>Customers</a></li>
+            <li><nuxt-link to="/">Home</nuxt-link></li>
+            <li><nuxt-link to="/token-page">Tokenomics</nuxt-link></li>
+            <li><nuxt-link to="/for-developers">Build</nuxt-link></li>
+            <li><a target="_blank" href="https://dao.effect.network">DAO</a></li>
+            <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+            <li><nuxt-link to="/team">Team</nuxt-link></li>
+            <li><nuxt-link to="/contact">Contact</nuxt-link></li>
           </ul>
         </div>
       </div>
@@ -46,12 +23,12 @@
             dApps
           </p>
           <ul class="menu-list">
-            <li><a>Effect Force</a></li>
-            <li><a>Effect DAO</a></li>
-            <li><a>Effect Translate</a></li>
-            <li><a>Effect Socials</a></li>
-            <li><a>Effect Captions</a></li>
-            <li><a>Effect Pieces</a></li>
+            <li><a href="https://worker.effect.ai" target="_blank">Effect Force</a></li>
+            <li><a href="https://dao.effect.network" target="_blank">Effect DAO</a></li>
+            <li><a href="https://translate.effect.network" target="_blank">Effect Translate</a></li>
+            <li><a href="https://socials.effect.network" target="_blank">Effect Socials</a></li>
+            <li><a href="https://captions.effect.network" target="_blank">Effect Captions</a></li>
+            <li><a href="https://pieces.effect.network" target="_blank">Effect Pieces</a></li>
           </ul>
         </div>
       </div>
@@ -61,15 +38,15 @@
             SOCIALS
           </p>
           <ul class="menu-list">
-            <li><a><i class="fab fa-twitter"></i> Twitter</a></li>
-            <li><a><i class="fab fa-telegram"></i> Telegram</a></li>
-            <li><a><i class="fab fa-youtube"></i> Youtube</a></li>
-            <li><a><i class="fab fa-facebook"></i> Facebook</a></li>
-            <li><a><i class="fab fa-linkedin"></i> Linkedin</a></li>
-            <li><a><i class="fab fa-github"></i> Github</a></li>
-            <li><a><i class="fab fa-medium"></i> Medium</a></li>
-            <li><a><i class="fab fa-reddit"></i> Reddit</a></li>
-            <li><a><i class="fab fa-weixin"></i> Wechat</a></li>
+            <li><a href="https://twitter.com/effectaix" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="https://t.me/effectai" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
+            <li><a href="https://www.youtube.com/channel/UCWzHpI310baipgvVMCxcwHAeffectai" target="_blank"><i class="fab fa-youtube"></i> Youtube</a></li>
+            <li><a href="https://www.facebook.com/effectai" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="https://www.linkedin.com/company/effectai" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+            <li><a href="https://github.com/effectai" target="_blank"><i class="fab fa-github"></i> Github</a></li>
+            <li><a href="https://medium.com/effect-ai" target="_blank"><i class="fab fa-medium"></i> Medium</a></li>
+            <li><a href="https://www.reddit.com/r/effectai" target="_blank"><i class="fab fa-reddit"></i> Reddit</a></li>
+            <li><a href="https://weibo.com/7578875568/info" target="_blank"><i class="fab fa-weibo"></i> Weibo</a></li>
           </ul>
         </div>
       </div>
@@ -77,7 +54,7 @@
         <div class="columns">
 
           <div class="column is-half is-flex is-align-items-start is-justify-content-center">
-            <img width="30" src="~assets/img/pin.png" contain class="mr-4 mt-2"/>
+            <img width="30" src="~assets/img/icons/pin.svg" contain class="mr-4 mt-2"/>
             <div>
               <div class="menu-label mb-0">Europe Office</div>
               <u>Effect.AI B.V.</u>
@@ -88,7 +65,7 @@
             </div>
           </div>
           <div class="column is-half is-flex is-align-items-start is-justify-content-center">
-            <img width="30" src="~assets/img/pin.png" contain class="mr-4 mt-2"/>
+            <img width="30" src="~assets/img/icons/pin.svg" contain class="mr-4 mt-2"/>
             <div>
               <div class="menu-label mb-0">Asia Office</div>
               <u>Effect Network Limited</u>

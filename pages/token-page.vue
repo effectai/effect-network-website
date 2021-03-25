@@ -76,19 +76,19 @@
         </div>
         <div class="columns mt-5">
           <div class="column is-one-third has-text-centered">
-            <img src="~assets/img/icons/smartphone.svg" style="height: 50px"/>
+            <img src="~assets/img/icons/earn.svg" style="height: 50px"/>
             <h3 class="title is-4 mt-4">Earn EFX</h3>
             <p>Perform tasks on the micro-tasking platform Effect Force</p>
             <a target="_blank" class="button is-secondary mt-5"  href="https://worker.effect.ai">Join WorkForce</a>
           </div>
           <div class="column is-one-third has-text-centered">
-            <img src="~assets/img/icons/programming.svg" style="height: 50px"/>
+            <img src="~assets/img/icons/stake.svg" style="height: 50px"/>
             <h3 class="title is-4 mt-4">Stake EFX</h3>
             <p>Stake tokens to improve your rank in the Effect Network and collect fees</p>
             <a target="_blank" class="button is-secondary mt-5"  href="https://dao.effect.network/stake">Stake EFX</a>
           </div>
           <div class="column is-one-third has-text-centered">
-            <img src="~assets/img/icons/user.svg" style="height: 50px"/>
+            <img src="~assets/img/icons/vote.svg" style="height: 50px"/>
             <h3 class="title is-4 mt-4">Governance</h3>
             <p>Receive funding for proposals, vote and collect fees with your NFX tokens</p>
             <a target="_blank" class="button is-secondary mt-5"  href="https://dao.effect.network/dao">Explore DAO</a>
