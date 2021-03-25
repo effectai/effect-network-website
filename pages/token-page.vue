@@ -61,7 +61,7 @@
           <div class="has-text-centered">
             <h2 class="title is-2">Tokenomics</h2>
             <div class="coinmarketcap-currency-widget has-background-white has-text-black has-radius" data-currencyid="2666" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
-            <img src="~assets/img/tokenomics.png"/>
+            <tokenomics />
           </div>
         </div>
       </div>
@@ -99,12 +99,14 @@
 </template>
 <script>
   import Whitepaper from '@/components/Whitepaper'
+  import Tokenomics from '@/components/Tokenomics'
 
   export default {
     name: 'EFX',
     colorMode: 'dark',
     components: {
-      Whitepaper
+      Whitepaper,
+      Tokenomics
     },
     head() {
       return {

@@ -5,12 +5,26 @@
       <h4 class="subtitle">The digital asset that powers the Effect Network</h4>
       <nuxt-link to="/token-page" class="button is-accent block is-wide">Discover EFX</nuxt-link>
       <div class="coinmarketcap-currency-widget has-background-white has-text-black has-radius" data-currencyid="2666" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
-      <img src="~assets/img/tokenomics.png" class="mt-6" style="margin-bottom: -120px;" />
+      <tokenomics style="margin-bottom: -120px" />
     </div>
   </section>
 
 </template>
 
+<script>
+import Tokenomics from '@/components/Tokenomics'
+export default {
+  components: {
+    Tokenomics
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.container {
+  width: 100%;
+}
+</style>
 <style lang="scss">
   .coinmarketcap-currency-widget {
     width: 710px;
@@ -33,3 +47,4 @@
     }
   }
 </style>
+

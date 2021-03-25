@@ -16,7 +16,8 @@
     "bulma": "^0.9.1",
     "core-js": "^3.8.2",
     "nuxt": "^2.14.12",
-    "nuxt-password-protect": "^1.2.0"
+    "nuxt-password-protect": "^1.2.0",
+    "vue-lottie": "^0.2.1"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.0.2",
