@@ -1,7 +1,9 @@
 <template>
   <div class="banner has-background-light">
-    <div class="circle-container">
-      <div class="circle"></div>
+    <div class="circle-container has-text-right">
+<!--      <div class="circle"></div>-->
+      <img src="~assets/img/circle-force.png" style="margin-right: -50px; max-width: 1500px"/>
+
     </div>
     <section class="section">
       <div class="container is-max-widescreen mt-6">
@@ -118,7 +120,9 @@ export default {
     margin: 20px 10px;
 
     width: 100%;
-
+    img {
+      animation: rotate 30s linear infinite;
+    }
     .circle {
       margin-left: auto;
       position: relative;
@@ -164,15 +168,15 @@ export default {
       content: "";
       display: block;
       position: absolute;
-      bottom: 400px;
+      bottom: 450px;
       right: -30px;
       width: 350px;
       height: 350px;
-      background: white;
-      -webkit-filter: blur(7px);
-      -moz-filter: blur(7px);
-      -o-filter: blur(7px);
-      -ms-filter: blur(7px);
+      background:  $light;
+      -webkit-filter: blur(5px);
+      -moz-filter: blur(5px);
+      -o-filter: blur(5px);
+      -ms-filter: blur(5px);
     }
   }
   @media all and (max-width: 770px) {
