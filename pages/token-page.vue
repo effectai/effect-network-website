@@ -2,11 +2,11 @@
   <div>
     <section class="section">
       <div class="container is-max-widescreen my-6">
-        <div class="columns">
-          <div class="column is-half">
+        <div class="columns has-text-centered">
+          <div class="column">
             <h2 class="title is-1">EFX Token</h2>
-            <p>EFX is the cryptographic token that fuels <b>The Effect
-              Network</b>. It offers developers and organizations a reliable option to build, monetize and power AI
+            <p class="has-limited-width is-horizontal-centered">EFX is the cryptographic token that fuels The Effect
+              Network. It offers developers and organizations a reliable option to build, monetize and power AI
               solutions. EFX can be earned or bought and can be used in a decentralized ecosystem of AI related
               services.</p>
           </div>

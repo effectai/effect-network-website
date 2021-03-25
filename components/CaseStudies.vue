@@ -32,7 +32,7 @@
       </div>
     </div>
     <div class="container has-text-centered">
-      <nuxt-link to="/cases" class="button is-secondary mt-3" :class="{'is-accent': $colorMode.value === 'dark'}">All Case Studies</nuxt-link>
+      <nuxt-link to="/cases" class="button is-secondary is-wide mt-3" :class="{'is-accent': $colorMode.value === 'dark'}">All Case Studies</nuxt-link>
     </div>
   </div>
 </template>
