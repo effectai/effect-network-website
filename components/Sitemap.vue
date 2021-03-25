@@ -61,15 +61,15 @@
             SOCIALS
           </p>
           <ul class="menu-list">
-            <li><a><i class="fab fa-twitter"></i> Twitter</a></li>
-            <li><a><i class="fab fa-telegram"></i> Telegram</a></li>
-            <li><a><i class="fab fa-youtube"></i> Youtube</a></li>
-            <li><a><i class="fab fa-facebook"></i> Facebook</a></li>
-            <li><a><i class="fab fa-linkedin"></i> Linkedin</a></li>
-            <li><a><i class="fab fa-github"></i> Github</a></li>
-            <li><a><i class="fab fa-medium"></i> Medium</a></li>
-            <li><a><i class="fab fa-reddit"></i> Reddit</a></li>
-            <li><a><i class="fab fa-weixin"></i> Wechat</a></li>
+            <li><a href="https://twitter.com/effectaix" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="https://t.me/effectai" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
+            <li><a href="https://www.youtube.com/channel/UCWzHpI310baipgvVMCxcwHAeffectai" target="_blank"><i class="fab fa-youtube"></i> Youtube</a></li>
+            <li><a href="https://www.facebook.com/effectai" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="https://www.linkedin.com/company/effectai" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+            <li><a href="https://github.com/effectai" target="_blank"><i class="fab fa-github"></i> Github</a></li>
+            <li><a href="https://medium.com/effect-ai" target="_blank"><i class="fab fa-medium"></i> Medium</a></li>
+            <li><a href="https://www.reddit.com/r/effectai" target="_blank"><i class="fab fa-reddit"></i> Reddit</a></li>
+            <li><a href="https://weibo.com/7578875568/info" target="_blank"><i class="fab fa-weibo"></i> Weibo</a></li>
           </ul>
         </div>
       </div>
@@ -77,7 +77,7 @@
         <div class="columns">
 
           <div class="column is-half is-flex is-align-items-start is-justify-content-center">
-            <img width="30" src="~assets/img/pin.png" contain class="mr-4 mt-2"/>
+            <img width="30" src="~assets/img/icons/pin.svg" contain class="mr-4 mt-2"/>
             <div>
               <div class="menu-label mb-0">Europe Office</div>
               <u>Effect.AI B.V.</u>
@@ -88,7 +88,7 @@
             </div>
           </div>
           <div class="column is-half is-flex is-align-items-start is-justify-content-center">
-            <img width="30" src="~assets/img/pin.png" contain class="mr-4 mt-2"/>
+            <img width="30" src="~assets/img/icons/pin.svg" contain class="mr-4 mt-2"/>
             <div>
               <div class="menu-label mb-0">Asia Office</div>
               <u>Effect Network Limited</u>
