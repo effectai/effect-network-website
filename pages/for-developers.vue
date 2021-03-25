@@ -7,7 +7,7 @@
             <h4 class="title is-4">The Effect Network</h4>
             <h1 class="subtitle is-1">For Developers</h1>
           </div> -->
-          <div class="columns pb-6 pt-6">
+          <div class="columns developer-hero-content pb-6 pt-6">
             <div class="column is-two-fifths mt-6">
               <h2 class="title is-1">Build on The Effect Network Protocol</h2>
               <p class="block">
@@ -316,4 +316,20 @@ export default {
 </style>
 
 <style scoped lang="scss">
+.developer-hero {
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-image: url('~assets/img/grad_devs.png');
+}
+@media all and (max-width: 770px) {
+  .developer-hero {
+    background-position: left top;
+    .developer-hero-content {
+      padding-top: 0 !important;
+      .is-two-fifths {
+        padding-top: 0 !important;
+      }
+    }
+  }
+}
 </style>
