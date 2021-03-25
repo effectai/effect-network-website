@@ -117,7 +117,4 @@
 .sitemap * {
   color: $white;
 }
-@media all and (max-width: 770px) {
-
-}
 </style>
