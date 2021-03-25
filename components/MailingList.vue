@@ -1,5 +1,5 @@
 <template>
-  <section class="hero is-primary  is-medium">
+  <section class="hero is-secondary-alt is-medium">
     <div class="hero-body container has-text-centered">
       <h1 class="title is-2">
         Join our mailing list
@@ -52,3 +52,10 @@
     }
   };
 </script>
+<style lang="scss" scoped>
+.hero {
+  background-image: url('~assets/img/force-c2a-bg.png');
+  background-position: right;
+  background-size: cover;
+}
+</style>

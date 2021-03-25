@@ -26,9 +26,8 @@
   background-image: url('~assets/img/threepeople.jpg');
 }
 .dao-circle {
-  background-image: url('~assets/img/circle_dao.png');
+  background-image: url('~assets/img/grad_home_dao.png');
   background-repeat: no-repeat;
-  background-position: 1000px 0px;
-  background-size: 1500px;
+  background-position-x: calc(50% + 100px);
 }
 </style>

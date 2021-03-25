@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-6">
+  <div class="mb-6 sitemap">
     <div class="columns is-multiline">
       <div class="column is-narrow">
         <div class="menu">
@@ -136,6 +136,8 @@
   </div>
 </template>
 
-<style lang="scss">
-
+<style lang="scss" scoped>
+.sitemap * {
+  color: $white;
+}
 </style>

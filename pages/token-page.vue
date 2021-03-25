@@ -1,71 +1,73 @@
 <template>
   <div>
-    <section class="section">
-      <div class="container is-max-widescreen my-6">
-        <div class="columns">
-          <div class="column is-half">
-            <h2 class="title is-1">EFX Token</h2>
-            <p>EFX is the cryptographic token that fuels <b>The Effect
-              Network</b>. It offers developers and organizations a reliable option to build, monetize and power AI
-              solutions. EFX can be earned or bought and can be used in a decentralized ecosystem of AI related
-              services.</p>
+    <div class="token-hero">
+      <section class="section">
+        <div class="container is-max-widescreen my-6">
+          <div class="columns">
+            <div class="column is-half">
+              <h2 class="title is-1">EFX Token</h2>
+              <p>EFX is the cryptographic token that fuels <b>The Effect
+                Network</b>. It offers developers and organizations a reliable option to build, monetize and power AI
+                solutions. EFX can be earned or bought and can be used in a decentralized ecosystem of AI related
+                services.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="my-6" id="buy">
-          <section class="section has-background-secondary-alt has-radius background-image efx-graph">
-            <div class="has-text-centered block">
-              <h2 class="title is-2">Buy EFX</h2>
-              <p class="subtitle">Buy EFX tokens with BTC, EOS or USDT</p>
-            </div>
-            <div class="columns has-text-grey has-text-centered">
-              <div class="column is-one-third">
-                <div class="has-background-white has-radius px-6 pt-5 pb-2">
-                  <div style="min-height: 70px" class="pt-2"><img width="80%"
-                    :src="require('@/assets/img/kucoin.svg')"/>
-                    </div>
-                  <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://trade.kucoin.com/EFX-BTC" target="_blank"
-                     color="accent primary--text">Buy EFX
-                  </a>
-                  <small>with BTC</small>
+          <div class="my-6" id="buy">
+            <section class="section has-background-secondary-alt has-radius background-image efx-graph">
+              <div class="has-text-centered block">
+                <h2 class="title is-2">Buy EFX</h2>
+                <p class="subtitle">Buy EFX tokens with BTC, EOS or USDT</p>
+              </div>
+              <div class="columns has-text-grey has-text-centered">
+                <div class="column is-one-third">
+                  <div class="has-background-white has-radius px-6 pt-5 pb-2">
+                    <div style="min-height: 70px" class="pt-2"><img width="80%"
+                      :src="require('@/assets/img/kucoin.svg')"/>
+                      </div>
+                    <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://trade.kucoin.com/EFX-BTC" target="_blank"
+                      color="accent primary--text">Buy EFX
+                    </a>
+                    <small>with BTC</small>
+                  </div>
+                </div>
+                <div class="column is-one-third">
+                  <div class="has-background-white has-radius px-6 pt-5 pb-2">
+                    <div style="min-height: 70px" class=""><img width="80%"
+                      :src="require('@/assets/img/newdex_logo.png')"/>
+                      </div>
+                    <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://newdex.io/trade/effecttokens-efx-eos" target="_blank">Buy EFX
+                    </a>
+                    <small>with EOS</small>
+                  </div>
+                </div>
+                <div class="column is-one-third">
+                  <div class="has-background-white has-radius px-6 pt-5 pb-2">
+                    <div style="min-height: 70px;" class=""><img width="80%"
+                        :src="require('@/assets/img/bidesk_logo.png')"/>
+                      </div>
+                    <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://www.bidesk.com/exchange/EFX/USDT" target="_blank">Buy EFX
+                    </a>
+                    <small>with USDT</small>
+                  </div>
                 </div>
               </div>
-              <div class="column is-one-third">
-                <div class="has-background-white has-radius px-6 pt-5 pb-2">
-                  <div style="min-height: 70px" class=""><img width="80%"
-                    :src="require('@/assets/img/newdex_logo.png')"/>
-                    </div>
-                  <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://newdex.io/trade/effecttokens-efx-eos" target="_blank">Buy EFX
-                  </a>
-                  <small>with EOS</small>
-                </div>
-              </div>
-              <div class="column is-one-third">
-                <div class="has-background-white has-radius px-6 pt-5 pb-2">
-                  <div style="min-height: 70px;" class=""><img width="80%"
-                       :src="require('@/assets/img/bidesk_logo.png')"/>
-                    </div>
-                  <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://www.bidesk.com/exchange/EFX/USDT" target="_blank">Buy EFX
-                  </a>
-                  <small>with USDT</small>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="my-6">
-          <div class="has-text-centered">
-            <h2 class="title is-2">Tokenomics</h2>
-            <div class="coinmarketcap-currency-widget has-background-white has-text-black has-radius" data-currencyid="2666" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
-            <tokenomics />
+            </section>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="my-6">
+            <div class="has-text-centered">
+              <h2 class="title is-2">Tokenomics</h2>
+              <div class="coinmarketcap-currency-widget has-background-white has-text-black has-radius" data-currencyid="2666" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
+              <tokenomics />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
     <whitepaper/>
     <section class="section hero is-white">
       <div class="container is-max-widescreen my-6">
@@ -130,6 +132,11 @@
 </script>
 
 <style lang="scss" scoped>
+  .token-hero {
+    background-image: url("~assets/img/grad_token_hero_left.png"), url("~assets/img/grad_token_hero_right.png");
+    background-position: left, right top;
+    background-repeat: no-repeat;
+  }
   .efx-graph {
     background-image: url("~assets/img/efx-graph.png");
     background-size: contain;

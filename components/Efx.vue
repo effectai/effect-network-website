@@ -5,7 +5,7 @@
       <h4 class="subtitle">The digital asset that powers the Effect Network</h4>
       <nuxt-link to="/token-page" class="button is-accent block is-wide">Discover EFX</nuxt-link>
       <div class="coinmarketcap-currency-widget has-background-white has-text-black has-radius" data-currencyid="2666" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
-      <tokenomics style="margin-bottom: -120px" />
+      <tokenomics style="margin-bottom: -120px" class="has-background-primary"/>
     </div>
   </section>
 
@@ -23,6 +23,13 @@ export default {
 <style lang="scss" scoped>
 .container {
   width: 100%;
+}
+
+.hero {
+  background-image: url('~assets/img/grad_home_efx.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
 }
 </style>
 <style lang="scss">
