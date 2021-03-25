@@ -58,11 +58,12 @@ $menu-label-letter-spacing: 0.05em;
 $menu-list-link-padding: 0.5em 0.5em;
 
 $box-shadow: 0 0 38px 10px rgba(49,71,168,0.12);
+$card-shadow: 0 0 38px 10px rgba(49,71,168,0.12);
 
 $light: #F6F7FF;
 
 @import '../../node_modules/bulma/sass/utilities/derived-variables';
-$card-footer-border-top: 1px solid rgba($border-light, 0.5);
+$card-footer-border-top: 1px solid $border-light;
 
 
 $dark-mode-background: #101D56;

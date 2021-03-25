@@ -1,29 +1,13 @@
 <template>
-  <section class="section">
-    <div class=" container is-max-widescreen">
-      <div class="has-text-centered">
+  <div>
+  <section class="section has-background-light">
+    <div class="container is-max-widescreen">
+      <div class="has-text-centered my-6">
         <h3 class="title is-2">News & Media</h3>
         <h4 class="subtitle">Blogs, press releases, and videos about Effect.AI</h4>
-        <!--        <div>-->
-        <!--          <v-btn class="ma-4" color="primary" x-large to="#blog">-->
-        <!--            <v-icon left>mdi-post</v-icon>-->
-        <!--            Blogs-->
-        <!--          </v-btn>-->
-        <!--          <v-btn class="ma-4" color="primary" x-large to="#video">-->
-        <!--            <v-icon left>mdi-play-circle</v-icon>-->
-        <!--            Videos-->
-        <!--          </v-btn>-->
-        <!--          <v-btn class="ma-4" color="primary" x-large to="#press">-->
-        <!--            <v-icon left>mdi-newspaper</v-icon>-->
-        <!--            Press Releases-->
-        <!--          </v-btn>-->
-        <!--        </div>-->
       </div>
       <div class="my-6" id="latest">
         <div>
-          <h4 class="title is-family-sans-serif has-text-weight-bold">
-            Featured
-          </h4>
           <div class="columns is-multiline">
             <div class="column is-one-third" v-for="post in posts" v-if="post.featured" :key="post.title">
               <div class="card" :href="post.href" target="_blank" min-height="500">
@@ -31,12 +15,22 @@
                   <figure class="image is-5by3 background-image" :style="'background-image: url(\''+post.img+'\')'">
                   </figure>
                 </div>
-                <div class="card-content" style="min-height: 350px;">
-                  <div class="menu-label has-text-white post-type">
-                    <span v-if="post.type == 'video'">Video</span>
-                    <span v-else-if="post.type == 'blog'">Blog Post</span>
-                    <span v-else-if="post.type == 'press'">Press Release</span>
-                    <span v-else>Post</span>
+                <div class="card-content" style="min-height: 280px;">
+                  <div class="post-type">
+                    <div class="columns pt-4">
+                      <div class="column is-narrow">
+                        <span class="is-size-7 has-text-white">
+                          {{post.date}}
+                          </span>
+                      </div>
+                      <div class="column"></div>
+                    <div class="column is-narrow">
+                      <span class="is-size-6 has-text-white" v-if="post.type == 'video'">Video</span>
+                      <span class="is-size-6 has-text-white" v-else-if="post.type == 'blog'">Blog Post</span>
+                      <span class="is-size-6 has-text-white" v-else-if="post.type == 'press'">Press Release</span>
+                      <span class="is-size-6 has-text-white" v-else>Post</span>
+                    </div>
+                    </div>
                   </div>
                   <div class="title is-4 is-family-sans-serif">{{post.title}}</div>
                   <div class="subtitle is-7">{{post.date}}</div>
@@ -57,16 +51,17 @@
           </div>
         </div>
       </div>
-      <div class="my-6">
-          <h4 class="title is-family-sans-serif has-text-weight-bold">
-            News
-          </h4>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container is-max-widescreen">
+      <div class="">
           <div class="columns is-multiline">
             <div class="column is-one-quarter" v-for="post in posts" :key="post.title">
-              <div class="card" :href="post.href" target="_blank" style="min-height: 300px">
-                <div class="card-image">
-                  <figure class="image is-5by3 background-image" :style="'background-image: url(\''+post.img+'\')'">
-                  </figure>
+              <div class="card is-flat" :href="post.href" target="_blank" style="min-height: 300px">
+                <div class="card-image full-image background-image" :style="'background-image: url(\''+post.img+'\')'">
+<!--                  <figure class="image is-5by3 background-image" >-->
+<!--                  </figure>-->
                 </div>
                 <div class="card-content" style="min-height: 125px">
                   <div class="menu-label has-text-white post-type">
@@ -75,8 +70,8 @@
                     <span v-else-if="post.type == 'press'">Press Release</span>
                     <span v-else>Post</span>
                   </div>
-                  <div class="title is-5 is-family-sans-serif">{{post.title}}</div>
-                  <div class="subtitle is-7">{{post.date}}</div>
+                  <div class="title has-text-white is-5 is-family-sans-serif">{{post.title}}</div>
+                  <div class="subtitle has-text-white is-7">{{post.date}}</div>
                 </div>
                 <footer class="card-footer">
                   <a v-if="post.type == 'video'" target="_blank" :href="post.href" class="card-footer-item" :class="{'has-text-accent': $colorMode.value === 'dark'}">
@@ -90,18 +85,17 @@
             </div>
           </div>
           <div class="has-text-centered">
-            <a :class="{'is-accent': $colorMode.value === 'dark'}" class="button is-medium is-secondary m-4" href="https://www.youtube.com/@effectai" target="_blank">
+            <a :class="{'is-accent': $colorMode.value === 'dark'}" class="button is-secondary m-4" href="https://www.youtube.com/@effectai" target="_blank">
               All Videos
-              <i class="fab fa-youtube ml-3"></i>
             </a>
-            <a :class="{'is-accent': $colorMode.value === 'dark'}" class="button is-medium is-secondary m-4" href="https://medium.com/effect-ai" target="_blank">
+            <a :class="{'is-accent': $colorMode.value === 'dark'}" class="button is-secondary m-4" href="https://medium.com/effect-ai" target="_blank">
               All Blogs
-              <i class="fas fa-file ml-3"></i>
             </a>
           </div>
       </div>
     </div>
   </section>
+  </div>
 </template>
 
 
@@ -133,7 +127,7 @@
             href: 'https://medium.com/effect-ai/art-and-blockchain-team-up-for-social-good-5d2ba81ccc2',
             title: 'Art and Blockchain Team Up for Social Good',
             date: 'January 7 - 2021',
-            text: 'Effect Pieces Uses Blockchain to connect Artists and Refugees to raise funds and awareness. Rare digital art masterpieces created by refugees are being sold as NFTs (Non-Fungible Tokens) at auction to raise money and assist with the refugee crisis.',
+            text: 'Effect Pieces: Rare digital art masterpieces created by refugees are being sold as NFTs (Non-Fungible Tokens) at auction to raise money and assist with the refugee crisis.',
             featured: true
           },
           {
@@ -142,7 +136,7 @@
             href: 'https://medium.com/effect-ai/effectdao-proposal-system-is-now-live-on-eos-mainnet-e05710b79d21',
             title: 'EffectDAO Proposal System is now LIVE',
             date: 'November 30 - 2020',
-            text: 'We are excited to announce that one of the core components of the EffectDAO has just been launched on EOS Mainnet. The release of the Effect Proposal System truly brings us one step closer to being a globally connected project where all potential is possible and can be put into action.',
+            text: 'The release of the Effect Proposal System truly brings us one step closer to being a globally connected project where all potential is possible and can be put into action.',
             featured: true
           },
           {
@@ -151,7 +145,7 @@
             href: 'https://medium.com/@chris_79722/effect-ai-partners-with-ivan-on-tech-academy-8dae0f982d05',
             title: 'Effect.AI Partners With Ivan On Tech Academy',
             date: 'September 3 - 2020',
-            text: 'In our enduring efforts to further enrich blockchain and AI learning opportunities in our Effect AI & Blockchain Centers, we’ve partnered with Ivan On Tech Academy. Members at our centers will be able to access and learn from the Academy’s course offerings composed by world-leading industry experts.',
+            text: 'In our enduring efforts to further enrich blockchain and AI learning opportunities in our Effect AI & Blockchain Centers, we’ve partnered with Ivan On Tech Academy.',
             featured: true
           },
           {
@@ -280,11 +274,28 @@
 <style lang="scss" scoped>
 .post-type {
   position: absolute;
-  top: -35px;
+  top: -53px;
   right: 0px;
-  padding: 5px;
+  padding: 5px 10px;
   width:100%;
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
-  text-align: right;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 }
+.full-image {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  &:after {
+    display: block;
+    position: absolute;
+    content: "";
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+  }
+}
+
 </style>
