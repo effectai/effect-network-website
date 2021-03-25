@@ -11,8 +11,8 @@
             <a href="https://dao.effect.ai" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}">Explore DAO</a>
           </div>
           <div class="column is-half">
-            <figure class="image">
-              <img src="~assets/img/proposals.png" class="">
+            <figure class="image has-shadow has-radius">
+              <img src="~assets/img/DAO-screen.png" class="has-radius">
             </figure>
           </div>
         </div>

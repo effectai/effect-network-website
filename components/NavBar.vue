@@ -21,6 +21,11 @@
 
           </div>
           <div class="navbar-end is-align-items-center">
+            <div @click="mobileMenu = false">
+              <nuxt-link class="navbar-item" to="/" exact-active-class="is-active">
+                Home
+              </nuxt-link>
+            </div>
              <div @click="mobileMenu = false">
             <nuxt-link class="navbar-item" to="/force" exact-active-class="is-active">
               Work 3.0
@@ -66,14 +71,14 @@
                 <a target="_blank" href="https://captions.effect.network" class="navbar-item">
                   <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-captions_part-white_h100.png') : require('@/assets/img/dapps/effect-captions_h100.png')" class="dapp-logo block"/>
                 </a>
-                <a target="_blank" href="https://pieces.effect.network" class="navbar-item">
+                <a target="_blank" href="https://superrare.co/effectpieces" class="navbar-item">
                   <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-pieces_part-white_h100.png') : require('@/assets/img/dapps/effect-pieces_h100.png')" class="dapp-logo block"/>
                 </a>
               </div>
             </div>
             <div class="navbar-item" exact-active-class="is-active">
                <div @click="mobileMenu = false">
-              <nuxt-link class="button is-secondary is-outlined" :class="{'is-accent': $colorMode.value === 'dark'}" to="/token-page#buy" exact-active-class="is-active">
+              <nuxt-link class="button is-secondary is-outlined" :class="{'is-accent': $colorMode.value === 'dark'}" to="/token-page" exact-active-class="is-active">
                 Buy EFX
               </nuxt-link>
                  </div>

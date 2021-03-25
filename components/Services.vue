@@ -3,10 +3,9 @@
     <div class="container is-max-widescreen my-6">
       <div class="has-text-centered">
         <h1 class="title">Effect <b>Services</b></h1>
-        <p class="has-limited-width is-horizontal-centered">Specializing in structuring data in areas like Natural
-          Language Processing, Machine Learning Training Data, Deploying AI Services, Translations, and many more.</p>
+        <p class="has-limited-width is-horizontal-centered">From high quality translations to the very best in social media engagement to Machine Learning Training Data. There are many services available for you to tap into with ease. </p>
       </div>
-      <div class="columns is-multiline is-variable is-6 mt-6">
+      <div class="columns is-multiline is-variable is-5 mt-6">
         <div class="column is-4">
           <nuxt-link to="/force"  class="card is-flat is-hoverable dapp-force">
             <header class="card-header">
@@ -14,7 +13,7 @@
                 <div class="has-text-centered" style="width: 100%">
                   <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-force_part-white_h100.png') : require('@/assets/img/dapps/effect-force_h100.png')" class="dapp-logo block"/>
                   <img src="~assets/img/dapps/effect-force_white_h100.png" class="dapp-logo-white block"/>
-                  <p class="has-text-weight-semibold block">A Global Workforce to Structure Data</p>
+                  <p class="has-text-weight-semibold block">Work From Anywhere At Anytime</p>
                   <b> <nuxt-link to="/force" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Learn More</nuxt-link> </b>
                 </div>
               </div>
@@ -145,14 +144,14 @@
           </a>
         </div>
         <div class="column is-4">
-          <a href="https://pieces.effect.network" target="_blank" class="card is-flat is-hoverable dapp-pieces">
+          <a href="https://superrare.co/effectpieces" target="_blank" class="card is-flat is-hoverable dapp-pieces">
             <header class="card-header">
               <div class="card-header-title ">
                 <div class="has-text-centered" style="width: 100%;">
                   <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-pieces_part-white_h100.png') : require('@/assets/img/dapps/effect-pieces_h100.png')" class="dapp-logo block"/>
                   <img src="~assets/img/dapps/effect-pieces_white_h100.png" class="dapp-logo-white block"/>
                   <p class="has-text-weight-semibold block">Crowdsourced Art on the Blockchain</p>
-                  <b> <a href="https://pieces.effect.network" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
+                  <b> <a href="https://superrare.co/effectpieces" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
                 </div>
               </div>
             </header>

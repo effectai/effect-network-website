@@ -28,7 +28,7 @@
             <li><a href="https://translate.effect.network" target="_blank">Effect Translate</a></li>
             <li><a href="https://socials.effect.network" target="_blank">Effect Socials</a></li>
             <li><a href="https://captions.effect.network" target="_blank">Effect Captions</a></li>
-            <li><a href="https://pieces.effect.network" target="_blank">Effect Pieces</a></li>
+            <li><a href="https://superrare.co/effectpieces" target="_blank">Effect Pieces</a></li>
           </ul>
         </div>
       </div>

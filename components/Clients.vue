@@ -10,20 +10,8 @@
       <div class="columns is-mobile">
         <div class="column">
           <nuxt-link to="/cases">
-            <img width="100px" max-width="140px" height="64px" max-height="80px" contain class="ma-2 greyscale"
-                 :src="require('@/assets/img/partners/pwc_color.png')"/>
-          </nuxt-link>
-        </div>
-        <div class="column">
-          <nuxt-link to="/cases#case-ing">
-            <img width="140px" max-width="180px" height="64px" max-height="80px" contain class="ma-2 greyscale"
-                 :src="require('@/assets/img/partners/ascendia.png')"/>
-          </nuxt-link>
-        </div>
-        <div class="column">
-          <nuxt-link to="/cases#case-un">
             <img width="160px" max-width="200px" height="64px" max-height="80px" contain class="ma-2 greyscale"
-                 :src="require('@/assets/img/partners/un_color.png') "/>
+                 :src="require('@/assets/img/partners/kraftheinz.png')"/>
           </nuxt-link>
         </div>
         <div class="column">
@@ -33,9 +21,21 @@
           </nuxt-link>
         </div>
         <div class="column">
-          <nuxt-link to="/cases">
+          <nuxt-link to="/cases#case-un">
             <img width="160px" max-width="200px" height="64px" max-height="80px" contain class="ma-2 greyscale"
-                 :src="require('@/assets/img/partners/kraftheinz.png')"/>
+                 :src="require('@/assets/img/partners/un_color.png') "/>
+          </nuxt-link>
+        </div>
+        <div class="column">
+          <nuxt-link to="/cases#case-ing">
+            <img width="140px" max-width="180px" height="64px" max-height="80px" contain class="ma-2 greyscale"
+                 :src="require('@/assets/img/partners/ascendia.png')"/>
+          </nuxt-link>
+        </div>
+        <div class="column">
+          <nuxt-link to="/cases">
+            <img width="100px" max-width="140px" height="64px" max-height="80px" contain class="ma-2 greyscale"
+                 :src="require('@/assets/img/partners/pwc_color.png')"/>
           </nuxt-link>
         </div>
       </div>
