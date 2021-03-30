@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="has-background-light">
+    <div class="has-background-light has-navbar-fixed-top">
     <home-banner />
     </div>
     <div class="has-background-light">

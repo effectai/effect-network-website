@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav-bar/>
+    <nav-bar :is-scrolling="isScrolling"/>
     <div>
       <Nuxt/>
     </div>
@@ -21,14 +21,27 @@
 
     data () {
       return {
+        isScrolling: false,
       }
     },
 
     computed: {
     },
-
+    mounted () {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeDestroy() {
+      window.removeEventListener("scroll", this.handleScroll)
+    },
     methods: {
-    }
+      handleScroll: function (e) {
+        if(e.target.documentElement.scrollTop) {
+          this.isScrolling = true;
+        } else {
+          this.isScrolling = false;
+        }
+      }
+    },
   };
 </script>
 

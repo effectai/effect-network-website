@@ -1,6 +1,6 @@
 <template>
   <div>
-      <div class="container is-max-widescreen has-text-centered my-6">
+      <div class="container is-max-widescreen has-text-centered my-6 has-navbar-fixed-top">
         <h1 class="title is-2">Contact Us</h1>
       <div class="subtitle">
         If you have any <nuxt-link to="/faqs">questions</nuxt-link>, requests, or need support, please shoot us an email at:

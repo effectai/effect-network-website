@@ -132,6 +132,10 @@ a.card {
   box-shadow: $box-shadow;
 }
 
+.has-navbar-fixed-top {
+  padding-top: 4.25rem;
+}
+
 @keyframes rotate {
   0% {
     transform: rotate(-30deg)
