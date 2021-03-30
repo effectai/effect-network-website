@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="developer-hero is-primary hero">
+    <div class="developer-hero is-primary hero has-navbar-fixed-top">
       <section class="section">
         <div class="container">
           <!-- <div class="has-text-centered my-6">

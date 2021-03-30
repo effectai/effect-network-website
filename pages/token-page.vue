@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="token-hero">
+    <div class="token-hero has-navbar-fixed-top">
       <section class="section">
         <div class="container is-max-widescreen my-6">
           <div class="columns has-text-centered">

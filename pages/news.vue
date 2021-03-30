@@ -1,6 +1,6 @@
 <template>
-  <div>
-  <section class="section has-background-light">
+  <div class="has-navbar-fixed-top has-background-light">
+  <section class="section">
     <div class="container is-max-widescreen">
       <div class="has-text-centered my-6">
         <h3 class="title is-2">News & Media</h3>

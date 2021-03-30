@@ -1,5 +1,5 @@
 <template>
-  <div class="banner has-background-light">
+  <div class="banner has-background-light has-navbar-fixed-top">
     <div class="circle-container has-text-right">
 <!--      <div class="circle"></div>-->
       <img src="~assets/img/circle-force.png" style="margin-right: -50px; max-width: 1500px"/>
@@ -84,7 +84,7 @@ export default {
   .banner {
     position: relative;
     overflow: hidden;
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh);
     &:before {
       content: "";
       display: block;

@@ -20,7 +20,7 @@
         <h3 class="title is-4 mt-4">Technical Whitepaper</h3>
         <p>Read the original Effect Whitepaper for a technical and mathematical description of the Effect Network.
         </p>
-        <a href="/download/effect_whitepaper.pdf" target="_blank" class="button is-text  is-outlined mt-2" :class="{'is-accent': $colorMode.value === 'dark'}" >Technical Whitepaper</a>
+        <a href="/download/effect_whitepaper.pdf" target="_blank" class="button is-text is-outlined mt-2" :class="{'is-accent': $colorMode.value === 'dark'}" >Technical Whitepaper</a>
       </div>
     </div>
     <div class="has-text-centered">
@@ -28,3 +28,10 @@
     </div>
   </div>
 </template>
+<style lang="scss" scoped>
+.dark-mode {
+  .button.is-outlined {
+    border: none !important;
+  }
+}
+</style>

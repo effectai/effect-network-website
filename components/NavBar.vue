@@ -1,6 +1,6 @@
 <template>
   <div class="has-background-light">
-    <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-transparent is-fixed-top" :class="{ 'is-scrolling has-background-light' : isScrolling}" role="navigation" aria-label="main navigation">
       <div class="container">
         <div class="navbar-brand">
           <nuxt-link class="navbar-item" to="/">
@@ -95,6 +95,7 @@
 <script>
   import DarkmodeSwitcher from '@/components/DarkmodeSwitcher';
   export default {
+    props: ['isScrolling'],
     components: {
       DarkmodeSwitcher
     },
@@ -118,11 +119,15 @@
     &.is-transparent {
       background: transparent;
     }
+
+    &.is-scrolling {
+      box-shadow: $box-shadow;
+    }
+
     .logo {
       height: 45px;
       max-width: none;
       max-height: none;
-      margin-top: 5px;
       margin-right: 8px;
     }
     .navbar-brand {
@@ -132,8 +137,14 @@
         }
       }
     }
+
+    .navbar-burger {
+      height: auto;
+    }
+
     .navbar-menu {
       margin-top: 8px;
+      margin-bottom: 8px;
       justify-content: center;
       .navbar-item {
         font-weight: 500;
