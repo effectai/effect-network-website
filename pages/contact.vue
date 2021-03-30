@@ -44,7 +44,11 @@ export default {
 <style lang="scss" scoped>
 #typeform {
   height: 400px;
-  width: 100%
+  width: 100%;
+  background: $white;
 }
+.bdziaR {
+    opacity: 1 !important;
+  }
 </style>
 

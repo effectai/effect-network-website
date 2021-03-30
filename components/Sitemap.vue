@@ -32,8 +32,8 @@
           </ul>
         </div>
       </div>
-      <div class="column is-two-fifths-mobile is-narrow">
-        <div class="menu">
+      <div class="column is-full-mobile is-narrow">
+        <div class="menu social-menu is-flex is-flex-wrap-wrap">
           <p class="menu-label">
             SOCIALS
           </p>
@@ -43,6 +43,8 @@
             <li><a href="https://www.youtube.com/channel/UCWzHpI310baipgvVMCxcwHAeffectai" target="_blank"><i class="fab fa-youtube"></i> Youtube</a></li>
             <li><a href="https://www.facebook.com/effectai" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
             <li><a href="https://www.linkedin.com/company/effectai" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></li>
+          </ul>
+           <ul class="menu-list">
             <li><a href="https://github.com/effectai" target="_blank"><i class="fab fa-github"></i> Github</a></li>
             <li><a href="https://medium.com/effect-ai" target="_blank"><i class="fab fa-medium"></i> Medium</a></li>
             <li><a href="https://www.reddit.com/r/effectai" target="_blank"><i class="fab fa-reddit"></i> Reddit</a></li>
@@ -116,5 +118,21 @@
 <style lang="scss" scoped>
 .sitemap * {
   color: $white;
+}
+
+.social-menu {
+  flex-direction: column;
+} 
+
+@media all and (max-width: 770px) {
+ .social-menu {
+   flex-direction: row;
+   .menu-label {
+     width: 100%;
+   }
+   .menu-list {
+     width: 50%;
+   }
+ }   
 }
 </style>
