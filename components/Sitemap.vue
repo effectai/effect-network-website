@@ -11,7 +11,7 @@
             <li><nuxt-link to="/token-page">Tokenomics</nuxt-link></li>
             <li><nuxt-link to="/for-developers">Build</nuxt-link></li>
             <li><a target="_blank" href="https://dao.effect.network">DAO</a></li>
-            <li><nuxt-link to="/blog">Blog</nuxt-link></li>
+            <li><nuxt-link to="/news">Blog</nuxt-link></li>
             <li><nuxt-link to="/team">Team</nuxt-link></li>
             <li><nuxt-link to="/contact">Contact</nuxt-link></li>
           </ul>
@@ -122,7 +122,7 @@
 
 .social-menu {
   flex-direction: column;
-} 
+}
 
 @media all and (max-width: 770px) {
  .social-menu {
@@ -133,6 +133,6 @@
    .menu-list {
      width: 50%;
    }
- }   
+ }
 }
 </style>

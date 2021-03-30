@@ -11,7 +11,7 @@
               <div class="column is-one-third has-text-centered px-6 mb-5" v-for="member in teamMembers" :key="member.name">
                 <a :href="member.link" target="_blank">
                   <figure class="image mx-4 is-hoverable">
-                    <div v-if="member.link" class="member-overlay is-flex is-justify-content-center is-flex-wrap-wrap is-align-content-center">
+                    <div v-if="member.link" class="member-overlay is-flex is-justify-content-center is-align-items-center is-flex-wrap-wrap">
                       <i class="fab fa-linkedin"></i>
                     </div>
                     <img class="is-rounded" :src="member.image">
@@ -215,8 +215,8 @@
     }
   }
   .image.is-hoverable {
-    overflow: hidden; 
-    
+    overflow: hidden;
+
     &:hover {
       .member-overlay {
         opacity: 1;
