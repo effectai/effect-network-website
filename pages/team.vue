@@ -9,9 +9,14 @@
         <div class="my-6">
             <div class="columns is-multiline mt-6">
               <div class="column is-one-third has-text-centered px-6 mb-5" v-for="member in teamMembers" :key="member.name">
-                <figure class="image px-4">
-                  <img class="is-rounded" :src="member.image">
-                </figure>
+                <a :href="member.link" target="_blank">
+                  <figure class="image mx-4 is-hoverable">
+                    <div v-if="member.link" class="member-overlay is-flex is-justify-content-center is-flex-wrap-wrap is-align-content-center">
+                      <i class="fab fa-linkedin"></i>
+                    </div>
+                    <img class="is-rounded" :src="member.image">
+                  </figure>
+                </a>
                 <a :href="member.link" target="_blank"><h4 class="title is-5 mt-5 mb-2">{{member.name}}</h4></a>
                 <p>{{member.title}}</p>
               </div>
@@ -196,4 +201,26 @@
 </script>
 
 <style lang="scss" scoped>
+  .member-overlay {
+    background: rgba($secondary, 0.85);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    opacity: 0;
+    transition: 0.2s;
+    i {
+      color: #fff;
+      font-size: 2.5rem;
+    }
+  }
+  .image.is-hoverable {
+    overflow: hidden; 
+    
+    &:hover {
+      .member-overlay {
+        opacity: 1;
+      }
+    }
+  }
 </style>

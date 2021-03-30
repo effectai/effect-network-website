@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="force-c2a is-secondary">
+    <section class="force-c2a">
       <div class="container has-text-centered py-6">
         <h1 class="title is-2 is-white mb-5 mt-6">
           Check Effect Force Now
@@ -12,7 +12,7 @@
 </template>
 <style lang="scss" scoped>
 .force-c2a {
-  background: $secondary;
+  background: $secondary-alt;
   background-image: url('~assets/img/force-c2a-bg.png');
   background-position: right;
   background-size: cover;
