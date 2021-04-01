@@ -214,7 +214,7 @@
         <button class="button is-text is-active ml-2"><span v-if="example">{{example}}</span><span v-else>Active</span></button>
         <br><br>
         <button class="button is-secondary is-outlined"><span v-if="example">{{example}}</span><span v-else>Outlined</span></button>
-        <button class="button is-secondary is-outlined is-active ml-2"><span v-if="example">{{example}}</span><span v-else>Active</span></button>
+        <button class="button is-secondary is-outlined is-hovered ml-2"><span v-if="example">{{example}}</span><span v-else>Active</span></button>
         <br><br>
         <div class="is-flex is-align-items-center">
           <button class="button is-secondary  is-small"><span v-if="example">{{example}}</span><span v-else>Small</span></button>
