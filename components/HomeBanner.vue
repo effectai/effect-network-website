@@ -1,6 +1,6 @@
 <template>
   <div class="banner">
-    <div class="circle-container has-text-right">
+    <div class="circle-container has-text-right" :style="{ transform : `scale(${scale})`}" style="transition: transform 0.05s">
 <!--      <div class="circle"></div>-->
       <img src="~assets/img/circle-network.png" style="margin-right: -50px; max-width: 1500px"/>
     </div>
@@ -36,6 +36,24 @@
 <script>
 
 export default {
+  created () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll (event) {
+      // Any code to be executed when the window is scrolled
+      console.log(window.scrollY)
+      this.scale = Math.min(2.5,1 + window.scrollY/1000)
+    }
+  },
+  data () {
+   return {
+     scale: 1
+   }
+  },
   components: {
   }
 }
@@ -392,11 +410,11 @@ export default {
 
     }
     @media all and (min-width: 770px) {
-      .title {  
+      .title {
         font-size: 3.5rem;
       }
     }
-    .subtitle { 
+    .subtitle {
       line-height: 1.8rem;
       @media all and (min-width: 770px) {
         span {

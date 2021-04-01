@@ -2,6 +2,9 @@ html {
   transition: background 0.2s;
   &.dark-mode {
     background: $dark-mode-background;
+    .has-background-default {
+      background-color: $dark-mode-background;
+    }
     body {
       color: $text-invert;
     }

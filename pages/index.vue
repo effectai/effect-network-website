@@ -1,18 +1,20 @@
 <template>
   <div>
+    <parallax fixed>
     <div class="has-background-light has-navbar-fixed-top">
     <home-banner />
     </div>
+    </parallax>
     <div class="has-background-light">
       <clients />
       <ten-video />
       <three-blocks />
     </div>
-    <force id="force" />
-    <services id="dapps" />
-    <efx />
+    <force id="force" class="has-background-default" />
+    <services id="dapps" class="has-background-default" />
+    <efx  />
     <case-studies />
-    <section class="section">
+    <section class="section has-background-default">
       <div class="container is-max-widescreen py-6">
         <div class="has-text-centered">
           <h1 class="title">Develop</h1>
@@ -28,6 +30,7 @@
 </template>
 
 <script>
+  import Parallax from 'vue-parallaxy'
   import HomeBanner from '@/components/HomeBanner';
   import Clients from '@/components/Clients';
   import TenVideo from '@/components/Video';
@@ -58,6 +61,7 @@
       }
     },
     components: {
+      Parallax,
       HomeBanner,
       Clients,
       TenVideo,
