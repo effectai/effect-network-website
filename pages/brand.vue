@@ -8,19 +8,19 @@
         <div class="subtitle is-5">Effect Network Colors</div>
         <div class="color">
             <div class="menu-label my-0"><small>primary</small></div>
-            <div  @click="copyToClipboard('#5158fa')" style="background: #5158fa"  class="color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+            <div  @click="copyToClipboard('#5158fa')" style="background: #5158fa"  class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
             <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #5158fa</div>
             <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small> (81, 88, 250)</div>
         </div>
         <div class="color">
             <div class="menu-label my-0"><small>secondary</small></div>
-            <div  @click="copyToClipboard('#101D56')" style="background: #101D56"  class="color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+            <div  @click="copyToClipboard('#101D56')" style="background: #101D56"  class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
             <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #101D56</div>
             <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(16, 29, 86)</div>
         </div>
         <div class="color">
             <div class="menu-label my-0"><small>accent</small></div>
-            <div  @click="copyToClipboard('#FF7C2F')" style="background: #FF7C2F"  class="color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+            <div  @click="copyToClipboard('#FF7C2F')" style="background: #FF7C2F"  class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
             <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #FF7C2F</div>
             <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(255, 124, 47)</div>
         </div>
@@ -28,37 +28,37 @@
         <div class="subtitle is-5">dApp Colors</div>
         <div class="color">
           <div class="menu-label my-0"><small>Effect Force</small></div>
-          <div  @click="copyToClipboard('#057cff')" style="background: #057cff" class="color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+          <div  @click="copyToClipboard('#057cff')" style="background: #057cff" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
           <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #057cff</div>
           <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small> (5, 124, 255)</div>
         </div>
         <div class="color">
           <div class="menu-label my-0"><small>Effect DAO</small></div>
-          <div  @click="copyToClipboard('#d7ac00')" style="background: #d7ac00" class="color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+          <div  @click="copyToClipboard('#d7ac00')" style="background: #d7ac00" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
           <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #d7ac00</div>
           <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(215, 172, 0)</div>
         </div>
         <div class="color">
           <div class="menu-label my-0"><small>Effect Translate</small></div>
-          <div  @click="copyToClipboard('#00c165')" style="background: #00c165" class="color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+          <div  @click="copyToClipboard('#00c165')" style="background: #00c165" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
           <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #00c165</div>
           <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(0, 193, 101)</div>
         </div>
         <div class="color">
           <div class="menu-label my-0"><small>Effect Socials</small></div>
-          <div  @click="copyToClipboard('#06c6c6')" style="background: #06c6c6" class="color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+          <div  @click="copyToClipboard('#06c6c6')" style="background: #06c6c6" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
           <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #06c6c6</div>
           <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(6, 198, 198)</div>
         </div>
         <div class="color">
           <div class="menu-label my-0"><small>Effect Captions</small></div>
-          <div  @click="copyToClipboard('#e06375')" style="background: #e06375" class="color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+          <div  @click="copyToClipboard('#e06375')" style="background: #e06375" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
           <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #e06375</div>
           <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(224, 99, 117)</div>
         </div>
         <div class="color">
           <div class="menu-label my-0"><small>Effect Pieces</small></div>
-          <div  @click="copyToClipboard('#999999')" style="background: #999999" class="color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+          <div  @click="copyToClipboard('#999999')" style="background: #999999" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
           <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #999999</div>
           <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(153, 153, 153)</div>
         </div>
