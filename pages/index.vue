@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="has-background-light has-navbar-fixed-top">
-    <home-banner />
+      <home-banner />
     </div>
     <div class="has-background-light">
       <clients />

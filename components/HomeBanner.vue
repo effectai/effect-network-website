@@ -11,7 +11,6 @@
             <h1 class="title is-1 is-spaced has-background-white-blur has-text-weight-medium"><span>Freedom To Work From Anywhere At Anytime</span></h1>
             <h1 class="subtitle has-background-white-blur pr-6"><span class="pr-6">The first Blockchain-based framework for the Future-of-Work. Access a global, on-demand, 24x7 scalable WorkForce.</span></h1>
             <!--          <p>Helping data science teams succeed with structuring data and the deployment of AI automation</p>-->
-            <br>
             <nuxt-link to="/force" class="button is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}">Work 3.0
             </nuxt-link>
           </div>
