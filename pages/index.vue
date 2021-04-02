@@ -2,7 +2,7 @@
   <div>
     <parallax fixed>
     <div class="has-background-light has-navbar-fixed-top">
-    <home-banner />
+      <home-banner />
     </div>
     </parallax>
     <div class="has-background-light">
