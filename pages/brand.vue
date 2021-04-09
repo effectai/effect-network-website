@@ -215,7 +215,7 @@
         <button class="button is-secondary is-outlined"><span v-if="example">{{example}}</span><span v-else>Outlined</span></button>
         <button class="button is-secondary is-outlined is-hovered ml-2"><span v-if="example">{{example}}</span><span v-else>Active</span></button>
         <br><br>
-        <div class="is-flex is-align-items-center">
+        <div class="buttons">
           <button class="button is-secondary  is-small"><span v-if="example">{{example}}</span><span v-else>Small</span></button>
           <button class="button is-secondary mx-2"><span v-if="example">{{example}}</span><span v-else>Normal</span></button>
           <button class="button is-secondary mx-2 is-medium"><span v-if="example">{{example}}</span><span v-else>Medium</span></button>
@@ -234,12 +234,13 @@
         <br>
         - Serif Font: <a href="https://fonts.adobe.com/fonts/p22-mackinac" target="_blank">P22 Mackinac Pro</a>
       </div>
+      <div class="table-container">
         <table class="typography table">
                 <thead>
                 <tr>
                     <th class="text-left">CSS</th>
                     <th class="text-left">Class</th>
-                    <th class="text-left">Information</th>
+                    <th style="min-width:300px" class="text-left">Information</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -281,6 +282,7 @@ line-height: 1.7;</pre>
                 </tr>
                 </tbody>
         </table>
+      </div>
     </div>
   </section>
 </template>
