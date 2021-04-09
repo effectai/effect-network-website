@@ -4,72 +4,12 @@
         <div class="title is-2">Effect <b>Style Guide</b></div>
         <p class="has-limited-width has-text-justified block">This is a style guide template of Effect. The template
             includes logo use, colors, typography, icons, buttons, fields and some images.</p>
-        <div class="subtitle is-4"><span class="has-text-secondary">01</span> Color Palette</div>
-        <div class="subtitle is-5">Effect Network Colors</div>
-        <div class="color">
-            <div class="menu-label my-0"><small>primary</small></div>
-            <div  @click="copyToClipboard('#5158fa')" style="background: #5158fa"  class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
-            <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #5158fa</div>
-            <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small> (81, 88, 250)</div>
-        </div>
-        <div class="color">
-            <div class="menu-label my-0"><small>secondary</small></div>
-            <div  @click="copyToClipboard('#101D56')" style="background: #101D56"  class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
-            <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #101D56</div>
-            <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(16, 29, 86)</div>
-        </div>
-        <div class="color">
-            <div class="menu-label my-0"><small>accent</small></div>
-            <div  @click="copyToClipboard('#FF7C2F')" style="background: #FF7C2F"  class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
-            <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #FF7C2F</div>
-            <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(255, 124, 47)</div>
-        </div>
-        <br><br>
-        <div class="subtitle is-5">dApp Colors</div>
-        <div class="color">
-          <div class="menu-label my-0"><small>Effect Force</small></div>
-          <div  @click="copyToClipboard('#057cff')" style="background: #057cff" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
-          <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #057cff</div>
-          <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small> (5, 124, 255)</div>
-        </div>
-        <div class="color">
-          <div class="menu-label my-0"><small>Effect DAO</small></div>
-          <div  @click="copyToClipboard('#d7ac00')" style="background: #d7ac00" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
-          <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #d7ac00</div>
-          <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(215, 172, 0)</div>
-        </div>
-        <div class="color">
-          <div class="menu-label my-0"><small>Effect Translate</small></div>
-          <div  @click="copyToClipboard('#00c165')" style="background: #00c165" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
-          <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #00c165</div>
-          <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(0, 193, 101)</div>
-        </div>
-        <div class="color">
-          <div class="menu-label my-0"><small>Effect Socials</small></div>
-          <div  @click="copyToClipboard('#06c6c6')" style="background: #06c6c6" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
-          <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #06c6c6</div>
-          <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(6, 198, 198)</div>
-        </div>
-        <div class="color">
-          <div class="menu-label my-0"><small>Effect Captions</small></div>
-          <div  @click="copyToClipboard('#e06375')" style="background: #e06375" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
-          <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #e06375</div>
-          <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(224, 99, 117)</div>
-        </div>
-        <div class="color">
-          <div class="menu-label my-0"><small>Effect Pieces</small></div>
-          <div  @click="copyToClipboard('#999999')" style="background: #999999" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
-          <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #999999</div>
-          <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(153, 153, 153)</div>
-        </div>
-        <br><br>
-
-        <div class="subtitle is-4 mt-4" ><span class="has-text-secondary">02</span> Logo</div>
+        <div class="subtitle is-4 mt-4" ><span class="has-text-secondary">01</span> Logo</div>
         <div class="subtitle is-5">Use of the Effect logo</div>
         <div class="is-inline-block p-4 has-text-centered">
           <div>
             <img src="~assets/img/logo.svg" class="mx-auto mb-2 d-block"
-                 style="height:100px;" />
+                 style="height:150px;" />
           </div>
             <a class="button is-small is-outlined" target="_blank" href="/img/logo/logo.png" download><i class="fas fa-download mr-2"></i> png</a>
             <a class="button is-small is-outlined" target="_blank" href="/img/logo/logo.svg" download><i class="fas fa-download mr-2"></i> svg</a>
@@ -77,7 +17,7 @@
         <div class="is-inline-block p-4 has-text-centered has-background-primary">
           <div>
             <img src="~assets/img/logo_white.svg" class="mx-auto mb-2 d-block"
-                 style="height:100px;" />
+                 style="height:150px;" />
           </div>
           <a class="button is-small is-white is-outlined" target="_blank" href="/img/logo/logo_white.png" download><i class="fas fa-download mr-2"></i> png</a>
           <a class="button is-small is-white is-outlined" target="_blank" href="/img/logo/logo_white.svg" download><i class="fas fa-download mr-2"></i> svg</a>
@@ -86,7 +26,7 @@
       <div class="is-inline-block p-4 has-text-centered">
         <div>
           <img src="~assets/img/logo_icon.png" class="mx-auto mb-2 d-block"
-               style="height:130px;" />
+               style="height:200px;" />
         </div>
         <a class="button is-small is-outlined" target="_blank" href="/img/logo/logo_icon.png" download><i class="fas fa-download mr-2"></i> png</a>
 <!--        <a class="button is-small is-outlined" target="_blank" href="~assets/img/logo.svg" download><i class="fas fa-download mr-2"></i> svg</a>-->
@@ -94,7 +34,7 @@
       <div class="is-inline-block p-4 has-text-centered has-background-primary">
         <div>
           <img src="~assets/img/logo_icon_white.png" class="mx-auto mb-2 d-block"
-               style="height:130px;" />
+               style="height:200px;" />
         </div>
         <a class="button is-small is-white is-outlined" target="_blank" href="/img/logo/logo_icon_white.png" download><i class="fas fa-download mr-2"></i> png</a>
 <!--        <a class="button is-small is-white is-outlined" target="_blank" href="~assets/img/logo_white.svg" download><i class="fas fa-download mr-2"></i> svg</a>-->
@@ -202,6 +142,65 @@
 <!--        <a class="button is-small is-white is-outlined" target="_blank" href="~assets/img/dapps/effect-dao_white.png" download><i class="fas fa-download mr-2"></i> svg</a>-->
       </div>
         <br><br>
+      <div class="subtitle is-4"><span class="has-text-secondary">02</span> Color Palette</div>
+      <div class="subtitle is-5">Effect Network Colors</div>
+      <div class="color">
+        <div class="menu-label my-0"><small>primary</small></div>
+        <div  @click="copyToClipboard('#5158fa')" style="background: #5158fa"  class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #5158fa</div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small> (81, 88, 250)</div>
+      </div>
+      <div class="color">
+        <div class="menu-label my-0"><small>secondary</small></div>
+        <div  @click="copyToClipboard('#101D56')" style="background: #101D56"  class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #101D56</div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(16, 29, 86)</div>
+      </div>
+      <div class="color">
+        <div class="menu-label my-0"><small>accent</small></div>
+        <div  @click="copyToClipboard('#FFAE0D')" style="background: #FFAE0D"  class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #FFAE0D</div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(255, 174, 13)</div>
+      </div>
+      <br><br>
+      <div class="subtitle is-5">dApp Colors</div>
+      <div class="color">
+        <div class="menu-label my-0"><small>Effect Force</small></div>
+        <div  @click="copyToClipboard('#057cff')" style="background: #057cff" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #057cff</div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small> (5, 124, 255)</div>
+      </div>
+      <div class="color">
+        <div class="menu-label my-0"><small>Effect DAO</small></div>
+        <div  @click="copyToClipboard('#d7ac00')" style="background: #d7ac00" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #d7ac00</div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(215, 172, 0)</div>
+      </div>
+      <div class="color">
+        <div class="menu-label my-0"><small>Effect Translate</small></div>
+        <div  @click="copyToClipboard('#00c165')" style="background: #00c165" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #00c165</div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(0, 193, 101)</div>
+      </div>
+      <div class="color">
+        <div class="menu-label my-0"><small>Effect Socials</small></div>
+        <div  @click="copyToClipboard('#06c6c6')" style="background: #06c6c6" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #06c6c6</div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(6, 198, 198)</div>
+      </div>
+      <div class="color">
+        <div class="menu-label my-0"><small>Effect Captions</small></div>
+        <div  @click="copyToClipboard('#e06375')" style="background: #e06375" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #e06375</div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(224, 99, 117)</div>
+      </div>
+      <div class="color">
+        <div class="menu-label my-0"><small>Effect Pieces</small></div>
+        <div  @click="copyToClipboard('#999999')" style="background: #999999" class="has-radius color-square has-text-white is-size-4"><i class="far fa-copy"></i></div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">HEX</small> #999999</div>
+        <div class="menu-label my-0"><small class="has-text-weight-normal">RGB</small>(153, 153, 153)</div>
+      </div>
+      <br><br>
       <div class="subtitle is-4 mt-4" ><span class="has-text-secondary">03</span> Buttons</div>
       <div class="subtitle is-5">All buttons styles used for Effect Network</div>
         <button class="button is-secondary"><span v-if="example">{{example}}</span><span v-else>Button</span></button>
