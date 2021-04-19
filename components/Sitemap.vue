@@ -81,9 +81,9 @@
         <!--      <div class="overline mt-3 mb-2 text-center">SOCIALS</div>-->
         <div class="has-text-centered mt-4">
           <div class="is-flex is-align-items-center is-justify-content-center">
-            <i class="fas fa-envelope has-text-primary is-size-4 mr-2"></i>
+            <i class="fas fa-envelope is-size-4 mr-2"></i>
             <div class="text-left">
-              <a class="has-text-weight-bold has-text-primary" href="mailto:hello@effect.ai" target="_blank">hello@effect.ai</a>
+              <a class="has-text-weight-bold" href="mailto:hello@effect.ai" target="_blank">hello@effect.ai</a>
             </div>
           </div>
           <a class="is-size-3 mx-2 has-text-primary" target="_blank" href="https://twitter.com/effectaix">

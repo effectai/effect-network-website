@@ -10,7 +10,7 @@
         <div>
           <div class="columns is-multiline">
             <div class="column is-one-third" v-for="post in posts" v-if="post.featured" :key="post.title">
-              <div class="card" :href="post.href" target="_blank" min-height="500">
+              <a class="card is-hoverable" :href="post.href" target="_blank" min-height="500">
                 <div class="card-image">
                   <figure class="image is-5by3 background-image" :style="'background-image: url(\''+post.img+'\')'">
                   </figure>
@@ -45,7 +45,7 @@
                     Read More <i class="fas fa-chevron-right ml-3"></i>
                   </a>
                 </footer>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@
       <div class="">
           <div class="columns is-multiline">
             <div class="column is-one-quarter" v-for="post in posts" :key="post.title">
-              <div class="card is-flat" :href="post.href" target="_blank">
+              <a class="card is-flat" :href="post.href" target="_blank">
                 <div class="card-image full-image background-image" :style="'background-image: url(\''+post.img+'\')'">
 <!--                  <figure class="image is-5by3 background-image" >-->
 <!--                  </figure>-->
@@ -82,7 +82,7 @@
                     Read More <i class="fas fa-chevron-right ml-3"></i>
                   </a>
                 </small>
-              </div>
+              </a>
             </div>
           </div>
           <div class="has-text-centered">
