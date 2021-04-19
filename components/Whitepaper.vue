@@ -29,4 +29,10 @@
 .has-blue-white-background {
   background: linear-gradient(90deg, $secondary-alt 35%, white 35%);
 }
+.image {
+  transition: 0.25s;
+}
+.image:hover {
+  transform: scale(1.03);
+}
 </style>
