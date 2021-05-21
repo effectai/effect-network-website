@@ -29,7 +29,6 @@
                        color="accent primary--text">Buy EFX
                     </a>
                     <small>with BNB</small>
-<!--                    <small>0xc51ef828319b131b595b7ec4b28210ecf4d05ad0</small>-->
                   </div>
                 </div>
                 <div class="column is-half">
@@ -65,12 +64,17 @@
                 </div>
               </div>
             </section>
+            <div class="p-5">
+              <div class="subtitle">Official Token Contracts</div>
+              <div class="block"><small>BSC Token Contract: <a class="blockchain-address has-text-white" href="https://bscscan.com/token/0xC51Ef828319b131B595b7ec4B28210eCf4d05aD0" target="_blank">0xc51ef828319b131b595b7ec4b28210ecf4d05ad0</a></small></div>
+              <div><small>EOS Token Contract: <a class="blockchain-address has-text-white" href="https://www.bloks.io/account/effecttokens" target="_blank">effecttokens</a></small></div>
+            </div>
           </div>
         </div>
       </section>
       <section class="section">
         <div class="container">
-          <div class="my-6">
+          <div class="mb-6 mt-2">
             <div class="has-text-centered">
               <h2 class="title is-2">Tokenomics</h2>
               <div class="coinmarketcap-currency-widget has-background-white has-text-black has-radius" data-currencyid="2666" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
@@ -144,6 +148,14 @@
 </script>
 
 <style lang="scss" scoped>
+.blockchain-address {
+  font-family: monospace;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
   .token-hero {
     background-image: url("~assets/img/grad_token_hero_left.png"), url("~assets/img/grad_token_hero_right.png");
     background-position: left, right top;
