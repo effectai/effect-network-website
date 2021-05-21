@@ -13,14 +13,26 @@
             </div>
           </div>
 
-          <div class="my-6" id="buy">
+          <div class="my-6" id="buy" style="max-width:750px; margin-left:auto;margin-right:auto">
             <section class="section has-background-secondary-alt has-radius background-image efx-graph">
               <div class="has-text-centered block">
                 <h2 class="title is-2">Buy EFX</h2>
                 <p class="subtitle">Buy EFX tokens with BTC, EOS or USDT</p>
               </div>
-              <div class="columns has-text-grey has-text-centered">
-                <div class="column is-one-third">
+              <div class="columns has-text-grey has-text-centered is-multiline">
+                <div class="column is-half">
+                  <div class="has-background-white has-radius px-6 pt-5 pb-2">
+                    <div style="min-height: 70px" class="pt-2"><img width="100%"
+                                                                    :src="require('@/assets/img/pancakeswap.png')"/>
+                    </div>
+                    <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xc51ef828319b131b595b7ec4b28210ecf4d05ad0" target="_blank"
+                       color="accent primary--text">Buy EFX
+                    </a>
+                    <small>with BNB</small>
+<!--                    <small>0xc51ef828319b131b595b7ec4b28210ecf4d05ad0</small>-->
+                  </div>
+                </div>
+                <div class="column is-half">
                   <div class="has-background-white has-radius px-6 pt-5 pb-2">
                     <div style="min-height: 70px" class="pt-2"><img width="80%"
                       :src="require('@/assets/img/kucoin.svg')"/>
@@ -31,7 +43,7 @@
                     <small>with BTC</small>
                   </div>
                 </div>
-                <div class="column is-one-third">
+                <div class="column is-half">
                   <div class="has-background-white has-radius px-6 pt-5 pb-2">
                     <div style="min-height: 70px" class=""><img width="80%"
                       :src="require('@/assets/img/newdex_logo.png')"/>
@@ -41,7 +53,7 @@
                     <small>with EOS</small>
                   </div>
                 </div>
-                <div class="column is-one-third">
+                <div class="column is-half">
                   <div class="has-background-white has-radius px-6 pt-5 pb-2">
                     <div style="min-height: 70px;" class=""><img width="80%"
                         :src="require('@/assets/img/bidesk_logo.png')"/>
