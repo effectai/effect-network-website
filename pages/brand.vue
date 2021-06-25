@@ -29,7 +29,7 @@
                style="height:200px;" />
         </div>
         <a class="button is-small is-outlined" target="_blank" href="/img/logo/logo_icon.png" download><i class="fas fa-download mr-2"></i> png</a>
-<!--        <a class="button is-small is-outlined" target="_blank" href="~assets/img/logo.svg" download><i class="fas fa-download mr-2"></i> svg</a>-->
+        <a class="button is-small is-outlined" target="_blank" href="/img/logo/logo_icon.svg" download><i class="fas fa-download mr-2"></i> svg</a>
       </div>
       <div class="is-inline-block p-4 has-text-centered has-background-primary">
         <div>
@@ -37,7 +37,7 @@
                style="height:200px;" />
         </div>
         <a class="button is-small is-white is-outlined" target="_blank" href="/img/logo/logo_icon_white.png" download><i class="fas fa-download mr-2"></i> png</a>
-<!--        <a class="button is-small is-white is-outlined" target="_blank" href="~assets/img/logo_white.svg" download><i class="fas fa-download mr-2"></i> svg</a>-->
+        <a class="button is-small is-white is-outlined" target="_blank" href="/img/logo/logo_icon_white.svg" download><i class="fas fa-download mr-2"></i> svg</a>
       </div>
       <div class="subtitle is-5 mt-6">Effect Force Logo</div>
       <div class="is-inline-block p-4 has-text-centered">
