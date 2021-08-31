@@ -25,7 +25,7 @@
                     <div style="min-height: 70px" class="pt-2"><img width="100%"
                                                                     :src="require('@/assets/img/pancakeswap.png')"/>
                     </div>
-                    <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0xc51ef828319b131b595b7ec4b28210ecf4d05ad0" target="_blank"
+                    <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://pancakeswap.finance/swap?outputCurrency=0xc51ef828319b131b595b7ec4b28210ecf4d05ad0" target="_blank"
                        color="accent primary--text">Buy EFX
                     </a>
                     <small>with BNB</small>
