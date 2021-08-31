@@ -80,7 +80,7 @@
             image: require('@/assets/img/team/jesse.jpg')
           },
           {
-            name: 'Laurens Verspreek',
+            name: 'Laurens Verspeek',
             title: 'Chief Engineer',
             link: 'https://www.linkedin.com/in/laurensverspeek/',
             image: require('@/assets/img/team/laurens.jpg')
