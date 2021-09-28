@@ -5,7 +5,7 @@
         <h1 class="title">Effect <b>Services</b></h1>
         <p class="has-limited-width is-horizontal-centered">From high quality translations to the very best in social media engagement to Machine Learning Training Data. There are many services available for you to tap into with ease. </p>
       </div>
-      <div class="columns is-multiline is-variable is-5 mt-6">
+      <div class="columns is-multiline is-variable is-5 mt-6 is-centered">
         <div class="column is-4">
           <nuxt-link to="/force"  class="card is-flat is-hoverable dapp-force">
             <header class="card-header">
@@ -143,33 +143,33 @@
 <!--            </footer>-->
           </a>
         </div>
-        <div class="column is-4">
-          <a href="https://superrare.co/effectpieces" target="_blank" class="card is-flat is-hoverable dapp-pieces">
-            <header class="card-header">
-              <div class="card-header-title ">
-                <div class="has-text-centered" style="width: 100%;">
-                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-pieces_part-white_h100.png') : require('@/assets/img/dapps/effect-pieces_h100.png')" class="dapp-logo block"/>
-                  <img src="~assets/img/dapps/effect-pieces_white_h100.png" class="dapp-logo-white block"/>
-                  <p class="has-text-weight-semibold block">Crowdsourced Art on the Blockchain</p>
-                  <b> <a href="https://superrare.co/effectpieces" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>
-                </div>
-              </div>
-            </header>
-<!--            <div class="card-content">-->
-<!--              <h4 class="subtitle is-5 has-text-weight-semibold">A Global Workforce to Structure Data</h4>-->
-<!--              <div>-->
-<!--                Whether you need training data, sentiment analysis,-->
-<!--                translations, or survey respondents, Force has you covered. We have thousands of workers, speaking-->
-<!--                25+ languages that can complete your tasks at scale.-->
+<!--        <div class="column is-4">-->
+<!--          <a href="https://superrare.co/effectpieces" target="_blank" class="card is-flat is-hoverable dapp-pieces">-->
+<!--            <header class="card-header">-->
+<!--              <div class="card-header-title ">-->
+<!--                <div class="has-text-centered" style="width: 100%;">-->
+<!--                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-pieces_part-white_h100.png') : require('@/assets/img/dapps/effect-pieces_h100.png')" class="dapp-logo block"/>-->
+<!--                  <img src="~assets/img/dapps/effect-pieces_white_h100.png" class="dapp-logo-white block"/>-->
+<!--                  <p class="has-text-weight-semibold block">Crowdsourced Art on the Blockchain</p>-->
+<!--                  <b> <a href="https://superrare.co/effectpieces" class="button is-outlined is-secondary" :class="{'is-accent': $colorMode.value === 'dark'}" target="_blank">Learn More</a> </b>-->
+<!--                </div>-->
 <!--              </div>-->
-<!--            </div>-->
-<!--            <footer class="card-footer">-->
-<!--              <p class="card-footer-item">-->
-<!--                <b> <a href="https://force.effect.ai" :class="{'has-text-accent': $colorMode.value === 'dark'}" target="_blank">EXPLORE EFFECT FORCE</a> </b>-->
-<!--              </p>-->
-<!--            </footer>-->
-          </a>
-        </div>
+<!--            </header>-->
+<!--&lt;!&ndash;            <div class="card-content">&ndash;&gt;-->
+<!--&lt;!&ndash;              <h4 class="subtitle is-5 has-text-weight-semibold">A Global Workforce to Structure Data</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;              <div>&ndash;&gt;-->
+<!--&lt;!&ndash;                Whether you need training data, sentiment analysis,&ndash;&gt;-->
+<!--&lt;!&ndash;                translations, or survey respondents, Force has you covered. We have thousands of workers, speaking&ndash;&gt;-->
+<!--&lt;!&ndash;                25+ languages that can complete your tasks at scale.&ndash;&gt;-->
+<!--&lt;!&ndash;              </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <footer class="card-footer">&ndash;&gt;-->
+<!--&lt;!&ndash;              <p class="card-footer-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                <b> <a href="https://force.effect.ai" :class="{'has-text-accent': $colorMode.value === 'dark'}" target="_blank">EXPLORE EFFECT FORCE</a> </b>&ndash;&gt;-->
+<!--&lt;!&ndash;              </p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </footer>&ndash;&gt;-->
+<!--          </a>-->
+<!--        </div>-->
       </div>
     </div>
   </section>

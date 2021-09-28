@@ -71,9 +71,9 @@
                 <a target="_blank" href="https://captions.effect.network" class="navbar-item">
                   <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-captions_part-white_h100.png') : require('@/assets/img/dapps/effect-captions_h100.png')" class="dapp-logo block"/>
                 </a>
-                <a target="_blank" href="https://superrare.co/effectpieces" class="navbar-item">
-                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-pieces_part-white_h100.png') : require('@/assets/img/dapps/effect-pieces_h100.png')" class="dapp-logo block"/>
-                </a>
+<!--                <a target="_blank" href="https://superrare.co/effectpieces" class="navbar-item">-->
+<!--                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-pieces_part-white_h100.png') : require('@/assets/img/dapps/effect-pieces_h100.png')" class="dapp-logo block"/>-->
+<!--                </a>-->
               </div>
             </div>
             <div class="navbar-item" exact-active-class="is-active">
@@ -223,7 +223,7 @@
         }
       }
     }
-      
+
     @media all and (max-width: 770px) {
       .navbar-menu {
         background: $primary;
