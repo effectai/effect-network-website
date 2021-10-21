@@ -55,11 +55,11 @@
                 <div class="column is-half">
                   <div class="has-background-white has-radius px-6 pt-5 pb-2">
                     <div style="min-height: 70px;" class=""><img width="80%"
-                        :src="require('@/assets/img/bidesk_logo.png')"/>
+                        :src="require('@/assets/img/orion.png')"/>
                       </div>
-                    <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://www.bidesk.com/exchange/EFX/USDT" target="_blank">Buy EFX
+                    <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://trade.orionprotocol.io/trade/EFX-USDT" target="_blank">Buy EFX
                     </a>
-                    <small>with USDT</small>
+                    <small>with USDT (BSC)</small>
                   </div>
                 </div>
               </div>
