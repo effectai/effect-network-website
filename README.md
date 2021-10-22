@@ -1,4 +1,4 @@
-# effect-network-website
+# Effect.network Website
 
 ## Build Setup
 
