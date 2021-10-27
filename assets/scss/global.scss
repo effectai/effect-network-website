@@ -58,6 +58,11 @@ a.card {
     background: white;
   }
 }
+
+.has-background-black-transparent {
+  background: rgba(11, 21, 62, 0.6);
+}
+
 .dark-mode {
   .has-background-white-blur:before {
     background: $dark-mode-background;

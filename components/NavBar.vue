@@ -14,11 +14,8 @@
             <span aria-hidden="true"></span>
           </a>
         </div>
-
-
         <div id="navbar" class="navbar-menu" :class="{'is-active': mobileMenu}">
           <div class="navbar-start">
-
           </div>
           <div class="navbar-end is-align-items-center">
             <div @click="mobileMenu = false">
@@ -26,35 +23,37 @@
                 Home
               </nuxt-link>
             </div>
-             <div @click="mobileMenu = false">
-            <nuxt-link class="navbar-item" to="/force" exact-active-class="is-active">
-              Work 3.0
-            </nuxt-link>
-             </div>
-             <div @click="mobileMenu = false">
-            <nuxt-link class="navbar-item" to="/token-page" exact-active-class="is-active">
-              EFX Token
-            </nuxt-link>
-             </div>
-
-             <div @click="mobileMenu = false">
-            <nuxt-link class="navbar-item" to="/for-developers" exact-active-class="is-active">
-              Develop
-            </nuxt-link>
-             </div>
-
-             <div @click="mobileMenu = false">
-            <nuxt-link class="navbar-item" to="/news" exact-active-class="is-active">
-              Blog
-            </nuxt-link>
-               </div>
-            <div class="navbar-item has-dropdown is-hoverable dapps">
-               <div @click="mobileMenu = false">
-              <nuxt-link to="/#dapps" class="navbar-link">
-                dApps
+            <div @click="mobileMenu = false">
+              <nuxt-link class="navbar-item" to="/force" exact-active-class="is-active">
+                Work 3.0
               </nuxt-link>
-                 </div>
-
+            </div>
+            <div @click="mobileMenu = false">
+              <nuxt-link class="navbar-item" to="/token-page" exact-active-class="is-active">
+                EFX Token
+              </nuxt-link>
+            </div>
+            <div @click="mobileMenu = false">
+              <nuxt-link class="navbar-item" to="/for-developers" exact-active-class="is-active">
+                Develop
+              </nuxt-link>
+            </div>
+            <div @click="mobileMenu = false">
+              <nuxt-link class="navbar-item" to="/hackathon" exact-active-class="is-active">
+                Hackathon
+              </nuxt-link>
+            </div>
+            <div @click="mobileMenu = false">
+              <nuxt-link class="navbar-item" to="/news" exact-active-class="is-active">
+                Blog
+              </nuxt-link>
+            </div>
+            <div class="navbar-item has-dropdown is-hoverable dapps">
+              <div @click="mobileMenu = false">
+                <nuxt-link to="/#dapps" class="navbar-link">
+                  dApps
+                </nuxt-link>
+              </div>
               <div class="navbar-dropdown">
                 <nuxt-link to="/force" class="navbar-item">
                   <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-force_part-white_h100.png') : require('@/assets/img/dapps/effect-force_h100.png')" class="dapp-logo block"/>
@@ -77,12 +76,11 @@
               </div>
             </div>
             <div class="navbar-item" exact-active-class="is-active">
-               <div @click="mobileMenu = false">
-              <nuxt-link class="button is-secondary is-outlined" :class="{'is-accent': $colorMode.value === 'dark'}" to="/token-page" exact-active-class="is-active">
-                Buy EFX
-              </nuxt-link>
-                 </div>
-
+              <div @click="mobileMenu = false">
+                <nuxt-link class="button is-secondary is-outlined" :class="{'is-accent': $colorMode.value === 'dark'}" to="/token-page" exact-active-class="is-active">
+                  Buy EFX
+                </nuxt-link>
+              </div>
             </div>
             <darkmode-switcher class="ml-4" />
           </div>
