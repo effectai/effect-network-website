@@ -30,38 +30,105 @@
     <section class="section">
       <div class="container">
         <h1 class="title has-text-centered">Book your Schedule!</h1>
-        <div class="my-6 is-flex is-justify-content-center">
-          <table class="table is-custom is-bordered">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Topic</th>
-                <th>Speaker</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>23 Nov, 2021</td>
-                <td>Hackathon Kick-off Session</td>
-                <td>Chris | CEO of Effect Network</td>
-              </tr>
-              <tr>
-                <td>24 Nov, 2021</td>
-                <td>Hands-on with the Effect SDK</td>
-                <td>Laurens | CE of Effect Network</td>
-              </tr>
-              <tr>
-                <td>25 Nov, 2021</td>
-                <td>Let's tackle it</td>
-                <td>Jesse | CTO of Effect Network</td>
-              </tr>
-              <tr>
-                <td>26 Nov, 2021</td>
-                <td>How to Curate your Workforce</td>
-                <td>Rochelle | Chief Talent Officer of Effect Network</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="m-6 px-6">
+            <div class="columns is-multiline mt-6">
+              <div class="column is-3">
+                <div class="card has-text-centered has-gradient">
+                  <div class="card-content">
+                    <div class="content">
+                      <div class="block">
+                        <p class="has-text-weight-bold is-size-5">
+                          23 Nov, 2021
+                        </p>
+                      </div>
+                      <div class="block">
+                        <img :src="require('@/assets/img/icons/speaker-1.png')" class="is-icon-size-medium has-radius"/>
+                      </div>
+                      <div class="block">
+                        <span class="is-5 mt-1 has-text-weight-bold">Chris Dawe</span>
+                        <p class="has-text-accent">CEO</p>
+                        <div class="is-divider" />
+                      </div>
+                      <div class="block">
+                        <h5 class="is-5">How to Perfect a Pitch</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3">
+                <div class="card has-text-centered has-gradient">
+                  <div class="card-content">
+                    <div class="content">
+                      <div class="block">
+                        <p class="has-text-weight-bold is-size-5">
+                          24 Nov, 2021
+                        </p>
+                      </div>
+                      <div class="block">
+                        <img :src="require('@/assets/img/icons/speaker-4.png')" class="is-icon-size-medium has-radius"/>
+                      </div>
+                      <div class="block">
+                        <span class="is-5 mt-1 has-text-weight-bold">Laurens</span>
+                        <p class="has-text-accent">CE</p>
+                        <div class="is-divider" />
+                      </div>
+                      <div class="block">
+                        <h5 class="is-5">Hands-on with<br>the Effect SDK</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3">
+                <div class="card has-text-centered has-gradient">
+                  <div class="card-content">
+                    <div class="content">
+                      <div class="block">
+                        <p class="has-text-weight-bold is-size-5">
+                          25 Nov, 2021
+                        </p>
+                      </div>
+                      <div class="block">
+                        <img :src="require('@/assets/img/icons/speaker-2.png')" class="is-icon-size-medium has-radius"/>
+                      </div>
+                      <div class="block">
+                        <span class="is-5 mt-1 has-text-weight-bold">Jesse</span>
+                        <p class="has-text-accent">CTO</p>
+                        <div class="is-divider" />
+                      </div>
+                      <div class="block">
+                        <h5 class="is-5">Let's Tackle It</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-3">
+                <div class="card has-text-centered has-gradient">
+                  <div class="card-content">
+                    <div class="content">
+                      <div class="block">
+                        <p class="has-text-weight-bold is-size-5">
+                          26 Nov, 2021
+                        </p>
+                      </div>
+                      <div class="block">
+                        <img :src="require('@/assets/img/icons/speaker-3.png')" class="is-icon-size-medium has-radius"/>
+                      </div>
+                      <div class="block">
+                        <span class="is-5 mt-1 has-text-weight-bold">Rochelle</span>
+                        <p class="has-text-accent">Chief Talent Officer</p>
+                        <div class="is-divider" />
+                      </div>
+                      <div class="block">
+                        <h5 class="is-5">How to Curate<br>Your Workforce</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </section>
@@ -71,25 +138,25 @@
           <div class="my-6">
             <div class="columns">
               <div class="column is-3 has-text-left">
-                <img :src="require('@/assets/img/icons/movie_player.svg')" style="height: 50px"/>
+                <img :src="require('@/assets/img/icons/movie_player.svg')" class="is-icon-size-small" />
                 <p>
                   A 3-minute video demonstration of the application uploaded to YouTube and made public with the hashtags <span class="has-text-accent">#EffectNetworkHackathon</span> and <span class="has-text-accent">#FutureOfWork</span>.
                 </p>
               </div>
               <div class="column is-3 has-text-left">
-                <img :src="require('@/assets/img/icons/code_doc.svg')" style="height: 50px"/>
+                <img :src="require('@/assets/img/icons/code_doc.svg')" class="is-icon-size-small" />
                 <p>
                   Source code submitted to GitHub that uses the Effect SDK and includes a readme with details for deployment or operation.
                 </p>
               </div>
               <div class="column is-3 has-text-left">
-                <img :src="require('@/assets/img/icons/template.svg')" style="height: 50px"/>
+                <img :src="require('@/assets/img/icons/template.svg')" class="is-icon-size-small" />
                 <p>
                   A campaign with template on the Effect Force testnet.
                 </p>
               </div>
               <div class="column is-3 has-text-left">
-                <img :src="require('@/assets/img/icons/wireframe.svg')" style="height: 50px"/>
+                <img :src="require('@/assets/img/icons/wireframe.svg')" class="is-icon-size-small" />
                 <p>
                   A user interface, either functioning or designed.
                 </p>
@@ -100,20 +167,21 @@
     </section>
     <section class="section">
       <div class="container">
+        <h1 class="title has-text-centered">Resources</h1>
         <div class="my-6 has-background-black-transparent has-limited-width is-horizontal-centered has-radius py-5">
           <div class="columns">
             <div class="column is-4 is-flex is-justify-content-center">
-              <a href="#" target="_blank" class="custom-hover">
-                <img :src="require('@/assets/img/icons/sdk.svg')" style="height: 50px"/>
+              <a href="https://github.com/effectai/effect-js" target="_blank" class="custom-hover">
+                <img :src="require('@/assets/img/icons/sdk.svg')" class="is-icon-size-small" />
               </a>
             </div>
             <div class="column is-4 is-flex is-justify-content-center">
-              <a href="#" target="_blank" class="custom-hover">
-                <img :src="require('@/assets/img/icons/github_white.svg')" style="height: 50px"/>
+              <a href="https://github.com/effectai/effect-network" target="_blank" class="custom-hover">
+                <img :src="require('@/assets/img/icons/github_white.svg')" class="is-icon-size-small" />
               </a>
               </div>
             <div class="column is-4 is-flex is-justify-content-center">
-              <a href="https://discord.com/invite/hM3237cYXP" target="_blank" class="custom-hover">
+              <a href="https://discord.gg/effectnetwork" target="_blank" class="custom-hover">
                 <img :src="require('@/assets/img/icons/discord.svg')" style="height: 50px" />
               </a>
             </div>
@@ -270,10 +338,28 @@ a.custom-hover {
      border-color: #505DF1
   }
 }
+.is-icon-size-small {
+  height: 50px;
+}
+.is-icon-size-medium {
+  height: 116px;
+}
 div.reward-container {
   background: rgba(11, 21, 62, 0.6);
   max-width: 600px;
   padding: 60px;
+}
+.is-bordered {
+  border: 1px solid #505DF1
+}
+.is-absolute { 
+  position: absolute;
+}
+.has-gradient {
+  background: linear-gradient(180deg, #5158FA 0%, #101D56 100%);
+}
+.is-divider {
+  border: 1px solid rgba(81, 88, 250, 0.5);
 }
 .hackathon-hero {
   background-repeat: no-repeat;
