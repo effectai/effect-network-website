@@ -30,7 +30,7 @@
     <section class="section">
       <div class="container">
         <h1 class="title has-text-centered">Book your Schedule!</h1>
-        <div class="m-6 px-6">
+        <div class="my-6">
             <div class="columns is-multiline mt-6">
               <div class="column is-3">
                 <div class="card has-text-centered has-gradient">
