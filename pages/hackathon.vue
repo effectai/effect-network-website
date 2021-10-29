@@ -128,20 +128,12 @@
         <V-accordion>
           <template v-slot:title>
             <h5 class="is-size-5">
-              Do I need to have any specific qualifications to be a participant for the Hackathon? 
+              Do I need to pay to register for the hackathon?
             </h5>
-          </template>
-          <template v-slot:icon>
-            <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L15 15L29 1" stroke="white" stroke-width="2"/>
-            </svg>
           </template>
           <template v-slot:content>
             <span>
-              If you love to build things, you are more than welcome to participate in the hackathon. 
-              It’s recommended that you have some experience in coding, 
-              or that you team up with at least 1 programmer, 
-              as you will need to develop an application.
+              No. The Effect hackathon is completely free to join for everyone that qualifies under the hackathon rules.
             </span>
           </template>
         </V-accordion>
@@ -151,37 +143,93 @@
               Do I need to have any specific qualifications to be a participant for the Hackathon? 
             </h5>
           </template>
-          <template v-slot:icon>
-            <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L15 15L29 1" stroke="white" stroke-width="2"/>
-            </svg>
-          </template>
           <template v-slot:content>
             <span>
-              If you love to build things, you are more than welcome to participate in the hackathon. 
-              It’s recommended that you have some experience in coding, 
-              or that you team up with at least 1 programmer, 
-              as you will need to develop an application.
+              If you love to build things, you are more than welcome to participate in the hackathon. It’s recommended that you have some experience in coding, or that you team up with at least 1 programmer, as you will need to develop an application.
             </span>
           </template>
         </V-accordion>
         <V-accordion>
           <template v-slot:title>
             <h5 class="is-size-5">
-              Do I need to have any specific qualifications to be a participant for the Hackathon? 
+              How do I submit what I have made for the hackathon?
             </h5>
-          </template>
-          <template v-slot:icon>
-            <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L15 15L29 1" stroke="white" stroke-width="2"/>
-            </svg>
           </template>
           <template v-slot:content>
             <span>
-              If you love to build things, you are more than welcome to participate in the hackathon. 
-              It’s recommended that you have some experience in coding, 
-              or that you team up with at least 1 programmer, 
-              as you will need to develop an application.
+              You will have to submit your hackathon entry through GitHub. The Devpost platform should be used to communicate with your team and register your final entry.
+            </span>
+          </template>
+        </V-accordion>
+        <V-accordion>
+          <template v-slot:title>
+            <h5 class="is-size-5">
+              Do we need to have the entire idea fully working? 
+            </h5>
+          </template>
+          <template v-slot:content>
+            <span>
+              The submission doesn’t have to be a finished product. However, the submission should be functional so that it can be reviewed by the judges. This means it should have a user interface with at least a couple of working interactions.
+            </span>
+          </template>
+        </V-accordion>
+        <V-accordion>
+          <template v-slot:title>
+            <h5 class="is-size-5">
+              How is the environment? Will your environment support any language? Will you provide any IDE and DB for us to work on ideas? 
+            </h5>
+          </template>
+          <template v-slot:content>
+            <span>
+              The hackathon and its content are in the English language. The development of your application will be based on the Effect SDK which is a NodeJS package. It’s encouraged to develop your submission in Javascript (or a language that can interop with Javascript), but this is not a requirement.
+            </span>
+          </template>
+        </V-accordion>
+        <V-accordion>
+          <template v-slot:title>
+            <h5 class="is-size-5">
+              Does one have to be online and available for the entire duration of the Hackathon? 
+            </h5>
+          </template>
+          <template v-slot:content>
+            <span>
+              No. You are free to attend the hackathon at whatever capacity you want. But everything you develop for your submission has to be built during the span of the event.
+            </span>
+          </template>
+        </V-accordion>
+        <V-accordion>
+          <template v-slot:title>
+            <h5 class="is-size-5">
+              Do I need to give a demo for the product that I have built?
+            </h5>
+          </template>
+          <template v-slot:content>
+            <span>
+              Your final submission should include a video of how your application works and that shows its functionality.
+            </span>
+          </template>
+        </V-accordion>
+        <V-accordion>
+          <template v-slot:title>
+            <h5 class="is-size-5">
+              If it is a team submission, does that mean all team members will have access to work at the same time? 
+            </h5>
+          </template>
+          <template v-slot:content>
+            <span>
+              This is an online event. All team members will have access to the Devpost platform and can collaborate in the GitHub repository of the project.
+            </span>
+          </template>
+        </V-accordion>
+        <V-accordion>
+          <template v-slot:title>
+            <h5 class="is-size-5">
+              Who will own the IP (Intellectual Property) Rights to the product that I have built? 
+            </h5>
+          </template>
+          <template v-slot:content>
+            <span>
+              The intellectual property of what you develop during the hackathon is owned by the team that made it. It is up to you what happens to it after the event.
             </span>
           </template>
         </V-accordion>

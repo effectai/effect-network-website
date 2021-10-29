@@ -6,21 +6,9 @@
       </div>
       <div class="right-icon">
         <slot name="icon" v-if="$slots['icon']" />
-        <svg
-          v-else
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
-          <path
-            d="M6 9L12 15L18 9"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+          <svg width="30" height="17" viewBox="0 0 30 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L15 15L29 1" stroke="white" stroke-width="2"/>
+          </svg>
       </div>
     </div>
     <div class="accordion-content" v-if="isOpen">
