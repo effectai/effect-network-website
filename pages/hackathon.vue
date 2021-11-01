@@ -20,7 +20,9 @@
                 <p class="block">
                   Register solo or team-up with <span class="has-text-accent">2 to 5 superstars</span>.<br>The Devpost platform is used to register and collaborate with your team.
                 </p>
-                <a href="#" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}">Join now!</a>
+                <a href="https://discord.gg/effectnetwork" target="_blank" class="button is-accent mt-5">
+                  Join our Discord
+                </a>
               </div>
             </div>
           </div>
