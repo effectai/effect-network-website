@@ -124,12 +124,102 @@
         posts: [
           {
             type: 'blog',
+            img: 'https://miro.medium.com/max/1400/1*eSOa-g2tSrzGXCQscFCClQ.png',
+            href: 'https://medium.com/effect-ai/defi-bridge-cb0095620cfa',
+            title: 'DeFi Bridge',
+            date: 'October 21 - 2021',
+            text: 'In this article, we want to highlight the decentralized nature of the blockchain and how ...',
+            featured: true
+          },
+          {
+            type: 'blog',
+            img: 'https://miro.medium.com/max/1400/1*nSgBWNNsLBVLODaBvaR66g.jpeg',
+            href: 'https://medium.com/effect-ai/a-brief-history-of-cryptocurrency-2ed9aa71fb4a',
+            title: 'A Brief History of Cryptocurrency',
+            date: 'October 8 - 2021',
+            text: 'A slew of cryptographic technologies appeared between 1983 and 1998 but never took off.',
+            featured: true
+          },
+          {
+            type: 'blog',
+            img: 'https://miro.medium.com/max/1400/1*nCH3mTzwhQryWitpZp0ofw.jpeg',
+            href: 'https://medium.com/effect-ai/tech-blog-on-chain-microtasks-6e8bb82c8e1d',
+            title: 'Tech Blog: On-Chain Microtasks',
+            date: 'September 17 - 2021',
+            text: 'In this article, we’ll take a look at Effect Force’s new task creation mechanism.',
+            featured: true
+          },
+          {
+            type: 'blog',
+            img: 'https://miro.medium.com/max/1400/1*nSgBWNNsLBVLODaBvaR66g.jpeg',
+            href: 'https://medium.com/effect-ai/basics-of-cryptocurrency-102-728995e93fd7',
+            title: 'Basics of cryptocurrency 102',
+            date: 'September 7 - 2021',
+            text: 'How does a cryptocurrency transaction work?'
+          },
+          {
+            type: 'blog',
+            img: 'https://miro.medium.com/max/700/1*0f68ZBNLjwTkldtnt_yB1Q.jpeg',
+            href: 'https://medium.com/effect-ai/your-comprehensive-guide-to-the-efx-lp-reward-farm-and-how-to-participate-a7344121ba7b',
+            title: 'Your comprehensive guide to the EFX LP Reward Farm and how to participate',
+            date: 'August 26 - 2021',
+            text: 'Discover the world of DeFi, AMMs & yield farming, and learn how to participate in the EFX LP Reward Farm.'
+          },
+          {
+            type: 'blog',
+            img: 'https://miro.medium.com/max/1400/1*Ra8M72OqFeO3gtIuIjDvhg.png',
+            href: 'https://medium.com/effect-ai/basics-of-cryptocurrency-101-9a43b509335f',
+            title: 'Basics of cryptocurrency 101',
+            date: 'August 20 - 2021',
+            text: 'New to cryptocurrency? Here’s what you should know.'
+          },
+          {
+            type: 'blog',
+            img: 'https://miro.medium.com/max/1400/0*SRN84Sml8QlF3-94',
+            href: 'https://medium.com/effect-ai/tech-blog-effect-account-system-a3bd8dfe93d4',
+            title: 'Tech blog: Effect Account System',
+            date: 'July 29 - 2021',
+            text: 'A Multi-Chain Decentralized Account System'
+          },
+          {
+            type: 'blog',
+            img: 'https://miro.medium.com/max/1400/0*1dtdPt9ZY5QYWKrP',
+            href: 'https://medium.com/effect-ai/6-month-anniversary-of-effectdao-bd655cc96241',
+            title: '6-month anniversary of EffectDAO',
+            date: 'June 28 - 2021',
+            text: 'The EffectDAO’s 13th cycle began last week, marking its half-year anniversary!'
+          },
+          {
+            type: 'blog',
+            img: 'https://miro.medium.com/max/1400/1*cuWQYEXnWTt6URBHsQ_1Bw.jpeg',
+            href: 'https://medium.com/effect-ai/effect-network-partners-up-with-pnetwork-and-releases-the-eos-bsc-bridge-a083cec7d5fc',
+            title: 'Effect Network partners up with pNetwork and releases the EOS-BSC bridge',
+            date: 'June 1 - 2021',
+            text: 'The first pNetwork-powered bridge between EOS and Binance Smart Chain has been launched for ...'
+          },
+          {
+            type: 'blog',
+            img: 'https://miro.medium.com/max/1400/1*KtMdhnceViMIElffhg7qhQ.jpeg',
+            href: 'https://medium.com/effect-ai/effect-network-partners-with-eos-titan-1ca28398c8ac',
+            title: 'Effect Network partners with EOS Titan',
+            date: 'May 12 - 2021',
+            text: 'The Effect team has partnered with EOS Titan to develop a first-of-its-kind EOS-to-BSC ...'
+          },
+          {
+            type: 'blog',
+            img: 'https://miro.medium.com/max/2000/1*Uk0brR9g12vgZG1vUb2t7Q.png',
+            href: 'https://medium.com/effect-ai/effect-ai-rebrands-to-effect-network-ad2f0be104d9',
+            title: 'Effect.AI Rebrands to Effect Network',
+            date: 'March 26 - 2021',
+            text: 'A brief history of the brand behind Effect.AI'
+          },
+          {
+            type: 'blog',
             img: 'https://miro.medium.com/max/700/0*iezuwY0klJ5sKTEh',
             href: 'https://medium.com/effect-ai/art-and-blockchain-team-up-for-social-good-5d2ba81ccc2',
             title: 'Art and Blockchain Team Up for Social Good',
             date: 'January 7 - 2021',
             text: 'Effect Pieces: Rare digital art masterpieces created by refugees are being sold as NFTs (Non-Fungible Tokens) at auction to raise money and assist with the refugee crisis.',
-            featured: true
           },
           {
             type: 'blog',
@@ -138,7 +228,6 @@
             title: 'EffectDAO Proposal System is now LIVE',
             date: 'November 30 - 2020',
             text: 'The release of the Effect Proposal System truly brings us one step closer to being a globally connected project where all potential is possible and can be put into action.',
-            featured: true
           },
           {
             type: 'press',
@@ -147,7 +236,6 @@
             title: 'Effect.AI Partners With Ivan On Tech Academy',
             date: 'September 3 - 2020',
             text: 'In our enduring efforts to further enrich blockchain and AI learning opportunities in our Effect AI & Blockchain Centers, we’ve partnered with Ivan On Tech Academy.',
-            featured: true
           },
           {
             type: 'blog',
@@ -156,7 +244,6 @@
             title: 'The Effect DAO Phase 0 Launching',
             date: 'Augustus 15 - 2020',
             text: 'The time has come for the most exciting evolution of the Effect Network! As we close in on the launch of the Effect DAO, the excitement brewing amongst our team and community has become viral…',
-            featured: false
           },
           {
             type: 'press',
@@ -165,7 +252,6 @@
             title: 'Effect.AI partners with Akon to launch a Blockchain Hub in Africa',
             date: 'July 6 - 2020',
             text: 'Popular musician and blockchain advocate, Akon has partnered with Dutch decentralized artificial intelligence firm, Effect.AI to launch a blockchain education hub in Africa.',
-            featured: false
           },
           {
             type: 'blog',
