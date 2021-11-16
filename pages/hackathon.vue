@@ -20,8 +20,8 @@
                 <p class="block">
                   Register solo or team-up with <span class="has-text-accent">2 to 5 superstars</span>.<br>The Devpost platform is used to register and collaborate with your team.
                 </p>
-                <a href="https://discord.gg/effectnetwork" target="_blank" class="button is-accent mt-5">
-                  Join our Discord
+                <a href="https://effect-network-hackathon.devpost.com/" target="_blank" class="button is-accent mt-5">
+                  Join now
                 </a>
               </div>
             </div>
