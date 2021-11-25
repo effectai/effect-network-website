@@ -33,32 +33,9 @@
       <div class="container">
         <h1 class="title has-text-centered">Book your Schedule!</h1>
         <div class="my-6">
-            <div class="columns is-multiline mt-6">
-              <div class="column is-3">
-                <div class="card has-text-centered has-gradient">
-                  <div class="card-content">
-                    <div class="content">
-                      <div class="block">
-                        <p class="has-text-weight-bold is-size-5">
-                          23 Nov, 2021
-                        </p>
-                      </div>
-                      <div class="block">
-                        <img :src="require('@/assets/img/icons/speaker-1.png')" class="is-icon-size-medium has-radius"/>
-                      </div>
-                      <div class="block">
-                        <span class="is-5 mt-1 has-text-weight-bold">Chris Dawe</span>
-                        <p class="has-text-accent">CEO</p>
-                        <div class="is-divider" />
-                      </div>
-                      <div class="block">
-                        <h5 class="is-5">How to Perfect a Pitch</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="column is-3">
+          <div class="columns is-multiline mt-6">
+            <div class="column is-3 has-special-hover">
+              <a target="_blank" href="https://youtu.be/xx8QEtZQieI">
                 <div class="card has-text-centered has-gradient">
                   <div class="card-content">
                     <div class="content">
@@ -81,8 +58,10 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="column is-3">
+              </a>
+            </div>
+            <div class="column is-3 has-special-hover">
+              <a target="_blank" href="https://youtu.be/LkYj0-jRKKw">
                 <div class="card has-text-centered has-gradient">
                   <div class="card-content">
                     <div class="content">
@@ -100,37 +79,62 @@
                         <div class="is-divider" />
                       </div>
                       <div class="block">
-                        <h5 class="is-5">Let's Tackle It</h5>
+                          <h5 class="is-5 is-link">Let's Tackle It</h5>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="column is-3">
-                <div class="card has-text-centered has-gradient">
-                  <div class="card-content">
-                    <div class="content">
-                      <div class="block">
-                        <p class="has-text-weight-bold is-size-5">
-                          26 Nov, 2021
-                        </p>
-                      </div>
-                      <div class="block">
-                        <img :src="require('@/assets/img/icons/speaker-3.png')" class="is-icon-size-medium has-radius"/>
-                      </div>
-                      <div class="block">
-                        <span class="is-5 mt-1 has-text-weight-bold">Rochelle</span>
-                        <p class="has-text-accent">Chief Talent Officer</p>
-                        <div class="is-divider" />
-                      </div>
-                      <div class="block">
-                        <h5 class="is-5">How to Curate<br>Your Workforce</h5>
-                      </div>
+              </a>
+            </div>
+            <div class="column is-3">
+              <div class="card has-text-centered has-gradient">
+                <div class="card-content">
+                  <div class="content">
+                    <div class="block">
+                      <p class="has-text-weight-bold is-size-5">
+                        26 Nov, 2021
+                      </p>
+                    </div>
+                    <div class="block">
+                      <img :src="require('@/assets/img/icons/speaker-1.png')" class="is-icon-size-medium has-radius"/>
+                    </div>
+                    <div class="block">
+                      <span class="is-5 mt-1 has-text-weight-bold">Chris Dawe</span>
+                      <p class="has-text-accent">CEO</p>
+                      <div class="is-divider" />
+                    </div>
+                    <div class="block">
+                      <h5 class="is-5">How to Perfect a Pitch</h5>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class="column is-3">
+              <div class="card has-text-centered has-gradient">
+                <div class="card-content">
+                  <div class="content">
+                    <div class="block">
+                      <p class="has-text-weight-bold is-size-5">
+                        26 Nov, 2021
+                      </p>
+                    </div>
+                    <div class="block">
+                      <img :src="require('@/assets/img/icons/speaker-3.png')" class="is-icon-size-medium has-radius"/>
+                    </div>
+                    <div class="block">
+                      <span class="is-5 mt-1 has-text-weight-bold">Rochelle</span>
+                      <p class="has-text-accent">Chief Talent Officer</p>
+                      <div class="is-divider" />
+                    </div>
+                    <div class="block">
+                      <h5 class="is-5">How to Curate<br>Your Workforce</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -321,6 +325,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.has-special-hover:hover {
+  div.card {
+    border: 1px solid $accent;
+  }
+}
 table.table.is-custom {
   td, th {
     border: 1px solid #505DF1;
@@ -362,6 +371,9 @@ div.reward-container {
 }
 .is-divider {
   border: 1px solid rgba(81, 88, 250, 0.5);
+}
+.is-link {
+  text-decoration: underline;
 }
 .hackathon-hero {
   background-repeat: no-repeat;
