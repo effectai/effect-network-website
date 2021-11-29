@@ -22,24 +22,6 @@
               </div>
             </div>
         </div>
-
-        <div class="my-6">
-            <h4 class="title is-family-sans-serif has-text-weight-bold">
-              Ambassadors
-            </h4>
-            <p class="has-limited-width">Right from the very beginning of Effect.AI, the project has been about community.
-              In the true sense of decentralization we want to connect the globe. From day one there have been community members who have contributed and help spread the word on Effect.AI in many creative ways.
-              This prompted us to create The Effect Ambassadors Movement aka T.E.A.M., a program designed to offer opportunities and incentives to those who want to be more involved in the project.
-              T.E.A.M. is also a platform where participants are rewarded for their efforts!</p>
-            <div class="columns is-multiline mt-6">
-              <div class="column is-one-fifth has-text-centered px-4 mb-4" v-for="ambassador in ambassadors" :key="ambassador.name">
-                <figure class="image px-4">
-                  <img class="is-rounded" :src="ambassador.image">
-                </figure>
-                <h5 class="title is-6 mt-4 mb-1">{{ambassador.name}}</h5>
-              </div>
-            </div>
-        </div>
       </div>
     </section>
   </div>

@@ -14,7 +14,7 @@
             <h2 class="title is-2">Work 3.0</h2>
             <p>Effect Force is the decentralized framework for the Future-of-Work. Currently there are over 10,000 people earning great pay in the cryptocurrency $EFX. You can now work from anywhere at any time from any device. Simply create an Effect Account and sign into Effect Force to start your future today.
             </p>
-            <a href="https://force.effect.ai" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}">Learn More</a>
+            <a href="https://developer.effect.network" target="_blank" class="button is-secondary mt-5" :class="{'is-accent': $colorMode.value === 'dark'}">Learn More</a>
           </div>
         </div>
       </div>
