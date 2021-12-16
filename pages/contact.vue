@@ -25,7 +25,7 @@ export default {
   mounted() {
     typeformEmbed.makeWidget(
       this.$refs.typeform,
-      'https://effectai.typeform.com/to/GTZ4k2',
+      'https://form.typeform.com/to/GTZ4k2',
       {
         opacity: 50,
         hideScrollbars: true,
