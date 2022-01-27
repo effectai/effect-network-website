@@ -18,7 +18,7 @@
           <h3 class="subtitle is-4 mt-4 mb-2">API Documentation</h3>
           <h4 class="subtitle is-5 mt-1">Effect Network API Documentation</h4>
           <p class="block">Connect your applications to Effect Force to access a global human workforce or learn more about other dApps like EffectDAO.</p>
-          <a target="_blank" class="is-text is-outlined mt-2" :class="{'is-accent': $colorMode.value === 'dark'}" href="https://docs.effect.ai">Explore Documentation</a>
+          <a target="_blank" class="is-text is-outlined mt-2" :class="{'is-accent': $colorMode.value === 'dark'}" href="https://developer.effect.network/">Explore Documentation</a>
         </div>
       </div>
       <div class="column is-one-third">

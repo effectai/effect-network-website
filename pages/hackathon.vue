@@ -15,13 +15,18 @@
             </div>
             <div class="column is-four-fifths" style="margin-top: 9rem">
               <div class="content has-text-centered reward-container">
-                <h1 class="title has-text-centered">Win $55k in prizes!</h1>
+                <h1 class="title has-text-centered">Winner Announcement</h1>
                 <img :src="require('@/assets/img/coins.png')" />
                 <p class="block">
-                  Register solo or team-up with <span class="has-text-accent">2 to 5 superstars</span>.<br>The Devpost platform is used to register and collaborate with your team.
+                  We would like to thank you to all of the participants of Effect Network's first hackathon. Above all we would like to congratulate the winners of this Hackathon.
+                  You can find more information about the winners at the following links:
                 </p>
                 <a href="https://effect-network-hackathon.devpost.com/" target="_blank" class="button is-accent mt-5">
-                  Join now
+                  DevPost
+                </a>
+                <br>
+                <a href="https://dao.effect.network/winner" target="_blank" class="button is-accent mt-5">
+                  DAO
                 </a>
               </div>
             </div>
@@ -214,7 +219,7 @@
         <V-accordion>
           <template v-slot:title>
             <h5 class="is-size-5">
-              Do I need to have any specific qualifications to be a participant for the Hackathon? 
+              Do I need to have any specific qualifications to be a participant for the Hackathon?
             </h5>
           </template>
           <template v-slot:content>
@@ -238,7 +243,7 @@
         <V-accordion>
           <template v-slot:title>
             <h5 class="is-size-5">
-              Do we need to have the entire idea fully working? 
+              Do we need to have the entire idea fully working?
             </h5>
           </template>
           <template v-slot:content>
@@ -250,7 +255,7 @@
         <V-accordion>
           <template v-slot:title>
             <h5 class="is-size-5">
-              How is the environment? Will your environment support any language? Will you provide any IDE and DB for us to work on ideas? 
+              How is the environment? Will your environment support any language? Will you provide any IDE and DB for us to work on ideas?
             </h5>
           </template>
           <template v-slot:content>
@@ -262,7 +267,7 @@
         <V-accordion>
           <template v-slot:title>
             <h5 class="is-size-5">
-              Does one have to be online and available for the entire duration of the Hackathon? 
+              Does one have to be online and available for the entire duration of the Hackathon?
             </h5>
           </template>
           <template v-slot:content>
@@ -286,7 +291,7 @@
         <V-accordion>
           <template v-slot:title>
             <h5 class="is-size-5">
-              If it is a team submission, does that mean all team members will have access to work at the same time? 
+              If it is a team submission, does that mean all team members will have access to work at the same time?
             </h5>
           </template>
           <template v-slot:content>
@@ -298,7 +303,7 @@
         <V-accordion>
           <template v-slot:title>
             <h5 class="is-size-5">
-              Who will own the IP (Intellectual Property) Rights to the product that I have built? 
+              Who will own the IP (Intellectual Property) Rights to the product that I have built?
             </h5>
           </template>
           <template v-slot:content>
@@ -363,7 +368,7 @@ div.reward-container {
 .is-bordered {
   border: 1px solid #505DF1
 }
-.is-absolute { 
+.is-absolute {
   position: absolute;
 }
 .has-gradient {
