@@ -35,13 +35,15 @@
 
           <nuxt-link to="/">
             <div class="card is-shadowless has-background-white">
-              <div class="card-image p-5 mb-1">
-                <figure>
-                  <p class="image has-radius is-vcentered">
+              <div class="card-image p-5 mb-1 mx-auto">
+                <figure class="">
+                  <p class="image is-256x256 is-3by3 has-radius is-vcentered mx-auto is-justify-content-center">
                     <img class="p-2" :src="getImageLink(dapp.image_url)" v-bind:alt="dapp.image_url">
                   </p>
                 </figure>
               </div>
+
+              <br>
 
               <div class="card-content p-2">
                 <section class="title-section">
@@ -119,6 +121,19 @@ export default {
   border-style: solid;
   border-width: 1px;
   border-color: #ededed;
+  .card-image {
+    height: 128px !important;
+    figure, p, img {
+      height: 128px !important;
+    }
+    img {
+      width: 100%;
+      object-fit: contain;
+      border-radius: 6px !important;
+    }
+  }
+  .card-content {
+  }
 }
 
 .color {
