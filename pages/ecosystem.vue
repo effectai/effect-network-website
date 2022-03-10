@@ -1,18 +1,18 @@
 <template>
   <section class="section has-navbar-fixed-top">
 
-  <div>
-    <div class="developer-hero is-primary hero has-navbar-fixed-top">
+  <!-- <div>
+    <div :class="['developer-hero', 'is-primary', 'hero', 'has-navbar-fixed-top', 'has-background-white', 'is-light', 'has-text-black']">
       <section class="section">
         <div class="container">
           <div class="columns developer-hero-content pb-6 pt-6">
             <div class="column is-two-fifths mt-6">
-              <h2 class="title is-1">Effect Ecosystem</h2>
+              <h2 :class="['title', 'is-1', colorMode === 'dark' ? 'has-text-black' : 'has-text-white']">Effect Ecosystem</h2>
               <p class="block">
                 Welcome to the dApps that are now available on the Effect Network.
               </p>
               <p class="block">
-                Roll your own our use one of these dApps in order to streamline your pipeline with the Effect Network WorkForce.
+                Roll your own our use one of these dApps in order to streamline your pipeline with the Effect Network WorkForce. Learn more at the <a href="https://developer.effect.network" class="is-underlined is-italic">Developer Portal</a>.
               </p>
             </div>
             <div class="column is-four-fifths">
@@ -22,8 +22,21 @@
         </div>
       </section>
     </div>
-  </div>
+  </div> -->
 
+    <div class="hero">
+      <section class="section">
+        <div class="container">
+          <h2 class="title is-1">Effect Ecosystem</h2>
+          <p class="block">
+            Welcome to the dApps that are now available on the Effect Network.
+          </p>
+          <p class="block">
+            Roll your own or use one of these dApps in order to streamline your pipeline with the Effect Network WorkForce. Learn more at the <a href="https://developer.effect.network" class="is-underlined is-italic">Developer Portal</a>.
+          </p>
+        </div>
+      </section>
+    </div>
 
     <div class="container is-max-widescreen my-6 py-6">
       <div class="columns is-multiline">
@@ -52,6 +65,9 @@
                       {{ dapp.group_name }}
                     </h2>
                     <br>
+                    <div class="tags is-centered">
+                      <span v-for="tag in dapp.tags" :key="tag" :class="['tag', 'is-success']">{{ tag }}</span>
+                    </div>
                     <p class="has-text-grey is-size-7 is-flex is-clipped">
                       {{ dapp.description.length > 200 ? `${dapp.description.slice(0, 200)}...` : dapp.description }}
                     </p>
@@ -82,7 +98,7 @@ import dapps from '@/static/json/dapps.json'
 import Network from "~/assets/img/developers.svg?inline";
 
 export default {
-    colorMode: 'dark',
+    // colorMode: 'dark',
     components: {
       Network
     },
@@ -99,19 +115,30 @@ export default {
     },
     mounted() {
     },
+
+    computed: {
+      heroDarkLight: function () {
+        return this.colorMode === 'dark' ? [].join(' ') : ''
+      }
+
+    },
+
     methods: {
 
       getImageLink (img_url) {
         // /effect-network-website/static/img/ecosystem
         return require(`@/assets/img/ecosystem/${img_url}`)
-      }
-
+      },
     }
 };
 </script>
 <style lang="scss" scoped>
 
 // style="display: flex; flex-direction: column; height: 100%; margin-top: auto; border-style: solid; border-width: 1px;
+
+.card:hover {
+  background-color: lightskyblue !important;
+}
 
 .card {
   display: flex;
