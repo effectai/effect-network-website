@@ -40,7 +40,7 @@
           </p>
           <ul class="menu-list">
             <li><a href="https://twitter.com/effectaix" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-            <li><a href="https://t.me/effectaiannouncements" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
+            <li><a href="https://discord.gg/3GrrfJrdyN" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
             <li><a href="https://www.youtube.com/channel/UCWzHpI310baipgvVMCxcwHA" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
             <li><a href="https://www.facebook.com/effectai" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
             <li><a href="https://www.linkedin.com/company/effectai" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
@@ -99,8 +99,8 @@
           <a class="is-size-3 mx-2 has-text-primary" target="_blank" href="https://www.youtube.com/@effectai">
             <i class="fab fa-youtube"></i>
           </a>
-          <a class="is-size-3 mx-2 has-text-primary" target="_blank" href="https://t.me/effectaiannouncements">
-            <i class="fab fa-telegram"></i>
+          <a class="is-size-3 mx-2 has-text-primary" target="_blank" href="https://discord.gg/3GrrfJrdyN">
+            <i class="fab fa-discord"></i>
           </a>
           <a class="is-size-3 mx-2 has-text-primary" target="_blank" href="https://github.com/effectai">
             <i class="fab fa-github"></i>
