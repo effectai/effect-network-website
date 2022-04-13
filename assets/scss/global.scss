@@ -132,9 +132,18 @@ a.card {
 .button {
   font-weight: 600;
   transition: 0.2s;
-  &.is-primary {
-    &:hover, &.is-hovered {
-      background-color: bulmaLighten($primary, 10%)
+  @each $name, $pair in $button-colors {
+    $color: nth($pair, 1);
+    &.is-#{$name} {
+      &:hover,
+      &.is-hovered {
+        background-color: bulmaLighten($color, 10%);
+      }
+      &:active,
+      &.is-active {
+        background-color: bulmaLighten($color, 10%);
+        box-shadow: $button-focus-box-shadow-size bulmaRgba($color, 0.25);
+      }
     }
   }
   &.is-wide {
@@ -142,8 +151,12 @@ a.card {
   }
 }
 
+.has-radius-small {
+  border-radius: $radius-small;
+}
+
 .has-radius {
-  border-radius: 7px;
+  border-radius: $radius-large;
 }
 
 .has-shadow {

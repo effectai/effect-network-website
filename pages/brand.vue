@@ -203,8 +203,8 @@
       <br><br>
       <div class="subtitle is-4 mt-4" ><span class="has-text-secondary">03</span> Buttons</div>
       <div class="subtitle is-5">All buttons styles used for Effect Network</div>
-        <button class="button is-secondary"><span v-if="example">{{example}}</span><span v-else>Button</span></button>
-        <button class="button is-secondary is-active ml-2"><span v-if="example">{{example}}</span><span v-else>Active</span></button>
+        <button class="button is-primary"><span v-if="example">{{example}}</span><span v-else>Button</span></button>
+        <button class="button is-primary is-active ml-2"><span v-if="example">{{example}}</span><span v-else>Active</span></button>
         <br><br>
         <button class="button is-accent"><span v-if="example">{{example}}</span><span v-else>Accent</span></button>
         <button class="button is-accent is-active ml-2"><span v-if="example">{{example}}</span><span v-else>Active</span></button>
