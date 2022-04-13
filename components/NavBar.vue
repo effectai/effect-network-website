@@ -77,12 +77,12 @@
             </div>
             <div class="navbar-item" exact-active-class="is-active">
               <div @click="mobileMenu = false">
-                <nuxt-link class="button is-secondary is-outlined" :class="{'is-accent': $colorMode.value === 'dark'}" to="/token-page" exact-active-class="is-active">
-                  Buy EFX
-                </nuxt-link>
+                <a href="https://app.effect.network" target="_blank" class="button is-outlined" :class="{'is-accent': $colorMode.value === 'dark', 'is-primary': $colorMode.value !== 'dark'}" exact-active-class="is-active">
+                  Launch App
+                </a>
               </div>
             </div>
-            <darkmode-switcher class="ml-4" />
+            <!-- <darkmode-switcher class="ml-4" /> -->
           </div>
         </div>
       </div>

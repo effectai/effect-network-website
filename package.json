@@ -12,6 +12,7 @@
     "@fortawesome/fontawesome-free": "^5.15.2",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@typeform/embed": "^0.16.0",
+    "aos": "^2.3.4",
     "axios": "^0.21.1",
     "bulma": "^0.9.1",
     "core-js": "^3.8.2",

@@ -6,6 +6,12 @@ a {
   outline: 0;
 }
 
+.title {
+  b, strong {
+    font-weight: 900;
+  }
+}
+
 .has-limited-width {
   width: 670px;
   max-width: 100%;
@@ -124,6 +130,13 @@ a.card {
 }
 
 .button {
+  font-weight: 600;
+  transition: 0.2s;
+  &.is-primary {
+    &:hover, &.is-hovered {
+      background-color: bulmaLighten($primary, 10%)
+    }
+  }
   &.is-wide {
     min-width: 200px;
   }
@@ -148,4 +161,13 @@ a.card {
   100% {
     transform: rotate(330deg)
   }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.2s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
 }
