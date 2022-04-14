@@ -1,0 +1,69 @@
+<template>
+  <div>
+    <section class="section">
+            <div class="container has-text-centered">
+        <h1 class="title is-1">
+          FAQ
+        </h1>
+        <h2 class="subtitle">Everything you need to get started on Effect Network</h2>
+      </div>
+      <div class="container mt-5">
+        <div
+          class="has-limited-width is-horizontal-centered"
+          style="width: 960px"
+        >
+          <accordion>
+            <accordion-item
+              v-for="faq in faqs"
+              :key="faq.question"
+            >
+              <!-- This slot will handle the title/header of the accordion and is the part you click on -->
+              <template slot="accordion-trigger">
+                <h3 class="subtitle mb-4 has-text-weight-semibold">
+                  {{ faq.question }}
+                </h3>
+              </template>
+              <!-- This slot will handle all the content that is passed to the accordion -->
+              <template slot="accordion-content">
+                <!-- eslint-disable vue/no-v-html -->
+                <span v-html="faq.answer" />
+              </template>
+            </accordion-item>
+          </accordion>
+        </div>
+        <p class="block has-text-centered">
+          <nuxt-link class="button is-primary" to="/faq">All Questions</nuxt-link>
+        </p>
+      </div>
+    </section>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      faqs: [
+        {
+          question: 'Who completes my tasks?',
+          answer:
+            'Our WorkForce is made up of more than 10,000 people across the globe who go through a series of certifications to qualify for the tasks you need. With us you only get the best.'
+        },
+                {
+          question: 'Who completes my tasks?',
+          answer:
+            'Our WorkForce is made up of more than 10,000 people across the globe who go through a series of certifications to qualify for the tasks you need. With us you only get the best.'
+        },
+                {
+          question: 'Who completes my tasks?',
+          answer:
+            'Our WorkForce is made up of more than 10,000 people across the globe who go through a series of certifications to qualify for the tasks you need. With us you only get the best.'
+        }
+      ]
+    }
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+</style>
