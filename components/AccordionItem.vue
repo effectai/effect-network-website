@@ -1,9 +1,6 @@
 <template>
-  <li class="accordion__item" @click="open">
-    <div
-      class="accordion__trigger"
-      :class="{ accordion__trigger_active: visible }"
-    >
+  <li class="accordion__item" @click="open" :class="{ accordion_active: visible }">
+    <div class="accordion__trigger">
       <!-- This slot will handle the title/header of the accordion and is the part you click on -->
       <slot name="accordion-trigger" />
       <span class="is-size-3 has-text-secondary" style="line-height: 1">
@@ -67,24 +64,23 @@ export default {
 <style lang="scss" scoped>
 .accordion__item {
   cursor: pointer;
-  padding: 10px 20px 10px 40px;
-  border-bottom: 1px solid $primary;
+  padding: 15px 20px 15px 30px;
   position: relative;
-  transition: background-color 0.2s ease;
+  transition: 0.2s ease;
+  border: 1px solid transparent;
   &:hover {
-    background-color: rgba($secondary, 0.08);
+    border-color: $secondary;
+    // background-color: rgba($secondary, 0.08) !important;
+  }
+  &.accordion_active {
+    border-color: $secondary;
   }
 }
 
 .accordion__trigger {
   display: flex;
   justify-content: space-between;
-  &.accordion__trigger_active {
-    color: $secondary;
-    > * {
-      color: $secondary;
-    }
-  }
+  align-items: center;
 }
 
 .accordion-enter-active,
