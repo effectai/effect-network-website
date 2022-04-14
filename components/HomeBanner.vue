@@ -31,7 +31,7 @@ export default {
   background-position: bottom right;
   height: 50vw;
   min-height: 500px;
-  max-height: 850px;
+  max-height: 950px;
   &:before {
     background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
     display: block;
