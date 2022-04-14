@@ -4,6 +4,7 @@
       <home-banner />
     </div>
     <how />
+    <efx />
     <faq class="has-background-light" />
     <div class="has-background-light">
       <clients />
@@ -12,7 +13,6 @@
     </div>
     <force id="force" />
     <services id="dapps" />
-    <efx />
     <case-studies />
     <section class="section">
       <div class="container is-max-widescreen py-6">
