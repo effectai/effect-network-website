@@ -26,7 +26,9 @@
           </div>
         </div>
       </div>
-      <div class="container mt-4">
+    </section>
+    <section class="section has-background-light">
+      <div class="container">
         <div
           class="has-limited-width is-horizontal-centered"
           style="width: 960px"
@@ -35,6 +37,7 @@
             <accordion-item
               v-for="faq in filteredFaqs"
               :key="faq.question"
+              class="has-background-white has-radius mb-2"
             >
               <!-- This slot will handle the title/header of the accordion and is the part you click on -->
               <template slot="accordion-trigger">
