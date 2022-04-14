@@ -4,6 +4,7 @@
       <home-banner />
     </div>
     <how />
+    <faq />
     <div class="has-background-light">
       <clients />
       <ten-video />
