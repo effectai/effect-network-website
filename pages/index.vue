@@ -3,6 +3,7 @@
     <div class="has-background-light has-navbar-fixed-top">
       <home-banner />
     </div>
+    <how />
     <div class="has-background-light">
       <clients />
       <ten-video />
