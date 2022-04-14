@@ -5,8 +5,8 @@
       <div class="columns my-6">
         <atropos :options="{rotateTouch: false}" class="column is-3 p-0">
             <div data-aos="fade-up" data-aos-delay="0" class="has-text-centered p-5 has-background-light has-radius">
-                <img src="~assets/img/icons/globe.svg" style="height: 95px"/>
-                <h2 class="subtitle mt-4"><b>Connect your blockchain wallet</b></h2>
+                <img data-atropos-offset="5" src="~assets/img/icons/globe.svg" style="height: 95px"/>
+                <h2 data-atropos-offset="10" class="subtitle mt-4"><b>Connect your blockchain wallet</b></h2>
             </div>
         </atropos>
         <div data-aos="fade-up" class="column is-flex is-align-items-center">
@@ -14,8 +14,8 @@
         </div>
         <atropos :options="{rotateTouch: false}" class="column is-3 p-0">
             <div data-aos="fade-up" data-aos-delay="200" class="has-text-centered p-5 has-background-light has-radius">
-                <img src="~assets/img/icons/tasks.svg" style="height: 95px"/>
-                <h2 class="subtitle mt-4"><b>Upload your tasks &amp; add $EFX</b></h2>
+                <img data-atropos-offset="5" src="~assets/img/icons/tasks.svg" style="height: 95px"/>
+                <h2 data-atropos-offset="10" class="subtitle mt-4"><b>Upload your tasks &amp; add $EFX</b></h2>
             </div>
         </atropos>
         <div data-aos="fade-up" class="column is-flex is-align-items-center">
@@ -23,8 +23,8 @@
         </div>
         <atropos :options="{rotateTouch: false}" class="column is-3 p-0">
             <div data-aos="fade-up" data-aos-delay="400" class="has-text-centered p-5 has-background-light has-radius">
-                <img class="ml-6" src="~assets/img/icons/complete.svg" style="height: 95px"/>
-                <h2 class="subtitle mt-4"><b>Expert Workforce completes the tasks</b></h2>
+                <img data-atropos-offset="5" class="ml-6" src="~assets/img/icons/complete.svg" style="height: 95px"/>
+                <h2 data-atropos-offset="10" class="subtitle mt-4"><b>Expert Workforce completes the tasks</b></h2>
             </div>
         </atropos>
       </div>
