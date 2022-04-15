@@ -4,6 +4,7 @@
       <home-banner />
     </div>
     <how />
+    <projects class="has-background-light" />
     <efx />
     <faq class="has-background-light" />
     <div class="has-background-light">
