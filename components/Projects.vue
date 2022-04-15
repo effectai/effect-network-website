@@ -91,6 +91,15 @@ export default {
 
 .glide {
   margin-top: -100px;
+  @include mobile {
+    margin-top: 0;
+  }
+}
+
+.is-two-third, .is-one-third {
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .project-item-text {
@@ -110,6 +119,12 @@ export default {
   transition: opacity .5s ease; 
   grid-area: slide;  //assign all child slides to the cell
   margin: 0 !important;
+  @include mobile {
+    display: block !important;
+    img {
+      padding-left: 0 !important;
+    }
+  }
 }
 .glide__slide--active {
   z-index:1; 
