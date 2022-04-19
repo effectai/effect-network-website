@@ -28,7 +28,9 @@
                   <p>{{project.description}}</p>
                 </div>
                 <div class="column is-two-third">
-                  <img :src="project.image" class="project-image pl-6">
+                  <div class="box ml-6 p-0">
+                    <img :src="project.image">
+                  </div>
                 </div>
               </div>
             </ul>
@@ -56,7 +58,7 @@ export default {
           id: 1,
           name: "Effect Notebooks",
           description: "Effect Notebooks is a campaign where workers can earn EFX tokens for writing code that will automate the cleaning of data, the way a task specifies.",
-          image: require('@/assets/img/notebooks.png')
+          image: require('@/assets/img/notebooks.jpg')
         },
         {
           id: 2,
@@ -129,5 +131,18 @@ export default {
 .glide__slide--active {
   z-index:1; 
   opacity:1;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+  }
 }
 </style>
