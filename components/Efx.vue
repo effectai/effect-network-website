@@ -40,10 +40,7 @@ export default {
   border-radius: 14px;
   background-size: 280px;
   position: relative;
-<<<<<<< HEAD
-=======
   display: block;
->>>>>>> 964cda68e587f57b39923bdff8aaaa9f71501450
 
   .efx-coin {
     position: absolute;

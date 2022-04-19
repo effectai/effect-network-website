@@ -124,8 +124,8 @@ export default {
   margin: 0 !important;
   @include mobile {
     display: block !important;
-    img {
-      padding-left: 0 !important;
+    .box {
+      margin-left: 0 !important;
     }
   }
 }
