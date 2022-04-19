@@ -17,10 +17,11 @@
             <accordion-item
               v-for="faq in faqs"
               :key="faq.question"
+              class="has-background-white has-radius mb-2"
             >
               <!-- This slot will handle the title/header of the accordion and is the part you click on -->
               <template slot="accordion-trigger">
-                <h3 class="subtitle mb-4 has-text-weight-semibold">
+                <h3 class="subtitle mb-0 has-text-weight-semibold">
                   {{ faq.question }}
                 </h3>
               </template>

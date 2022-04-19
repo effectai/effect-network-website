@@ -4,11 +4,11 @@
       <home-banner />
     </div>
     <how />
+    <projects class="has-background-light" />
     <efx />
-    <faq />
+    <faq class="has-background-light" />
     <div class="has-background-light">
       <clients />
-      <ten-video />
       <three-blocks />
     </div>
     <force id="force" />
@@ -32,7 +32,6 @@
 <script>
   import HomeBanner from '@/components/HomeBanner';
   import Clients from '@/components/Clients';
-  import TenVideo from '@/components/Video';
   import ThreeBlocks from '@/components/ThreeBlocks';
   import Force from '@/components/Force';
   import Services from '@/components/Services';
@@ -62,7 +61,6 @@
     components: {
       HomeBanner,
       Clients,
-      TenVideo,
       ThreeBlocks,
       Force,
       Services,

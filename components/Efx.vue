@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container has-text-centered mb-6">
+    <div class="container has-text-centered mb-6 py-6">
       <div class="token-block py-6 has-limited-width">
         <img src="@/assets/img/efx-blue-2.png" class="efx-coin is-hidden-mobile">
         <h2 class="title is-2 has-text-white is-spaced">EFX Token</h2>
@@ -40,6 +40,10 @@ export default {
   border-radius: 14px;
   background-size: 280px;
   position: relative;
+<<<<<<< HEAD
+=======
+  display: block;
+>>>>>>> 964cda68e587f57b39923bdff8aaaa9f71501450
 
   .efx-coin {
     position: absolute;

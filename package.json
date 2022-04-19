@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
+    "@glidejs/glide": "^3.5.2",
     "@nuxtjs/google-analytics": "^2.4.0",
     "@typeform/embed": "^0.16.0",
     "aos": "^2.3.4",
