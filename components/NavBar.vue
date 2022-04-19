@@ -39,8 +39,8 @@
               </nuxt-link>
             </div>
             <div @click="mobileMenu = false">
-              <nuxt-link class="navbar-item" to="/hackathon" exact-active-class="is-active">
-                Hackathon
+              <nuxt-link class="navbar-item" to="/ecosystem" exact-active-class="is-active">
+                Ecosystem
               </nuxt-link>
             </div>
             <div @click="mobileMenu = false">
