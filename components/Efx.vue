@@ -1,8 +1,8 @@
 <template>
   <section>
     <div class="container has-text-centered mb-6 py-6">
-      <div class="token-block py-6 has-limited-width">
-        <img src="@/assets/img/efx-blue-2.png" class="efx-coin is-hidden-mobile">
+      <div class="token-block py-6 has-limited-width" data-aos="fade-up" data-aos-delay="50">
+        <img src="@/assets/img/efx-blue-2.png" class="efx-coin is-hidden-mobile" data-aos="zoom-in" data-aos-delay="500">
         <h2 class="title is-2 has-text-white is-spaced">EFX Token</h2>
         <p class="has-text-white">The digital asset that powers the Effect Network</p>
         <div class="coinmarketcap-currency-widget has-background-white has-text-black has-radius mt-6" data-currencyid="2666" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
