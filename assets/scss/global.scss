@@ -138,6 +138,7 @@ a.card {
 .button {
   font-weight: 600;
   transition: 0.2s;
+  border-radius: 8px;
   @each $name, $pair in $button-colors {
     $color: nth($pair, 1);
     &.is-#{$name} {

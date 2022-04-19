@@ -7,14 +7,15 @@
     <projects class="has-background-light" />
     <efx />
     <faq class="has-background-light" />
-    <div class="has-background-light">
+    <globe />
+    <!-- <div class="has-background-light">
       <clients />
       <three-blocks />
     </div>
     <force id="force" />
     <services id="dapps" />
-    <case-studies />
-    <section class="section">
+    <case-studies /> -->
+    <!-- <section class="section">
       <div class="container is-max-widescreen py-6">
         <div class="has-text-centered">
           <h1 class="title">Develop</h1>
@@ -23,7 +24,7 @@
         </div>
         <develop-blocks />
       </div>
-    </section>
+    </section> -->
     <dao />
     <mailing-list />
   </div>
@@ -40,6 +41,8 @@
   import Dao from '@/components/Dao';
   import MailingList from '@/components/MailingList';
   import CaseStudies from '../components/CaseStudies.vue';
+  import globe from '../components/Globe.vue';
+import Globe from '../components/Globe.vue';
 
   export default {
     head() {
@@ -68,7 +71,8 @@
       Efx,
       Dao,
       MailingList,
-      CaseStudies
+      CaseStudies,
+        Globe
     }
   }
 </script>

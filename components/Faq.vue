@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="py-6">
     <section class="section">
             <div class="container has-text-centered">
         <h1 class="title is-1" data-aos="fade-up">
@@ -7,7 +7,7 @@
         </h1>
         <h2 class="subtitle" data-aos="fade-up" data-aos-delay="100">Everything you need to get started on Effect Network</h2>
       </div>
-      <div class="container mt-5">
+      <div class="container mt-6">
         <div
           class="has-limited-width is-horizontal-centered"
           style="width: 960px"
