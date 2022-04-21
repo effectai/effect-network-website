@@ -18,7 +18,9 @@
 import ThreeGlobe from 'three-globe';
 import * as THREE from 'three';
 import TrackballControls from 'three-trackballcontrols';
-import { CSS2DRenderer } from 'three-css2drender'
+import {
+  CSS2DRenderer
+} from "three/examples/jsm/renderers/CSS2DRenderer";
 
 export default {
   data() {
@@ -29,46 +31,42 @@ export default {
   components: {
   },
   mounted() {
-    const markerSvg = `<svg viewBox="-4 0 36 36">
-      <path fill="currentColor" d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z"></path>
-      <circle fill="black" cx="14" cy="14" r="7"></circle>
-    </svg>`;
-    // Gen random data
-    const N = 30;
+    // Add random markers
+    // TODO: make a set of predefined markers
+    const N = 60;
     const gData = [...Array(N).keys()].map(() => ({
-      lat: (Math.random() - 0.5) * 180,
+      lat: ((Math.random() - 0.5) * 180),
       lng: (Math.random() - 0.5) * 360,
       size: 60,
-      color: 'blue'
     }));
 
     const world = new ThreeGlobe()
-      .showGlobe(false)
-      .atmosphereColor('#fff')
+      // .showGlobe(false)
+      .globeImageUrl(require('@/assets/img/earth.jpg'))
+      .atmosphereColor('#101D56')
       .htmlElementsData(gData)
       .htmlElement(d => {
-        console.log('d', d)
         const el = document.createElement('div');
-        el.innerHTML = markerSvg;
+        el.innerHTML = `<img src="${this.markerSvg}">`;
         el.style.color = d.color;
         el.style.width = `${d.size}px`;
+        // TODO: this is hacky, find a way so that this isn't needed
+        el.style.marginTop = '325px'
         el.style['pointer-events'] = 'auto';
-        el.style.cursor = 'pointer';
-        console.log(el)
-        el.onclick = () => console.info(d);
         return el;
       });
 
-    // TODO: replace this
-    fetch('https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries => {
-      world.hexPolygonsData(countries.features)
-      world.hexPolygonResolution(1)
-      world.hexPolygonMargin(0.1)
-      world.hexPolygonColor(() => `rgba(0,0,0,0.3)`)
-    });
+    // hexpolygon
+    // fetch('https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries => {
+    //   world.hexPolygonsData(countries.features)
+    //   world.hexPolygonResolution(3)
+    //   world.hexPolygonMargin(0.1)
+    //   world.hexPolygonCurvatureResolution(10)
+    //   world.hexPolygonColor(() => `rgba(0,0,0,0.3)`)
+    // });
 
     // Setup renderers
-    const renderers = [new THREE.WebGLRenderer(), new THREE.CSS2DRenderer()];
+    const renderers = [new THREE.WebGLRenderer(), new CSS2DRenderer()];
     renderers.forEach((r, idx) => {
       r.setSize(window.innerWidth, window.innerHeight);
       if (idx > 0) {
@@ -83,29 +81,27 @@ export default {
     // Setup scene
     const scene = new THREE.Scene();
     scene.add(world);
-    scene.add(new THREE.AmbientLight(0xbbbbbb));
-    scene.add(new THREE.DirectionalLight(0xffffff, 0.6));
+    scene.add(new THREE.AmbientLight(0xffffff));
+    scene.add(new THREE.DirectionalLight(0xffffff, 0.01));
     scene.background = null;
 
     // Setup camera
     const camera = new THREE.PerspectiveCamera();
     camera.aspect = window.innerWidth/ window.innerHeight;
     camera.updateProjectionMatrix();
-    camera.position.z = 250;
+    camera.position.z = 240;
+    camera.position.y = 150;
 
     // Add camera controls
     const tbControls = new TrackballControls(camera, renderers[0].domElement);
-    tbControls.enableZoom = false;
-    tbControls.rotateSpeed = 1;
-    tbControls.zoomSpeed = 0;
+    tbControls.rotateSpeed = .5;
+    tbControls.noZoom = true;
     renderers[0].setClearColor( 0x000000, 0 );
 
     world.setPointOfView(camera.position, world.position);
     tbControls.addEventListener('change', () => world.setPointOfView(camera.position, world.position));
 
-    // Kick-off renderer
-    (function animate() { // IIFE
-      // Frame cycle
+    (function animate() {
       tbControls.update();
       scene.rotation.x += 0.0005
       renderers.forEach(r => r.render(scene, camera));
