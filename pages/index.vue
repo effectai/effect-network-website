@@ -41,8 +41,7 @@
   import Dao from '@/components/Dao';
   import MailingList from '@/components/MailingList';
   import CaseStudies from '../components/CaseStudies.vue';
-  import globe from '../components/Globe.vue';
-import Globe from '../components/Globe.vue';
+  import Globe from '../components/Globe.vue';
 
   export default {
     head() {
