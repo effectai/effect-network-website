@@ -18,6 +18,8 @@
 import ThreeGlobe from 'three-globe';
 import * as THREE from 'three';
 import TrackballControls from 'three-trackballcontrols';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+
 import {
   CSS2DRenderer
 } from "three/examples/jsm/renderers/CSS2DRenderer";
@@ -40,8 +42,9 @@ export default {
       size: 60,
     }));
 
+    let cameraRotationSpeed = 0.0005;
+ 
     const world = new ThreeGlobe()
-      // .showGlobe(false)
       .globeImageUrl(require('@/assets/img/earth.jpg'))
       .atmosphereColor('#101D56')
       .htmlElementsData(gData)
@@ -55,15 +58,6 @@ export default {
         el.style['pointer-events'] = 'auto';
         return el;
       });
-
-    // hexpolygon
-    // fetch('https://raw.githubusercontent.com/vasturiano/globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson').then(res => res.json()).then(countries => {
-    //   world.hexPolygonsData(countries.features)
-    //   world.hexPolygonResolution(3)
-    //   world.hexPolygonMargin(0.1)
-    //   world.hexPolygonCurvatureResolution(10)
-    //   world.hexPolygonColor(() => `rgba(0,0,0,0.3)`)
-    // });
 
     // Setup renderers
     const renderers = [new THREE.WebGLRenderer(), new CSS2DRenderer()];
@@ -86,33 +80,53 @@ export default {
     scene.background = null;
 
     // Setup camera
-    const camera = new THREE.PerspectiveCamera();
-    camera.aspect = window.innerWidth/ window.innerHeight;
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
     camera.updateProjectionMatrix();
-    camera.position.z = 240;
-    camera.position.y = 150;
+    camera.position.z = 200;
+    camera.position.y = 300;
+    camera.position.multiplyScalar(0.7)
 
     // Add camera controls
-    const tbControls = new TrackballControls(camera, renderers[0].domElement);
-    tbControls.rotateSpeed = .5;
-    tbControls.noZoom = true;
+    // const tbControls = new TrackballControls(camera, renderers[0].domElement);
+    // tbControls.rotateSpeed = 2;
+    // tbControls.noZoom = false;
+    // tbControls.minDistance = 250;
+    // tbControls.maxDistance = 250;
+    const controls = new OrbitControls( camera, renderers[0].domElement );
+    controls.autoRotate = false;
+    controls.autoRotateSpeed = 0.25
+    controls.enableZoom = false;
+    controls.rotateSpeed  = 0.1
+
     renderers[0].setClearColor( 0x000000, 0 );
 
     world.setPointOfView(camera.position, world.position);
-    tbControls.addEventListener('change', () => world.setPointOfView(camera.position, world.position));
+    // tbControls.addEventListener('change', () => world.setPointOfView(camera.position, world.position));
 
+    var angle = 0;
     (function animate() {
-      tbControls.update();
-      scene.rotation.x += 0.0005
+      //tbControls.update()
+      controls.update()
+      //scene.rotation.x = cameraRotationSpeed      
       renderers.forEach(r => r.render(scene, camera));
+      // camera.lookAt(world.position)
+      // camera.position.y = radius * Math.cos( angle );  
+      // camera.position.z = radius * Math.sin( angle );
+      // angle += 0.001;
+      world.setPointOfView(camera.position, world.position)
       requestAnimationFrame(animate);
     })();
+
+    
   }
 }
 </script>
 
 
 <style lang="scss" scoped>
+#globe {
+  // height: 100px !important;
+}
 .banner {
   overflow: hidden;
   position: relative;
@@ -120,9 +134,8 @@ export default {
   background-size: 75%;
   background-repeat: no-repeat;
   background-position: bottom right;
-  height: 50vw;
   min-height: 500px;
-  max-height: 950px;
+  height: calc(100vh - 4.25rem);
   &:before {
     background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
     display: block;
