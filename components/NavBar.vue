@@ -19,28 +19,8 @@
           </div>
           <div class="navbar-end is-align-items-center">
             <div @click="mobileMenu = false">
-              <nuxt-link class="navbar-item" to="/" exact-active-class="is-active">
-                Home
-              </nuxt-link>
-            </div>
-            <div @click="mobileMenu = false">
-              <nuxt-link class="navbar-item" to="/force" exact-active-class="is-active">
-                Work 3.0
-              </nuxt-link>
-            </div>
-            <div @click="mobileMenu = false">
               <nuxt-link class="navbar-item" to="/token-page" exact-active-class="is-active">
-                EFX Token
-              </nuxt-link>
-            </div>
-            <div @click="mobileMenu = false">
-              <nuxt-link class="navbar-item" to="/for-developers" exact-active-class="is-active">
-                Develop
-              </nuxt-link>
-            </div>
-            <div @click="mobileMenu = false">
-              <nuxt-link class="navbar-item" to="/ecosystem" exact-active-class="is-active">
-                Ecosystem
+                Token
               </nuxt-link>
             </div>
             <div @click="mobileMenu = false">
@@ -48,32 +28,10 @@
                 Blog
               </nuxt-link>
             </div>
-            <div class="navbar-item has-dropdown is-hoverable dapps">
-              <div @click="mobileMenu = false">
-                <nuxt-link to="/#dapps" class="navbar-link">
-                  dApps
-                </nuxt-link>
-              </div>
-              <div class="navbar-dropdown">
-                <nuxt-link to="/force" class="navbar-item">
-                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-force_part-white_h100.png') : require('@/assets/img/dapps/effect-force_h100.png')" class="dapp-logo block"/>
-                </nuxt-link>
-                <a target="_blank" href="https://dao.effect.network" class="navbar-item">
-                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-dao_part-white_h100.png') : require('@/assets/img/dapps/effect-dao_h100.png')" class="dapp-logo block"/>
-                </a>
-                <a target="_blank" href="https://translate.effect.network" class="navbar-item">
-                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-translate_part-white_h100.png') : require('@/assets/img/dapps/effect-translate_h100.png')" class="dapp-logo block"/>
-                </a>
-                <a href="https://socials.effect.network" target="_blank" class="navbar-item">
-                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-socials_part-white_h100.png') : require('@/assets/img/dapps/effect-socials_h100.png')" class="dapp-logo block"/>
-                </a>
-                <a target="_blank" href="https://captions.effect.network" class="navbar-item">
-                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-captions_part-white_h100.png') : require('@/assets/img/dapps/effect-captions_h100.png')" class="dapp-logo block"/>
-                </a>
-<!--                <a target="_blank" href="https://superrare.co/effectpieces" class="navbar-item">-->
-<!--                  <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-pieces_part-white_h100.png') : require('@/assets/img/dapps/effect-pieces_h100.png')" class="dapp-logo block"/>-->
-<!--                </a>-->
-              </div>
+            <div @click="mobileMenu = false">
+              <nuxt-link class="navbar-item" to="/ecosystem" exact-active-class="is-active">
+                Ecosystem
+              </nuxt-link>
             </div>
             <div class="navbar-item" exact-active-class="is-active">
               <div @click="mobileMenu = false">
