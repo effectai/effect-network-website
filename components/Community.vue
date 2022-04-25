@@ -1,5 +1,5 @@
 <template>
-  <div class="container mb-6 py-6">
+  <div class="container my-6 py-6">
     <div class="community-block p-6 has-limited-width columns is-flex is-justify-content-space-between is-align-items-center" data-aos="fade-up" data-aos-delay="50">
         <h2 class="p-6 title mb-0 is-2 has-text-white is-spaced">Join the<br>community</h2>
         <div class="px-6">
