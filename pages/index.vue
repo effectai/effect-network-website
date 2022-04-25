@@ -8,6 +8,7 @@
     <efx />
     <faq class="has-background-light" />
     <globe />
+    <community />
     <!-- <div class="has-background-light">
       <clients />
       <three-blocks />
@@ -26,7 +27,6 @@
       </div>
     </section> -->
     <dao />
-    <mailing-list />
   </div>
 </template>
 
