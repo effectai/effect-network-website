@@ -42,7 +42,7 @@ export default {
       size: 60,
     }));
 
-    let cameraRotationSpeed = 0.0005;
+    let cameraRotationSpeed = 0.0003;
  
     const world = new ThreeGlobe()
       .globeImageUrl(require('@/assets/img/earth.jpg'))
@@ -53,8 +53,6 @@ export default {
         el.innerHTML = `<img src="${this.markerSvg}">`;
         el.style.color = d.color;
         el.style.width = `${d.size}px`;
-        // TODO: this is hacky, find a way so that this isn't needed
-        el.style.marginTop = '325px'
         el.style['pointer-events'] = 'auto';
         return el;
       });
@@ -80,39 +78,35 @@ export default {
     scene.background = null;
 
     // Setup camera
-    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
-    camera.updateProjectionMatrix();
-    camera.position.z = 200;
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 100000);
+    camera.position.z = 1000;
     camera.position.y = 300;
-    camera.position.multiplyScalar(0.7)
+    camera.position.multiplyScalar(.1)
+    camera.updateProjectionMatrix();
 
     // Add camera controls
-    // const tbControls = new TrackballControls(camera, renderers[0].domElement);
-    // tbControls.rotateSpeed = 2;
-    // tbControls.noZoom = false;
-    // tbControls.minDistance = 250;
-    // tbControls.maxDistance = 250;
-    const controls = new OrbitControls( camera, renderers[0].domElement );
-    controls.autoRotate = false;
-    controls.autoRotateSpeed = 0.25
-    controls.enableZoom = false;
-    controls.rotateSpeed  = 0.1
+    const tbControls = new TrackballControls(camera, renderers[0].domElement);
+    tbControls.rotateSpeed = .5;
+    tbControls.noZoom = false;
+    tbControls.minDistance = 250;
+    tbControls.maxDistance = 250;
+    // const controls = new OrbitControls( camera, renderers[0].domElement );
+    // controls.autoRotate = false;
+    // controls.autoRotateSpeed = 0.25
+    // controls.enableZoom = false;
+    // controls.rotateSpeed  = 0.1
 
     renderers[0].setClearColor( 0x000000, 0 );
 
     world.setPointOfView(camera.position, world.position);
-    // tbControls.addEventListener('change', () => world.setPointOfView(camera.position, world.position));
+    tbControls.addEventListener('change', () => world.setPointOfView(camera.position, world.position));
 
-    var angle = 0;
     (function animate() {
-      //tbControls.update()
-      controls.update()
-      //scene.rotation.x = cameraRotationSpeed      
+      tbControls.update()
+      // controls.update()
+      scene.rotation.x += cameraRotationSpeed      
       renderers.forEach(r => r.render(scene, camera));
-      // camera.lookAt(world.position)
-      // camera.position.y = radius * Math.cos( angle );  
-      // camera.position.z = radius * Math.sin( angle );
-      // angle += 0.001;
+      //camera.lookAt(world.position)
       world.setPointOfView(camera.position, world.position)
       requestAnimationFrame(animate);
     })();
@@ -125,6 +119,9 @@ export default {
 
 <style lang="scss" scoped>
 #globe {
+  position: absolute;
+  top: calc(100vh - 300px);
+  z-index: 1;
   // height: 100px !important;
 }
 .banner {
