@@ -16,8 +16,8 @@
           <div class="my-6" id="buy" style="max-width:750px; margin-left:auto;margin-right:auto">
             <section class="section has-background-secondary-alt has-radius background-image efx-graph">
               <div class="has-text-centered block">
-                <h2 class="title is-2">Buy EFX</h2>
-                <p class="subtitle">Buy EFX tokens with BTC, EOS or USDT</p>
+                <h2 class="title is-2 has-text-white">Buy EFX</h2>
+                <p class="subtitle has-text-white">Buy EFX tokens with BTC, EOS or USDT</p>
               </div>
               <div class="columns has-text-grey has-text-centered is-multiline">
                 <div class="column is-half">
@@ -66,17 +66,17 @@
             </section>
             <div class="p-5">
               <div class="subtitle">Official Token Contracts</div>
-              <div class="block"><small>BSC Token Contract: <a class="blockchain-address has-text-white" href="https://bscscan.com/token/0xC51Ef828319b131B595b7ec4B28210eCf4d05aD0" target="_blank">0xc51ef828319b131b595b7ec4b28210ecf4d05ad0</a></small></div>
-              <div><small>EOS Token Contract: <a class="blockchain-address has-text-white" href="https://www.bloks.io/account/effecttokens" target="_blank">effecttokens</a></small></div>
+              <div class="block"><small>BSC Token Contract: <a class="blockchain-address" href="https://bscscan.com/token/0xC51Ef828319b131B595b7ec4B28210eCf4d05aD0" target="_blank">0xc51ef828319b131b595b7ec4b28210ecf4d05ad0</a></small></div>
+              <div><small>EOS Token Contract: <a class="blockchain-address" href="https://www.bloks.io/account/effecttokens" target="_blank">effecttokens</a></small></div>
             </div>
           </div>
         </div>
       </section>
       <section class="section">
         <div class="container">
-          <div class="mb-6 mt-2">
-            <div class="has-text-centered">
-              <h2 class="title is-2">Tokenomics</h2>
+          <div class="mt-2">
+            <div class="has-text-centered tokenomics pt-6">
+              <h2 class="title is-2 has-text-white">Tokenomics</h2>
               <div class="coinmarketcap-currency-widget has-background-white has-text-black has-radius" data-currencyid="2666" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
               <tokenomics />
             </div>
@@ -84,9 +84,8 @@
         </div>
       </section>
     </div>
-    <whitepaper/>
     <section class="section hero is-white">
-      <div class="container is-max-widescreen my-6">
+      <div class="container is-max-widescreen mb-6">
         <div class="has-text-centered">
           <h2 class="title is-2">Features</h2>
         </div>
@@ -121,7 +120,7 @@
 
   export default {
     name: 'EFX',
-    colorMode: 'dark',
+    colorMode: 'light',
     components: {
       Whitepaper,
       Tokenomics
@@ -156,21 +155,8 @@
   overflow: hidden;
   display: block;
 }
-  .token-hero {
-    background-image: url("~assets/img/grad_token_hero_left.png"), url("~assets/img/grad_token_hero_right.png");
-    background-position: left, right top;
-    background-repeat: no-repeat;
-  }
-  .efx-graph {
-    background-image: url("~assets/img/efx-graph.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .efx-bg {
-    background-image: url("~assets/img/efx-bg.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-top: -67px;
-    padding-top: 67px;
-  }
+.tokenomics {
+  background-color: $secondary-alt;
+  border-radius: $box-radius;
+}
 </style>

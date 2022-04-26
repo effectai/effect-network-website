@@ -37,7 +37,7 @@ export default {
   background-color: $secondary-alt;
   background-repeat: no-repeat;
   background-position: right bottom;
-  border-radius: 14px;
+  border-radius: $box-radius;
   background-size: 280px;
   position: relative;
   display: block;

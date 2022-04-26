@@ -22,7 +22,7 @@
             class="column is-full-mobile is-half-tablet is-one-fifth-desktop is-one-fifth-widescreen"
             v-for="dapp in featuredDapps"
             :key="dapp.id">
-            <div class="card is-shadowless has-background-white p-4" @click="goToDapp(dapp.id)">
+            <div class="card is-shadowless has-background-white p-4" @click="goToDapp(dapp.group_name)">
               <div class="card-image mx-auto mb-2">
                 <figure>
                   <img :src="getImageLink(dapp.image_url)" v-bind:alt="dapp.image_url">
@@ -73,7 +73,7 @@
             v-for="dapp in filteredDapps"
             :key="dapp.id"
           >
-            <div class="card is-shadowless has-background-white p-4" @click="goToDapp(dapp.id)">
+            <div class="card is-shadowless has-background-white p-4" @click="goToDapp(dapp.group_name)">
               <div class="card-image mx-auto mb-2">
                 <figure>
                   <img :src="getImageLink(dapp.image_url)" v-bind:alt="dapp.image_url">
@@ -177,8 +177,8 @@ export default {
     },
 
     methods: {
-      goToDapp (id) {
-        console.log('Todo go to dapp page', id)
+      goToDapp (name) {
+        this.$router.push(`/ecosystem/${name}`)
       },
       removeFilter (tag) {
         this.filters = this.filters.filter(e => e !== tag)

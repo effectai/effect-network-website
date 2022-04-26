@@ -1,24 +1,23 @@
 <template>
   <div class="container my-6 py-6">
     <div class="community-block p-6 has-limited-width columns is-flex is-justify-content-space-between is-align-items-center" data-aos="fade-up" data-aos-delay="50">
-        <h2 class="p-6 title mb-0 is-2 has-text-white is-spaced">Join the<br>community</h2>
-        <div class="px-6">
-          <a href="https://discord.gg/effectnetwork" target="_blank">
-            <button type="button" class="button is-white">
-              <i class="fab fa-discord"></i>
-            </button>
-          </a>
-          <a href="https://twitter.com/effectaix" target="_blank">
-            <button type="button" class="button is-white">
-              <i class="fab fa-twitter"></i>
-            </button>
-          </a>
-          <a href="https://github.com/effectai" target="_blank">
-            <button type="button" class="button is-white">
-              <i class="fab fa-github"></i>
-            </button>
-          </a>
-        </div>
+      <h2 class="p-6 title mb-0 is-2 has-text-white is-spaced">Join the<br>community</h2>
+      <div class="px-6">
+        <a href="https://discord.gg/effectnetwork" target="_blank">
+          <button type="button" class="button is-white">
+            <i class="fab fa-discord"></i>
+          </button>
+        </a>
+        <a href="https://twitter.com/effectaix" target="_blank">
+          <button type="button" class="button is-white">
+            <i class="fab fa-twitter"></i>
+          </button>
+        </a>
+        <a href="https://github.com/effectai" target="_blank">
+          <button type="button" class="button is-white">
+            <i class="fab fa-github"></i>
+          </button>
+        </a>
       </div>
     </div>
   </div>
