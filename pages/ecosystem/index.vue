@@ -224,31 +224,18 @@ export default {
   border-width: 1px;
   border-color: #ededed;
   .card-image {
+    border: 1px solid #E8EEFF;
+    overflow: hidden;
     height: 150px !important;
+    border-radius: $card-radius !important;
     figure, img {
       height: 150px !important;
     }
     img {
       width: 100%;
       object-fit: cover;
-      border-radius: $card-radius !important;
+      // border-radius: $card-radius !important;
     }
-  }
-}
-
-.tags {
-  .tag {
-    z-index: 999;
-    background: rgba(25, 119, 243, 0.1);
-    color: #81889D;
-    cursor: pointer;
-  }
-  &.is-medium {
-    background: $light !important;
-    font-size: .95rem !important;
-  }
-  p {
-    cursor: pointer;
   }
 }
 </style>

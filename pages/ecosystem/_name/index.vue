@@ -34,6 +34,34 @@
         </div>
       </div>
       <hr>
+      <div class="columns">
+        <div class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen" v-if="nextDapp">
+          <h2 class="subtitle my-4 has-text-weight-semibold">Next dApp</h2>
+            <div class="card is-shadowless has-background-white p-4" @click="goToDapp(nextDapp.group_name)">
+              <div class="card-image mx-auto mb-2">
+                <figure>
+                  <img :src="getImageLink(nextDapp.image_url)" v-bind:alt="nextDapp.image_url">
+                </figure>
+              </div>
+
+              <div class="card-content p-2">
+                <section class="title-section">
+                  <div class="media-content">
+                    <h2 class="title is-5 has-text-weight-medium mb-3 has-text-centered has-text-black">
+                      {{ nextDapp.group_name }}
+                    </h2>
+                    <div class="tags is-centered">
+                      <span v-for="tag in nextDapp.tags" @click="addFilter(tag)" :key="tag" class="tag is-info is-light">{{ tag }}</span>
+                    </div>
+                    <p class="has-text-grey is-flex is-clipped mb-0">
+                      {{ nextDapp.description.length > 200 ? `${nextDapp.description.slice(0, 200)}...` : nextDapp.description }}
+                    </p>
+                  </div>
+                </section>
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -45,12 +73,15 @@ export default {
     return {
       name: this.$route.params.name,
       loading: false,
-      dapp: dapps.submissions.find(e => e.group_name === this.name),
+      dapp: null,
+      nextDapp: null,
     }
   },
   created () {
     if (this.name) {
-      this.dapp = dapps.submissions.find(e => e.group_name === this.name) 
+      this.dapp = dapps.submissions.find(e => e.group_name === this.name)
+      const dappIndex = dapps.submissions.findIndex(e => e.group_name === this.name)
+      this.nextDapp = (dappIndex + 1) > dapps.submissions.length - 1 ? dapps.submissions[0] : dapps.submissions[dappIndex + 1]
     }
     if (!this.dapp) {
       return this.$nuxt.error({ statusCode: 404, message: "Can't find dApp" })
@@ -60,16 +91,26 @@ export default {
     getImageLink (img_url) {
       return require(`@/assets/img/ecosystem/${img_url}`)
     },
+    goToDapp (name) {
+      this.$router.push(`/ecosystem/${name}`)
+    },
   }
 }
 </script>
 
 <style scoped lang="scss">
-figure img {
-  max-width: 250px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: $card-radius;
+.is-one-fifth figure {
+  @include mobile {
+    display: flex;
+    justify-content: center;
+  }
+  img {
+    max-width: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: $card-radius;
+    
+  }
 }
 .social-icons {
   justify-content: center;
@@ -86,5 +127,36 @@ figure img {
 hr {
   display: block;
   overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: $box-shadow !important;
+}
+
+.card {
+  transition: all .3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  z-index: 1;
+  margin-top: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ededed;
+  .card-image {
+    border: 1px solid #E8EEFF;
+    overflow: hidden;
+    height: 150px !important;
+    border-radius: $card-radius !important;
+    figure, img {
+      height: 150px !important;
+    }
+    img {
+      width: 100%;
+      object-fit: cover;
+      // border-radius: $card-radius !important;
+    }
+  }
 }
 </style>

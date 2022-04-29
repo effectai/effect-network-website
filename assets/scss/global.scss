@@ -199,3 +199,19 @@ a.card {
 .page-leave-to {
   opacity: 0;
 }
+
+.tags {
+  .tag {
+    z-index: 999;
+    background: rgba(25, 119, 243, 0.1);
+    color: #81889D;
+    cursor: pointer;
+  }
+  &.is-medium {
+    background: $light !important;
+    font-size: .95rem !important;
+  }
+  p {
+    cursor: pointer;
+  }
+}
