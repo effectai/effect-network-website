@@ -36,6 +36,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 .community-block {
+  background-image: url('~assets/img/community-bg.png');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: bottom left;
   border-radius: $box-radius;
   background-color: $secondary-alt;
   @include mobile {
