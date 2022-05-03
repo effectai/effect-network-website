@@ -9,8 +9,8 @@
             <div style="display: inline-block" data-aos="zoom-in" data-aos-delay="300"><a target="_blank" href="https://app.effect.network" class="button is-primary" :class="{'is-accent': $colorMode.value === 'dark'}">Launch App</a></div>
           </div>
         </div>  
+        <div id="globe"></div>
       </div>
-      <div id="globe"></div>
     </section>
   </div>
 </template>
@@ -45,22 +45,23 @@ export default {
     let cameraRotationSpeed = 0.0003;
  
     const world = new ThreeGlobe()
-      .globeImageUrl(require('@/assets/img/earth.jpg'))
+      .globeImageUrl(require('@/assets/img/Maps/Map_2.jpg'))
       .atmosphereColor('#101D56')
-      .htmlElementsData(gData)
-      .htmlElement(d => {
-        const el = document.createElement('div');
-        el.innerHTML = `<img src="${this.markerSvg}">`;
-        el.style.color = d.color;
-        el.style.width = `${d.size}px`;
-        el.style['pointer-events'] = 'auto';
-        return el;
-      });
+      .atmosphereAltitude(0.05)
+      // .htmlElementsData(gData)
+      // .htmlElement(d => {
+      //   const el = document.createElement('div');
+      //   el.innerHTML = `<img src="${this.markerSvg}">`;
+      //   el.style.color = d.color;
+      //   el.style.width = `${d.size}px`;
+      //   el.style['pointer-events'] = 'auto';
+      //   return el;
+      // });
 
     // Setup renderers
     const renderers = [new THREE.WebGLRenderer(), new CSS2DRenderer()];
     renderers.forEach((r, idx) => {
-      r.setSize(window.innerWidth, window.innerHeight);
+      r.setSize(window.innerWidth * 1.5, window.innerHeight * 1.5);
       if (idx > 0) {
         // overlay additional on top of main renderer
         r.domElement.style.position = 'absolute';
@@ -78,18 +79,19 @@ export default {
     scene.background = null;
 
     // Setup camera
-    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 100000);
-    camera.position.z = 1000;
-    camera.position.y = 300;
-    camera.position.multiplyScalar(.1)
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
+    camera.position.z = 100;
+    camera.position.x = 30;
+    camera.position.y = 0;
+    // camera.position.multiplyScalar(.1)
     camera.updateProjectionMatrix();
 
     // Add camera controls
     const tbControls = new TrackballControls(camera, renderers[0].domElement);
     tbControls.rotateSpeed = .5;
     tbControls.noZoom = false;
-    tbControls.minDistance = 250;
-    tbControls.maxDistance = 250;
+    tbControls.minDistance = 275;
+    tbControls.maxDistance = 275;
     // const controls = new OrbitControls( camera, renderers[0].domElement );
     // controls.autoRotate = false;
     // controls.autoRotateSpeed = 0.25
@@ -111,6 +113,23 @@ export default {
       requestAnimationFrame(animate);
     })();
 
+    window.addEventListener( 'resize', () => {
+      if (window.innerWidth < 1000) {
+        renderers.forEach(r => () => {
+          r.setSize(window.innerWidth, window.innerHeight);
+          r.render(scene, camera);
+        });
+      } else {
+        renderers.forEach(r => () => {
+          r.setSize(window.innerWidth * 1.5, window.innerHeight * 1.5);
+          r.render(scene, camera);
+        });
+      }
+      camera.updateProjectionMatrix();
+      world.setPointOfView(camera.position, world.position)
+      tbControls.update()
+    });
+
     
   }
 }
@@ -120,8 +139,9 @@ export default {
 <style lang="scss" scoped>
 #globe {
   position: absolute;
-  top: calc(100vh - 300px);
-  z-index: 1;
+  top: calc(100vh - 800px);
+  left: -300px;
+  z-index: -1;
   // height: 100px !important;
 }
 .banner {
