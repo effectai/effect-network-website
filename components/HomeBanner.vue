@@ -45,7 +45,7 @@ export default {
     let cameraRotationSpeed = 0.0003;
  
     const world = new ThreeGlobe()
-      .globeImageUrl(require('@/assets/img/Maps/Map_2.jpg'))
+      .globeImageUrl(require('@/assets/img/maps/Map_2.jpg'))
       .atmosphereColor('#101D56')
       .atmosphereAltitude(0.05)
       // .htmlElementsData(gData)
