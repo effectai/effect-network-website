@@ -143,6 +143,10 @@ export default {
   left: -300px;
   z-index: -1;
   // height: 100px !important;
+  @include mobile {
+    top: calc(100vh - 400px);
+    left: -100px;
+  }
 }
 .banner {
   overflow: hidden;
@@ -163,10 +167,15 @@ export default {
     bottom: 0;
     left: 0;
   }
+  .section, .container, .columns {
+    @include mobile {
+      height: 100%
+    }
+  }
 }
 @include desktop {
   .title {
-        font-size: 54px;
+    font-size: 54px;
   }
 }
 </style>
