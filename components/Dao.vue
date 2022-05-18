@@ -2,7 +2,7 @@
   <div class="py-6 has-background-light always-light">
     <section class="section">
       <div class="container is-max-widescreen">
-        <div class="columns is-centered is-vcentered is-variable is-8">
+        <div class="columns is-centered is-vcentered is-variable is-6">
           <div class="column is-5" data-aos="fade-up" data-aos-delay="100">
             <img :src="$colorMode.value === 'dark' ? require('@/assets/img/dapps/effect-dao.png') : require('@/assets/img/dapps/effect-dao.png')" width="200" class="mb-5" />
             <!-- <h2 class="title is-2">Effect Proposal System</h2>

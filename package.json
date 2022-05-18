@@ -18,8 +18,13 @@
     "axios": "^0.21.1",
     "bulma": "^0.9.1",
     "core-js": "^3.8.2",
+    "globe.gl": "^2.26.1",
     "nuxt": "^2.14.12",
     "nuxt-password-protect": "^1.2.0",
+    "three": "^0.139.2",
+    "three-css2drender": "^1.0.0",
+    "three-globe": "^2.24.4",
+    "three-trackballcontrols": "^0.9.0",
     "vue-lottie": "^0.2.1"
   },
   "devDependencies": {
