@@ -30,7 +30,10 @@
                 </div>
                 <div class="column is-two-third">
                   <div class="box ml-6 p-0">
-                    <img :src="project.image">
+                    <video autoplay muted loop>
+                      <source :src="project.video" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
                   </div>
                 </div>
               </div>
@@ -59,19 +62,20 @@ export default {
           id: 1,
           name: "Effect Notebooks",
           description: "Effect Notebooks is a campaign where workers can earn EFX tokens for writing code that will automate the cleaning of data, the way a task specifies.",
-          image: require('@/assets/img/notebooks.jpg')
+          image: require('@/assets/img/notebooks.jpg'),
+          video: require('~/assets/videos/notebooks.mp4')
         },
         {
           id: 2,
-          name: "Effect Notebooks 2",
-          description: "Effect Notebooks is a campaign where workers can earn EFX tokens for writing code that will automate the cleaning of data, the way a task specifies.",
-          image: require('@/assets/img/efx-3d.png')
+          name: "Delos",
+          description: "Delos allows anyone to submit a Document and using the amazing Effect Workforce, we categorize the data from the image and validate if it is in fact a useful document.",
+          video: require('@/assets/videos/delos.mp4')
         },
         {
           id: 3,
-          name: "Effect Notebooks 3",
-          description: "Effect Notebooks is a campaign where workers can earn EFX tokens for writing code that will automate the cleaning of data, the way a task specifies.",
-          image: require('@/assets/img/efx-3d.png')
+          name: "Ergasia",
+          description: "Ergasia allows companies and individuals to upload tasks and get them done quickly. For example: Converting handwritten images to text, Editing Images, Technical Code Debug, Feedback for posters and asking Academic Course related questions.",
+          video: require('@/assets/videos/egrasia.mp4')
         }
       ]
     }
@@ -119,9 +123,10 @@ export default {
 .glide__slide {
   position: relative; 
   opacity: 0; 
-  transition: opacity .5s ease; 
+  transition: all .5s ease; 
   grid-area: slide;  //assign all child slides to the cell
   margin: 0 !important;
+  transform: scale(.95);
   @include mobile {
     display: block !important;
     .box {
@@ -131,6 +136,7 @@ export default {
 }
 .glide__slide--active {
   z-index:1; 
+  transform: scale(1);
   opacity:1;
 }
 
