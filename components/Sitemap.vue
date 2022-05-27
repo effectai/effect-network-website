@@ -12,7 +12,7 @@
             <li><nuxt-link to="/for-developers">Build</nuxt-link></li>
             <li><a target="_blank" href="https://dao.effect.network">DAO</a></li>
             <li><nuxt-link to="/news">Blog</nuxt-link></li>
-            <li><nuxt-link to="/team">Team</nuxt-link></li>
+            <li><nuxt-link to="/about">About</nuxt-link></li>
             <li><nuxt-link to="/brand">Brand</nuxt-link></li>
             <li><nuxt-link to="/contact">Contact</nuxt-link></li>
           </ul>
