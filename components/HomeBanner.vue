@@ -8,7 +8,7 @@
             <h1 class="subtitle has-background-white-blur pr-6" data-aos="fade-up" data-aos-delay="150"><span class="pr-6">Earn $EFX anywhere at any time by completing simple tasks.</span></h1>
             <div style="display: inline-block" data-aos="zoom-in" data-aos-delay="300"><a target="_blank" href="https://app.effect.network" class="button is-primary" :class="{'is-accent': $colorMode.value === 'dark'}">Launch App</a></div>
           </div>
-        </div>  
+        </div>
         <div id="globe"></div>
       </div>
     </section>
@@ -114,7 +114,7 @@ export default {
       requestAnimationFrame(animate);
     })();
 
-    
+
   }
 }
 </script>
@@ -124,7 +124,7 @@ export default {
 #globe {
   position: absolute;
   top: calc(100vh - 800px);
-  left: -330px;
+  left: -420px;
   z-index: -1;
   // height: 100px !important;
   @include mobile {
