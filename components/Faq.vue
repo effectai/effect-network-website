@@ -54,12 +54,12 @@ export default {
                 {
           question: 'How are task prices determined?',
           answer:
-            'Task prices are determined by the requester, eventhough we do recommend to them how much the taks should be priced, it is currently not yet enforced. A vote will have to take place in order to nail down the price for each task for the platform. '
+            'Task prices are determined by the requester that posts the tasks. The platform does recommend a minimum price, but in the end it functions as an open marketplace. '
         },
                 {
           question: 'Who are the requesters?',
           answer:
-            'It can be anyone! You can create tasks just as easily as I can. Join app.effect.network in order to start creating tasks today!'
+            'It can be anyone! You can create tasks just as easily as I can. Join https://app.effect.network and start creating tasks today.'
         }
       ]
     }
