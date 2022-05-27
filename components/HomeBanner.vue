@@ -99,7 +99,7 @@ export default {
 
     // Add camera controls
     const tbControls = new TrackballControls(camera, renderer.domElement);
-    tbControls.rotateSpeed = 5;
+    tbControls.rotateSpeed = .5;
     tbControls.noZoom = false;
     tbControls.minDistance = 275;
     tbControls.maxDistance = 275;
