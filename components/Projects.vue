@@ -4,7 +4,7 @@
       <div class="container py-6">
         <div class="column is-two-fifths">
           <h1 class="title is-1" data-aos="fade-up">
-            What kind of projects are suitable for Effect Network
+            What kind of projects are suitable for Effect Network?
           </h1>
           <p data-aos="fade-up" data-aos-delay="100" class="pr-6 block">Any process that needs automation, here are a couple of use cases to give you an idea!</p>
           <p data-aos="fade-up" data-aos-delay="150" class="block" style="z-index: 2; position: relative"><nuxt-link to="/ecosystem" class="button is-primary">Explore Ecosystem</nuxt-link></p>
