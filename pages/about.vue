@@ -85,7 +85,7 @@
             image: require('@/assets/img/team/laurens.png')
           },
           {
-            name: 'Rochelle Travellow',
+            name: 'Rochelle Trevarrow',
             title: 'Chief Talent Officer',
             link: 'https://www.linkedin.com/in/rochelle-effectai',
             image: require('@/assets/img/team/rochelle.png')
