@@ -70,7 +70,7 @@ export default {
     const Globe = new ThreeGlobe()
       .globeImageUrl(require('@/assets/img/maps/white.jpg'))
       .atmosphereColor('#101D56')
-      .atmosphereAltitude(0.05)
+      .atmosphereAltitude(0.03)
       .ringsData(gData)
       .ringColor(() => colorInterpolator)
       .ringMaxRadius('maxR')
@@ -94,7 +94,7 @@ export default {
     camera.position.z = 100;
     camera.position.x = 30;
     camera.position.y = 30;
-    camera.position.normalize().multiplyScalar(300)
+    camera.position.normalize().multiplyScalar(270)
     camera.updateProjectionMatrix();
 
     // Add camera controls
@@ -128,8 +128,11 @@ export default {
   z-index: -1;
   // height: 100px !important;
   @include mobile {
-    top: calc(100vh - 400px);
+    top: calc(100vh - 500px);
     left: -100px;
+    @media (max-height: 700px) {
+      top: calc(100vh - 350px);
+    }
   }
 }
 .banner {
