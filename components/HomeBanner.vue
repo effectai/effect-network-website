@@ -94,20 +94,15 @@ export default {
     camera.position.z = 100;
     camera.position.x = 30;
     camera.position.y = 30;
-    // camera.position.multiplyScalar(.1)
+    camera.position.normalize().multiplyScalar(300)
     camera.updateProjectionMatrix();
 
     // Add camera controls
     const tbControls = new TrackballControls(camera, renderer.domElement);
     tbControls.rotateSpeed = .5;
-    tbControls.noZoom = false;
-    tbControls.minDistance = 275;
-    tbControls.maxDistance = 275;
-    // const controls = new OrbitControls( camera, renderers[0].domElement );
-    // controls.autoRotate = false;
-    // controls.autoRotateSpeed = 0.25
-    // controls.enableZoom = false;
-    // controls.rotateSpeed  = 0.1
+    tbControls.noPan = true;
+    tbControls.noKeys = true;
+    tbControls.noZoom = true;
 
     renderer.setClearColor( 0x000000, 0 );
 
