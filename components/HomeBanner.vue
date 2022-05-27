@@ -124,7 +124,7 @@ export default {
 #globe {
   position: absolute;
   top: calc(100vh - 800px);
-  left: -300px;
+  left: -330px;
   z-index: -1;
   // height: 100px !important;
   @include mobile {
