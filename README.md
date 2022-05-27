@@ -2,6 +2,8 @@
 
 ## Build Setup
 
+Node version needed for this project is: **V12.X.Y**.
+
 ```bash
 # install dependencies
 $ npm install

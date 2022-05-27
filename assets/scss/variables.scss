@@ -25,7 +25,7 @@ $custom-colors: (
   "accent":($accent, $accent-invert),
 );
 
-$text: #363636;
+$text: #2A2B48;
 // $body-background-color: #FFFDF7;
 
 $link: $secondary;
@@ -33,14 +33,17 @@ $link-hover: lighten($secondary, 20%);
 $link-focus: lighten($secondary, 20%);
 $link-active: lighten($secondary, 20%);
 
-$title-weight: 400;
-$title-color: $primary;
-//$subtitle-color: $secondary;
-$title-family: $family-secondary;
+$title-weight: 700;
+$title-color: $text;
+$subtitle-color: $text;
+$title-family: $family-sans-serif;
 $subtitle-family: $family-sans-serif;
+// $subtitle-weight: 500;
 
 $body-line-height: 1.7;
 $button-padding-horizontal: 1.7em;
+$control-border-width: 2px;
+$control-radius: $radius-large;
 
 $card-header-padding: 1.25rem 2rem;
 $card-content-padding: 1.2rem 1.2rem;
@@ -58,10 +61,15 @@ $menu-label-font-size: 0.9em;
 $menu-label-letter-spacing: 0.05em;
 $menu-list-link-padding: 0.5em 0.5em;
 
-$box-shadow: 0 0 38px 10px rgba(49,71,168,0.12);
 $card-shadow: 0 0 38px 10px rgba(49,71,168,0.12);
+$card-radius: 10px;
+
+$box-radius: 14px;
+$box-background-color: #F7F8FE;
+$box-shadow: 0px 4px 30px rgba(16, 29, 86, 0.1);
 
 $light: #F6F7FF;
+$lighter: #fbfbfd;
 
 @import '../../node_modules/bulma/sass/utilities/derived-variables';
 $card-footer-border-top: 1px solid $border-light;
@@ -69,4 +77,4 @@ $card-footer-border-top: 1px solid $border-light;
 
 $dark-mode-background: #101D56;
 
-
+@import "../../node_modules/bulma/sass/utilities/mixins";

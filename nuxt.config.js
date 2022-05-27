@@ -40,6 +40,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/aos', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -51,6 +52,9 @@ export default {
     '@nuxtjs/color-mode',
     '@nuxtjs/google-analytics'
   ],
+  colorMode: {
+    preference: 'light',
+  },
   googleAnalytics: {
     id: 'UA-110391238-5'
   },

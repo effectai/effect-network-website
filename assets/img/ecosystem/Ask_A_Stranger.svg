@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="175" width="175">
+  <g transform="translate(110,16) rotate(120 0 0)">
+    <rect x="0" y="0" height="32" width="160" stroke="black" rx="16" stroke-width="5" fill="transparent" />
+  </g>
+  <g transform="translate(94,0) rotate(60 0 0)">
+    <rect x="0" y="0" height="32" width="160" stroke="black" rx="16" stroke-width="5" fill="transparent" />
+  </g>
+  <g>
+    <rect x="24" y="90" height="32" width="128" stroke="black" rx="16" stroke-width="5" fill="transparent" />
+  </g>
+</svg>		

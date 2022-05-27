@@ -5,7 +5,7 @@
         <h1 class="title is-2 is-white mb-5 mt-6">
           Check Effect Force Now
         </h1>
-        <a href="https://effectai.typeform.com/to/XpQoFq" target="_blank" class="mt-4 mb-6 button is-accent block is-wide">Request a demo</a>
+        <a href="https://app.effect.network" target="_blank" class="mt-4 mb-6 button is-accent block is-wide">Explore Force</a>
     </div>
   </section>
   </div>
