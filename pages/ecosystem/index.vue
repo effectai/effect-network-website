@@ -2,7 +2,17 @@
   <div class="coming-soon">
     <div id="overlay">
       <div>
-        <h1 class="title is-primary">Coming soon!</h1>
+        <h1 class="title is-size-1">Coming soon ✨</h1>
+        <div class="columns is-centered">
+          <p class="is-size-5 my-6 is-one-third column has-text-left is-bold">
+            Effect Network's ecosystem is a collection of all the applications
+            running on the network. You may use $EFX tokens to buy a number of
+            services that boost productivity, including social media engagement,
+            translations, subtitles and graphics, to help your business grow in
+            many ways. Think of this as the $EFX candy store, which will be
+            available to you very soon!
+          </p>
+        </div>
         <nuxt-link to="/">
           <button class="button is-primary">
             Back to home
