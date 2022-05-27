@@ -99,7 +99,7 @@
           {
             name: 'Jaïr Zijp',
             title: 'Software Engineer',
-            link: 'http://twitter.com',
+            link: 'https://www.linkedin.com/in/ja%C3%AFr-zijp-424657104',
             image: require('@/assets/img/team/jair.jpg')
           },
           {
