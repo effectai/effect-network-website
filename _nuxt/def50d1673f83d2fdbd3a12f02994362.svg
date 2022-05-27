@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="175" width="175" style="">
+  <g transform="translate(110,16) rotate(120 0 0)">
+    <path height="32" width="160" stroke="black" stroke-width="5" fill="transparent" d="M 16,0 L 144,0 A 16,16,0,0,1,160,16 L 160,16 A 16,16,0,0,1,144,32 L 16,32 A 16,16,0,0,1,0,16 L 0,16 A 16,16,0,0,1,16,0" class="TCrttLZM_0"></path>
+  </g>
+  <g transform="translate(94,0) rotate(60 0 0)">
+    <path height="32" width="160" stroke="black" stroke-width="5" fill="transparent" d="M 16,0 L 144,0 A 16,16,0,0,1,160,16 L 160,16 A 16,16,0,0,1,144,32 L 16,32 A 16,16,0,0,1,0,16 L 0,16 A 16,16,0,0,1,16,0" class="TCrttLZM_1"></path>
+  </g>
+  <g>
+    <path height="32" width="128" stroke="black" stroke-width="5" fill="transparent" d="M 40,90 L 136,90 A 16,16,0,0,1,152,106 L 152,106 A 16,16,0,0,1,136,122 L 40,122 A 16,16,0,0,1,24,106 L 24,106 A 16,16,0,0,1,40,90" class="TCrttLZM_2"></path>
+  </g>
+<style data-made-with="vivus-instant">.TCrttLZM_0{stroke-dasharray:357 359;stroke-dashoffset:358;animation:TCrttLZM_draw 1000ms ease-in-out 0ms forwards;}.TCrttLZM_1{stroke-dasharray:357 359;stroke-dashoffset:358;animation:TCrttLZM_draw 1000ms ease-in-out 250ms forwards;}.TCrttLZM_2{stroke-dasharray:293 295;stroke-dashoffset:294;animation:TCrttLZM_draw 1000ms ease-in-out 500ms forwards;}@keyframes TCrttLZM_draw{100%{stroke-dashoffset:0;}}@keyframes TCrttLZM_fade{0%{stroke-opacity:1;}92.98245614035088%{stroke-opacity:1;}100%{stroke-opacity:0;}}</style></svg>		
