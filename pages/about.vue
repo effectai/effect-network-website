@@ -3,6 +3,29 @@
     <section class="section">
       <div class=" container is-max-widescreen">
         <div class="has-text-centered">
+          <h3 class="title is-2">About us</h3>
+          <h4 class="subtitle">Building the Future-of-Work</h4>
+        </div>
+        <p class="is-size-5 mb-3 mt-6">
+          We are building the Future of Work. Everyone says it, but it's true in
+          our case: welcome to the first work platform that’s completely
+          decentralized and enables people to work from anywhere.
+        </p>
+        <p class="is-size-5 mb-6">
+          Effect Network was established in 2017 by an amazing community and a
+          team that’s passionate about a decentralized future. What makes Effect
+          tick is the EffectDAO, started in 2021, a community organization with
+          the goal to grow Effect Network by supporting the development of
+          projects in a socially responsible, inclusive, and transparent
+          manner. The DAO is the mechanism that drives frictionless entry into
+          Web3 space and the Future of Work.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class=" container is-max-widescreen">
+        <div class="has-text-centered">
           <h3 class="title is-2">Team</h3>
           <h4 class="subtitle">Meet the team</h4>
         </div>
@@ -50,47 +73,40 @@
       return {
         teamMembers: [
           {
-            name: 'Chris Dawe',
-            title: 'CEO',
-            link: 'https://www.linkedin.com/in/chris-r-dawe-b79217151/',
-            image: require('@/assets/img/team/chris.jpg')
-          },
-          {
             name: 'Jesse Eisses',
-            title: 'CTO',
+            title: 'Founder',
             link: 'https://www.linkedin.com/in/jesse-eisses-9760ab48/',
             image: require('@/assets/img/team/jesse.jpg')
           },
           {
             name: 'Laurens Verspeek',
-            title: 'Chief Engineer',
+            title: 'Founder',
             link: 'https://www.linkedin.com/in/laurensverspeek/',
-            image: require('@/assets/img/team/laurens.jpg')
+            image: require('@/assets/img/team/laurens.png')
           },
-          // {
-          //   name: 'Team member #4',
-          //   title: 'Chief Engineer',
-          //   link: 'http://twitter.com',
-          //   image: 'https://bulma.io/images/placeholders/128x128.png'
-          // },
-          // {
-          //   name: 'Team member #5',
-          //   title: 'Chief Engineer',
-          //   link: 'http://twitter.com',
-          //   image: 'https://bulma.io/images/placeholders/128x128.png'
-          // },
-          // {
-          //   name: 'Team member #6',
-          //   title: 'Chief Engineer',
-          //   link: 'http://twitter.com',
-          //   image: 'https://bulma.io/images/placeholders/128x128.png'
-          // },
-          // {
-          //   name: 'Team member #7',
-          //   title: 'Chief Engineer',
-          //   link: 'http://twitter.com',
-          //   image: 'https://bulma.io/images/placeholders/128x128.png'
-          // },
+          {
+            name: 'Rochelle Travellow',
+            title: 'Chief Talent Officer',
+            link: 'https://www.linkedin.com/in/rochelle-effectai',
+            image: require('@/assets/img/team/rochelle.png')
+          },
+          {
+            name: 'Gabrielle Ponce',
+            title: 'Head of Marketing',
+            link: 'https://www.linkedin.com/in/gabrielle-ponce-b801371b2/',
+            image: require('@/assets/img/team/gabi.png')
+          },
+          {
+            name: 'Jaïr Zijp',
+            title: 'Software Engineer',
+            link: 'https://www.linkedin.com/in/ja%C3%AFr-zijp-424657104',
+            image: require('@/assets/img/team/jair.jpg')
+          },
+          {
+            name: 'David Britt',
+            title: 'Software Engineer',
+            image: require('@/assets/img/team/david.jpg')
+          }
           // {
           //   name: 'Team member #8',
           //   title: 'Chief Engineer',
@@ -121,7 +137,7 @@
           //   link: 'http://twitter.com',
           //   image: 'https://bulma.io/images/placeholders/128x128.png'
           // },
-        ],
+        ].sort(() => Math.random() - 0.5),
         ambassadors: [
           {
             name: 'Jehudah',

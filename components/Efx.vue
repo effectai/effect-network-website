@@ -1,11 +1,13 @@
 <template>
-  <section class="hero is-secondary-alt">
-    <div class="hero-body container has-text-centered">
-      <h2 class="title is-2 is-spaced">EFX Token</h2>
-      <h4 class="subtitle">The digital asset that powers the Effect Network</h4>
-      <nuxt-link to="/token-page" class="button is-accent block is-wide">Discover EFX</nuxt-link>
-      <div class="coinmarketcap-currency-widget has-background-white has-text-black has-radius" data-currencyid="2666" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
-      <tokenomics style="margin-bottom: -120px" class="has-background-primary"/>
+  <section>
+    <div class="container has-text-centered mb-6 py-6">
+      <div class="token-block py-6 has-limited-width" data-aos="fade-up" data-aos-delay="50">
+        <img src="@/assets/img/efx-blue-2.png" class="efx-coin is-hidden-mobile" data-aos="zoom-in" data-aos-delay="500">
+        <h2 class="title is-2 has-text-white is-spaced">EFX Token</h2>
+        <p class="has-text-white">The digital asset that powers the Effect Network</p>
+        <div class="coinmarketcap-currency-widget has-background-white has-text-black has-radius mt-6" data-currencyid="2666" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
+        <nuxt-link to="/token-page" class="button is-primary block is-wide mt-6">Get EFX</nuxt-link>
+      </div>
     </div>
   </section>
 
@@ -25,11 +27,27 @@ export default {
   width: 100%;
 }
 
-.hero {
-  background-image: url('~assets/img/grad_home_efx.png');
+.has-limited-width {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.token-block {
+  background-image: url('~assets/img/efx-blue.png');
+  background-color: $secondary-alt;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: top;
+  background-position: right bottom;
+  border-radius: $box-radius;
+  background-size: 280px;
+  position: relative;
+  display: block;
+
+  .efx-coin {
+    position: absolute;
+    width: 180px;
+    top: -50px;
+    left: 30px;
+  }
 }
 </style>
 <style lang="scss">

@@ -1,9 +1,29 @@
 /* Import the rest of Bulma */
 @import '../../node_modules/bulma';
 @import 'dark-mode';
+@import '../../node_modules/atropos/atropos.scss';
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
 a {
   outline: 0;
+}
+
+h1.is-1 {
+  line-height: 3.5rem;
+}
+
+.is-2 {
+  line-height: 1.25;
+}
+
+.title {
+  b, strong {
+    font-weight: 900;
+  }
+}
+
+.subtitle {
+  line-height: 1.5;
 }
 
 .has-limited-width {
@@ -124,13 +144,34 @@ a.card {
 }
 
 .button {
+  font-weight: 600;
+  transition: 0.2s;
+  border-radius: 8px;
+  @each $name, $pair in $button-colors {
+    $color: nth($pair, 1);
+    &.is-#{$name} {
+      &:hover,
+      &.is-hovered {
+        background-color: bulmaLighten($color, 10%);
+      }
+      &:active,
+      &.is-active {
+        background-color: bulmaLighten($color, 10%);
+        box-shadow: $button-focus-box-shadow-size bulmaRgba($color, 0.25);
+      }
+    }
+  }
   &.is-wide {
     min-width: 200px;
   }
 }
 
+.has-radius-small {
+  border-radius: $radius-small;
+}
+
 .has-radius {
-  border-radius: 7px;
+  border-radius: $radius-large;
 }
 
 .has-shadow {
@@ -147,5 +188,30 @@ a.card {
   }
   100% {
     transform: rotate(330deg)
+  }
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.2s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.tags {
+  .tag {
+    z-index: 999;
+    background: rgba(25, 119, 243, 0.1);
+    color: #81889D;
+    cursor: pointer;
+  }
+  &.is-medium {
+    background: $light !important;
+    font-size: .95rem !important;
+  }
+  p {
+    cursor: pointer;
   }
 }

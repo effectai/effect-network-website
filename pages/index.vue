@@ -3,16 +3,20 @@
     <div class="has-background-light has-navbar-fixed-top">
       <home-banner />
     </div>
-    <div class="has-background-light">
+    <how />
+    <projects class="has-background-light" />
+    <efx />
+    <faq class="has-background-light" />
+    <globe />
+    <community />
+    <!-- <div class="has-background-light">
       <clients />
-      <ten-video />
       <three-blocks />
     </div>
     <force id="force" />
     <services id="dapps" />
-    <efx />
-    <case-studies />
-    <section class="section">
+    <case-studies /> -->
+    <!-- <section class="section">
       <div class="container is-max-widescreen py-6">
         <div class="has-text-centered">
           <h1 class="title">Develop</h1>
@@ -21,16 +25,14 @@
         </div>
         <develop-blocks />
       </div>
-    </section>
+    </section> -->
     <dao />
-    <mailing-list />
   </div>
 </template>
 
 <script>
   import HomeBanner from '@/components/HomeBanner';
   import Clients from '@/components/Clients';
-  import TenVideo from '@/components/Video';
   import ThreeBlocks from '@/components/ThreeBlocks';
   import Force from '@/components/Force';
   import Services from '@/components/Services';
@@ -39,6 +41,7 @@
   import Dao from '@/components/Dao';
   import MailingList from '@/components/MailingList';
   import CaseStudies from '../components/CaseStudies.vue';
+  import Globe from '../components/Globe.vue';
 
   export default {
     colorMode: 'light',
@@ -53,7 +56,7 @@
           {
             hid: 'description',
             name: 'description',
-            content: 'Freedom To Work From Anywhere At Anytime. Effect Network is the first Blockchain-based framework for the Future-of-Work. Access to a global, on-demand, 24x7 scalable WorkForce.'
+            content: 'Freedom To Work From Anywhere At Anytime. Effect Network is the first blockchain-based framework for the Future-of-Work. Access a global, on-demand, 24x7, scalable workforce.'
           }
         ]
       }
@@ -61,7 +64,6 @@
     components: {
       HomeBanner,
       Clients,
-      TenVideo,
       ThreeBlocks,
       Force,
       Services,
@@ -69,7 +71,8 @@
       Efx,
       Dao,
       MailingList,
-      CaseStudies
+      CaseStudies,
+        Globe
     }
   }
 </script>

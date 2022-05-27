@@ -21,7 +21,7 @@
 <style lang="scss" scoped>
 .footer {
   background: $primary;
-  background-image: url('~assets/img/grad_foot.png');
+  // background-image: url('~assets/img/grad_foot.png');
   background-repeat: no-repeat;
   background-position: bottom;
 

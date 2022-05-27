@@ -124,12 +124,30 @@
         posts: [
           {
             type: 'blog',
+            img: 'https://miro.medium.com/max/1400/1*rqeuFphfhKI9nXA0Tvx-sA.jpeg',
+            href: 'https://medium.com/effect-ai/how-effect-network-works-and-why-you-should-get-involved-with-it-e9864d5b31fb',
+            title: 'How Effect Network works and why you should get involved with it.',
+            date: 'April 28 - 2022',
+            text: 'In its simplest form, Effect Network is a blockchain-based crowdsourcing platform. It can be used...',
+            featured: true
+          },
+          {
+            type: 'blog',
+            img: 'https://miro.medium.com/max/1400/1*hUx_ofIdqCV19hxgyB4UjQ.png',
+            href: 'https://medium.com/effect-ai/2022-roadmap-355034019d8b',
+            title: '2022 Roadmap',
+            date: 'January 31 - 2022',
+            text: 'Today we reveal the 2022 roadmap for Effect Network. We’re more excited than ever about what...',
+            featured: true
+          },
+          {
+            type: 'blog',
             img: 'https://miro.medium.com/max/1400/1*eSOa-g2tSrzGXCQscFCClQ.png',
             href: 'https://medium.com/effect-ai/defi-bridge-cb0095620cfa',
             title: 'DeFi Bridge',
             date: 'October 21 - 2021',
-            text: 'In this article, we want to highlight the decentralized nature of the blockchain and how ...',
-            featured: true
+            text: 'In this article, we want to highlight the decentralized nature of the blockchain and how...',
+            featured: false
           },
           {
             type: 'blog',
@@ -138,7 +156,7 @@
             title: 'A Brief History of Cryptocurrency',
             date: 'October 8 - 2021',
             text: 'A slew of cryptographic technologies appeared between 1983 and 1998 but never took off.',
-            featured: true
+            featured: false
           },
           {
             type: 'blog',

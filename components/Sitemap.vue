@@ -12,7 +12,7 @@
             <li><nuxt-link to="/for-developers">Build</nuxt-link></li>
             <li><a target="_blank" href="https://dao.effect.network">DAO</a></li>
             <li><nuxt-link to="/news">Blog</nuxt-link></li>
-            <li><nuxt-link to="/team">Team</nuxt-link></li>
+            <li><nuxt-link to="/about">About</nuxt-link></li>
             <li><nuxt-link to="/brand">Brand</nuxt-link></li>
             <li><nuxt-link to="/contact">Contact</nuxt-link></li>
           </ul>
@@ -54,33 +54,21 @@
         </div>
       </div>
       <div class="column is-full-mobile ">
-        <div class="columns is-mobile">
+        <div class="columns">
 
-          <div class="column is-half is-half-mobile is-flex is-align-items-start is-justify-content-center">
+          <div class="column is-half is-flex is-align-items-start is-justify-content-center">
             <img width="30" src="~assets/img/icons/pin.svg" contain class="mr-4 mt-2"/>
             <div>
-              <div class="menu-label mb-0">Europe Office</div>
+              <div class="menu-label mb-0">Office</div>
               <u>Effect.AI B.V.</u>
-              <div>Prinsengracht 201A</div>
-              <div>Amsterdam, 1015 DT</div>
+              <div>Arlandaweg 92</div>
+              <div>Amsterdam, 1043 EX</div>
               <div>&nbsp;</div>
               <div>The Netherlands</div>
             </div>
           </div>
-          <div class="column is-half is-half-mobile is-flex is-align-items-start is-justify-content-center">
-            <img width="30" src="~assets/img/icons/pin.svg" contain class="mr-4 mt-2"/>
-            <div>
-              <div class="menu-label mb-0">Asia Office</div>
-              <u>Effect Network Limited</u>
-              <div>Unit B, 12/F, Hang Seng</div>
-              <div>Causeway Bay Building, 28 YEE</div>
-              <div>Wo Street, Causeway Bay</div>
-              <div>Hong Kong</div>
-            </div>
-          </div>
-        </div>
-        <!--      <div class="overline mt-3 mb-2 text-center">SOCIALS</div>-->
-        <div class="has-text-centered mt-4">
+          <div class="column is-half is-flex is-align-items-start is-justify-content-center">
+   <div class="has-text-centered mt-4">
           <div class="is-flex is-align-items-center is-justify-content-center">
             <i class="fas fa-envelope is-size-4 mr-2"></i>
             <div class="text-left">
@@ -106,11 +94,8 @@
             <i class="fab fa-github"></i>
           </a>
         </div>
-<!--        <div class="has-text-centered">-->
-<!--          <a class="button my-2 is-secondary is-outlined" href="https://worker.effect.ai"-->
-<!--             target="_blank">Join the WorkForce-->
-<!--          </a>-->
-<!--        </div>-->
+          </div>
+        </div>
       </div>
     </div>
   </div>
