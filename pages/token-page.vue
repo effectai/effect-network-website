@@ -95,7 +95,7 @@
               <img src="~assets/img/icons/earn.svg" class="is-align-self-flex-end" style="height: 70px"/>
               <h3 class="title is-4 mb-2 has-text-weight-semibold">Earn EFX</h3>
               <p>Perform tasks on the micro-tasking platform Effect Force</p>
-              <a target="_blank" class="mt-5 is-align-self-flex-end"  href="https://worker.effect.ai">Join WorkForce <img src="~assets/img/icons/turned-arrow.svg" style="height:15px;"></a>
+              <a target="_blank" class="mt-5 is-align-self-flex-end"  href="https://app.effect.network">Join WorkForce <img src="~assets/img/icons/turned-arrow.svg" style="height:15px;"></a>
             </div>
           </div>
           <div class="column is-one-third is-full-mobile px-5">
@@ -197,7 +197,7 @@
         position: absolute;
         content: '';
         height: 1px;
-        bottom: -3px; 
+        bottom: -3px;
         left: 0;
         right: 0;
         width: 100%;
