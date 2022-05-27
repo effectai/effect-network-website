@@ -52,14 +52,14 @@ export default {
             'Our WorkForce is made up of more than 10,000 people across the globe who go through a series of certifications to qualify for the tasks you need. With us you only get the best.'
         },
                 {
-          question: 'Who completes my tasks?',
+          question: 'How are task prices determined?',
           answer:
-            'Our WorkForce is made up of more than 10,000 people across the globe who go through a series of certifications to qualify for the tasks you need. With us you only get the best.'
+            'Task prices are determined by the requester that posts the tasks. The platform does recommend a minimum price, but in the end it functions as an open marketplace. '
         },
                 {
-          question: 'Who completes my tasks?',
+          question: 'Who are the requesters?',
           answer:
-            'Our WorkForce is made up of more than 10,000 people across the globe who go through a series of certifications to qualify for the tasks you need. With us you only get the best.'
+            'It can be anyone! You can create tasks just as easily as I can. Join https://app.effect.network and start creating tasks today.'
         }
       ]
     }

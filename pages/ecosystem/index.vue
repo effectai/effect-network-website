@@ -251,20 +251,19 @@ export default {
   }
 }
 // TODO: remove this later
-html, body, #app, .coming-soon {margin: 0 !important; height: 100vh !important; overflow: hidden !important}
 .blurred {
-  filter: blur(25px);
+  filter: blur(10px);
 }
 #overlay {
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: 100vw;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 29;
   margin-top: 60px;
   h1 {
     font-size: 4rem;

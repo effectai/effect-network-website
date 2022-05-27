@@ -61,7 +61,7 @@ export default {
         {
           id: 1,
           name: "Effect Notebooks",
-          description: "Effect Notebooks is a campaign where workers can earn EFX tokens for writing code that will automate the cleaning of data, the way a task specifies.",
+          description: "With Effect Notebooks users earn EFX tokens by writing code that automates the cleaning of data. Let's outsource the tedious bits of datascience!",
           image: require('@/assets/img/notebooks.jpg'),
           video: require('~/assets/videos/notebooks.mp4')
         },

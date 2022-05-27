@@ -55,7 +55,7 @@
           {
             hid: 'description',
             name: 'description',
-            content: 'Freedom To Work From Anywhere At Anytime. Effect Network is the first Blockchain-based framework for the Future-of-Work. Access to a global, on-demand, 24x7 scalable WorkForce.'
+            content: 'Freedom To Work From Anywhere At Anytime. Effect Network is the first blockchain-based framework for the Future-of-Work. Access a global, on-demand, 24x7, scalable workforce.'
           }
         ]
       }
