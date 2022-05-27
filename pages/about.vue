@@ -105,6 +105,7 @@
           {
             name: 'David Britt',
             title: 'Software Engineer',
+            link: 'https://github.com/djmbritt',
             image: require('@/assets/img/team/david.jpg')
           }
           // {
