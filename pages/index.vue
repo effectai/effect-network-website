@@ -41,6 +41,7 @@
   import CaseStudies from '../components/CaseStudies.vue';
 
   export default {
+    colorMode: 'light',
     head() {
       return {
         title: 'Effect Network - Blockchain-based framework for the Future-of-Work',
