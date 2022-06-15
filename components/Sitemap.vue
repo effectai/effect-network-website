@@ -49,8 +49,7 @@
             <li><a href="https://github.com/effectai" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
             <li><a href="https://medium.com/effect-ai" target="_blank"><i class="fab fa-medium"></i> Medium</a></li>
             <li><a href="https://www.reddit.com/r/effectai" target="_blank"><i class="fab fa-reddit"></i> Reddit</a></li>
-            <li><a href="https://weibo.com/7578875568/info" target="_blank"><i class="fab fa-weibo"></i> Weibo</a></li>
-          </ul>
+            </ul>
         </div>
       </div>
       <div class="column is-full-mobile ">
