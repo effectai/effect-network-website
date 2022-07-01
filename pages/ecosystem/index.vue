@@ -2,9 +2,9 @@
   <div class="coming-soon">
     <div id="overlay">
       <div>
-        <h1 class="title is-size-1">Coming soon ✨</h1>
+        <h1 class="title is-size-1" style="color:black">Coming soon ✨</h1>
         <div class="columns is-centered">
-          <p class="is-size-5 my-6 is-one-third column has-text-left is-bold">
+          <p class="is-size-5 my-6 is-one-third column has-text-left is-bold" style="background: #ffffff; opacity: 0.8; border-radius: 10px; color: black; ">
             Effect Network's ecosystem is a collection of all the applications
             running on the network. You may use $EFX tokens to buy a number of
             services that boost productivity, including social media engagement,
@@ -14,9 +14,9 @@
           </p>
         </div>
         <nuxt-link to="/">
-          <button class="button is-primary">
-            Back to home
-          </button>
+          <button data-v-f4c3ac42="" class="button is-primary" style=" background-color: #101d56; color: white; border-color: #c8cdfd; ">
+          Back to home
+        </button>
         </nuxt-link>
       </div>
     </div>
