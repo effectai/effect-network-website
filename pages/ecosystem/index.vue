@@ -1,33 +1,18 @@
 <template>
-  <div class="coming-soon">
-    <div id="overlay">
-      <div>
-        <h1 class="title is-size-1" style="color:black">Coming soon ✨</h1>
-        <div class="columns is-centered">
-          <p class="is-size-5 my-6 is-one-third column has-text-left is-bold" style="background: #ffffff; opacity: 0.8; border-radius: 10px; color: black; ">
-            Effect Network's ecosystem is a collection of all the applications
-            running on the network. You may use $EFX tokens to buy a number of
-            services that boost productivity, including social media engagement,
-            translations, subtitles and graphics, to help your business grow in
-            many ways. Think of this as the $EFX candy store, which will be
-            available to you very soon!
-          </p>
-        </div>
-        <nuxt-link to="/">
-          <button data-v-f4c3ac42="" class="button is-primary" style=" background-color: #101d56; color: white; border-color: #c8cdfd; ">
-          Back to home
-        </button>
-        </nuxt-link>
-      </div>
-    </div>
-    <div class="blurred">
+  <div>
+    <div>
       <section class="section has-navbar-fixed-top">
         <div class="hero">
           <section class="section">
             <div class="container">
               <h2 class="title is-1">Effect Ecosystem</h2>
               <p class="block">
-                Welcome to the dApps that are now available on the Effect Network.
+            Effect Network's ecosystem is a collection of all the applications
+            running on the network. You may use $EFX tokens to buy a number of
+            services that boost productivity, including social media engagement,
+            translations, subtitles and graphics, to help your business grow in
+            many ways. Think of this as the $EFX candy store, which will be
+            available to you very soon!
               </p>
             </div>
           </section>
@@ -70,7 +55,9 @@
 
       <!-- All dApps -->
       <section>
+
         <div class="container my-6 py-6">
+          <h2 class="subtitle has-text-weight-semibold is-4">In Development</h2>
           <div class="is-flex is-align-items-center is-justify-content-space-between">
             <div class="tags is-align-items-center is-align-content-center is-flex">
               <p v-if="filters.length > 0" class="is-size-7 mr-3 mb-0" @click="filters = []">clear tags</p>
