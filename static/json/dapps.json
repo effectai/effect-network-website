@@ -155,7 +155,7 @@
       "group_name": "Vibelyze",
       "description": "Vibelyze is an app that investigates music nuance. Vibelyze obtains information suitable for training your music-related machine algorithm or designing your DJ setlist by handing songs to thousands of Effect Network workers.",
       "github_url": "https://github.com/effectai/hackathon-submission-repo/tree/main/vibelyze",
-      "campaign_url": "https://testnet.effect.network/campaigns/198",
+      "campaign_url": "https://app.effect.network/campaigns/19",
       "youtube_url": "https://www.youtube.com/watch?v=O6vbbiE918Y",
       "website": "https://vibelyze.github.io/vibelyze/",
       "devpost": "https://effect-network-hackathon.devpost.com/submissions/295633-vibelyze",
@@ -164,7 +164,8 @@
       "twitter": "",
       "discord": "",
       "instagram": "",
-      "reddit": ""
+      "reddit": "",
+      "featured": 1
     },
     {
       "id": 12,
@@ -315,7 +316,7 @@
       "group_name": "Effect Socials",
       "description": "Real engagements on your social media posts from genuine fans. The most effective way to have the social media algorithms work for you is to increase your engagement rate. Quality engagement is rewarded 80% more than anything else.",
       "github_url": "https://github.com/effectai/effect-socials",
-      "campaign_url": "https://testnet.effect.network/campaigns/8",
+      "campaign_url": "https://app.effect.network/campaigns/14",
       "youtube_url": "",
       "website": "https://socials.effect.network",
       "devpost": "",
