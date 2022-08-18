@@ -45,7 +45,7 @@
                     <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://trade.kucoin.com/EFX-BTC" target="_blank"
                       color="accent primary--text">Buy EFX
                     </a>
-                    <small>with BTC</small>
+                    <small>with BTC or USDT</small>
                   </div>
                 </div>
                 <div class="column is-one-fourth" data-aos="zoom-in" data-aos-delay="500">
