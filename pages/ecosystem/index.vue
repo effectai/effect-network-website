@@ -132,6 +132,7 @@ export default {
         dappsList: dapps,
         filters: [],
         featuredDapps: dapps.submissions.filter(e => e.featured),
+        developmentDapps: dapps.submissions.filter(e => !e.featured),
         publicPath: process.env.BASE_URL,
         sort: '',
         sort_options: {
@@ -161,7 +162,7 @@ export default {
         return this.colorMode === 'dark' ? [].join(' ') : ''
       },
       filteredDapps () {
-        let filteredDapps = this.dappsList.submissions;
+        let filteredDapps = this.developmentDapps;
         if (this.filters.length > 0) {
           console.log(this.filters)
           filteredDapps = filteredDapps.filter((d) => {
