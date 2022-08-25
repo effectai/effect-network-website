@@ -102,7 +102,7 @@
             <div class="p-5 is-flex is-justify-content-space-between	 is-flex-direction-column">
               <img src="~assets/img/icons/stake.svg" class="is-align-self-flex-end" style="height: 70px"/>
               <h3 class="title is-4 has-text-weight-semibold">Stake EFX</h3>
-              <p>Stake tokens to improve your rank in the Effect Network and collect fees</p>
+              <p>Stake tokens to participate in the Effect Network DAO</p>
               <a target="_blank" class="mt-5 is-align-self-flex-end"  href="https://dao.effect.network/stake">Stake EFX <img src="~assets/img/icons/turned-arrow.svg" style="height:15px;"></a>
             </div>
           </div>
