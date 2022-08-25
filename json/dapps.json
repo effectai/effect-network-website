@@ -327,6 +327,23 @@
       "instagram": "",
       "reddit": "",
       "featured": 1
+    },
+    {
+      "id": 22,
+      "group_name": "MetaverseTasks.io",
+      "description": "MetaverseTasks.io is connecting individuals and businesses together in the web3 space. Its goal is to unite skilled individuals and web3 projects together, create pathways to skill progression, and launch careers for those who want to build the future.",
+      "github_url": "",
+      "campaign_url": "",
+      "youtube_url": "",
+      "website": "https://metaversetasks.io/",
+      "devpost": "",
+      "image_url": "metaverseio.png",
+      "tags": ["work"],
+      "twitter": "",
+      "discord": "",
+      "instagram": "",
+      "reddit": "",
+      "featured": 0
     }
   ]
 }
