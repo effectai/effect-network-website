@@ -5,28 +5,32 @@
         <div class="container">
           <div class="columns hackathon-hero-content pb-6 pt-6">
             <div class="column is-two-fifths mt-6">
-              <h2 class="title is-1">Effect Network<br>1st Hackathon</h2>
+              <h2 class="title is-1">Welcome to our LAUNCH-A-THON!</h2>
               <p class="block has-text-weight-bold">
-                Join to create the decentralized network for human intelligence!
+                Deploy your dApp to Effect Mainnet
               </p>
               <p class="block">
-                Effect Network is focused on creating a distributed workforce where workers and requesters can easily connect with each other. Join our hackathon and become a builder in the Future of Work by building a decentralized app that harnesses the power of Effect Force.
+                A contest where the most voted dApps will win from a prize pool of 350,000 EFX, and all participants are rewarded with 1000 NFX.
+              </p>
+              <p class="content block">
+                <ul>
+                  <li>The contest will take place in NOWHERE and all participants will demostrate their dApp fully functional on our mainnet platform.</li>
+                  <li>The date of the event is yet to be determined when all participants have registered and we can coordinate a day and time that suits us all.</li>
+                  <li>Registrations are open until September 15th 18:00 CET.</li>
+                  <li>Active participants will have access to an exclusive Discord channel where the team can provide any support or answer questions.</li>
+                  <li>Our DAO will review and vote on submissions.</li>
+                </ul>
               </p>
             </div>
             <div class="column is-four-fifths" style="margin-top: 9rem">
               <div class="content has-text-centered reward-container">
-                <h1 class="title has-text-centered">Winner Announcement</h1>
+                <h1 class="title has-text-centered">Prize pool of 350,000 EFX!</h1>
                 <img :src="require('@/assets/img/coins.png')" />
                 <p class="block">
-                  We would like to thank you to all of the participants of Effect Network's first hackathon. Above all we would like to congratulate the winners of this Hackathon.
-                  You can find more information about the winners at the following links:
+                  Register your dApp. Everyone that will deploy their dApp to Mainnet will get a guaranteed 1000 NFX!
                 </p>
-                <a href="https://effect-network-hackathon.devpost.com/" target="_blank" class="button is-accent mt-5">
-                  DevPost
-                </a>
-                <br>
-                <a href="https://dao.effect.network/winner" target="_blank" class="button is-accent mt-5">
-                  DAO
+                <a href="https://forms.gle/Zt4QPCJt5ZUqJgon9" target="_blank" class="button is-accent mt-5">
+                  Register now
                 </a>
               </div>
             </div>
@@ -34,7 +38,7 @@
         </div>
       </section>
     </div>
-    <section class="section">
+    <!-- <section class="section">
       <div class="container">
         <h1 class="title has-text-centered">Book your Schedule!</h1>
         <div class="my-6">
@@ -142,7 +146,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <section class="section">
         <div class="container">
           <h1 class="title has-text-centered">Submission Requirements</h1>
@@ -151,7 +155,7 @@
               <div class="column is-3 has-text-left">
                 <img :src="require('@/assets/img/icons/movie_player.svg')" class="is-icon-size-small" />
                 <p>
-                  A 3-minute video demonstration of the application uploaded to YouTube and made public with the hashtags <span class="has-text-accent">#EffectNetworkHackathon</span> and <span class="has-text-accent">#FutureOfWork</span>.
+                  A short virtual demo in NOWHERE. Your dApp should work on Effect Mainnet.
                 </p>
               </div>
               <div class="column is-3 has-text-left">
@@ -200,7 +204,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <!-- <section class="section">
       <div class="container">
         <h1 class="title has-text-centered">FAQ</h1>
         <div class="my-6">
@@ -219,7 +223,7 @@
         <V-accordion>
           <template v-slot:title>
             <h5 class="is-size-5">
-              Do I need to have any specific qualifications to be a participant for the Hackathon?
+              Do I need to have any specific qualifications to be a participant for the Hackathon? 
             </h5>
           </template>
           <template v-slot:content>
@@ -243,7 +247,7 @@
         <V-accordion>
           <template v-slot:title>
             <h5 class="is-size-5">
-              Do we need to have the entire idea fully working?
+              Do we need to have the entire idea fully working? 
             </h5>
           </template>
           <template v-slot:content>
@@ -255,7 +259,7 @@
         <V-accordion>
           <template v-slot:title>
             <h5 class="is-size-5">
-              How is the environment? Will your environment support any language? Will you provide any IDE and DB for us to work on ideas?
+              How is the environment? Will your environment support any language? Will you provide any IDE and DB for us to work on ideas? 
             </h5>
           </template>
           <template v-slot:content>
@@ -267,7 +271,7 @@
         <V-accordion>
           <template v-slot:title>
             <h5 class="is-size-5">
-              Does one have to be online and available for the entire duration of the Hackathon?
+              Does one have to be online and available for the entire duration of the Hackathon? 
             </h5>
           </template>
           <template v-slot:content>
@@ -291,7 +295,7 @@
         <V-accordion>
           <template v-slot:title>
             <h5 class="is-size-5">
-              If it is a team submission, does that mean all team members will have access to work at the same time?
+              If it is a team submission, does that mean all team members will have access to work at the same time? 
             </h5>
           </template>
           <template v-slot:content>
@@ -303,7 +307,7 @@
         <V-accordion>
           <template v-slot:title>
             <h5 class="is-size-5">
-              Who will own the IP (Intellectual Property) Rights to the product that I have built?
+              Who will own the IP (Intellectual Property) Rights to the product that I have built? 
             </h5>
           </template>
           <template v-slot:content>
@@ -314,7 +318,7 @@
         </V-accordion>
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
@@ -368,7 +372,7 @@ div.reward-container {
 .is-bordered {
   border: 1px solid #505DF1
 }
-.is-absolute {
+.is-absolute { 
   position: absolute;
 }
 .has-gradient {
