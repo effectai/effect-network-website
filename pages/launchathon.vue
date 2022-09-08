@@ -16,7 +16,7 @@
                 <ul>
                   <li>The contest will take place in NOWHERE and all participants will demostrate their dApp fully functional on our mainnet platform.</li>
                   <li>The date of the event is yet to be determined when all participants have registered and we can coordinate a day and time that suits us all.</li>
-                  <li>Registrations are open until September 15th 18:00 CET.</li>
+                  <li>Registrations are open until September 30th 18:00 CET.</li>
                   <li>Active participants will have access to an exclusive Discord channel where the team can provide any support or answer questions.</li>
                   <li>Our DAO will review and vote on submissions.</li>
                 </ul>
