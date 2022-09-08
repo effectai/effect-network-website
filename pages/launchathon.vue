@@ -38,82 +38,38 @@
         </div>
       </section>
     </div>
-    <!-- <section class="section">
+    <section class="section">
       <div class="container">
-        <h1 class="title has-text-centered">Book your Schedule!</h1>
+        <h1 class="title has-text-centered">Winners prizes</h1>
         <div class="my-6">
           <div class="columns is-multiline mt-6">
             <div class="column is-3 has-special-hover">
-              <a target="_blank" href="https://youtu.be/xx8QEtZQieI">
-                <div class="card has-text-centered has-gradient">
-                  <div class="card-content">
-                    <div class="content">
-                      <div class="block">
-                        <p class="has-text-weight-bold is-size-5">
-                          24 Nov, 2021
-                        </p>
-                      </div>
-                      <div class="block">
-                        <img :src="require('@/assets/img/icons/speaker-4.png')" class="is-icon-size-medium has-radius"/>
-                      </div>
-                      <div class="block">
-                        <span class="is-5 mt-1 has-text-weight-bold">Laurens</span>
-                        <p class="has-text-accent">CE</p>
-                        <div class="is-divider" />
-                      </div>
-                      <div class="block">
-                        <h5 class="is-5">Hands-on with<br>the Effect SDK</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="column is-3 has-special-hover">
-              <a target="_blank" href="https://youtu.be/LkYj0-jRKKw">
-                <div class="card has-text-centered has-gradient">
-                  <div class="card-content">
-                    <div class="content">
-                      <div class="block">
-                        <p class="has-text-weight-bold is-size-5">
-                          25 Nov, 2021
-                        </p>
-                      </div>
-                      <div class="block">
-                        <img :src="require('@/assets/img/icons/speaker-2.png')" class="is-icon-size-medium has-radius"/>
-                      </div>
-                      <div class="block">
-                        <span class="is-5 mt-1 has-text-weight-bold">Jesse</span>
-                        <p class="has-text-accent">CTO</p>
-                        <div class="is-divider" />
-                      </div>
-                      <div class="block">
-                          <h5 class="is-5 is-link">Let's Tackle It</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="column is-3">
               <div class="card has-text-centered has-gradient">
                 <div class="card-content">
                   <div class="content">
                     <div class="block">
-                      <p class="has-text-weight-bold is-size-5">
-                        26 Nov, 2021
-                      </p>
-                    </div>
-                    <div class="block">
-                      <img :src="require('@/assets/img/icons/speaker-1.png')" class="is-icon-size-medium has-radius"/>
-                    </div>
-                    <div class="block">
-                      <span class="is-5 mt-1 has-text-weight-bold">Chris Dawe</span>
-                      <p class="has-text-accent">CEO</p>
+                      <span class="is-size-3 mt-1 has-text-weight-bold">200,000</span>
+                      <p class="has-text-accent">EFX</p>
                       <div class="is-divider" />
                     </div>
                     <div class="block">
-                      <h5 class="is-5">How to Perfect a Pitch</h5>
+                      <h5 class="is-5">1st place</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column is-3 has-special-hover">
+              <div class="card has-text-centered has-gradient">
+                <div class="card-content">
+                  <div class="content">
+                    <div class="block">
+                      <span class="is-size-3 mt-1 has-text-weight-bold">100,000</span>
+                      <p class="has-text-accent">EFX</p>
+                      <div class="is-divider" />
+                    </div>
+                    <div class="block">
+                      <h5 class="is-5">2nd place</h5>
                     </div>
                   </div>
                 </div>
@@ -124,20 +80,28 @@
                 <div class="card-content">
                   <div class="content">
                     <div class="block">
-                      <p class="has-text-weight-bold is-size-5">
-                        26 Nov, 2021
-                      </p>
-                    </div>
-                    <div class="block">
-                      <img :src="require('@/assets/img/icons/speaker-3.png')" class="is-icon-size-medium has-radius"/>
-                    </div>
-                    <div class="block">
-                      <span class="is-5 mt-1 has-text-weight-bold">Rochelle</span>
-                      <p class="has-text-accent">Chief Talent Officer</p>
+                      <span class="is-size-3 mt-1 has-text-weight-bold">50,000</span>
+                      <p class="has-text-accent">EFX</p>
                       <div class="is-divider" />
                     </div>
                     <div class="block">
-                      <h5 class="is-5">How to Curate<br>Your Workforce</h5>
+                      <h5 class="is-5">3rd place</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column is-3">
+              <div class="card has-text-centered has-gradient">
+                <div class="card-content">
+                  <div class="content">
+                    <div class="block">
+                      <span class="is-size-3 mt-1 has-text-weight-bold">1,000</span>
+                      <p class="has-text-accent">EFX and NFX</p>
+                      <div class="is-divider" />
+                    </div>
+                    <div class="block">
+                      <h5 class="is-5">Next 7 places</h5>
                     </div>
                   </div>
                 </div>
@@ -146,7 +110,7 @@
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <section class="section">
         <div class="container">
           <h1 class="title has-text-centered">Submission Requirements</h1>
