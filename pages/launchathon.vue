@@ -119,7 +119,7 @@
               <div class="column is-3 has-text-left">
                 <img :src="require('@/assets/img/icons/movie_player.svg')" class="is-icon-size-small" />
                 <p>
-                  A short virtual demo in NOWHERE. Your dApp should work on Effect Mainnet.
+                  A short virtual demo in NOWHERE. 
                 </p>
               </div>
               <div class="column is-3 has-text-left">
@@ -131,13 +131,13 @@
               <div class="column is-3 has-text-left">
                 <img :src="require('@/assets/img/icons/template.svg')" class="is-icon-size-small" />
                 <p>
-                  A campaign with template on the Effect Force testnet.
+                  A functional dApp with a campaign and template on Effect mainnet.
                 </p>
               </div>
               <div class="column is-3 has-text-left">
                 <img :src="require('@/assets/img/icons/wireframe.svg')" class="is-icon-size-small" />
                 <p>
-                  A user interface, either functioning or designed.
+                  Your dApp listed in the Effect Ecosystem.
                 </p>
               </div>
             </div>
