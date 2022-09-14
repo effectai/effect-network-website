@@ -19,6 +19,11 @@
           </div>
           <div class="navbar-end is-align-items-center">
             <div @click="mobileMenu = false">
+              <nuxt-link class="navbar-item" to="/launchathon" exact-active-class="is-active">
+                Launch-a-thon
+              </nuxt-link>
+            </div>
+            <div @click="mobileMenu = false">
               <nuxt-link class="navbar-item" to="/token-page" exact-active-class="is-active">
                 Token
               </nuxt-link>
