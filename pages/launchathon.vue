@@ -155,7 +155,7 @@
               </a>
             </div>
             <div class="column is-4 is-flex is-justify-content-center">
-              <a href="https://github.com/effectai/effect-network" target="_blank" class="custom-hover">
+              <a href="https://github.com/effectai/dapp-boilerplate" target="_blank" class="custom-hover">
                 <img :src="require('@/assets/img/icons/github_white.svg')" class="is-icon-size-small" />
               </a>
               </div>
