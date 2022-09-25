@@ -19,6 +19,7 @@
                   <li>Registrations are open until September 30th 18:00 CET.</li>
                   <li>Active participants will have access to an exclusive Discord channel where the team can provide any support or answer questions.</li>
                   <li>Our DAO will review and vote on submissions.</li>
+                  <li><a href="https://medium.com/effect-ai/launch-your-dapp-on-effect-network-eece1ba221f6" target="_blank" rel="noopener noreferrer">Read more on how to get started with an Effect dApp now! ↗</a></li>
                 </ul>
               </p>
             </div>
