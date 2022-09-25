@@ -38,6 +38,11 @@
                 Ecosystem
               </nuxt-link>
             </div>
+            <div @click="mobileMenu = false">
+              <a href="https://dao.effect.network" target="_blank" class="navbar-item" exact-active-class="is-active">
+                DAO
+              </a>
+            </div>
             <div class="navbar-item" exact-active-class="is-active">
               <div @click="mobileMenu = false">
                 <a href="https://app.effect.network" target="_blank" class="button is-outlined" :class="{'is-accent': $colorMode.value === 'dark', 'is-primary': $colorMode.value !== 'dark'}" exact-active-class="is-active">
