@@ -344,6 +344,23 @@
       "instagram": "",
       "reddit": "",
       "featured": 0
+    },
+    {
+      "id": 23,
+      "group_name": "Image Labeler",
+      "description": "Upgrade the metadata of your images and NFT's using the Effect Network image labeler. Make it easier for your audience to find your images and AI-generated NFT's. Label them today.",
+      "github_url": "https://github.com/effectai/dApp-Label-Image/",
+      "campaign_url": "https://app.effect.network/campaigns/41",
+      "youtube_url": "",
+      "website": "https://effectai.github.io/dApp-Label-Image/",
+      "devpost": "",
+      "image_url": "https://effectai.github.io/dApp-Label-Image/_nuxt/img/dalle-shiba-picture.8a35e93.png",
+      "tags": ["NFT", "image", "data", "content", "metadata"],
+      "twitter": "https://twitter.com/effectaix",
+      "discord": "https://discord.gg/effectnetwork",
+      "instagram": "",
+      "reddit": "",
+      "featured": 1
     }
   ]
 }
