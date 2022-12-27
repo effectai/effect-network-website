@@ -5,17 +5,17 @@
       "group_name": "Delos",
       "description": "Delos allows anyone to submit a Document and using the amazing Effect Workforce, we categorize the data from the image and validate if it is in fact a useful document.",
       "github_url": " https://github.com/jgarciajovel/delos/tree/master ",
-      "campaign_url": "https://testnet.effect.network/campaigns/81",
+      "campaign_url": "https://app.effect.network",
       "youtube_url": "https://youtu.be/VOw77SIIBHE",
-      "website": "https://delos-dashboard.herokuapp.com/",
-      "devpost": "https://effect-network-hackathon.devpost.com/submissions/289471-delos",
+      "website": "",
+      "devpost": "",
       "image_url": "Delos_Logo.jpg",
       "tags": ["identificaiton", "validation"],
       "twitter": "",
       "discord": "",
       "instagram": "",
       "reddit": "",
-      "featured": 0
+      "featured": 1
     },
     {
       "id": 3,
