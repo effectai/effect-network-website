@@ -34,7 +34,7 @@
                     <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://pancakeswap.finance/swap?outputCurrency=0xc51ef828319b131b595b7ec4b28210ecf4d05ad0" target="_blank"
                        color="accent primary--text">Buy EFX
                     </a>
-                    <small>with BNB</small>
+                    <small>with BNB (BSC)</small>
                   </div>
                 </div>
                 <div class="column is-one-fourth" data-aos="zoom-in" data-aos-delay="300">
@@ -45,7 +45,7 @@
                     <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://trade.kucoin.com/EFX-BTC" target="_blank"
                       color="accent primary--text">Buy EFX
                     </a>
-                    <small>with BTC or USDT</small>
+                    <small>with BTC or USDT (EOS)</small>
                   </div>
                 </div>
                 <div class="column is-one-fourth" data-aos="zoom-in" data-aos-delay="500">
@@ -55,7 +55,7 @@
                       </div>
                     <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://newdex.io/trade/effecttokens-efx-eos" target="_blank">Buy EFX
                     </a>
-                    <small>with EOS</small>
+                    <small>with EOS (EOS)</small>
                   </div>
                 </div>
                 <div class="column is-one-fourth" data-aos="zoom-in" data-aos-delay="700">
@@ -74,16 +74,7 @@
         </div>
       </section>
     </div>
-    <section class="section">
-      <div class="container" data-aos="fade-up">
-        <div class="mt-2">
-          <div class="has-text-centered tokenomics pt-6">
-            <h2 class="title is-2 has-text-white">Tokenomics</h2>
-            <tokenomics />
-          </div>
-        </div>
-      </div>
-    </section>
+
     <section class="section hero is-white features">
       <div class="container is-max-widescreen mb-6">
         <div class="has-text-centered">
@@ -118,42 +109,330 @@
       </div>
     </section>
 
+    <section class="section">
+      <div class="container" data-aos="fade-up">
+        <div class="mt-2">
+          <div class="has-text-centered tokenomics pt-6">
+            <h2 class="title is-2 has-text-white">Tokenomics</h2>
+            <tokenomics />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="mt-2">
+          <div class="has-text-centered tokenomics pt-6">
+            <h2 class="title is-2 has-text-white">Token Map</h2>
+            <div class="table-container">
+            <table class="table is-striped is-hoverable is-fullwidth has-text-left">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th class="has-text-centered">
+                    Tokens
+                  </th>
+                  <th class="has-text-left">
+                    Address
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(label, index) in chartData.datasets[0].labels" :key="label">
+                  <td>
+                    {{ label }}
+                    <span v-if="chartData.datasets[0].meta[index].description" class="is-pulled-right" :data-tooltip="chartData.datasets[0].meta[index].description">
+                      <font-awesome-icon :icon="['fas', 'info-circle']" />
+                    </span>
+                  </td>
+                  <td class="has-text-right">
+                    {{ hello(balances[chartData.datasets[0].meta[index].balanceKey]) }} EFX
+                  </td>
+                  <td class="has-text-left">
+                    <a
+                      :href="chartData.datasets[0].meta[index].link"
+                      target="_blank"
+                    >{{ chartData.datasets[0].meta[index].addressName }}</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="mt-2">
+          <div class="has-text-centered tokenomics pt-6">
+            <h2 class="title is-2 has-text-white">Contract Map</h2>
+            <div class="table-container">
+              <table class="table is-striped is-hoverable is-fullwidth has-text-left">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Address</th>
+                    <th>Source</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="contract in contracts" :key="contract.account">
+                    <td>{{ contract.name }}</td>
+                    <td>{{ contract.description }}</td>
+                    <td><a :href="contract.link" target="_blank">{{ contract.account }}</a></td>
+                    <td><a :href="contract.source" target="_blank">view source</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <community />
 
   </div>
 </template>
 <script>
-  import Community from '@/components/Community';
-  import Whitepaper from '@/components/Whitepaper'
-  import Tokenomics from '@/components/Tokenomics'
+import Web3 from 'web3/dist/web3.min.js'
+import Community from '@/components/Community';
+import Whitepaper from '@/components/Whitepaper'
+import Tokenomics from '@/components/Tokenomics'
 
-  export default {
-    name: 'EFX',
-    colorMode: 'light',
-    components: {
-      Whitepaper,
-      Tokenomics,
-      Community
+export default {
+  name: 'EFX',
+  colorMode: 'light',
+  components: {
+    Whitepaper,
+    Tokenomics,
+    Community
+  },
+  head() {
+    return {
+      title: 'EFX Token',
+      script: [
+        {
+          src: 'https://files.coinmarketcap.com/static/widget/currency.js'
+        }
+      ],
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'EFX is the digital asset that powers The Future of Work'
+        }
+      ]
+    }
+  },
+  data () {
+    return {
+    loadingBalances: false,
+    balances: {
+      daoBalance: 0,
+      liquidBalance: 0,
+      liquidBalanceBsc: 0,
+      stakeBalance: 0,
+      unswappedBalance: 0,
+      // foundationBalance: 195375000,
+      foundationBalance: 100000000,
+      liquidityBalance: 0,
+      communityBalance: 5000000,
+      maxSupply: 650000000,
+      circulating: 0,
+      noncirculating: 0,
+      totalSupply: 0
+
     },
-    head() {
+    contracts: [
+      {
+        name: 'Effect Tokens',
+        description: 'Contract managing the EFX and NFX tokens',
+        account: 'effecttokens',
+        link: 'https://bloks.io/account/effecttokens?loadContract=true&tab=Tables&table=stat&account=effecttokens&scope=EFX&limit=100',
+        source: 'https://github.com/effectai/effect-network/tree/master/contracts/token'
+      },
+      {
+        name: 'Effect Staking Protocol',
+        description: 'Implemetation of the Effect Staking Protocol 2.0',
+        account: 'efxstakepool',
+        link: 'https://bloks.io/account/efxstakepool?loadContract=true&tab=Tables&account=efxstakepool&scope=efxstakepool&limit=100',
+        source: 'https://github.com/effectai/effect-network-eos/blob/master/contracts/stake/stake.cpp'
+      },
+      {
+        name: 'Token Swap',
+        description: 'Verifies NEO transactions with an Oracle and issues EFX tokens on EOS',
+        account: 'efxtokenswap',
+        link: 'https://bloks.io/account/efxtokenswap?loadContract=true&tab=ABI&account=efxtokenswap&scope=efxtokenswap&limit=100&table=nep5',
+        source: 'https://github.com/effectai/effect-network-eos/blob/master/contracts/swap/swap.cpp'
+      },
+      {
+        name: 'EffectDAO',
+        description: 'Holds the registry of the members and guardians of the EffectDAO',
+        account: 'theeffectdao',
+        link: 'https://bloks.io/account/theeffectdao?loadContract=true&tab=Tables&account=theeffectdao&scope=theeffectdao&limit=100&table=member',
+        source: 'https://github.com/effectai/effect-network/blob/master/contracts/dao/dao.cpp'
+      },
+      {
+        name: 'Effect Proposals',
+        description: 'Stores proposals and handles the voting machanism of the EffectDAO',
+        account: 'daoproposals',
+        link: 'https://bloks.io/account/daoproposals?loadContract=true&tab=Tables&account=daoproposals&scope=daoproposals&limit=100&table=proposal',
+        source: 'https://github.com/effectai/effect-network-eos/blob/proposals/contracts/effect-proposals/effect-proposals.cpp'
+      },
+      {
+        name: 'Effect.AI Token on BSC',
+        description: 'Smart contract on the BSC blockchain',
+        account: '0xC51...5aD0',
+        link: 'https://bscscan.com/token/0xC51Ef828319b131B595b7ec4B28210eCf4d05aD0',
+        source: null
+      }
+    ]
+  }
+  },
+  computed: {
+    chartData () {
       return {
-        title: 'EFX Token',
-        script: [
+        // labels: ['Circulating', 'Foundation'],
+        labels: ['Liquid Supply (EOS)', 'Liquid Supply (BSC)', 'Stake Pool', 'Liquidity & Partnerships', 'Circulating', 'EffectDAO*', 'Foundation', 'Non-Circulating', 'Total Supply'],
+        datasets: [
           {
-            src: 'https://files.coinmarketcap.com/static/widget/currency.js'
-          }
-        ],
-        meta: [
-          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-          {
-            hid: 'description',
-            name: 'description',
-            content: 'EFX is the digital asset that powers The Future of Work'
+            name: 'Token Map',
+            backgroundColor: ['#0dd925', '#499166', '#fce68d', '#394dfa', '#d6fca4', '#7aa7ff', '#A4B8BB', '#7e8a8c'],
+            weight: 0.55,
+            meta: [
+              {
+                addressName: 'effecttokens',
+                link: 'https://bloks.io/tokens/EFX-eos-effecttokens',
+                description: null, // 'Current supply in circulation and not locked in any staking or timelock.',
+                balanceKey: 'liquidBalance'
+              },
+              {
+                addressName: '0xC51Ef828319b131B595b7ec4B28210eCf4d05aD0',
+                link: 'https://bscscan.com/token/0xC51Ef828319b131B595b7ec4B28210eCf4d05aD0',
+                description: null,
+                balanceKey: 'liquidBalanceBsc'
+              },
+              {
+                addressName: 'efxstakepool',
+                locked: true,
+                link: 'https://bloks.io/account/efxstakepool',
+                description: 'Staked EFX.',
+                balanceKey: 'stakeBalance'
+              },
+              {
+                addressName: 'bsc.efx',
+                link: 'https://bloks.io/account/bsc.efx',
+                locked: false,
+                description: 'Funds allocated for providing liquidity and partnership.',
+                balanceKey: 'liquidityBalance'
+              },
+              {
+                addressName: '',
+                link: '',
+                locked: false,
+                description: null,
+                balanceKey: 'circulating'
+              },
+              {
+                addressName: 'treasury.efx',
+                link: 'https://bloks.io/account/treasury.efx',
+                locked: true,
+                description: 'Tokens governed by the DAO, from here proposals are funded.',
+                balanceKey: 'daoBalance'
+              },
+              {
+                addressName: 'efx',
+                link: 'https://bloks.io/account/efx',
+                locked: true,
+                description: null, // 'EFX locked by the foundation until 2021-09.',
+                balanceKey: 'foundationBalance'
+              },
+              {
+                addressName: '',
+                link: '',
+                locked: false,
+                description: null,
+                balanceKey: 'noncirculating'
+              },
+              {
+                addressName: '',
+                link: '',
+                locked: false,
+                description: null,
+                balanceKey: 'totalSupply'
+              }
+            ],
+            labels: ['Liquid Supply (EOS)', 'Liquid Supply (BSC)', 'Stake Pool', 'Liquidity & Partnerships', 'Circulating', 'EffectDAO', 'Foundation','Non-Circulating', 'Total Supply']
           }
         ]
       }
+    },
+  },
+  mounted () {
+    this.getBalances()
+    this.getBscBalance()
+  },
+  methods: {
+    async getBscBalance () {
+      const provider = 'https://bsc-dataseed.binance.org/'
+      const efxAddress = '0xC51Ef828319b131B595b7ec4B28210eCf4d05aD0'
+
+      const json = [{
+        inputs: [],
+        name: 'totalSupply',
+        outputs: [{
+          internalType: 'uint256',
+          name: '',
+          type: 'uint256'
+        }],
+        stateMutability: 'view',
+        type: 'function'
+      }]
+
+      const w3 = new Web3(provider)
+      const efxContract = new w3.eth.Contract(json, efxAddress)
+      // returns an int like this: 23153044824406508517219986
+      const balance = await efxContract.methods.totalSupply().call().catch(console.log)
+
+      // https://bscscan.com/unitconverter?wei=23153044824406508517219986
+      // Formatted should look like this: 23153044.824406508517219986
+
+      const formattedBalance = w3.utils.fromWei(balance)
+      // fromWei return: 23153044.824406508517219986
+      console.log(formattedBalance)
+      return formattedBalance
+    },
+    async getBalances () {
+      this.loadingBalances = true
+      const circSupply = parseInt((await fetch('https://www.api.bloks.io/tokens/EFX-eos-effecttokens').then(data => data.json()))[0].supply.circulating)
+      this.balances.liquidBalanceBsc = parseInt(await this.getBscBalance())
+      this.balances.daoBalance = parseInt((await this.$eos.rpc.get_currency_balance('effecttokens', 'treasury.efx', 'EFX'))[0].replace(' EFX', ''))
+      this.balances.stakeBalance = parseInt((await this.$eos.rpc.get_currency_balance('effecttokens', 'efxstakepool', 'EFX'))[0].replace(' EFX', ''))
+      this.balances.liquidityBalance = parseInt((await this.$eos.rpc.get_currency_balance('effecttokens', 'bsc.efx', 'EFX'))[0].replace(' EFX', ''))
+      this.balances.liquidBalance = circSupply - this.balances.daoBalance - this.balances.stakeBalance - this.balances.liquidityBalance - this.balances.foundationBalance - this.balances.liquidBalanceBsc
+      this.balances.unswappedBalance = 650000000 - (this.balances.liquidBalance + this.balances.stakeBalance + this.balances.foundationBalance + this.balances.liquidityBalance + this.balances.daoBalance)
+
+      this.balances.circulating = this.balances.liquidBalanceBsc + this.balances.liquidBalance + this.balances.stakeBalance + this.balances.liquidityBalance
+      this.balances.noncirculating = this.balances.foundationBalance + this.balances.daoBalance
+      this.balances.totalSupply = circSupply
+
+      this.loadingBalances = false
+    },
+    hello (x) {
+      if (!x) {
+        return
+      } else {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+      }
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
