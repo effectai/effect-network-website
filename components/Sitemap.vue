@@ -24,7 +24,7 @@
             dApps
           </p>
           <ul class="menu-list">
-            <li><a href="https://worker.effect.ai" target="_blank">Effect Force</a></li>
+            <li><a href="https://app.effect.network" target="_blank">Effect Force</a></li>
             <li><a href="https://dao.effect.network" target="_blank">Effect DAO</a></li>
             <li><a href="https://translate.effect.network" target="_blank">Effect Translate</a></li>
             <li><a href="https://socials.effect.network" target="_blank">Effect Socials</a></li>
