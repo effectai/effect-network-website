@@ -51,9 +51,9 @@
                 <div class="column is-one-fourth" data-aos="zoom-in" data-aos-delay="500">
                   <div class="has-background-white has-radius px-6 pt-5 pb-2">
                     <div style="min-height: 70px" class=""><img width="80%"
-                      :src="require('@/assets/img/newdex_logo.png')"/>
+                      :src="require('@/assets/img/Defibox.png')"/>
                       </div>
-                    <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://newdex.io/trade/effecttokens-efx-eos" target="_blank">Buy EFX
+                    <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://eos.defibox.io/marketDetail/191" target="_blank">Buy EFX
                     </a>
                     <small>with EOS (EOS)</small>
                   </div>
