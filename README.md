@@ -20,3 +20,4 @@ $ npm run generate
 ```
 
 For a detailed explanation of how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
