@@ -56,7 +56,9 @@
           {
             hid: 'description',
             name: 'description',
-            content: 'Freedom To Work From Anywhere At Anytime. Effect Network is the first blockchain-based framework for the Future-of-Work. Access a global, on-demand, 24x7, scalable workforce.'
+            content: 'Effect Network is the place where anyone, at any time, can earn $EFX by completing simple tasks. 
+                      It’s also the place where the future of AI is created. Train your AI models, enhance your current datasets, 
+                      or create completely new algorithms using a scalable, on-demand pool of human intelligence.'
           }
         ]
       }
