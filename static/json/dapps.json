@@ -361,6 +361,23 @@
       "instagram": "",
       "reddit": "",
       "featured": 1
-    }
+    },
+        {
+      "id": 24,
+      "group_name": "YouTube Tools",
+      "description": "Add chapter time frames to YouTube videos",
+      "github_url": "https://github.com/DizzyDenniz/YouTubeTools",
+      "campaign_url": "https://app.effect.network/campaigns/53",
+      "youtube_url": "",
+      "website": "https://you-tube-tools-omega.vercel.app",
+      "devpost": "",
+      "image_url": "YouTubeTools.png",
+      "tags": ["YouTube Tools"],
+      "twitter": "",
+      "discord": "",
+      "instagram": "",
+      "reddit": "",
+      "featured": 1
+    },
   ]
 }
