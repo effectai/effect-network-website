@@ -37,17 +37,6 @@
                     <small>with BNB (BSC)</small>
                   </div>
                 </div>
-                <div class="column is-one-fourth" data-aos="zoom-in" data-aos-delay="300">
-                  <div class="has-background-white has-radius px-6 pt-5 pb-2">
-                    <div style="min-height: 70px" class="pt-2"><img width="80%"
-                      :src="require('@/assets/img/kucoin.svg')"/>
-                      </div>
-                    <a class="button is-secondary is-outlined is-fullwidth has-text-weight-semibold" href="https://trade.kucoin.com/EFX-BTC" target="_blank"
-                      color="accent primary--text">Buy EFX
-                    </a>
-                    <small>with BTC or USDT (EOS)</small>
-                  </div>
-                </div>
                 <div class="column is-one-fourth" data-aos="zoom-in" data-aos-delay="500">
                   <div class="has-background-white has-radius px-6 pt-5 pb-2">
                     <div style="min-height: 70px" class=""><img width="80%"
