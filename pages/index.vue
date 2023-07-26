@@ -56,9 +56,9 @@
           {
             hid: 'description',
             name: 'description',
-            content: 'Effect Network is the place where anyone, at any time, can earn $EFX by completing simple tasks. 
+            content: `Effect Network is the place where anyone, at any time, can earn $EFX by completing simple tasks. 
                       It’s also the place where the future of AI is created. Train your AI models, enhance your current datasets, 
-                      or create completely new algorithms using a scalable, on-demand pool of human intelligence.'
+                      or create completely new algorithms using a scalable, on-demand pool of human intelligence.`
           }
         ]
       }
