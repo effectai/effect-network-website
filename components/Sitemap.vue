@@ -40,6 +40,7 @@
           </p>
           <ul class="menu-list">
             <li><a href="https://twitter.com/effectaix" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+            <li><a href="https://t.me/effectai" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
             <li><a href="https://discord.gg/effectnetwork" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
             <li><a href="https://www.youtube.com/channel/UCWzHpI310baipgvVMCxcwHA" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
             <li><a href="https://www.facebook.com/effectai" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
@@ -76,6 +77,9 @@
           </div>
           <a class="is-size-3 mx-2 has-text-primary" target="_blank" href="https://twitter.com/effectaix">
             <i class="fab fa-twitter"></i>
+          </a>
+          <a class="is-size-3 mx-2 has-text-primary" target="_blank" href="https://t.me/effectai">
+            <i class="fab fa-telegram"></i>
           </a>
           <a class="is-size-3 mx-2 has-text-primary" target="_blank" href="http://facebook.com/effectai">
             <i class="fab fa-facebook"></i>
