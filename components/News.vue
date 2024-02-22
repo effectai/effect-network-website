@@ -1,5 +1,5 @@
 <template>
-  <div class="has-navbar-fixed-top has-background-light">
+  <div>
     <section class="section">
       <div class="container is-max-widescreen">
         <div class="has-text-centered my-6">
@@ -94,91 +94,6 @@
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container is-max-widescreen">
-        <div class="">
-          <div class="columns is-multiline">
-            <div
-              class="column is-one-quarter"
-              v-for="post in posts"
-              :key="post.title"
-            >
-              <a class="card is-flat" :href="post.href" target="_blank">
-                <div
-                  class="card-image full-image background-image"
-                  :style="'background-image: url(\'' + post.img + '\')'"
-                >
-                  <!--                  <figure class="image is-5by3 background-image" >-->
-                  <!--                  </figure>-->
-                </div>
-                <div
-                  class="card-content is-flex is-justify-content-space-between is-flex-direction-column"
-                  style="min-height: 250px;"
-                >
-                  <div
-                    class="is-size-6 has-text-shadow has-text-white has-text-right"
-                  >
-                    <span v-if="post.type == 'video'">Video</span>
-                    <span v-else-if="post.type == 'blog'">Blog Post</span>
-                    <span v-else-if="post.type == 'press'">Press Release</span>
-                    <span v-else>Post</span>
-                  </div>
-                  <div>
-                    <div
-                      class="subtitle has-text-white is-7"
-                      style="margin-top:70px;"
-                    >
-                      {{ post.date }}
-                    </div>
-                    <div class="title has-text-white is-5 is-family-sans-serif">
-                      {{ post.title }}
-                    </div>
-                  </div>
-                </div>
-                <small class="card-footer">
-                  <a
-                    v-if="post.type == 'video'"
-                    target="_blank"
-                    :href="post.href"
-                    class="card-footer-item has-text-white"
-                    :class="{ 'has-text-accent': $colorMode.value === 'dark' }"
-                  >
-                    Watch Video <i class="fab fa-youtube ml-3"></i>
-                  </a>
-                  <a
-                    v-else
-                    target="_blank"
-                    :href="post.href"
-                    class="card-footer-item has-text-white"
-                    :class="{ 'has-text-accent': $colorMode.value === 'dark' }"
-                  >
-                    Read More <i class="fas fa-chevron-right ml-3"></i>
-                  </a>
-                </small>
-              </a>
-            </div>
-          </div>
-          <div class="has-text-centered">
-            <a
-              :class="{ 'is-accent': $colorMode.value === 'dark' }"
-              class="button is-secondary m-4"
-              href="https://www.youtube.com/@effectai"
-              target="_blank"
-            >
-              All Videos
-            </a>
-            <a
-              :class="{ 'is-accent': $colorMode.value === 'dark' }"
-              class="button is-secondary m-4"
-              href="https://medium.com/effect-ai"
-              target="_blank"
-            >
-              All Blogs
-            </a>
           </div>
         </div>
       </div>
