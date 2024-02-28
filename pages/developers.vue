@@ -32,35 +32,74 @@
       </section>
     </div>
 
-    <section class="section">
-      <div class="container">
-        <div
-          class="columns has-text-left is-white is-vcentered is-variable is-8 pt-4 pb-6"
-        >
-          <div class="column is-2/3 has-text-left">
-            <pre><code class="lang-js">
-<p>import SDK from @effect-network/sdk</p>
-<p>const client = new SDK.EffectClient(&#39;jungle&#39;);</p>
-<p>const campaign = await client.force.makeCampaign(campaignToIpfs, '10')</p>
-            </code></pre>
+    <SimpleSection>
+      <div class="my-6">
+        <div class="columns">
+          <div class="column is-one-third">
+            <div class="card is-flat always-light p-5">
+              <img src="~assets/img/icons/github.svg" style="height: 50px" />
+              <h3 class="subtitle is-4 mt-4 mb-2">Github</h3>
+              <h4 class="subtitle is-5 mt-1">
+                Explore Public Effect Repositories
+              </h4>
+              <p class="block">
+                Join the Effect.AI development effort by contributing to one of
+                the open-source projects on the public Effect repositories.
+              </p>
+              <a
+                target="_blank"
+                class="is-text is-outlined mt-2"
+                href="https://github.com/effectai"
+                >Explore Github</a
+              >
+            </div>
           </div>
-          <div class="column is-1/3">
-            <h2 class="title">SDK</h2>
-            <p class="block">
-              The Effect Network SDK is a collection of tools and libraries that
-              allow developers to build applications on top of the Effect
-              Network protocol. The SDK is a collection of tools and libraries
-              that allow developers to build applications on top of the Effect
-              Network protocol.
-            </p>
-
-            <a class="button is-secondary" href="" target="_blank"
-              >SDK Documentation</a
-            >
+          <div class="column is-one-third">
+            <div class="card is-flat always-light p-5">
+              <img src="~assets/img/icons/api.svg" style="height: 50px" />
+              <h3 class="subtitle is-4 mt-4 mb-2">API Documentation</h3>
+              <h4 class="subtitle is-5 mt-1">
+                Effect Network API Documentation
+              </h4>
+              <p class="block">
+                Connect your applications to Effect Force to access a global
+                human workforce or learn more about other dApps like EffectDAO.
+              </p>
+              <a
+                target="_blank"
+                class="is-text is-outlined mt-2"
+                href="https://developer.effect.network/"
+                >Explore Documentation</a
+              >
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="card is-flat always-light p-5">
+              <img
+                src="~assets/img/icons/whitepaper.svg"
+                style="height: 50px"
+              />
+              <h3 class="subtitle is-4 mt-4 mb-2">Effect Whitepaper</h3>
+              <h4 class="subtitle is-5 mt-1">Technical description</h4>
+              <p class="block">
+                Read the original Effect Whitepaper for a technical and
+                mathematical description of the Effect Network.
+              </p>
+              <a
+                href="/download/effect_whitepaper.pdf"
+                target="_blank"
+                class="is-text is-outlined mt-2"
+                >Technical Whitepaper</a
+              >
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </SimpleSection>
+
+    <SimpleSection>
+      <SDKSection />
+    </SimpleSection>
 
     <section class="section always-light has-background-white">
       <div class="container">
@@ -88,17 +127,16 @@
         </div>
       </div>
     </section>
-    <mailing-list />
   </div>
 </template>
 
 <script setup lang="ts">
 import bg from "@/assets/img/grad_devs.png";
-import Prism from "prismjs";
-import "prismjs/themes/prism.min.css";
 
-onMounted(() => {
-  Prism.highlightAll();
+useSeoMeta({
+  title: "Developers",
+  description:
+    "A manual for joining the Effect.AI ecosystem. By developers for developers.",
 });
 </script>
 

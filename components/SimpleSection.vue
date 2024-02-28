@@ -1,6 +1,10 @@
 <template>
-  <section class="section" data-aos="fade-in">
-    <div class="container is-max-widescreen">
+  <section
+    :class="{ 'is-mirrored': isMirrored }"
+    class="section"
+    data-aos="fade-in"
+  >
+    <div class="container">
       <div :class="{ 'has-text-centered': centered }" class="my-5">
         <h3 v-if="title" class="title is-2">
           {{ title }}
@@ -20,10 +24,18 @@
 const props = withDefaults(
   defineProps<{
     centered: boolean;
-
     title?: string;
     subtitle?: string;
+    isMirrored?: boolean;
   }>(),
   { centered: false }
 );
 </script>
+
+<style lang="scss">
+.is-mirrored {
+  .columns {
+    flex-direction: row-reverse;
+  }
+}
+</style>

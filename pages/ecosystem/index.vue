@@ -1,82 +1,83 @@
 <template>
   <div>
-    <section
-      class="section gradient-bg"
-      :style="`
-        background-size: cover;
-        background-position: center;
-    `"
-      data-aos="fade-in"
-      data-aos-delay="300"
-      id="hero"
-    >
-      <div class="scene-bg is-absolute">
+    <div class="hero" id="ecosystem-hero" data-aos="fade-in">
+      <div class="three-canvas">
         <PlanetScene />
       </div>
-      <div class="container is-max-widescreen mt-6">
-        <div class="columns">
-          <div
-            class="mt-6 column is-half"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            <h1 class="title is-spaced has-text-primary is-uppercase">
-              Be Part Of <br />
-              The AI Future
-            </h1>
-            <h1
-              class="subtitle pr-6 has-text-white"
-              data-aos="fade-up"
-              data-aos-delay="150"
-            >
-              <EcosystemStatisticsBlock />
-            </h1>
+      <section class="section">
+        <div class="container">
+          <div class="columns is-mobile pt-6">
             <div
-              class="is-flex is-size-3 is-align-items-center is-primary has-text-primary is-in-front"
-              data-aos="fade-left"
-              data-aos-delay="550"
+              class="mt-6 column is-half-desktop is-three-thirds-tablet is-full-mobile"
+              data-aos="fade-up"
+              data-aos-delay="500"
             >
-              <a
-                target="_blank"
-                href="https://dao.effect.network"
-                class="button is-accent mr-5"
-                >Join DAO</a
+              <h1
+                style="font-size: 4rem; line-height: 84px"
+                class="title is-1 is-spaced has-text-white is-uppercase"
               >
-              <!-- //twitter -->
-              <div>
+                Be Part Of <br />
+                The AI Future
+              </h1>
+              <h1
+                class="subtitle pr-6 has-text-white"
+                data-aos="fade-up"
+                data-aos-delay="150"
+              >
+                <EcosystemStatisticsBlock class="has-text-white" />
+              </h1>
+              <div
+                class="is-flex is-size-3 is-align-items-center is-primary has-text-white is-in-front"
+                data-aos="fade-left"
+                data-aos-delay="550"
+              >
                 <a
                   target="_blank"
-                  href="https://twitter.com/effectaix"
-                  class="has-text-primary mr-2"
+                  href="https://dao.effect.network"
+                  class="button is-accent mr-5"
+                  >Join DAO</a
                 >
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a
-                  target="_blank"
-                  href="https://twitter.com/effectaix"
-                  class="has-text-primary mr-2"
-                >
-                  <i class="fab fa-discord"></i>
-                </a>
-                <a
-                  target="_blank"
-                  href="https://github.com/effectai"
-                  class="has-text-primary"
-                >
-                  <i class="fab fa-github"></i>
-                </a>
+                <!-- //twitter -->
+                <div>
+                  <a
+                    target="_blank"
+                    href="https://twitter.com/effectaix"
+                    class="has-text-white mr-2"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://twitter.com/effectaix"
+                    class="has-text-white mr-2"
+                  >
+                    <i class="fab fa-discord"></i>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://github.com/effectai"
+                    class="has-text-white"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <SimpleSection class="has-background-light has-text-primary">
       <div class="columns is-variable is-6">
-        <div class="column is-7" data-aos="fade-up" data-aos-delay="100">
+        <div class="column is-5" data-aos="fade-up" data-aos-delay="100">
           <h2 class="title is-3 has-text-primary mb-0">The EFFECT.AI</h2>
-          <h2 class="title is-1 has-text-primary is-uppercase">Ecosystem</h2>
+          <h2
+            class="title is-1 has-text-primary is-uppercase"
+            style="font-size: 3rem"
+          >
+            Ecosystem
+          </h2>
           <p>
             Effect Network's ecosystem is a collection of all the applications
             running on the network. collectively managed by the DAO. Lorem ipsum
@@ -88,13 +89,14 @@
             Ecosystem.
           </p>
         </div>
+        <div class="column"></div>
         <div class="column is-5" data-aos="fade-up" data-aos-delay="350">
           <div class="card dao-card">
-            <div class="card-content">
+            <div class="card-content has-text-centered">
               <img
                 src="@/assets/img/dapps/effect-dao.png"
                 width="200"
-                class="mb-5"
+                class=""
               />
               <h4 class="subtitle">Vote, Stake and Earn EFX</h4>
 
@@ -132,8 +134,8 @@
         <ChainCardList />
       </SimpleSection>
 
-      <SimpleSection class="section px-0">
-        <div class="my-5">
+      <SimpleSection class="px-0">
+        <div class="my-6">
           <h2 class="title is-1 has-text-primary mt-6">Communities</h2>
 
           <p>
@@ -178,6 +180,12 @@ import communities from "@/content/data/communities.json";
 
 const featuredDapps = dapps.filter((dapp) => dapp.featured);
 
+useSeoMeta({
+  title: "Ecosystem",
+  description:
+    "Effect Network's ecosystem is a collection of all the applications running on the network.",
+});
+
 const daoStats = [
   { label: "status", value: "Voting" },
   { label: "cycle", value: "83" },
@@ -186,25 +194,14 @@ const daoStats = [
 </script>
 
 <style lang="scss">
-.gradient-bg {
-  background: #d3cce3; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #e9e4f0,
-    #d3cce3
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #e9e4f0, #d3cce3);
-}
+#ecosystem-hero {
+  height: 600px;
 
-.scene-bg {
-  width: 100%;
-  height: 100%;
-}
-
-.tokenomics-area {
-  padding: 2rem;
-  border-radius: 10px;
-  border: 3px solid #e5e5e5;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #000046; /* fallback for old browsers */
+  background: linear-gradient(
+    to left,
+    #a3a5f0,
+    #000046
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 </style>

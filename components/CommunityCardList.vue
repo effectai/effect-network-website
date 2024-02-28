@@ -1,6 +1,6 @@
 <template>
   <div class="columns">
-    <div v-for="community in communities" class="column is-3">
+    <div v-for="community in communities" class="column is-3\">
       <nuxt-link :to="community.href">
         <CommunityCard
           :name="community.name"
@@ -19,6 +19,9 @@ const props = defineProps<{
     faClass: string;
     activeMembers: number;
     href: string;
+    isFeatured?: boolean;
   }[];
 }>();
+
+//sort on isFeatured
 </script>

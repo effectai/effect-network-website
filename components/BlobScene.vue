@@ -1,41 +1,38 @@
 <template>
-  <div>
-    <ClientOnly>
-      <TresCanvas
-        preset="realistic"
-        ref="canvas"
-        height="600"
-        :alpha="true"
-        :antialias="true"
-        shadows
-      >
-        <TresPerspectiveCamera ref="camera" visible :position="[0, 0, 15]" />
-        <TresDirectionalLight
-          :color="new Color('#ECF0F1')"
-          :intensity="2"
-          :position="[0, 5, 5]"
-        />
-        <TresSpotLight
-          :angle="Math.PI / 4"
-          :distance="7"
-          :penumbra="1"
-          :decay="0.5"
-          :intensity="0.9"
-          :color="'#fff'"
-        />
+  <ClientOnly>
+    <TresCanvas
+      preset="realistic"
+      ref="canvas"
+      height="600"
+      :alpha="true"
+      :antialias="true"
+      shadows
+    >
+      <TresPerspectiveCamera ref="camera" visible :position="[0, 0, 15]" />
+      <TresDirectionalLight
+        :color="0xecf0f1"
+        :intensity="2"
+        :position="[0, 5, 5]"
+      />
+      <TresSpotLight
+        :angle="Math.PI / 4"
+        :distance="7"
+        :penumbra="1"
+        :decay="0.5"
+        :intensity="0.9"
+        :color="'#fff'"
+      />
 
-        <Suspense>
-          <BlobModel />
-        </Suspense>
-      </TresCanvas>
-    </ClientOnly>
-  </div>
+      <BlobModel v-if="texture" :texture="texture" />
+    </TresCanvas>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">
-import { Color, BasicShadowMap, NoToneMapping } from "three";
-const canvas = ref(null);
-const camera = ref(null);
+const texture = ref<any | null>(null);
+onMounted(async () => {
+  texture.value = await useTexture(["gradients/gradient-img.png"]);
+});
 </script>
 
 <style>

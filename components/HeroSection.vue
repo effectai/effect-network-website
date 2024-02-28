@@ -1,10 +1,10 @@
 <template>
-  <div class="banner" data-aos="fade-in">
-    <div class="video-bg is-absolute">
+  <div class="hero" id="main-hero" data-aos="fade-in">
+    <div class="three-canvas">
       <BlobScene class="w-full h-full" />
     </div>
     <section class="section">
-      <div class="container is-max-widescreen mt-6">
+      <div class="container mt-6">
         <div class="columns">
           <div
             class="mt-6 column is-half"
@@ -19,7 +19,7 @@
             <h1 class="subtitle pr-6" data-aos="fade-up" data-aos-delay="150">
               <span class="pr-6 has-text-white">
                 Bringing AI To the Masses, the Decentralized Scalable Workforce
-                On-Demand. Enabling the Birth of next-gen AI models</span
+                On-Demand. Enabling the Birth of next-gen AI models.</span
               >
             </h1>
             <div
@@ -68,34 +68,14 @@
 <script setup lang="ts"></script>
 
 <style lang="scss">
-.banner {
-  position: relative;
-  // background: url('~assets/img/logo-3d.png');
+#main-hero {
   min-height: 750px;
 
-  .section,
-  .container,
-  .columns {
-    @include mobile {
-      height: 100%;
-    }
-  }
-}
-@include desktop {
-  .title {
-    font-size: 54px;
-  }
-}
-
-.video-bg {
   background: #000046; /* fallback for old browsers */
   background: linear-gradient(
     to left,
     #a3a5f0,
     #000046
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  width: 100%;
-  height: 100%;
 }
 </style>

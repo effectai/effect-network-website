@@ -7,31 +7,26 @@ import {
   MeshStandardMaterial,
   IcosahedronGeometry,
   Mesh,
-  SphereGeometry,
   Vector2,
   ShaderChunk,
+  Texture,
 } from "three";
 
 import headers from "@/glsl/shaders/headers.glsl";
 import displacement from "@/glsl/shaders/displacement.glsl";
 
-const blobRef = shallowRef(null);
-
-const { data: texture, refresh } = await useAsyncData(async () => {
-  const texture = await useTexture(["gradients/gradient-img.png"]);
-  return texture;
+const props = defineProps({
+  texture: {
+    type: Object as PropType<Texture>,
+    default: "",
+  },
 });
 
-await refresh();
-
-// Create a box geometry and a basic material
 const geometry = new IcosahedronGeometry(5, 65);
-
 const material = new MeshStandardMaterial({
   metalness: 1,
   roughness: 0.5,
-  envMapIntensity: 1,
-  map: texture.value,
+  map: props.texture,
 });
 
 material.flatShading = true;
@@ -42,7 +37,7 @@ const uniforms = {
   distort: { value: 0.4 },
   frequency: { value: 4 },
   speed: { value: 0.33 },
-  surfaceDistort: { value: 0.1 },
+  surfaceDistort: { value: 0.15 },
   surfaceFrequency: { value: 1 },
   surfaceTime: { value: 0 },
   surfaceSpeed: { value: 2 },
@@ -96,23 +91,13 @@ material.onBeforeCompile = (shader) => {
 };
 
 const meshWithMaterial = new Mesh(geometry, material);
-
 meshWithMaterial.position.x = 5;
 
 const { onLoop } = useRenderLoop();
 
 onLoop(({ delta, elapsed }) => {
-  //update the time uniform
   uniforms.time.value = elapsed * uniforms.speed.value;
   uniforms.surfaceTime.value = elapsed * uniforms.surfaceSpeed.value;
-
-  if (blobRef.value) {
-    // blobRef.value.rotation.x = elapsed * 0.3;
-    // blobRef.value.material.uniforms.uMousePosition.value = new Vector2(
-    //   x.value,
-    //   y.value
-    // );
-  }
 });
 </script>
 

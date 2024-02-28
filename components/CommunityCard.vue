@@ -21,7 +21,7 @@ const props = defineProps<{
 <style scoped lang="scss">
 i {
   transition: 0.3s opacity;
-  font-size: 4rem;
+  font-size: 6rem;
   position: absolute;
   color: white;
   opacity: 0.3;
