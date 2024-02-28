@@ -1,7 +1,7 @@
 <template>
-  <div class="has-background-light">
+  <div class="has-background-primary">
     <nav
-      class="navbar is-transparent is-fixed-top"
+      class="navbar is-fixed-top"
       :class="{ 'is-scrolling has-background-light': isScrolling }"
       role="navigation"
       aria-label="main navigation"
@@ -9,14 +9,7 @@
       <div class="container">
         <div class="navbar-brand">
           <nuxt-link class="navbar-item" to="/">
-            <img
-              :src="
-                $colorMode.value === 'dark'
-                  ? require('@/assets/img/logo_white.svg')
-                  : require('@/assets/img/logo.svg')
-              "
-              class="logo"
-            />
+            <img src="/img/logo.svg" class="logo" />
           </nuxt-link>
 
           <a
@@ -39,58 +32,30 @@
         >
           <div class="navbar-start"></div>
           <div class="navbar-end is-align-items-center">
-            <!-- <div @click="mobileMenu = false"> -->
-            <!-- <nuxt-link class="navbar-item" to="/launchathon" exact-active-class="is-active"> -->
-            <!-- Launch-a-thon -->
-            <!-- </nuxt-link> -->
-            <!-- </div> -->
             <div @click="mobileMenu = false">
               <nuxt-link
                 class="navbar-item"
-                to="/token-page"
+                to="/developers"
                 exact-active-class="is-active"
               >
-                Token
+                Developers
               </nuxt-link>
             </div>
             <div @click="mobileMenu = false">
               <nuxt-link
-                class="navbar-item"
-                to="/news"
-                exact-active-class="is-active"
-              >
-                News
-              </nuxt-link>
-            </div>
-            <div @click="mobileMenu = false">
-              <nuxt-link
-                class="navbar-item"
                 to="/ecosystem"
+                class="navbar-item"
                 exact-active-class="is-active"
               >
                 Ecosystem
               </nuxt-link>
-            </div>
-            <div @click="mobileMenu = false">
-              <a
-                href="https://dao.effect.network"
-                target="_blank"
-                class="navbar-item"
-                exact-active-class="is-active"
-              >
-                DAO
-              </a>
             </div>
             <div class="navbar-item" exact-active-class="is-active">
               <div @click="mobileMenu = false">
                 <a
                   href="https://app.effect.network"
                   target="_blank"
-                  class="button is-outlined"
-                  :class="{
-                    'is-accent': $colorMode.value === 'dark',
-                    'is-primary': $colorMode.value !== 'dark'
-                  }"
+                  class="button is-outlined is-primary"
                   exact-active-class="is-active"
                 >
                   Launch App
@@ -105,26 +70,13 @@
   </div>
 </template>
 
-<script>
-import DarkmodeSwitcher from "@/components/DarkmodeSwitcher";
-export default {
-  props: ["isScrolling"],
-  components: {
-    DarkmodeSwitcher
-  },
-  data() {
-    return {
-      loading: false,
-      mobileMenu: false
-    };
-  },
+<script setup lang="ts">
+const loading = ref(false);
+const mobileMenu = ref(false);
 
-  computed: {
-    wallet() {
-      return this.$wallet ? this.$wallet.wallet : null;
-    }
-  }
-};
+const props = defineProps<{
+  isScrolling: boolean;
+}>();
 </script>
 
 <style lang="scss">

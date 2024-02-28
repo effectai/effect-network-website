@@ -1,272 +1,210 @@
 <template>
   <div>
-    <div>
-      <section class="section has-navbar-fixed-top">
-        <div class="hero">
-          <section class="section">
-            <div class="container">
-              <h2 class="title is-1">Effect Ecosystem</h2>
-              <p class="block">
-            Effect Network's ecosystem is a collection of all the applications
-            running on the network. You may use $EFX tokens to buy a number of
-            services that boost productivity, including social media engagement,
-            translations, subtitles and graphics, to help your business grow in
-            many ways. Think of this as the $EFX candy store, which will be
-            available to you very soon!
-              </p>
-            </div>
-          </section>
-        </div>
-      </section>
-
-      <!-- Featured dApps -->
-      <div class="featured-apps">
-        <div class="container pt-2 pb-6">
-          <h2 class="subtitle has-text-weight-semibold is-4 mb-5">Featured dApps</h2>
-          <div class="columns is-multiline">
+    <section
+      class="section gradient-bg"
+      :style="`
+        background-size: cover;
+        background-position: center;
+    `"
+      data-aos="fade-in"
+      data-aos-delay="300"
+      id="hero"
+    >
+      <div class="scene-bg is-absolute">
+        <PlanetScene />
+      </div>
+      <div class="container is-max-widescreen mt-6">
+        <div class="columns">
+          <div
+            class="mt-6 column is-half"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <h1 class="title is-spaced has-text-primary is-uppercase">
+              Be Part Of <br />
+              The AI Future
+            </h1>
+            <h1
+              class="subtitle pr-6 has-text-white"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <EcosystemStatisticsBlock />
+            </h1>
             <div
-              class="column is-full-mobile is-half-tablet is-one-fifth-desktop is-one-fifth-widescreen"
-              v-for="dapp in featuredDapps"
-              :key="dapp.id">
-              <div class="card is-shadowless has-background-white p-4" @click="goToDapp(dapp.group_name)">
-                <div class="card-image mx-auto mb-2">
-                  <figure>
-                    <img :src="getImageLink(dapp.image_url)" v-bind:alt="dapp.image_url">
-                  </figure>
-                </div>
-
-                <div class="card-content p-2">
-                  <section class="title-section">
-                    <div class="media-content">
-                      <h2 class="title is-5 has-text-weight-medium mb-3 has-text-centered has-text-black">
-                        {{ dapp.group_name }}
-                      </h2>
-                      <div class="tags is-centered">
-                        <span v-for="tag in dapp.tags" @click.prevent="addFilter(tag)" :key="tag" class="tag is-info is-light">{{ tag }}</span>
-                      </div>
-                    </div>
-                  </section>
-                </div>
+              class="is-flex is-size-3 is-align-items-center is-primary has-text-primary is-in-front"
+              data-aos="fade-left"
+              data-aos-delay="550"
+            >
+              <a
+                target="_blank"
+                href="https://dao.effect.network"
+                class="button is-accent mr-5"
+                >Join DAO</a
+              >
+              <!-- //twitter -->
+              <div>
+                <a
+                  target="_blank"
+                  href="https://twitter.com/effectaix"
+                  class="has-text-primary mr-2"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://twitter.com/effectaix"
+                  class="has-text-primary mr-2"
+                >
+                  <i class="fab fa-discord"></i>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/effectai"
+                  class="has-text-primary"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- All dApps -->
-      <section>
+    <SimpleSection class="has-background-light has-text-primary">
+      <div class="columns is-variable is-6">
+        <div class="column is-7" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="title is-3 has-text-primary mb-0">The EFFECT.AI</h2>
+          <h2 class="title is-1 has-text-primary is-uppercase">Ecosystem</h2>
+          <p>
+            Effect Network's ecosystem is a collection of all the applications
+            running on the network. collectively managed by the DAO. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <br />
+          <p class="has-text-weight-bold">
+            Join the DAO and have a voice on the development of the EFFECT.AI
+            Ecosystem.
+          </p>
+        </div>
+        <div class="column is-5" data-aos="fade-up" data-aos-delay="350">
+          <div class="card dao-card">
+            <div class="card-content">
+              <img
+                src="@/assets/img/dapps/effect-dao.png"
+                width="200"
+                class="mb-5"
+              />
+              <h4 class="subtitle">Vote, Stake and Earn EFX</h4>
 
-        <div class="container my-6 py-6">
-          <h2 class="subtitle has-text-weight-semibold is-4">In Development</h2>
-          <div class="is-flex is-align-items-center is-justify-content-space-between">
-            <div class="tags is-align-items-center is-align-content-center is-flex">
-              <p v-if="filters.length > 0" class="is-size-7 mr-3 mb-0" @click="filters = []">clear tags</p>
-              <span v-for="tag in filters" :key="tag" class="tag is-medium py-4 mb-0 is-info is-light">
-                {{ tag }}
-                <button @click="removeFilter(tag)" class="delete is-small"></button>
-              </span>
-            </div>
-            <div class="select">
-              <select v-model="sort" @change="onSort(sort)">
-                <option value="" selected>Sort by</option>
-                <option v-for="(sort) in sort_options" :key="sort.name" :value="sort" class="column">
-                  {{ sort.name }}
-                </option>
-              </select>
-            </div>
-          </div>
-          <div class="columns is-multiline mt-2">
-            <div
-              class="column is-full-mobile is-half-tablet is-one-third-desktop is-one-quarter-widescreen"
-              v-for="dapp in filteredDapps"
-              :key="dapp.id"
-            >
-              <div class="card is-shadowless has-background-white p-4" @click="goToDapp(dapp.group_name)">
-                <div class="card-image mx-auto mb-2">
-                  <figure>
-                    <img :src="getImageLink(dapp.image_url)" v-bind:alt="dapp.image_url">
-                  </figure>
-                </div>
-
-                <div class="card-content p-2">
-                  <section class="title-section">
-                    <div class="media-content">
-                      <h2 class="title is-5 has-text-weight-medium mb-3 has-text-centered has-text-black">
-                        {{ dapp.group_name }}
-                      </h2>
-                      <div class="tags is-centered">
-                        <span v-for="tag in dapp.tags" @click="addFilter(tag)" :key="tag" class="tag is-info is-light">{{ tag }}</span>
-                      </div>
-                      <p class="has-text-grey is-flex is-clipped mb-0">
-                        {{ dapp.description.length > 200 ? `${dapp.description.slice(0, 200)}...` : dapp.description }}
-                      </p>
-                    </div>
-                  </section>
+              <div class="columns">
+                <div v-for="stat in daoStats" class="column is-4">
+                  <p class="has-text-weight-bold">{{ stat.label }}</p>
+                  <p>{{ stat.value }}</p>
                 </div>
               </div>
+
+              <a
+                href="https://dao.effect.network"
+                target="_blank"
+                class="button is-primary mt-5"
+                >Become a member</a
+              >
             </div>
-            <p v-if="filteredDapps.length === 0">
-              No dApps found matching that match the criteria
-            </p>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+      <div class="has-background-white my-5">
+        <Tokenomics class="has-background-white" />
+      </div>
+
+      <SimpleSection class="section px-0">
+        <div class="my-5">
+          <h2 class="title is-1 has-text-primary mt-6">$EFX Token</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </div>
+        <ChainCardList />
+      </SimpleSection>
+
+      <SimpleSection class="section px-0">
+        <div class="my-5">
+          <h2 class="title is-1 has-text-primary mt-6">Communities</h2>
+
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </div>
+        <CommunityCardList :communities="communities" />
+      </SimpleSection>
+
+      <SimpleSection class="px-0">
+        <div class="my-5">
+          <h2 class="title is-1 has-text-primary mt-6">Dapps</h2>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </div>
+        <div class="has-background-light">
+          <DappCardList :dapps="featuredDapps" />
+        </div>
+
+        <div class="is-flex is-justify-content-center mt-5">
+          <div class="button is-primary mx-auto has-text-centered">
+            <nuxt-link to="/dapps" class="has-text-white"
+              >View all dApps</nuxt-link
+            >
+          </div>
+        </div>
+      </SimpleSection>
+    </SimpleSection>
   </div>
 </template>
 
-<script>
-import _ from 'lodash'
-import dapps from '@/static/json/dapps.json'
-import Network from "~/assets/img/developers.svg?inline";
+<script setup lang="ts">
+import dapps from "@/content/data/dapps.json";
+import communities from "@/content/data/communities.json";
 
-export default {
-    // colorMode: 'dark',
-    components: {
-      Network
-    },
-    name: 'Ecosystem',
-    data() {
-      return {
-        example: null,
-        dappsList: dapps,
-        filters: [],
-        featuredDapps: dapps.submissions.filter(e => e.featured),
-        developmentDapps: dapps.submissions.filter(e => !e.featured),
-        publicPath: process.env.BASE_URL,
-        sort: '',
-        sort_options: {
-          title_asc: {
-            value: 'group_name',
-            name: 'Title (ascending)',
-            order: 'asc'
-          },
-          title_desc: {
-            value: 'group_name',
-            name: 'Title (descending)',
-            order: 'desc'
-          },
-          recently_added: {
-            value: 'id',
-            name: 'Recently added',
-            order: 'desc'
-          }
-        }
-      };
-    },
-    mounted() {
-    },
+const featuredDapps = dapps.filter((dapp) => dapp.featured);
 
-    computed: {
-      heroDarkLight: function () {
-        return this.colorMode === 'dark' ? [].join(' ') : ''
-      },
-      filteredDapps () {
-        let filteredDapps = this.developmentDapps;
-        if (this.filters.length > 0) {
-          console.log(this.filters)
-          filteredDapps = filteredDapps.filter((d) => {
-            for (const filter of this.filters) {
-              if (d.tags.includes(filter.toLowerCase())) {
-                return d.tags.includes(filter.toLowerCase())
-              }
-            }
-          })
-        }
-        if (this.sort) {
-          filteredDapps = _.orderBy(filteredDapps, [(dapp) => {
-            if (typeof _.get(dapp, `${this.sort.value}`) === 'string') {
-              return _.get(dapp, `${this.sort.value}`).toLowerCase()
-            } else {
-              return _.get(dapp, `${this.sort.value}`)
-            }
-          }], [this.sort.order, 'desc'])
-        }
-        return filteredDapps
-      }
-    },
-
-    methods: {
-      goToDapp (name) {
-        this.$router.push(`/ecosystem/${name}`)
-      },
-      removeFilter (tag) {
-        this.filters = this.filters.filter(e => e !== tag)
-      },
-      addFilter (tag) {
-        if (!this.filters.includes(tag)) {
-          this.filters.push(tag)
-        }
-      },
-      onSort (sort) {
-        this.sort = sort
-      },
-      getImageLink (img_url) {
-        // /effect-network-website/static/img/ecosystem
-        return require(`@/assets/img/ecosystem/${img_url}`)
-      },
-    }
-};
+const daoStats = [
+  { label: "status", value: "Voting" },
+  { label: "cycle", value: "83" },
+  { label: "rewards", value: "$2,125.00" },
+];
 </script>
-<style lang="scss" scoped>
-.select select {
-  outline: none;
-  background-color: $light;
-  border: none;
-  color: #81889D;
-}
-.featured-apps {
-  background: linear-gradient(0deg, $light 65%, transparent 35%);
-}
-.card:hover {
-  box-shadow: $box-shadow !important;
+
+<style lang="scss">
+.gradient-bg {
+  background: #d3cce3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #e9e4f0, #d3cce3);
 }
 
-.card {
-  transition: all .3s ease;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
+.scene-bg {
+  width: 100%;
   height: 100%;
-  z-index: 1;
-  margin-top: auto;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #ededed;
-  .card-image {
-    border: 1px solid #E8EEFF;
-    overflow: hidden;
-    height: 150px !important;
-    border-radius: $card-radius !important;
-    figure, img {
-      height: 150px !important;
-    }
-    img {
-      width: 100%;
-      object-fit: cover;
-      // border-radius: $card-radius !important;
-    }
-  }
 }
-// TODO: remove this later
-.blurred {
-  filter: blur(10px);
-}
-#overlay {
-  overflow: hidden;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 29;
-  margin-top: 60px;
-  h1 {
-    font-size: 4rem;
-    margin-top: -60px;
-    text-shadow: 0px 0px 10px #fff;
-  }
+
+.tokenomics-area {
+  padding: 2rem;
+  border-radius: 10px;
+  border: 3px solid #e5e5e5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 </style>

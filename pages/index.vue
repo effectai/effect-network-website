@@ -1,80 +1,52 @@
 <template>
   <div>
-    <div class="has-background-light has-navbar-fixed-top">
-      <home-banner />
-    </div>
-    <news />
-    <projects class="has-background-light" />
-    <efx />
-    <!-- <div class="has-background-light">
-      <clients />
-      <three-blocks />
-    </div>
-    <force id="force" />
-    <services id="dapps" />
-    <case-studies /> -->
-    <!-- <section class="section">
-      <div class="container is-max-widescreen py-6">
-        <div class="has-text-centered">
-          <h1 class="title">Develop</h1>
-          <p class="has-limited-width is-horizontal-centered">Specializing in structuring data in areas like Natural
-            Language Processing, Machine Learning Training Data, Deploying AI Services, Translations, and many more.</p>
-        </div>
-        <develop-blocks />
-      </div>
-    </section> -->
-    <dao />
+    <HeroSection />
+    <SimpleSection
+      class="p-0"
+      data-aos="fade-left"
+      data-aos-delay="300"
+      id="news"
+    >
+      <NewsCardList :posts="featuredPosts" />
+    </SimpleSection>
+    <SimpleSection
+      title="Ecosystem Spotlight"
+      subtitle="The latest updates on the projects built within the Effect.AI Ecosystem"
+    >
+      <DappCardList :dapps="featuredDapps" />
+      <div class="is-flex is-justify-content-center mt-5"></div>
+    </SimpleSection>
   </div>
 </template>
 
-<script>
-import HomeBanner from "@/components/HomeBanner";
-import Clients from "@/components/Clients";
-import ThreeBlocks from "@/components/ThreeBlocks";
-import Force from "@/components/Force";
-import Services from "@/components/Services";
-import DevelopBlocks from "@/components/DevelopBlocks";
-import Efx from "@/components/Efx";
-import Dao from "@/components/Dao";
-import MailingList from "@/components/MailingList";
-import CaseStudies from "../components/CaseStudies.vue";
-import Globe from "../components/Globe.vue";
-import News from "../components/News.vue";
+<script setup lang="ts">
+import posts from "@/content/data/posts.json";
+import dapps from "@/content/data/dapps.json";
 
-export default {
-  colorMode: "light",
-  head() {
-    return {
-      title:
-        "Effect Network - Blockchain-based framework for the Future-of-Work",
-      script: [
-        { src: "https://files.coinmarketcap.com/static/widget/currency.js" }
-      ],
-      meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-        {
-          hid: "description",
-          name: "description",
-          content: `Effect Network is the place where anyone, at any time, can earn $EFX by completing simple tasks. 
-                      It’s also the place where the future of AI is created. Train your AI models, enhance your current datasets, 
-                      or create completely new algorithms using a scalable, on-demand pool of human intelligence.`
-        }
-      ]
-    };
-  },
-  components: {
-    HomeBanner,
-    Clients,
-    ThreeBlocks,
-    Force,
-    Services,
-    DevelopBlocks,
-    Efx,
-    Dao,
-    MailingList,
-    CaseStudies,
-    Globe,
-    News
-  }
-};
+const featuredPosts = posts.filter((post) => post.featured).slice(0, 3);
+const featuredDapps = dapps.filter((dapp) => dapp.featured);
+
+useHead({
+  title: "Effect Network | Home",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content: `Effect.AI is a decentralized network for artificial intelligence and AI related services. We are creating a platform that will allow anyone in the world to contribute to AI development.`,
+    },
+  ],
+  script: [
+    { src: "https://files.coinmarketcap.com/static/widget/currency.js" },
+  ],
+});
 </script>
+
+<style lang="scss">
+#news {
+  margin-top: -220px;
+
+  @include mobile {
+    margin-top: -300px;
+  }
+}
+</style>

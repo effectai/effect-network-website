@@ -1,8 +1,7 @@
+
 /* Import the rest of Bulma */
-@import '../../node_modules/bulma';
+@import "bulma/bulma";
 @import 'dark-mode';
-@import '../../node_modules/atropos/atropos.scss';
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
 a {
   outline: 0;
@@ -179,7 +178,7 @@ a.card {
 }
 
 .has-navbar-fixed-top {
-  padding-top: 4.25rem;
+  padding-top: 4.25rem !important;
 }
 
 @keyframes rotate {
@@ -214,4 +213,32 @@ a.card {
   p {
     cursor: pointer;
   }
+}
+
+.is-absolute{
+  position: absolute;
+}
+
+.right-0{
+  right:0;
+}
+
+.top-0{
+  top:0;
+}
+
+.is-in-front{
+  z-index: 999;
+}
+
+.gap-5 {
+  gap: 5px;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
 }

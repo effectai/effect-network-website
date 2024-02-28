@@ -1,48 +1,15 @@
 <template>
   <div id="app">
-    <nav-bar :is-scrolling="isScrolling"/>
+    <NavBar :is-scrolling="isScrolling" />
     <div>
-      <Nuxt/>
+      <slot />
     </div>
-    <foot/>
+    <Footer />
   </div>
 </template>
 
-<script>
-  import NavBar from '@/components/NavBar';
-  import Foot from '@/components/Footer';
-
-
-  export default {
-    components: {
-      NavBar,
-      Foot
-    },
-
-    data () {
-      return {
-        isScrolling: false,
-      }
-    },
-
-    computed: {
-    },
-    mounted () {
-        window.addEventListener('scroll', this.handleScroll);
-    },
-    beforeDestroy() {
-      window.removeEventListener("scroll", this.handleScroll)
-    },
-    methods: {
-      handleScroll: function (e) {
-        if(e.target.documentElement.scrollTop) {
-          this.isScrolling = true;
-        } else {
-          this.isScrolling = false;
-        }
-      }
-    },
-  };
+<script setup lang="ts">
+const isScrolling = ref(false);
 </script>
 
 <style scoped>
