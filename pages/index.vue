@@ -9,6 +9,15 @@
     >
       <NewsCardList :posts="featuredPosts" />
     </SimpleSection>
+
+    <SimpleSection
+      title="How to use Effect.AI?"
+      :centered="true"
+      class="has-background-white"
+    >
+      <HowItWorks />
+    </SimpleSection>
+
     <SimpleSection
       title="Ecosystem Spotlight"
       subtitle="The latest updates on the projects built within the Effect.AI Ecosystem"
