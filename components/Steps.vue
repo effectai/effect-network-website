@@ -1,5 +1,5 @@
 <template>
-  <div class="columns">
+  <div class="columns is-mobile">
     <div class="column is-narrow">
       <div
         style="top: -50px"
