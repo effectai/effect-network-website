@@ -1,6 +1,6 @@
 <template>
-  <div style="height: 650px">
-    <TresCanvas height="600" preset="realistic" :alpha="true">
+  <div style="height: 750px">
+    <TresCanvas preset="realistic" :alpha="true">
       <TresPerspectiveCamera ref="camera" visible :position="[-6, 0, 15]" />
 
       <TresAmbientLight :color="'#101D56'" :intensity="2" />

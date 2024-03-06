@@ -82,7 +82,7 @@ const props = defineProps({
   },
 });
 
-const geometry = new IcosahedronGeometry(5, 200);
+const geometry = new IcosahedronGeometry(4, 200);
 
 const material = new MeshStandardMaterial({
   metalness: props.metalness,
@@ -164,9 +164,7 @@ const { onLoop } = useRenderLoop();
 
 onLoop(({ delta, elapsed }) => {
   //update uniforms
-  if (material) {
-    material.needsUpdate = true;
-  }
+  material.needsUpdate = true;
 
   uniforms.frequency.value = props.frequency;
   uniforms.distort.value = props.distort;
