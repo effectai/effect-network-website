@@ -6,7 +6,7 @@
       </template>
 
       <template #subtitle>
-        <p class="block is-size-5 has-text-white">
+        <p class="block is-size-5 has-text-black">
           A collection of resources for joining the Effect.AI ecosystem. By
           developers for developers.
         </p>

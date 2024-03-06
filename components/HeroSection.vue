@@ -13,7 +13,7 @@
             data-aos-delay="500"
           >
             <h1 v-if="title" class="mt-3 title is-spaced keep-all">
-              <span class="is-uppercase has-text-white">{{ title }}</span>
+              <span class="is-uppercase has-text-primary">{{ title }}</span>
             </h1>
 
             <h1 v-else-if="$slots.title" class="mt-3 title is-spaced keep-all">
@@ -46,7 +46,6 @@ const props = defineProps({
 
 <style lang="scss">
 #hero {
-  background: #283048; /* fallback for old browsers */
-  background: linear-gradient(to left, #859398, #283048);
+  background: #e5e7eb;
 }
 </style>

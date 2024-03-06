@@ -10,7 +10,7 @@
 
       <template #subtitle>
         <p class="subtitle pr-6" data-aos="fade-up" data-aos-delay="150">
-          <span class="pr-6 has-text-white">
+          <span class="pr-6 has-text-black">
             Bringing AI To the Masses, the Decentralized Scalable Workforce
             On-Demand. Enabling the Birth of next-gen AI models.</span
           >
@@ -26,7 +26,7 @@
           <a
             target="_blank"
             href="https://app.effect.network"
-            class="button is-secondary mr-5"
+            class="button is-primary mr-5"
             >Launch App</a
           >
           <div>

@@ -6,7 +6,7 @@
       </template>
 
       <template #title>
-        <h1 class="has-text-white is-uppercase title">
+        <h1 class="has-text-primary is-uppercase title">
           Be Part of <br />
           the AI future
         </h1>
@@ -14,11 +14,11 @@
 
       <template #subtitle>
         <div
-          class="subtitle pr-6 has-text-white"
+          class="subtitle pr-6 has-text-black"
           data-aos="fade-up"
           data-aos-delay="150"
         >
-          <EcosystemStatisticsBlock class="has-text-white" />
+          <EcosystemStatisticsBlock class="has-text-black" />
         </div>
       </template>
 
@@ -31,7 +31,7 @@
           <a
             target="_blank"
             href="https://dao.effect.network"
-            class="button is-accent mr-5"
+            class="button is-primary mr-5"
             >Join DAO</a
           >
 

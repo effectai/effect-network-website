@@ -4,7 +4,7 @@
       v-for="social in socials"
       target="_blank"
       :href="social.link"
-      class="is-primary has-text-white mr-2"
+      class="is-primary has-text-primary mr-2"
     >
       <i :class="social.faClass"></i>
     </a>
