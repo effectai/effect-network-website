@@ -22,7 +22,7 @@
         :decay="0.2"
         :intensity="2"
         :position="[-13, -2, 15]"
-        :color="'#fffff'"
+        :color="'#ffffff'"
       />
 
       <!-- <TresSpotLight

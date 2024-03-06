@@ -25,19 +25,22 @@
       <div class="my-6">
         <div class="columns">
           <div class="column is-one-third">
-            <div class="card is-flat always-light p-5">
-              <img src="~assets/img/icons/github.svg" style="height: 50px" />
+            <div
+              class="card is-flat always-light p-5 h-full is-flex is-flex-direction-column"
+            >
+              <img
+                src="~assets/img/icons/github.svg"
+                class="self-baseline"
+                style="height: 50px"
+              />
               <h3 class="subtitle is-4 mt-4 mb-2">Github</h3>
-              <h4 class="subtitle is-5 mt-1">
-                Explore Public Effect Repositories
-              </h4>
               <p class="block">
                 Join the Effect.AI development effort by contributing to one of
                 the open-source projects on the public Effect repositories.
               </p>
               <a
                 target="_blank"
-                class="is-text is-outlined mt-2"
+                class="is-text is-outlined mt-auto"
                 href="https://github.com/effectai"
                 >Explore Github</a
               >
@@ -46,30 +49,29 @@
           <div class="column is-one-third">
             <div class="card is-flat always-light p-5">
               <img src="~assets/img/icons/api.svg" style="height: 50px" />
-              <h3 class="subtitle is-4 mt-4 mb-2">API Documentation</h3>
-              <h4 class="subtitle is-5 mt-1">
-                Effect Network API Documentation
-              </h4>
+              <h3 class="subtitle is-4 mt-4 mb-2">SDK Documentation</h3>
               <p class="block">
                 Connect your applications to Effect Force to access a global
                 human workforce or learn more about other dApps like EffectDAO.
               </p>
               <a
                 target="_blank"
-                class="is-text is-outlined mt-2"
+                class="is-text is-outlined mt-auto"
                 href="https://developer.effect.network/"
                 >Explore Documentation</a
               >
             </div>
           </div>
           <div class="column is-one-third">
-            <div class="card is-flat always-light p-5">
+            <div
+              class="card is-flat always-light p-5 h-full is-flex is-flex-direction-column"
+            >
               <img
                 src="~assets/img/icons/whitepaper.svg"
+                class="self-baseline"
                 style="height: 50px"
               />
               <h3 class="subtitle is-4 mt-4 mb-2">Effect Whitepaper</h3>
-              <h4 class="subtitle is-5 mt-1">Technical description</h4>
               <p class="block">
                 Read the original Effect Whitepaper for a technical and
                 mathematical description of the Effect Network.
@@ -77,7 +79,7 @@
               <a
                 href="/download/effect_whitepaper.pdf"
                 target="_blank"
-                class="is-text is-outlined mt-2"
+                class="is-text is-outlined mt-auto"
                 >Technical Whitepaper</a
               >
             </div>
@@ -99,16 +101,19 @@
             <h2 class="title is-2">Smart Contracts</h2>
             <p class="block">
               The Effect Network is an open protocol built with a technology
-              stack of smart contracts. The TEN protocol allows anyone to build
+              stack of smart contracts. The protocol allows anyone to build
               decentralized applications and connect their interface to the
               network.
             </p>
             <a
-              class="button is-secondary"
+              class="button is-secondary icon-left is-medium"
               href="https://github.com/effectai/effect-network-eos"
               target="_blank"
-              >Smart Contracts</a
             >
+              <i class="fab fa-github mx-2"></i>
+
+              View Contracts
+            </a>
           </div>
           <div class="column is-three-fifths">
             <img src="@/assets/img/formula.png" />

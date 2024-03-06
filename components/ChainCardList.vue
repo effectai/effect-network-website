@@ -14,7 +14,7 @@
     </div>
     <div class="column is-one-third p-5 has-text-centered">
       <ChainCard
-        :supply="0"
+        :supply="50000000"
         class="solana recommended"
         chain="Solana"
         :logo="solanaLogo"

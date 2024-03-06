@@ -45,7 +45,7 @@
       <NewsCardList :posts="featuredPosts" />
     </SimpleSection>
 
-    <SimpleSection :centered="true" title="Getting started" class="">
+    <SimpleSection :centered="true" title="How to use Effect.AI?" class="">
       <template #subtitle>
         <p class="is-size-5">
           Founded in 2017, Effect.AI is a decentralized network for AI related

@@ -1,82 +1,68 @@
 <template>
   <div class="split mt-6">
-    <div class="container is-relative px-5 has-text-centered">
-      <div class="columns is-vcentered">
-        <div class="column is-6 bg-hover bg-hover-left py-5">
-          <div class="columns h-full">
-            <div class="column is-2-widescreen is-2-desktop is-1-tablet" />
-            <div
-              class="column is-8-widescreen is-10-desktop is-11-tablet p-0 h-full is-flex is-flex-direction-column is-align-items-center"
+    <div class="container has-text-centered">
+      <div class="columns is-relative">
+        <split-block class="bg-hover-left">
+          <img
+            src="~assets/img/icons/coins_white.gif"
+            style="height: 90px"
+            class="show-on-hover mx-auto"
+          />
+          <img
+            src="~assets/img/icons/coins.png"
+            style="height: 90px"
+            class="hide-on-hover mx-auto"
+          />
+          <h1 class="title is-1">Complete Tasks</h1>
+          <h1 class="title is-4">
+            Complete tasks and earn EFX directly to your wallet.
+          </h1>
+          <p class="has-text-aligned block">
+            Effect.AI is the platform for the Future-of-Work. You can work from
+            anywhere, at any time, from any device. Simply create an Effect
+            Account and start completing tasks while collecting $EFX directly to
+            your wallet!
+          </p>
+          <p class="block mt-auto">
+            <nuxt-link
+              class="button mt-auto is-primary is-outlined is-medium"
+              to="https://app.effect.network/login"
             >
-              <img
-                src="~assets/img/icons/coins_white.gif"
-                style="height: 90px"
-                class="show-on-hover mx-auto"
-              />
-              <img
-                src="~assets/img/icons/coins.png"
-                style="height: 90px"
-                class="hide-on-hover mx-auto"
-              />
-              <h1 class="title is-1 whitespace-pre">Complete Tasks</h1>
-              <h1 class="title is-4">
-                Complete tasks and earn EFX directly to your wallet.
-              </h1>
-              <p class="has-text-aligned block">
-                Effect.AI is the platform for the Future-of-Work. You can work
-                from anywhere, at any time, from any device. Simply create an
-                Effect Account and start completing tasks while collecting $EFX
-                directly to your wallet!
-              </p>
-              <p class="block mt-auto">
-                <nuxt-link
-                  class="button mt-auto is-primary is-outlined is-medium"
-                  to="https://app.effect.network/login"
-                >
-                  Join the workforce
-                </nuxt-link>
-              </p>
-            </div>
-          </div>
-        </div>
+              Join the workforce
+            </nuxt-link>
+          </p>
+        </split-block>
 
-        <div class="column is-6 bg-hover bg-hover-right py-5">
-          <div class="columns is-vcentered">
-            <div class="column is-2-widescreen is-2-desktop is-1-tablet" />
-            <div
-              class="column is-8-widescreen is-10-desktop is-11-tablet p-0 h-full is-flex is-flex-direction-column"
+        <split-block class="bg-hover-right">
+          <img
+            src="~assets/img/icons/create_white.gif"
+            style="height: 90px"
+            class="show-on-hover mx-auto"
+          />
+          <img
+            src="~assets/img/icons/create.png"
+            style="height: 90px"
+            class="hide-on-hover mx-auto"
+          />
+          <h1 class="title is-1">Create Tasks</h1>
+          <h1 class="title is-4">
+            Access a global, on-demand, 24x7 scalable workforce
+          </h1>
+          <p class="has-text-aligned block">
+            Tap into a diverse workforce of over 10,000 people who complete
+            tasks for you. Choose one of the default task templates to get
+            started with text analysis, document transcription, image
+            annotations, sentiment analyis and many more!
+          </p>
+          <p class="block mt-auto">
+            <nuxt-link
+              class="button is-primary is-outlined is-medium"
+              to="https://app.effect.network/campaigns/templates"
             >
-              <img
-                src="~assets/img/icons/create_white.gif"
-                style="height: 90px"
-                class="show-on-hover mx-auto"
-              />
-              <img
-                src="~assets/img/icons/create.png"
-                style="height: 90px"
-                class="hide-on-hover mx-auto"
-              />
-              <h1 class="title is-1">Create Tasks</h1>
-              <h1 class="title is-4">
-                Access a global, on-demand, 24x7 scalable workforce
-              </h1>
-              <p class="has-text-aligned block">
-                Tap into a diverse workforce of over 10,000 people who complete
-                tasks for you. Choose one of the default task templates to get
-                started with text analysis, document transcription, image
-                annotations, sentiment analyis and many more!
-              </p>
-              <p class="block mt-auto">
-                <nuxt-link
-                  class="button is-primary is-outlined is-medium"
-                  to="https://app.effect.network/campaigns/templates"
-                >
-                  Create a task
-                </nuxt-link>
-              </p>
-            </div>
-          </div>
-        </div>
+              Create a task
+            </nuxt-link>
+          </p>
+        </split-block>
       </div>
     </div>
     <div class="or">OR</div>
@@ -155,7 +141,7 @@
 .or {
   z-index: 1;
   position: absolute;
-  top: calc(50% - 35px);
+  top: calc(60%);
   font-size: 35px;
   font-weight: 900;
   left: calc(50% - 45px);

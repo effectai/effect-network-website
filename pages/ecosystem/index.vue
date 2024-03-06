@@ -55,8 +55,7 @@
             running on the network. You may use $EFX tokens to buy a number of
             services that boost productivity, including social media engagement,
             translations, subtitles and graphics, to help your business grow in
-            many ways. Think of this as the $EFX candy store, which will be
-            available to you very soon!
+            many ways.
           </p>
           <br />
           <p class="has-text-weight-bold">
@@ -126,7 +125,7 @@
         <div class="my-5">
           <h2 class="title is-1 has-text-primary mt-6">Marketplace</h2>
           <p>
-            The Effect Network is a decentralized platform for AI services. The
+            Effect.AI is a decentralized platform for AI related services. The
             marketplace is a place where you can find AI services and
             applications that are built on the network.
           </p>

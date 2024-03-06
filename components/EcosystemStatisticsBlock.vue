@@ -1,11 +1,11 @@
 <template>
-  <div class="columns is-centered is-size-1 is-vcentered is-variable is-6">
+  <div class="columns is-centered is-size-1 is-vcentered is-6">
     <div class="column is-one-third" v-for="statistic in statistics">
       <div class="has-text-weight-bold" style="font-size: 2.5rem">
         <ClientOnly>
           <div class="is-flex">
             <count-up
-              class="is-flex"
+              class="is-flex whitespace-pre"
               :decimal-places="statistic.decimalPlaces"
               :end-val="statistic.value"
             >
@@ -14,7 +14,7 @@
           </div>
         </ClientOnly>
       </div>
-      <p class="is-size-6 has-text-weight-bold whitespace-nowrap">
+      <p class="is-size-6 has-text-weight-bold">
         {{ statistic.label }}
       </p>
     </div>
@@ -39,7 +39,7 @@ const statistics = [
   },
   {
     label: "Proposals created",
-    value: 326,
+    value: 325,
     decimalPlaces: 0,
   },
 ];

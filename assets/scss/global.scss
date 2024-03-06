@@ -215,38 +215,6 @@ a.card {
   }
 }
 
-.is-absolute{
-  position: absolute;
-}
-
-.right-0{
-  right:0;
-}
-
-.top-0{
-  top:0;
-}
-
-.is-in-front{
-  z-index: 999;
-}
-
-.gap-5 {
-  gap: 5px;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.whitespace-nowrap {
-  white-space: nowrap;
-}
-
-.scene-bg{
-  left:0;
-}
-
 #hero {
   position: relative;
   width:100%;
@@ -289,4 +257,39 @@ a.card {
   white-space: pre;
 }
 
+.self-baseline{
+  align-self: baseline;
+}
 
+
+.is-absolute{
+  position: absolute;
+}
+
+.right-0{
+  right:0;
+}
+
+.top-0{
+  top:0;
+}
+
+.is-in-front{
+  z-index: 999;
+}
+
+.gap-5 {
+  gap: 5px;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.scene-bg{
+  left:0;
+}

@@ -6,13 +6,10 @@
           <p class="menu-label">Effect.AI</p>
           <ul class="menu-list">
             <li><nuxt-link to="/">Home</nuxt-link></li>
-            <li><nuxt-link to="/token">Tokenomics</nuxt-link></li>
             <li><nuxt-link to="/developers">Build</nuxt-link></li>
             <li>
               <a target="_blank" href="https://dao.effect.network">DAO</a>
             </li>
-            <li><nuxt-link to="/news">Blog</nuxt-link></li>
-            <li><nuxt-link to="/contact">Contact</nuxt-link></li>
           </ul>
         </div>
       </div>

@@ -5,7 +5,7 @@
     data-aos="fade-in"
   >
     <div class="container">
-      <div :class="{ 'has-text-centered': centered }" class="my-5">
+      <div :class="{ 'has-text-centered': centered }" class="my-6">
         <h3 v-if="title" class="title is-2">
           {{ title }}
         </h3>
@@ -24,7 +24,7 @@
 <script setup lang="ts">
 const props = withDefaults(
   defineProps<{
-    centered: boolean;
+    centered?: boolean;
     title?: string;
     subtitle?: string;
     isMirrored?: boolean;

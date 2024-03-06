@@ -5,8 +5,8 @@
     </div>
 
     <div class="card-content p-2">
-      <section class="title-section">
-        <div class="media-content">
+      <div class="title-section">
+        <div class="content">
           <h2
             class="title is-5 has-text-weight-medium mb-3 has-text-centered has-text-black"
           >
@@ -21,7 +21,7 @@
             >
           </div>
         </div>
-      </section>
+      </div>
     </div>
   </div>
 </template>

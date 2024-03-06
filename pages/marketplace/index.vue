@@ -1,6 +1,6 @@
 <template>
   <SimpleSection title="Marketplace">
-    <DappCardList :dapps="dapps" />
+    <DappCardList :fade-up="false" :dapps="dapps" />
 
     <div class="is-flex is-justify-content-center mt-5">
       <div class="button is-primary mx-auto has-text-centered">

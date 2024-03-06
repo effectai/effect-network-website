@@ -7,7 +7,7 @@
 
       <Suspense>
         <TresMesh v-if="planetTexture" ref="planetMesh" :position="[9, -1, 0]">
-          <TresSphereGeometry :args="[9, 300]" />
+          <TresSphereGeometry :args="[9, 400]" />
           <TresMeshStandardMaterial
             :metalness="0.5"
             :roughness="0.4"

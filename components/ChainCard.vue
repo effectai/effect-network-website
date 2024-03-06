@@ -11,8 +11,6 @@
       Current supply: {{ formattedMillions }}M
     </h3>
 
-    <!-- make a online status -->
-
     <a class="button mt-auto is-primary mt-5">Buy EFX on {{ chain }}</a>
   </div>
 </template>

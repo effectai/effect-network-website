@@ -3,7 +3,8 @@
     <div class="container pt-2">
       <div class="columns is-multiline">
         <nuxt-link
-          :data-aos-delay="400 * (index + 1)"
+          :data-aos="fadeUp ? `fade-up` : ''"
+          :data-aos-delay="350 * (index + 1)"
           v-for="(dapp, index) in dapps"
           class="column is-full-mobile is-half-tablet is-one-fifth-desktop is-one-fifth-widescreen"
           :key="dapp.id"
@@ -17,9 +18,15 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  dapps: any[];
-}>();
+const props = withDefaults(
+  defineProps<{
+    dapps: any[];
+    fadeUp?: boolean;
+  }>(),
+  {
+    fadeUp: true,
+  }
+);
 </script>
 
 <style lang="scss">
