@@ -20,7 +20,6 @@
     "@tresjs/post-processing": "^0.7.0",
     "@vueuse/core": "^10.8.0",
     "@vueuse/nuxt": "^10.8.0",
-    "@wdns/vue-code-block": "^2.3.1",
     "aos": "^2.3.4",
     "bulma": "^0.9.4",
     "glsl-noise": "^0.0.0",
