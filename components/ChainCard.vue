@@ -57,9 +57,5 @@ const formattedMillions = new Intl.NumberFormat().format(
     transform: scale(1.04);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   }
-
-  &.recommended {
-    transform: scale(1.1);
-  }
 }
 </style>

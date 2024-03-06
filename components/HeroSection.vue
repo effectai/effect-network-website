@@ -1,63 +1,30 @@
 <template>
-  <div class="hero" id="main-hero" data-aos="fade-in">
+  <div id="hero" data-aos="fade-in">
     <div class="three-canvas">
-      <BlobScene class="w-full h-full" />
+      <slot name="canvas" class="three-canvas"> </slot>
     </div>
+
     <section class="section">
       <div class="container mt-6">
-        <div class="columns">
+        <div class="columns is-vcentered">
           <div
             class="mt-6 column is-half"
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            <h1 class="mt-6 title is-spaced">
-              <span class="is-uppercase has-text-white"
-                >Igniting The AI Revolution</span
-              >
+            <h1 v-if="title" class="mt-3 title is-spaced keep-all">
+              <span class="is-uppercase has-text-white">{{ title }}</span>
             </h1>
-            <h1 class="subtitle pr-6" data-aos="fade-up" data-aos-delay="150">
-              <span class="pr-6 has-text-white">
-                Bringing AI To the Masses, the Decentralized Scalable Workforce
-                On-Demand. Enabling the Birth of next-gen AI models.</span
-              >
+
+            <h1 v-else-if="$slots.title" class="mt-3 title is-spaced keep-all">
+              <slot name="title"> </slot>
             </h1>
-            <div
-              class="is-flex is-size-3 is-align-items-center is-primary has-text-primary is-in-front"
-              data-aos="fade-left"
-              data-aos-delay="550"
-            >
-              <a
-                target="_blank"
-                href="https://app.effect.network"
-                class="button is-secondary mr-5"
-                >Launch App</a
-              >
-              <!-- //twitter -->
-              <div>
-                <a
-                  target="_blank"
-                  href="https://twitter.com/effectaix"
-                  class="is-primary has-text-white mr-2"
-                >
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a
-                  target="_blank"
-                  href="https://twitter.com/effectaix"
-                  class="is-primary has-text-white mr-2"
-                >
-                  <i class="fab fa-discord"></i>
-                </a>
-                <a
-                  target="_blank"
-                  href="https://github.com/effectai"
-                  class="is-primary has-text-white"
-                >
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
-            </div>
+
+            <slot name="subtitle"></slot>
+            <slot name="footer"></slot>
+          </div>
+          <div class="column is-half is-vcentered">
+            <slot name="side"></slot>
           </div>
         </div>
       </div>
@@ -65,17 +32,21 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = defineProps({
+  height: {
+    type: String,
+    default: "750px",
+  },
+  title: {
+    type: String,
+  },
+});
+</script>
 
 <style lang="scss">
-#main-hero {
-  min-height: 750px;
-
-  background: #000046; /* fallback for old browsers */
-  background: linear-gradient(
-    to left,
-    #a3a5f0,
-    #000046
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+#hero {
+  background: #283048; /* fallback for old browsers */
+  background: linear-gradient(to left, #859398, #283048);
 }
 </style>

@@ -12,6 +12,7 @@
         <h4 v-if="subtitle" class="subtitle">
           {{ subtitle }}
         </h4>
+        <slot v-else-if="$slots.subtitle" name="subtitle"></slot>
       </div>
       <div class="">
         <slot></slot>

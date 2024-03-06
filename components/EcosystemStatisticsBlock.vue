@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-import dapps from "@/content/data/dapps.json";
+import { dapps } from "@/constants/dapps";
 import CountUp from "vue-countup-v3";
 
 const statistics = [

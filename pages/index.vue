@@ -1,6 +1,41 @@
 <template>
   <div>
-    <HeroSection />
+    <HeroSection
+      style="min-height: 750px"
+      :title="'Decentralizing Artificial Intelligence'"
+    >
+      <template #canvas>
+        <BlobScene />
+      </template>
+
+      <template #subtitle>
+        <p class="subtitle pr-6" data-aos="fade-up" data-aos-delay="150">
+          <span class="pr-6 has-text-white">
+            Bringing AI To the Masses, the Decentralized Scalable Workforce
+            On-Demand. Enabling the Birth of next-gen AI models.</span
+          >
+        </p>
+      </template>
+
+      <template #footer>
+        <div
+          class="is-flex is-size-3 is-align-items-center is-primary has-text-primary is-in-front"
+          data-aos="fade-left"
+          data-aos-delay="550"
+        >
+          <a
+            target="_blank"
+            href="https://app.effect.network"
+            class="button is-secondary mr-5"
+            >Launch App</a
+          >
+          <div>
+            <SocialBar :socials="[github, twitter, discord]" />
+          </div>
+        </div>
+      </template>
+    </HeroSection>
+
     <SimpleSection
       class="p-0"
       data-aos="fade-left"
@@ -10,27 +45,39 @@
       <NewsCardList :posts="featuredPosts" />
     </SimpleSection>
 
-    <SimpleSection
-      title="How to use Effect.AI?"
-      :centered="true"
-      class="has-background-white"
-    >
+    <SimpleSection :centered="true" title="Getting started" class="">
+      <template #subtitle>
+        <p class="is-size-5">
+          Founded in 2017, Effect.AI is a decentralized network for AI related
+          services. Together with our community, we are creating a platform that
+          will allow anyone in the world to contribute to AI development in a
+          100% decentralized manner.
+        </p>
+      </template>
       <HowItWorks />
     </SimpleSection>
 
     <SimpleSection
+      :centered="true"
       title="Ecosystem Spotlight"
-      subtitle="The latest updates on the projects built within the Effect.AI Ecosystem"
+      subtitle="Check out some of the hottest projects built on the Effect Network Ecosystem."
     >
       <DappCardList :dapps="featuredDapps" />
-      <div class="is-flex is-justify-content-center mt-5"></div>
+      <div class="is-flex is-justify-content-center mt-5">
+        <div class="button is-primary mx-auto has-text-centered">
+          <nuxt-link to="/marketplace" class="has-text-white"
+            >View all</nuxt-link
+          >
+        </div>
+      </div>
     </SimpleSection>
   </div>
 </template>
 
 <script setup lang="ts">
-import posts from "@/content/data/posts.json";
-import dapps from "@/content/data/dapps.json";
+import { posts } from "@/constants/posts";
+import { dapps } from "@/constants/dapps";
+import { discord, github, twitter } from "@/constants/socials";
 
 const featuredPosts = posts.filter((post) => post.featured).slice(0, 3);
 const featuredDapps = dapps.filter((dapp) => dapp.featured);

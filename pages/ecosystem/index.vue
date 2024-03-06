@@ -1,72 +1,44 @@
 <template>
   <div>
-    <div class="hero" id="ecosystem-hero" data-aos="fade-in">
-      <div class="three-canvas">
+    <HeroSection>
+      <template #canvas>
         <PlanetScene />
-      </div>
-      <section class="section">
-        <div class="container">
-          <div class="columns is-mobile pt-6">
-            <div
-              class="mt-6 column is-half-desktop is-three-thirds-tablet is-full-mobile"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <h1
-                style="font-size: 4rem; line-height: 84px"
-                class="title is-1 is-spaced has-text-white is-uppercase"
-              >
-                Be Part Of <br />
-                The AI Future
-              </h1>
-              <h1
-                class="subtitle pr-6 has-text-white"
-                data-aos="fade-up"
-                data-aos-delay="150"
-              >
-                <EcosystemStatisticsBlock class="has-text-white" />
-              </h1>
-              <div
-                class="is-flex is-size-3 is-align-items-center is-primary has-text-white is-in-front"
-                data-aos="fade-left"
-                data-aos-delay="550"
-              >
-                <a
-                  target="_blank"
-                  href="https://dao.effect.network"
-                  class="button is-accent mr-5"
-                  >Join DAO</a
-                >
-                <!-- //twitter -->
-                <div>
-                  <a
-                    target="_blank"
-                    href="https://twitter.com/effectaix"
-                    class="has-text-white mr-2"
-                  >
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a
-                    target="_blank"
-                    href="https://twitter.com/effectaix"
-                    class="has-text-white mr-2"
-                  >
-                    <i class="fab fa-discord"></i>
-                  </a>
-                  <a
-                    target="_blank"
-                    href="https://github.com/effectai"
-                    class="has-text-white"
-                  >
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+      </template>
+
+      <template #title>
+        <h1 class="has-text-white is-uppercase title">
+          Be Part of <br />
+          the AI future
+        </h1>
+      </template>
+
+      <template #subtitle>
+        <div
+          class="subtitle pr-6 has-text-white"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          <EcosystemStatisticsBlock class="has-text-white" />
         </div>
-      </section>
-    </div>
+      </template>
+
+      <template #footer>
+        <div
+          class="is-flex is-size-3 is-align-items-center is-primary has-text-white is-in-front"
+          data-aos="fade-left"
+          data-aos-delay="550"
+        >
+          <a
+            target="_blank"
+            href="https://dao.effect.network"
+            class="button is-accent mr-5"
+            >Join DAO</a
+          >
+
+          <SocialBar :socials="[reddit, discord, telegram]" />
+        </div>
+      </template>
+    </HeroSection>
 
     <SimpleSection class="has-background-light has-text-primary">
       <div class="columns is-variable is-6">
@@ -80,8 +52,11 @@
           </h2>
           <p>
             Effect Network's ecosystem is a collection of all the applications
-            running on the network. collectively managed by the DAO. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit.
+            running on the network. You may use $EFX tokens to buy a number of
+            services that boost productivity, including social media engagement,
+            translations, subtitles and graphics, to help your business grow in
+            many ways. Think of this as the $EFX candy store, which will be
+            available to you very soon!
           </p>
           <br />
           <p class="has-text-weight-bold">
@@ -123,12 +98,12 @@
 
       <SimpleSection class="section px-0">
         <div class="my-5">
-          <h2 class="title is-1 has-text-primary mt-6">$EFX Token</h2>
+          <h2 class="title is-1 has-text-primary mt-6">Powered By EFX</h2>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            EFX is the cryptographic token that fuels the Effect Network. It
+            offers developers and organizations a reliable option to build,
+            monetize and power AI solutions. EFX can be earned or bought and can
+            be used in a decentralized ecosystem of AI-related services.
           </p>
         </div>
         <ChainCardList />
@@ -139,23 +114,21 @@
           <h2 class="title is-1 has-text-primary mt-6">Communities</h2>
 
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            Come talk to us on our social channels. We are active on Reddit,
+            Discord and Telegram. We are always looking for new members to join
+            our community and would love to hear from you.
           </p>
         </div>
-        <CommunityCardList :communities="communities" />
+        <SocialCardList :socials="communities" />
       </SimpleSection>
 
       <SimpleSection class="px-0">
         <div class="my-5">
-          <h2 class="title is-1 has-text-primary mt-6">Dapps</h2>
+          <h2 class="title is-1 has-text-primary mt-6">Marketplace</h2>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
+            The Effect Network is a decentralized platform for AI services. The
+            marketplace is a place where you can find AI services and
+            applications that are built on the network.
           </p>
         </div>
         <div class="has-background-light">
@@ -164,8 +137,8 @@
 
         <div class="is-flex is-justify-content-center mt-5">
           <div class="button is-primary mx-auto has-text-centered">
-            <nuxt-link to="/dapps" class="has-text-white"
-              >View all dApps</nuxt-link
+            <nuxt-link to="/marketplace" class="has-text-white"
+              >View all</nuxt-link
             >
           </div>
         </div>
@@ -175,8 +148,9 @@
 </template>
 
 <script setup lang="ts">
-import dapps from "@/content/data/dapps.json";
-import communities from "@/content/data/communities.json";
+import { dapps } from "@/constants/dapps";
+import { communities } from "@/constants/socials";
+import { reddit, discord, telegram } from "@/constants/socials";
 
 const featuredDapps = dapps.filter((dapp) => dapp.featured);
 
@@ -192,16 +166,3 @@ const daoStats = [
   { label: "rewards", value: "$2,125.00" },
 ];
 </script>
-
-<style lang="scss">
-#ecosystem-hero {
-  height: 600px;
-
-  background: #000046; /* fallback for old browsers */
-  background: linear-gradient(
-    to left,
-    #a3a5f0,
-    #000046
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-</style>

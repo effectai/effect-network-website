@@ -1,36 +1,25 @@
 <template>
   <div>
-    <div
-      :style="`
-        background-image: url(${bg});
-        background-size: cover;
-        background-position: center;
-      `"
-      class="developer-hero is-primary hero has-navbar-fixed-top is-clipped is-relative"
-    >
-      <img src="@/assets/img/developers.svg" class="is-absolute right-0" />
-      <section class="section">
-        <div class="container">
-          <div class="columns developer-hero-content pb-6 pt-6">
-            <div class="column is-half mt-6">
-              <h2 class="title is-1 is-capitalized">
-                Unleash the power of a Decentralized Workforce.
-              </h2>
-              <p class="block is-size-5">
-                A manual for joining the Effect.AI ecosystem. By developers for
-                developers.
-              </p>
-
-              <nuxt-link target="_blank" to="https://developer.effect.network/"
-                ><button class="button is-secondary">
-                  Get Started
-                </button></nuxt-link
-              >
-            </div>
-          </div>
+    <HeroSection title="Unleash the power of a decentralized workforce">
+      <template #canvas>
+        <div class="is-flex is-justify-content-end h-full">
+          <img style="height: 100%" src="@/assets/img/developers.svg" />
         </div>
-      </section>
-    </div>
+      </template>
+
+      <template #subtitle>
+        <p class="block is-size-5 has-text-white">
+          A manual for joining the Effect.AI ecosystem. By developers for
+          developers.
+        </p>
+      </template>
+
+      <template #footer>
+        <nuxt-link target="_blank" to="https://developer.effect.network/"
+          ><button class="button is-secondary">Get Started</button></nuxt-link
+        >
+      </template>
+    </HeroSection>
 
     <SimpleSection>
       <div class="my-6">
@@ -143,6 +132,7 @@ useSeoMeta({
 <style lang="scss">
 pre {
   background-color: #374151;
+
   padding: 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;

@@ -1,26 +1,15 @@
 <template>
   <ClientOnly>
-    <TresCanvas preset="realistic" ref="canvas" :alpha="true" :antialias="true">
+    <TresCanvas preset="realistic" ref="canvas" :alpha="true">
       <TresPerspectiveCamera ref="camera" visible :position="[0, 0, 15]" />
-      <TresDirectionalLight
-        :color="new Color('#ECF0F1')"
-        :intensity="3"
-        :position="[0, 5, 5]"
-      />
-      <TresSpotLight
-        :angle="Math.PI / 4"
-        :distance="12"
-        :penumbra="0.8"
-        :decay="0.9"
-        :intensity="1"
-        :color="'#fff'"
-      />
+
+      <TresAmbientLight :intensity="1.5" />
 
       <Suspense>
         <TresMesh v-if="planetTexture" ref="planetMesh" :position="[9, -1, 0]">
-          <TresSphereGeometry :args="[9, 500]" />
+          <TresSphereGeometry :args="[9, 300]" />
           <TresMeshStandardMaterial
-            :metalness="0.3"
+            :metalness="0.5"
             :roughness="0.4"
             :map="planetTexture.map"
           ></TresMeshStandardMaterial>
@@ -31,7 +20,6 @@
 </template>
 
 <script setup lang="ts">
-import { Color, Texture } from "three";
 const canvas = ref(null);
 const camera = ref(null);
 const planetMesh = ref(null);

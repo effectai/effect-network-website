@@ -247,8 +247,7 @@ a.card {
   left:0;
 }
 
-.hero {
-  max-height:750px;
+#hero {
   position: relative;
   width:100%;
   height:100%;
@@ -273,4 +272,21 @@ a.card {
     height:100%;
   }
 }
+
+.keep-all{
+  word-break: keep-all;
+}
+
+.z-99{
+  z-index: 99;
+}
+
+.z-1{
+  z-index:1;
+}
+
+.whitespace-pre{
+  white-space: pre;
+}
+
 

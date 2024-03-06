@@ -36,7 +36,10 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .card-image {
+  display: flex;
+  justify-content: center;
   img {
+    width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
   }

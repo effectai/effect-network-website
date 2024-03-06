@@ -3,12 +3,11 @@
     <div class="container pt-2">
       <div class="columns is-multiline">
         <nuxt-link
-          data-aos="fade-up"
           :data-aos-delay="400 * (index + 1)"
           v-for="(dapp, index) in dapps"
           class="column is-full-mobile is-half-tablet is-one-fifth-desktop is-one-fifth-widescreen"
           :key="dapp.id"
-          :to="`/ecosystem/${dapp.group_name.toLowerCase()}`"
+          :to="`/marketplace/${dapp.group_name.toLowerCase()}`"
         >
           <dapp-card class="dapp-card" :dapp="dapp" />
         </nuxt-link>
