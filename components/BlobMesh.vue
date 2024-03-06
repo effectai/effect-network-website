@@ -82,7 +82,7 @@ const props = defineProps({
   },
 });
 
-const geometry = new IcosahedronGeometry(5.4, 200);
+const geometry = new IcosahedronGeometry(5, 200);
 
 const material = new MeshStandardMaterial({
   metalness: props.metalness,
