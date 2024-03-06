@@ -2,16 +2,24 @@
   <div>
     <HeroSection title="Unleash the power of a decentralized workforce">
       <template #canvas>
-        <div class="is-flex is-justify-content-end h-full">
-          <img style="height: 100%" src="@/assets/img/developers.svg" />
-        </div>
+        <div class="is-flex is-justify-content-end h-full"></div>
       </template>
 
       <template #subtitle>
         <p class="block is-size-5 has-text-white">
-          A manual for joining the Effect.AI ecosystem. By developers for
-          developers.
+          A collection of resources for joining the Effect.AI ecosystem. By
+          developers for developers.
         </p>
+      </template>
+
+      <template #side>
+        <div class="column">
+          <img
+            src="@/assets/img/developers.svg"
+            alt="Developers"
+            class="is-hidden-mobile"
+          />
+        </div>
       </template>
 
       <template #footer>
@@ -22,6 +30,79 @@
     </HeroSection>
 
     <SimpleSection>
+      <div class="columns">
+        <div class="column">
+          <h2 class="is-3 title">Get Started With The SDK</h2>
+          <p>
+            The Effect.AI SDK offers a collection of tools and libraries that
+            developers can use to build applications on top of the Effect
+            Network protocol.
+          </p>
+
+          <div class="mt-5 is-flex gap-5">
+            <a class="button is-secondary" href="" target="_blank"
+              >Documentation</a
+            >
+            <a class="button is-outlined is-secondary" href="" target="_blank"
+              >View on github</a
+            >
+          </div>
+        </div>
+        <div class="column is-offset-1">
+          <Steps>
+            <template #1>
+              <div class="">
+                <p class="my-3">Install the @effect-network SDK</p>
+                <CodeBlock
+                  :codes="[
+                    {
+                      language: 'terminal',
+                      code: 'yarn add @effect-network/sdk',
+                    },
+                  ]"
+                ></CodeBlock>
+              </div>
+            </template>
+            <template #2>
+              <p class="my-3">
+                Create a new instance of the EffectClient and connect to the
+                jungle testnet.
+              </p>
+              <CodeBlock
+                :codes="[
+                  {
+                    language: 'js',
+                    code: content,
+                  },
+                ]"
+              ></CodeBlock>
+            </template>
+          </Steps>
+        </div>
+      </div>
+    </SimpleSection>
+
+    <SimpleSection :title="'Tutorials & Guides'">
+      <a href="#" class="is-capitalized is-block"
+        >Finetuning GPT with industry specific data using Effect Force.</a
+      >
+      <a href="#" class="is-capitalized is-block">
+        Final Check of automatically generated transcriptions (Humans in the
+        loop)
+      </a>
+      <a href="#" class="is-capitalized is-block">
+        Final Check of automatically translated content (Humans in the loop)
+      </a>
+    </SimpleSection>
+
+    <SimpleSection :title="'Examples'">
+      You can start playing with Effect Force in your browser using our online
+      sandboxes:
+
+      <a href="#" class="is-capital is-block mt-5">Open on StackBlitz</a>
+    </SimpleSection>
+
+    <SimpleSection :title="'Resources'">
       <div class="my-6">
         <div class="columns">
           <div class="column is-one-third">
@@ -87,60 +168,21 @@
         </div>
       </div>
     </SimpleSection>
-
-    <SimpleSection>
-      <SDKSection />
-    </SimpleSection>
-
-    <section class="section always-light has-background-white">
-      <div class="container">
-        <div
-          class="columns has-text-left is-white is-vcentered is-variable is-8 pt-4 pb-6"
-        >
-          <div class="column is-two-fifths">
-            <h2 class="title is-2">Smart Contracts</h2>
-            <p class="block">
-              The Effect Network is an open protocol built with a technology
-              stack of smart contracts. The protocol allows anyone to build
-              decentralized applications and connect their interface to the
-              network.
-            </p>
-            <a
-              class="button is-secondary icon-left is-medium"
-              href="https://github.com/effectai/effect-network-eos"
-              target="_blank"
-            >
-              <i class="fab fa-github mx-2"></i>
-
-              View Contracts
-            </a>
-          </div>
-          <div class="column is-three-fifths">
-            <img src="@/assets/img/formula.png" />
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
 <script setup lang="ts">
-import bg from "@/assets/img/grad_devs.png";
-
 useSeoMeta({
   title: "Developers",
   description:
-    "A manual for joining the Effect.AI ecosystem. By developers for developers.",
+    "A collection of resources for joining the Effect.AI ecosystem. By developers for developers.",
 });
+
+const content = `import SDK from @effect-network/sdk;
+const client = new SDK.EffectClient('jungle');
+const campaign = await client.force.makeCampaign(campaignToIpfs, '10');`;
+
+const quickStart = "npx nuxi@latest init content-app -t content";
 </script>
 
-<style lang="scss">
-pre {
-  background-color: #374151;
-
-  padding: 1rem;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-  color: white;
-}
-</style>
+<style lang="scss"></style>

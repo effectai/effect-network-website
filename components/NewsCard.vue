@@ -1,10 +1,9 @@
 <template>
-  <div>
+  <ClientOnly>
     <a
       class="card is-hoverable h-full is-flex is-flex-direction-column"
       :href="post.href"
       target="_blank"
-      min-height="500"
     >
       <div class="card-image">
         <figure
@@ -41,7 +40,7 @@
         </a>
       </footer>
     </a>
-  </div>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">

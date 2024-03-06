@@ -22,6 +22,7 @@ export default defineNuxtConfig({
   },
   plugins: [{ src: "~/plugins/aos.client.ts", mode: "client" }],
   css: [
+    "../../../node_modules/highlight.js/styles/nord.css",
     "@fortawesome/fontawesome-free/css/all.css",
     "@/assets/scss/global.scss",
   ],
