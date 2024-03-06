@@ -5,16 +5,6 @@
 
       <TresAmbientLight :color="'#101D56'" :intensity="2" />
 
-      <!-- <TresSpotLight
-      :angle="Math.PI / 4"
-      :distance="9"
-      :penumbra="0.5"
-      :decay="0.2"
-      :intensity="10"
-      :position="[0, 10, 0]"
-      :color="'#101D56'"
-    /> -->
-
       <TresSpotLight
         :angle="Math.PI / 4"
         :distance="25"
@@ -24,16 +14,6 @@
         :position="[-13, -2, 15]"
         :color="'#ffffff'"
       />
-
-      <!-- <TresSpotLight
-        :angle="Math.PI / 4"
-        :distance="50"
-        :penumbra="0.4"
-        :decay="0.2"
-        :intensity="25"
-        :position="[-13, -2, 15]"
-        :color="'#101D56'"
-      /> -->
 
       <BlobMesh
         :color="'#ffffff'"
@@ -59,7 +39,7 @@
 </template>
 
 <script setup lang="ts">
-import { vLightHelper } from "@tresjs/cientos";
+// import { vLightHelper } from "@tresjs/cientos";
 import { EquirectangularReflectionMapping } from "three";
 import { useControls, TresLeches } from "@tresjs/leches";
 import "@tresjs/leches/styles";

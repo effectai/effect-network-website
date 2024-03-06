@@ -1,5 +1,6 @@
 <template>
   <div>
+    <TresLeches />
     <BlobScene />
   </div>
 </template>

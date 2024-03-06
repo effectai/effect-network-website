@@ -40,10 +40,16 @@
           </p>
 
           <div class="mt-5 is-flex gap-5">
-            <a class="button is-secondary" href="" target="_blank"
+            <a
+              class="button is-secondary"
+              href="https://developer.effect.network/quickstart/"
+              target="_blank"
               >Documentation</a
             >
-            <a class="button is-outlined is-secondary" href="" target="_blank"
+            <a
+              class="button is-outlined is-secondary"
+              href="https://github.com/effectai/effect-js"
+              target="_blank"
               >View on github</a
             >
           </div>
@@ -57,7 +63,7 @@
                   :codes="[
                     {
                       language: 'terminal',
-                      code: 'yarn add @effect-network/sdk',
+                      code: 'yarn add @effectai/effect-js',
                     },
                   ]"
                 ></CodeBlock>
@@ -87,11 +93,10 @@
         >Finetuning GPT with industry specific data using Effect Force.</a
       >
       <a href="#" class="is-capitalized is-block">
-        Final Check of automatically generated transcriptions (Humans in the
-        loop)
+        Final Check of AI generated transcriptions (Humans in the loop)
       </a>
       <a href="#" class="is-capitalized is-block">
-        Final Check of automatically translated content (Humans in the loop)
+        Final Check of AI generated translated content (Humans in the loop)
       </a>
     </SimpleSection>
 
@@ -178,7 +183,7 @@ useSeoMeta({
     "A collection of resources for joining the Effect.AI ecosystem. By developers for developers.",
 });
 
-const content = `import SDK from @effect-network/sdk;
+const content = `import SDK from @effectai/effect-js;
 const client = new SDK.EffectClient('jungle');
 const campaign = await client.force.makeCampaign(campaignToIpfs, '10');`;
 
