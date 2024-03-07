@@ -1,6 +1,6 @@
 <template>
   <div class="columns is-multiline">
-    <div class="column" v-for="tutorial in tutorials">
+    <div class="column is-section-faded" v-for="tutorial in tutorials">
       <TutorialCard :tutorial="tutorial" />
     </div>
   </div>
@@ -17,4 +17,17 @@ const props = defineProps({
 });
 </script>
 
-<style></style>
+<style lang="scss">
+.is-section-faded {
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(255, 255, 255, 0.6));
+  }
+}
+</style>

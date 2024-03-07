@@ -82,7 +82,11 @@
       </div>
     </SimpleSection>
 
-    <SimpleSection id="tutorials" :title="'Tutorials & Guides'">
+    <SimpleSection id="tutorials">
+      <div class="is-flex has-gap-1 is-align-items-center mb-5">
+        <h2 class="title is-2 m-0">Tutorials & Guides</h2>
+        <div class="tag is-warning">coming soon</div>
+      </div>
       <TutorialCardList
         v-if="tutorials && tutorials.length > 0"
         :tutorials="tutorials"

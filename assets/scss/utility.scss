@@ -43,3 +43,7 @@
 .is-dimmed {
   opacity: 0.5;
 }
+
+.is-faded {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}

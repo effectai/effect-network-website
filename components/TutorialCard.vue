@@ -1,5 +1,8 @@
 <template>
-  <div class="tutorial-card card" :class="{ disabled: tutorial.disabled }">
+  <div
+    class="tutorial-card card is-fullheight"
+    :class="{ disabled: tutorial.disabled }"
+  >
     <div class="card-title px-4">
       <div class="is-flex is-align-items-center has-gap-">
         <img class="is-64x64 image" src="@/assets/img/logo.svg" />
