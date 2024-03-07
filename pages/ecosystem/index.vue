@@ -13,11 +13,7 @@
       </template>
 
       <template #subtitle>
-        <div
-          class="subtitle pr-6 has-text-black"
-          data-aos="fade-up"
-          data-aos-delay="150"
-        >
+        <div class="subtitle" data-aos="fade-up" data-aos-delay="150">
           <EcosystemStatisticsBlock class="has-text-black" />
         </div>
       </template>
