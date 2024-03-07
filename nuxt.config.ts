@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@nuxt/content", "@tresjs/nuxt", "@vueuse/nuxt"],
+  content: {},
   build: {
     transpile: ["vue-countup-v3"],
   },

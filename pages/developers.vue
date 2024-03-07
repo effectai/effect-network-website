@@ -2,7 +2,7 @@
   <div>
     <HeroSection title="Unleash the power of a decentralized workforce">
       <template #canvas>
-        <div class="is-flex is-justify-content-end h-full"></div>
+        <div class="is-flex is-justify-content-end is-fullheight"></div>
       </template>
 
       <template #subtitle>
@@ -13,13 +13,7 @@
       </template>
 
       <template #side>
-        <div class="column">
-          <img
-            src="@/assets/img/developers.svg"
-            alt="Developers"
-            class="is-hidden-mobile"
-          />
-        </div>
+        <div class="column"></div>
       </template>
 
       <template #footer>
@@ -39,7 +33,7 @@
             Network protocol.
           </p>
 
-          <div class="mt-5 is-flex gap-5">
+          <div class="mt-5 is-flex has-gap-1">
             <a
               class="button is-secondary"
               href="https://developer.effect.network/quickstart/"
@@ -88,16 +82,11 @@
       </div>
     </SimpleSection>
 
-    <SimpleSection :title="'Tutorials & Guides'">
-      <a href="#" class="is-capitalized is-block"
-        >Finetuning GPT with industry specific data using Effect Force.</a
-      >
-      <a href="#" class="is-capitalized is-block">
-        Final Check of AI generated transcriptions (Humans in the loop)
-      </a>
-      <a href="#" class="is-capitalized is-block">
-        Final Check of AI generated translated content (Humans in the loop)
-      </a>
+    <SimpleSection id="tutorials" :title="'Tutorials & Guides'">
+      <TutorialCardList
+        v-if="tutorials && tutorials.length > 0"
+        :tutorials="tutorials"
+      />
     </SimpleSection>
 
     <SimpleSection :title="'Examples'">
@@ -177,17 +166,21 @@
 </template>
 
 <script setup lang="ts">
+import type { Tutorial } from "~/types/tutorials";
+
 useSeoMeta({
   title: "Developers",
   description:
     "A collection of resources for joining the Effect.AI ecosystem. By developers for developers.",
 });
 
-const content = `import SDK from @effectai/effect-js;
-const client = new SDK.EffectClient('jungle');
-const campaign = await client.force.makeCampaign(campaignToIpfs, '10');`;
+const content = `import { EffectClient } from '@effectai/effect-js';
+const client = new EffectClient('jungle');
+client.connect();`;
 
-const quickStart = "npx nuxi@latest init content-app -t content";
+const { data: tutorials } = await useAsyncData("tutorials", async () =>
+  queryContent<Tutorial>(`/tutorials`).find()
+);
 </script>
 
 <style lang="scss"></style>

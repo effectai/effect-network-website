@@ -7,7 +7,7 @@
         data-aos="fade-up"
         :data-aos-delay="300 + i * 250"
       >
-        <NewsCard class="news-card h-full" :post="post" />
+        <NewsCard class="news-card is-fullheight" :post="post" />
       </div>
     </div>
   </div>

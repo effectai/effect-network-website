@@ -42,6 +42,30 @@ const props = defineProps({
 
 <style lang="scss">
 #hero {
-  background: #e5e7eb;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .section,
+  .container,
+  .columns {
+    @include mobile {
+      height: 100%;
+    }
+  }
+  @include desktop {
+    .title {
+      font-size: 54px;
+    }
+  }
+  .three-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  background: #f5f5f5;
 }
 </style>

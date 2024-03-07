@@ -1,5 +1,5 @@
 <template>
-  <div v-if="dapp" class="is-shadowless h-full p-4">
+  <div v-if="dapp" class="is-shadowless is-fullheight p-4">
     <div class="card-image mx-auto">
       <img class="" :src="useGetImageUrl(dapp.image_url)" />
     </div>

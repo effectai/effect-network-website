@@ -2,7 +2,7 @@
   <div>
     <ClientOnly>
       <a
-        class="card is-hoverable h-full is-flex is-flex-direction-column"
+        class="card is-hoverable is-fullheight is-flex is-flex-direction-column"
         :href="post.href"
         target="_blank"
       >
@@ -14,7 +14,7 @@
         </div>
         <div class="card-content">
           <div
-            class="is-flex is-justify-content-space-between w-full py-2 has-text-primary"
+            class="is-flex is-justify-content-space-between has-fullwidth py-2 has-text-primary"
           >
             <span> {{ post.date }}</span>
 
@@ -61,4 +61,8 @@ const postType = computed(() =>
 );
 </script>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+figure {
+  background-size: cover;
+}
+</style>

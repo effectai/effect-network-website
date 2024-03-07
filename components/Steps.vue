@@ -3,7 +3,7 @@
     <div class="column is-narrow">
       <div
         style="top: -50px"
-        class="is-flex h-full is-flex-direction-column is-justify-content-space-between is-relative"
+        class="is-flex is-fullheight is-flex-direction-column is-justify-content-space-between is-relative"
       >
         <svg
           data-v-08d29902=""
@@ -12,7 +12,7 @@
           viewBox="0 0 2 295"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="is-absolute h-full z-[-1]"
+          class="is-absolute is-fullheight"
         >
           <path
             data-v-08d29902=""

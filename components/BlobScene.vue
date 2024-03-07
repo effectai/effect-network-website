@@ -33,6 +33,7 @@
         :speed="speed.value"
         :gooPoleAmount="gooPoleAmount.value"
         :flatShading="flatShading.value"
+        :liveUpdate="liveUpdate"
       />
     </TresCanvas>
   </div>
@@ -43,6 +44,13 @@
 import { EquirectangularReflectionMapping } from "three";
 import { useControls, TresLeches } from "@tresjs/leches";
 import "@tresjs/leches/styles";
+
+const props = defineProps({
+  liveUpdate: {
+    type: Boolean,
+    default: false,
+  },
+});
 
 const {
   frequency,

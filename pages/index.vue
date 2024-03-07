@@ -30,7 +30,10 @@
             >Launch App</a
           >
           <div>
-            <SocialBar :socials="[github, twitter, discord]" />
+            <SocialBar
+              class="has-text-primary"
+              :socials="[github, twitter, discord]"
+            />
           </div>
         </div>
       </template>

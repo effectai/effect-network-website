@@ -14,7 +14,7 @@
 
       <template #subtitle>
         <div class="subtitle" data-aos="fade-up" data-aos-delay="150">
-          <EcosystemStatisticsBlock class="has-text-black" />
+          <EcosystemStatisticsBlock class="has-text-primary" />
         </div>
       </template>
 
@@ -23,16 +23,7 @@
           class="is-flex is-size-3 is-align-items-center is-primary has-text-white is-in-front"
           data-aos="fade-left"
           data-aos-delay="550"
-        >
-          <a
-            target="_blank"
-            href="https://dao.effect.network"
-            class="button is-primary mr-5"
-            >Join DAO</a
-          >
-
-          <SocialBar :socials="[reddit, discord, telegram]" />
-        </div>
+        ></div>
       </template>
     </HeroSection>
 

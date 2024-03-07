@@ -1,10 +1,11 @@
 <template>
-  <div>
+  <div class="has-text-primary">
     <a
       v-for="social in socials"
       target="_blank"
       :href="social.link"
-      class="is-primary has-text-primary mr-2"
+      :class="$attrs.class"
+      class="mr-2"
     >
       <i :class="social.faClass"></i>
     </a>

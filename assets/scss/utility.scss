@@ -1,0 +1,45 @@
+.is-horizontal-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.has-text-shadow {
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.is-in-front {
+  z-index: 100;
+}
+
+.is-absolute {
+  position: absolute;
+}
+
+.is-relative {
+  position: relative;
+}
+
+.is-fullwidth {
+  width: 100%;
+}
+
+.is-fullheight {
+  height: 100%;
+}
+
+.has-gap-1 {
+  gap: 1rem;
+}
+
+.is-sticky {
+  position: sticky;
+  top: 75px;
+}
+
+.is-self-center {
+  align-self: center;
+}
+
+.is-dimmed {
+  opacity: 0.5;
+}

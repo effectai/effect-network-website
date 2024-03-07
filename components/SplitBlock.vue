@@ -1,6 +1,6 @@
 <template>
   <div class="column is-6 bg-hover p-3">
-    <div class="columns h-full is-mobile is-gapless">
+    <div class="columns is-fullheight is-mobile is-gapless">
       <div
         class="column is-offset-2 is-8-widescreen is-10-desktop is-11-tablet h-full"
       >

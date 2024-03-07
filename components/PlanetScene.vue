@@ -11,7 +11,7 @@
 
       <Suspense>
         <TresGroup
-          :position="[6, 0, 0]"
+          :position="[8, 0, 0]"
           ref="planet"
           v-if="planetTexture && cloudTexture"
         >

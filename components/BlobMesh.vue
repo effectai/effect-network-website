@@ -80,6 +80,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  liveUpdate: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const geometry = new IcosahedronGeometry(4, 200);
@@ -164,23 +168,23 @@ const { onLoop } = useRenderLoop();
 
 onLoop(({ delta, elapsed }) => {
   //update uniforms
-  material.needsUpdate = true;
+  if (props.liveUpdate) {
+    material.needsUpdate = true;
 
-  uniforms.frequency.value = props.frequency;
-  uniforms.distort.value = props.distort;
-  uniforms.surfaceDistort.value = props.surfaceDistort;
-  uniforms.surfaceFrequency.value = props.surfaceFrequency;
-  uniforms.surfacePoleAmount.value = props.surfacePoleAmount;
-  uniforms.numberOfWaves.value = props.numberOfWaves;
-  uniforms.surfaceSpeed.value = props.surfaceSpeed;
-  uniforms.gooPoleAmount.value = props.gooPoleAmount;
-  uniforms.speed.value = props.speed;
+    uniforms.frequency.value = props.frequency;
+    uniforms.distort.value = props.distort;
+    uniforms.surfaceDistort.value = props.surfaceDistort;
+    uniforms.surfaceFrequency.value = props.surfaceFrequency;
+    uniforms.surfacePoleAmount.value = props.surfacePoleAmount;
+    uniforms.numberOfWaves.value = props.numberOfWaves;
+    uniforms.surfaceSpeed.value = props.surfaceSpeed;
+    uniforms.gooPoleAmount.value = props.gooPoleAmount;
+    uniforms.speed.value = props.speed;
 
-  //update metalness
-  material.metalness = props.metalness;
-  material.roughness = props.roughness;
-  material.flatShading = props.flatShading;
-  material.needsUpdate = true;
+    material.metalness = props.metalness;
+    material.roughness = props.roughness;
+    material.flatShading = props.flatShading;
+  }
 
   uniforms.time.value = elapsed * uniforms.speed.value;
   uniforms.surfaceTime.value = elapsed * uniforms.surfaceSpeed.value;
