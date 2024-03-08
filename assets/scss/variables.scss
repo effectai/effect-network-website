@@ -20,7 +20,13 @@ $accent: #ffae0d;
 $accent-invert: findColorInvert($accent) !default;
 $yellow-light: #fffdf7;
 
+$smoke: #f5f5f5;
+
 $custom-colors: (
+  "smoke": (
+    $smoke,
+    findColorInvert($smoke),
+  ),
   "secondary": (
     $secondary,
     $secondary-invert,
@@ -90,3 +96,6 @@ $dark-mode-background: #101d56;
 $section-padding-desktop: 5rem 1.5rem;
 
 @import "../../node_modules/bulma/sass/utilities/mixins";
+
+// Bulma content
+$content-block-margin-bottom: 2.1rem;

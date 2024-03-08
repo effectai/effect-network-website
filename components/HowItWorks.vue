@@ -13,10 +13,10 @@
             style="height: 90px"
             class="hide-on-hover mx-auto"
           />
-          <h1 class="title is-1">Complete Tasks</h1>
-          <h1 class="title is-4">
+          <h2 class="title is-2">Complete Tasks</h2>
+          <h2 class="title is-4">
             Complete tasks and earn EFX directly to your wallet.
-          </h1>
+          </h2>
           <p class="has-text-aligned block">
             Effect.AI is the platform for the Future-of-Work. You can work from
             anywhere, at any time, from any device. Simply create an Effect
@@ -44,10 +44,10 @@
             style="height: 90px"
             class="hide-on-hover mx-auto"
           />
-          <h1 class="title is-1">Create Tasks</h1>
-          <h1 class="title is-4">
+          <h2 class="title is-2">Create Tasks</h2>
+          <h2 class="title is-4">
             Access a global, on-demand, 24x7 scalable workforce
-          </h1>
+          </h2>
           <p class="has-text-aligned block">
             Tap into a diverse workforce of over 10,000 people who complete
             tasks for you. Choose one of the default task templates to get

@@ -1,5 +1,5 @@
 <template>
-  <div id="hero" data-aos="fade-in">
+  <div id="hero" data-aos="fade-in" class="has-background-smoke">
     <div class="three-canvas">
       <slot name="canvas" class="three-canvas"> </slot>
     </div>
@@ -65,7 +65,5 @@ const props = defineProps({
     width: 100%;
     height: 100%;
   }
-
-  background: #f5f5f5;
 }
 </style>
