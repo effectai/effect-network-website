@@ -80,7 +80,6 @@
 import { posts } from "@/constants/posts";
 import { dapps } from "@/constants/dapps";
 import { discord, github, twitter } from "@/constants/socials";
-import { useSequence } from "~/composables/useAnimation";
 
 const featuredPosts = posts.filter((post) => post.featured).slice(0, 3);
 const featuredDapps = dapps.filter((dapp) => dapp.featured);

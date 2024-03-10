@@ -19,19 +19,19 @@
         <TresGroup
           :position="[8, 0, 0]"
           ref="planet"
-          v-if="envMap && normalMap && gradient"
+          v-if="envMap && normalMap && gradient && specularMap"
         >
           <TresMesh ref="planetMesh">
-            <TresIcosahedronGeometry :args="[8, 20]" />
+            <TresIcosahedronGeometry :args="[8, 50]" />
             <TresMeshStandardMaterial
               :metalness="0.9"
-              :roughness="0.2"
-              :map="gradient"
-              :envMap="envMap"
+              :roughness="0.1"
+              :map="specularMap"
+              :color="0xf5f5f5"
+              :alphaMap="gradient"
               :normalMap="normalMap"
-              :bumpMap="specularMap"
-              :bumpScale="20"
-              :envMapIntensity="0.7"
+              :envMap="envMap"
+              :envMapIntensity="0.3"
               :flatShading="true"
             ></TresMeshStandardMaterial>
           </TresMesh>
@@ -60,7 +60,7 @@ onMounted(async () => {
 
   normalMap.value = await useTexture(["/textures/earth-normalmap.jpg"]);
 
-  envMap.value = await useTexture(["space-env.png"]);
+  envMap.value = await useTexture(["envmap.jpg"]);
   envMap.value.mapping = EquirectangularReflectionMapping;
 
   specularMap.value = await useTexture(["/textures/4k_earth_specular.jpg"]);
