@@ -129,3 +129,26 @@ float f(vec3 point) {
 vec3 orthogonal(vec3 v) {
     return normalize(abs(v.x) > abs(v.z) ? vec3(-v.y, v.x, 0.0) : vec3(0.0, -v.z, v.y));
 }
+
+vec3 calculateBarycentric(vec2 point, vec2 v0, vec2 v1, vec2 v2) {
+    vec2 v0v1 = v1 - v0;
+    vec2 v0v2 = v2 - v0;
+    vec2 v0p = point - v0;
+
+    vec2 v0v0 = v0 - v0;
+    
+    float dot00 = dot(v0v0, v0v0);
+    float dot01 = dot(v0v0, v0v1);
+    float dot02 = dot(v0v0, v0v2);
+    float dot11 = dot(v0v1, v0v1);
+    float dot12 = dot(v0v1, v0v2);
+
+    float denom = dot00 * dot11 - dot01 * dot01;
+    
+    vec3 barycentric;
+    barycentric.y = (dot11 * dot02 - dot01 * dot12) / denom;
+    barycentric.z = (dot00 * dot12 - dot01 * dot02) / denom;
+    barycentric.x = 1.0 - barycentric.y - barycentric.z;
+
+    return barycentric;
+}

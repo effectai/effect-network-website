@@ -7,7 +7,6 @@
       <template #canvas>
         <BlobScene />
       </template>
-
       <template #subtitle>
         <p class="subtitle pr-6" data-aos="fade-up" data-aos-delay="150">
           <span class="pr-6 has-text-black">
@@ -81,6 +80,7 @@
 import { posts } from "@/constants/posts";
 import { dapps } from "@/constants/dapps";
 import { discord, github, twitter } from "@/constants/socials";
+import { useSequence } from "~/composables/useAnimation";
 
 const featuredPosts = posts.filter((post) => post.featured).slice(0, 3);
 const featuredDapps = dapps.filter((dapp) => dapp.featured);
@@ -98,6 +98,9 @@ useHead({
     { src: "https://files.coinmarketcap.com/static/widget/currency.js" },
   ],
 });
+
+//use layout
+definePageMeta({});
 </script>
 
 <style lang="scss">

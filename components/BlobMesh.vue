@@ -120,8 +120,6 @@ material.onBeforeCompile = (shader) => {
   shader.uniforms.time = uniforms.time;
   shader.uniforms.uMousePosition = uniforms.uMousePosition;
 
-  shader.uniforms.metalness;
-
   shader.uniforms.distort = uniforms.distort;
   shader.uniforms.frequency = uniforms.frequency;
   shader.uniforms.speed = uniforms.speed;
@@ -151,7 +149,7 @@ material.onBeforeCompile = (shader) => {
     `transformed = displacedPosition;`
   );
 
-  // https://codepen.io/marco_fugaro/pen/xxZWPWJ?editors=1010
+  //fix normals: https://codepen.io/marco_fugaro/pen/xxZWPWJ?editors=1010
   shader.vertexShader = shader.vertexShader.replace(
     "#include <defaultnormal_vertex>",
     ShaderChunk.defaultnormal_vertex.replace(

@@ -1,7 +1,7 @@
 <template>
   <div style="height: 750px">
     <TresCanvas preset="realistic" :alpha="true">
-      <TresPerspectiveCamera ref="camera" visible :position="[-6, 0, 15]" />
+      <TresPerspectiveCamera ref="camera" visible :position="[-6, -1, 15]" />
 
       <TresAmbientLight :color="'#101D56'" :intensity="2" />
 
@@ -71,7 +71,7 @@ const {
   flatShading,
 } = useControls({
   metalness: {
-    value: 0.7,
+    value: 0.8,
     min: 0.1,
     max: 1,
     step: 0.1,
@@ -83,7 +83,7 @@ const {
     step: 0.1,
   },
   speed: {
-    value: 0.3,
+    value: 0.2,
     min: 0.1,
     max: 5,
     step: 0.1,
@@ -101,7 +101,7 @@ const {
     step: 0.1,
   },
   distort: {
-    value: 0.4,
+    value: 0.3,
     min: 0.1,
     max: 1,
     step: 0.01,
@@ -119,19 +119,19 @@ const {
     step: 0.1,
   },
   surfaceSpeed: {
-    value: 1,
+    value: 0.8,
     min: 0.1,
     max: 5,
     step: 0.1,
   },
   numberOfWaves: {
-    value: 0,
+    value: 1,
     min: 1,
     max: 20,
     step: 1,
   },
   surfacePoleAmount: {
-    value: 0,
+    value: 0.3,
     min: 0.1,
     max: 1,
     step: 0.1,
@@ -143,7 +143,7 @@ const texture = ref<any | null>(null);
 const envMap = ref<any | null>(null);
 
 onMounted(async () => {
-  texture.value = await useTexture(["gradients/gradient-img.png"]);
+  texture.value = await useTexture(["gradients/zinc.jpg"]);
   envMap.value = await useTexture(["envmap.jpg"]);
 
   //make envMap equirectangular

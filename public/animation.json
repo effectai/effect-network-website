@@ -1,0 +1,401 @@
+{
+  "sheetsById": {
+    "Animated scene": {
+      "staticOverrides": {
+        "byObject": {
+          "Blob": {
+            "distort": 0.41329113924050476,
+            "normalScale": 0.1
+          },
+          "Image": {
+            "normalTexture": {
+              "type": "image",
+              "id": "earth-normalmap.jpg"
+            }
+          },
+          "Displacement": {
+            "frequency": 0.7265822784810133,
+            "distort": 0.1,
+            "normalScale": 0.949367088607595,
+            "rotation": {
+              "x": -0.4556511420943341,
+              "y": -1.0631859982201126,
+              "z": -0.8353604271729456
+            },
+            "speed": 0,
+            "metalness": 0.6202531645569626,
+            "roughness": 0.3797468354430381
+          },
+          "Textures": {
+            "texture": {
+              "type": "image",
+              "id": "zinc.jpg"
+            }
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 2,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "Blob": {
+            "trackData": {
+              "cJji0phP95": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Blob:[\"normalTexture\"]",
+                "keyframes": [
+                  {
+                    "id": "Bd8_DB673b",
+                    "position": 2.067,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": {
+                      "type": "image",
+                      "id": "earth-normalmap.jpg"
+                    }
+                  },
+                  {
+                    "id": "0f0JgeLpD3",
+                    "position": 2.933,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": {
+                      "type": "image",
+                      "id": "earth-normalmap.jpg"
+                    }
+                  }
+                ]
+              },
+              "uuTmi6D2E-": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Blob:[\"normalScale\"]",
+                "keyframes": [
+                  {
+                    "id": "CcqkwzB1eM",
+                    "position": 0.1,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "VG_DJPCDgg",
+                    "position": 1.667,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              },
+              "_VVHeQI1nK": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Blob:[\"distort\"]",
+                "keyframes": [
+                  {
+                    "id": "k2WvHwXelQ",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.3
+                  },
+                  {
+                    "id": "0pqldolg9N",
+                    "position": 2.033,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.01
+                  },
+                  {
+                    "id": "QKpvuytBm_",
+                    "position": 2.067,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.01
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"normalTexture\"]": "cJji0phP95",
+              "[\"normalScale\"]": "uuTmi6D2E-",
+              "[\"distort\"]": "_VVHeQI1nK"
+            }
+          },
+          "Displacement": {
+            "trackData": {
+              "5Vx8oZp1x3": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Displacement:[\"distort\"]",
+                "keyframes": [
+                  {
+                    "id": "MnMhcUSTvD",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0.3
+                  },
+                  {
+                    "id": "RHz1ozcoK4",
+                    "position": 2,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  }
+                ]
+              },
+              "4FLYifgzkU": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Displacement:[\"frequency\"]",
+                "keyframes": [
+                  {
+                    "id": "qfk_QISapv",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 2.9
+                  },
+                  {
+                    "id": "sQCS6wZTzx",
+                    "position": 2,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              },
+              "akLvUW584S": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Displacement:[\"normalScale\"]",
+                "keyframes": [
+                  {
+                    "id": "zjhu0S_4WC",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.55,
+                      0.055
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "KIzSUOjUTl",
+                    "position": 2,
+                    "connectedRight": true,
+                    "handles": [
+                      0.675,
+                      0.19,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 1
+                  }
+                ]
+              },
+              "sqkbIZdwZb": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Displacement:[\"rotation\",\"x\"]",
+                "keyframes": []
+              },
+              "ulKynsiMvZ": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Displacement:[\"rotation\",\"y\"]",
+                "keyframes": []
+              },
+              "WnVFTLqBqs": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Displacement:[\"rotation\",\"z\"]",
+                "keyframes": []
+              },
+              "HAEPVuZOec": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Displacement:[\"speed\"]",
+                "keyframes": []
+              },
+              "jUQPO7zVXk": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Displacement:[\"surfaceSpeed\"]",
+                "keyframes": [
+                  {
+                    "id": "T4sO4sjHA5",
+                    "position": 1.967,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  }
+                ]
+              },
+              "H1rWimwgMN": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Displacement:[\"surfaceDistort\"]",
+                "keyframes": [
+                  {
+                    "id": "KhvKUl3XPD",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 1.5
+                  },
+                  {
+                    "id": "wIs6o3UdCR",
+                    "position": 1.967,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"distort\"]": "5Vx8oZp1x3",
+              "[\"frequency\"]": "4FLYifgzkU",
+              "[\"normalScale\"]": "akLvUW584S",
+              "[\"rotation\",\"x\"]": "sqkbIZdwZb",
+              "[\"rotation\",\"y\"]": "ulKynsiMvZ",
+              "[\"rotation\",\"z\"]": "WnVFTLqBqs",
+              "[\"speed\"]": "HAEPVuZOec",
+              "[\"surfaceSpeed\"]": "jUQPO7zVXk",
+              "[\"surfaceDistort\"]": "H1rWimwgMN"
+            }
+          },
+          "Textures": {
+            "trackData": {
+              "DnxqpMqK9a": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "Textures:[\"normalTexture\"]",
+                "keyframes": [
+                  {
+                    "id": "NsGr6bznMX",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": {
+                      "type": "image"
+                    }
+                  },
+                  {
+                    "id": "H903cUMuH9",
+                    "position": 0.467,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": {
+                      "type": "image",
+                      "id": "earth-normalmap.jpg"
+                    }
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"normalTexture\"]": "DnxqpMqK9a"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitionVersion": "0.4.0",
+  "revisionHistory": [
+    "GM2Wq5ptTmwJwH1a",
+    "7MFQUUnlo3HYVWew"
+  ]
+}

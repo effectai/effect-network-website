@@ -2,7 +2,7 @@
   <div>
     <HeroSection title="Unleash the power of a decentralized workforce">
       <template #canvas>
-        <div class="is-flex is-justify-content-end is-fullheight"></div>
+        <BrainScene />
       </template>
 
       <template #subtitle>

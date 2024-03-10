@@ -1,7 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import glsl from "vite-plugin-glsl";
+import { templateCompilerOptions } from "@tresjs/core";
+
 export default defineNuxtConfig({
+  ssr: false,
   app: {
+    pageTransition: { name: "page", mode: "out-in" },
     head: {
       titleTemplate: "%s - Effect Network",
       title: "Effect Network",
@@ -23,7 +27,6 @@ export default defineNuxtConfig({
   },
   plugins: [{ src: "~/plugins/aos.client.ts", mode: "client" }],
   css: [
-    "../../../node_modules/highlight.js/styles/nord.css",
     "@fortawesome/fontawesome-free/css/all.css",
     "@/assets/scss/global.scss",
   ],

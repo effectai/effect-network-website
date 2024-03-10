@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeroSection>
+    <HeroSection style="z-index: 0">
       <template #canvas>
         <PlanetScene />
       </template>
@@ -146,9 +146,19 @@ useSeoMeta({
     "Effect Network's ecosystem is a collection of all the applications running on the network.",
 });
 
-const daoStats = [
-  { label: "status", value: "Voting" },
-  { label: "cycle", value: "83" },
-  { label: "rewards", value: "$2,125.00" },
-];
+const { useDaoStatistics, useEfxPrice } = useStatistics();
+const { data: price } = useEfxPrice();
+
+const { currentCycle, feePoolBalance } = await useDaoStatistics();
+
+const daoStats = ref([
+  { label: "status", value: "voting" },
+  { label: "cycle", value: currentCycle },
+  {
+    label: "rewards",
+    value: `$${new Intl.NumberFormat().format(
+      (feePoolBalance.value * price.value) / 1000
+    )}`,
+  },
+]);
 </script>
