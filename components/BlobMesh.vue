@@ -86,7 +86,7 @@ const props = defineProps({
   },
 });
 
-const geometry = new IcosahedronGeometry(4, 200);
+const geometry = new IcosahedronGeometry(4, 150);
 
 const material = new MeshStandardMaterial({
   metalness: props.metalness,
@@ -146,17 +146,18 @@ material.onBeforeCompile = (shader) => {
 
   shader.vertexShader = shader.vertexShader.replace(
     "#include <displacementmap_vertex>",
-    `transformed = displacedPosition;`
+    `#include <displacementmap_vertex>
+    transformed = displacedPosition;`
   );
 
   //fix normals: https://codepen.io/marco_fugaro/pen/xxZWPWJ?editors=1010
-  shader.vertexShader = shader.vertexShader.replace(
-    "#include <defaultnormal_vertex>",
-    ShaderChunk.defaultnormal_vertex.replace(
-      "vec3 transformedNormal = objectNormal;",
-      `vec3 transformedNormal = displacedNormal;`
-    )
-  );
+  // shader.vertexShader = shader.vertexShader.replace(
+  //   "#include <defaultnormal_vertex>",
+  //   ShaderChunk.defaultnormal_vertex.replace(
+  //     "vec3 transformedNormal = objectNormal;",
+  //     `vec3 transformedNormal = displacedNormal;`
+  //   )
+  // );
 };
 
 const meshWithMaterial = new Mesh(geometry, material);

@@ -1,54 +1,16 @@
-import { Material, ShaderChunk } from "three";
+import {
+  Material,
+  ShaderChunk,
+  IcosahedronGeometry,
+  MeshStandardMaterial,
+  Mesh,
+} from "three";
 
 import displacement from "@/glsl/shaders/displacement.glsl";
 import headers from "@/glsl/shaders/headers.glsl";
 
-export const useDisplacement = (material: Material, uniforms: any) => {
-  material.onBeforeCompile = (shader: any) => {
-    shader.uniforms.time = uniforms.time;
-
-    shader.uniforms.distort = uniforms.distort;
-    shader.uniforms.frequency = uniforms.frequency;
-    shader.uniforms.speed = uniforms.speed;
-    shader.uniforms.surfaceDistort = uniforms.surfaceDistort;
-    shader.uniforms.surfaceFrequency = uniforms.surfaceFrequency;
-    shader.uniforms.surfaceTime = uniforms.surfaceTime;
-    shader.uniforms.surfaceSpeed = uniforms.surfaceSpeed;
-    shader.uniforms.numberOfWaves = uniforms.numberOfWaves;
-    shader.uniforms.surfacePoleAmount = uniforms.surfacePoleAmount;
-    shader.uniforms.gooPoleAmount = uniforms.gooPoleAmount;
-
-    shader.vertexShader = `
-      ${headers}
-      ${shader.vertexShader}
-    `;
-
-    shader.vertexShader = shader.vertexShader.replace(
-      "void main() {",
-      `
-        void main() {
-          ${displacement}
-      `
-    );
-
-    shader.vertexShader = shader.vertexShader.replace(
-      "#include <displacementmap_vertex>",
-      `transformed = displacedPosition;`
-    );
-
-    //fix normals: https://codepen.io/marco_fugaro/pen/xxZWPWJ?editors=1010
-    shader.vertexShader = shader.vertexShader.replace(
-      "#include <defaultnormal_vertex>",
-      ShaderChunk.defaultnormal_vertex.replace(
-        "vec3 transformedNormal = objectNormal;",
-        `vec3 transformedNormal = displacedNormal;`
-      )
-    );
-  };
-};
-
-export const useThreeControls = () => {
-  return useControls({
+export const useDisplacement = (material: Material) => {
+  const controls = useControls({
     metalness: {
       value: 0.8,
       min: 0,
@@ -111,4 +73,109 @@ export const useThreeControls = () => {
       max: 1,
     },
   });
+
+  const uniforms = {
+    time: { value: 0.1 },
+    surfaceTime: { value: 0.1 },
+
+    morphRatio: { value: controls.morphRatio.value.value },
+
+    distort: { value: controls.distort.value.value },
+    frequency: { value: controls.frequency.value.value },
+    speed: { value: controls.speed.value.value },
+
+    surfaceDistort: { value: controls.surfaceDistort.value.value },
+    surfaceFrequency: { value: controls.surfaceFrequency.value.value },
+    surfaceSpeed: { value: controls.surfaceSpeed.value.value },
+    numberOfWaves: { value: controls.numberOfWaves.value.value },
+    surfacePoleAmount: { value: controls.surfacePoleAmount.value.value },
+    gooPoleAmount: { value: controls.gooPoleAmount.value.value },
+  };
+
+  const updateUniforms = (elapsed: number) => {
+    uniforms.time.value = elapsed * uniforms.speed.value;
+    uniforms.surfaceTime.value = elapsed * uniforms.surfaceSpeed.value;
+
+    uniforms.distort.value = controls.distort.value.value;
+    uniforms.frequency.value = controls.frequency.value.value;
+    uniforms.gooPoleAmount.value = controls.gooPoleAmount.value.value;
+    uniforms.surfaceDistort.value = controls.surfaceDistort.value.value;
+    uniforms.surfaceFrequency.value = controls.surfaceFrequency.value.value;
+    uniforms.numberOfWaves.value = controls.numberOfWaves.value.value;
+    uniforms.surfacePoleAmount.value = controls.surfacePoleAmount.value.value;
+  };
+
+  const attachShader = () => {
+    material.onBeforeCompile = (shader: any) => {
+      shader.uniforms.time = uniforms.time;
+
+      shader.uniforms.distort = uniforms.distort;
+      shader.uniforms.frequency = uniforms.frequency;
+      shader.uniforms.speed = uniforms.speed;
+      shader.uniforms.surfaceDistort = uniforms.surfaceDistort;
+      shader.uniforms.surfaceFrequency = uniforms.surfaceFrequency;
+      shader.uniforms.surfaceTime = uniforms.surfaceTime;
+      shader.uniforms.surfaceSpeed = uniforms.surfaceSpeed;
+      shader.uniforms.numberOfWaves = uniforms.numberOfWaves;
+      shader.uniforms.surfacePoleAmount = uniforms.surfacePoleAmount;
+      shader.uniforms.gooPoleAmount = uniforms.gooPoleAmount;
+
+      shader.vertexShader = `
+        ${headers}
+        ${shader.vertexShader}
+      `;
+
+      shader.vertexShader = shader.vertexShader.replace(
+        "void main() {",
+        `
+          void main() {
+            ${displacement}
+        `
+      );
+
+      shader.vertexShader = shader.vertexShader.replace(
+        "#include <displacementmap_vertex>",
+        `transformed = displacedPosition;`
+      );
+
+      //fix normals: https://codepen.io/marco_fugaro/pen/xxZWPWJ?editors=1010
+      shader.vertexShader = shader.vertexShader.replace(
+        "#include <defaultnormal_vertex>",
+        ShaderChunk.defaultnormal_vertex.replace(
+          "vec3 transformedNormal = objectNormal;",
+          `vec3 transformedNormal = displacedNormal;`
+        )
+      );
+    };
+
+    material.needsUpdate = true;
+  };
+
+  const resetShader = () => {
+    material.onBeforeCompile = (shader) => {};
+  };
+
+  return {
+    resetShader,
+    attachShader,
+    updateUniforms,
+    ...controls,
+    uniforms,
+  };
+};
+
+export const useBlob = () => {
+  const geometry = new IcosahedronGeometry(1, 64);
+  const material = new MeshStandardMaterial({
+    metalness: 0.9,
+    roughness: 0.2,
+  });
+
+  const mesh = new Mesh(geometry, material);
+
+  return {
+    mesh,
+    geometry,
+    material,
+  };
 };

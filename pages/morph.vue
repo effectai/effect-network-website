@@ -67,10 +67,10 @@ onMounted(async () => {
 
   const { nodes, scene } = await useGLTF("/models/scene.gltf");
 
-  const brain = nodes["Brain_Brain_0"];
+  const brain = nodes["finalstlcleanermaterialmergergles"];
   brainMesh.value = brain;
 
-  brainGeometry.value = mergeModel(brain, 1);
+  brainGeometry.value = mergeModel(brain, 0.1);
 
   geometry.value.setAttribute(
     "positionStart",
@@ -91,29 +91,9 @@ onMounted(async () => {
     "normalEnd",
     new Float32BufferAttribute(brainGeometry.value.attributes.normal.array, 3)
   );
-
-  console.log(geometry.value);
-
-  // Set the indices to the geometry
 });
 
-const {
-  metalness,
-  roughness,
-  distort,
-  frequency,
-  speed,
-  surfaceDistort,
-  surfaceFrequency,
-  numberOfWaves,
-  surfacePoleAmount,
-  gooPoleAmount,
-  surfaceSpeed,
-  morphRatio,
-  vertices,
-} = useThreeControls();
-
-const geometry = shallowRef(new IcosahedronGeometry(5, 100));
+const geometry = shallowRef(new IcosahedronGeometry(8, 150));
 const material = new MeshStandardMaterial({
   metalness: 0.8,
   roughness: 0.2,
@@ -121,26 +101,23 @@ const material = new MeshStandardMaterial({
 });
 
 const uniforms = {
-  morphRatio: { value: morphRatio.value.value },
-  time: { value: 0.1 },
-  surfaceTime: { value: 0.1 },
-
-  distort: { value: distort.value.value },
-  frequency: { value: frequency.value.value },
-  speed: { value: speed.value.value },
-
-  surfaceDistort: { value: surfaceDistort.value.value },
-  surfaceFrequency: { value: surfaceFrequency.value.value },
-  surfaceSpeed: { value: surfaceSpeed.value.value },
-  numberOfWaves: { value: numberOfWaves.value.value },
-  surfacePoleAmount: { value: surfacePoleAmount.value.value },
-  gooPoleAmount: { value: gooPoleAmount.value.value },
+  distort: { value: 0.4 },
+  frequency: { value: 4 },
+  speed: { value: 0.33 },
+  surfaceDistort: { value: 0.15 },
+  surfaceFrequency: { value: 1 },
+  surfaceSpeed: { value: 2 },
+  surfaceTime: { value: 0 },
+  numberOfWaves: { value: 1 },
+  surfacePoleAmount: { value: 0.3 },
+  gooPoleAmount: { value: 12 },
+  time: { value: 0 },
+  morphRatio: { value: 0 },
 };
 
 material.onBeforeCompile = (shader: any) => {
   shader.uniforms.morphRatio = uniforms.morphRatio;
-
-  shader.uniforms.time = uniforms.time;
+  shader.uniforms.time = 0;
 
   shader.uniforms.distort = uniforms.distort;
   shader.uniforms.frequency = uniforms.frequency;
@@ -213,6 +190,82 @@ material.onBeforeCompile = (shader: any) => {
 const meshWithMaterial = new Mesh(geometry.value, material);
 
 const { onLoop } = useRenderLoop();
+
+const {
+  morphRatio,
+  distort,
+  frequency,
+  numberOfWaves,
+  roughness,
+  metalness,
+  speed,
+  gooPoleAmount,
+  surfaceDistort,
+  surfaceFrequency,
+  surfacePoleAmount,
+} = useControls({
+  metalness: {
+    value: 0.8,
+    min: 0,
+    max: 1,
+  },
+  roughness: {
+    value: 0.2,
+    min: 0,
+    max: 1,
+  },
+  speed: {
+    value: 0.2,
+    min: 0,
+    max: 10,
+  },
+  gooPoleAmount: {
+    value: 12,
+    min: 0,
+    max: 1,
+  },
+  distort: {
+    value: 0.3,
+    min: 0,
+    max: 10,
+  },
+  frequency: {
+    value: 1.5,
+    min: 0,
+    max: 10,
+  },
+  surfaceDistort: {
+    value: 1,
+    min: 0,
+    max: 10,
+  },
+  surfaceFrequency: {
+    value: 1.65,
+    min: 0,
+    max: 10,
+  },
+  surfaceSpeed: {
+    value: 0.8,
+    min: 0,
+    max: 10,
+  },
+  numberOfWaves: {
+    value: 1,
+    min: 0,
+    max: 10,
+  },
+  surfacePoleAmount: {
+    value: 3,
+    min: 0,
+    max: 1,
+  },
+  morphRatio: {
+    value: 0,
+    min: 0,
+    step: 0.001,
+    max: 1,
+  },
+});
 
 onLoop(({ elapsed, delta, clock }) => {
   uniforms.time.value = elapsed * uniforms.speed.value;

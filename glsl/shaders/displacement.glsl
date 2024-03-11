@@ -1,7 +1,7 @@
 #define GLSLIFY 1
 
 float displacement = f(position);
-vec3 displacedPosition = position + normalize(normal) * f(position);
+vec3 displacedPosition = position + normal * f(position);
 vec3 displacedNormal = normalize(normal);
 
 // Generate new normals
@@ -20,5 +20,5 @@ if (fixNormals == 1.0) {
     vec3 displacedBitangent = displacedNeighbour2 - displacedPosition;
 
     // https://upload.wikimedia.org/wikipedia/commons/d/d2/Right_hand_rule_cross_product.svg
-    displacedNormal = normalize(cross(displacedTangent, displacedBitangent));
+    // displacedNormal = normalize(cross(displacedTangent, displacedBitangent));
 }

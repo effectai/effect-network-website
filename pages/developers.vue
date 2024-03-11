@@ -1,9 +1,7 @@
 <template>
   <div>
     <HeroSection title="Unleash the power of a decentralized workforce">
-      <template #canvas>
-        <BrainScene />
-      </template>
+      <template #canvas> </template>
 
       <template #subtitle>
         <p class="block is-size-5 has-text-black">
