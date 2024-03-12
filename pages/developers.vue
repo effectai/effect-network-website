@@ -16,7 +16,7 @@
 
       <template #footer>
         <nuxt-link target="_blank" to="https://developer.effect.network/"
-          ><button class="button is-secondary">Get Started</button></nuxt-link
+          ><button class="button is-primary">Get Started</button></nuxt-link
         >
       </template>
     </HeroSection>
@@ -33,7 +33,7 @@
 
           <div class="mt-5 is-flex has-gap-1">
             <a
-              class="button is-secondary"
+              class="button is-primary"
               href="https://developer.effect.network/quickstart/"
               target="_blank"
               >Documentation</a

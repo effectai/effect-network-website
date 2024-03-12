@@ -15,7 +15,10 @@
     <NavBar :is-scrolling="isScrolling" />
 
     <div>
-      <div class="three-canvas is-absolute is-fullwidth" style="height: 750px">
+      <div
+        class="three-canvas is-absolute is-fullwidth has-background-smoke"
+        style="height: 700px"
+      >
         <TresCanvas preset="realistic" ref="canvas" :alpha="true">
           <TresPerspectiveCamera ref="camera" visible :position="[0, 0, 15]" />
 

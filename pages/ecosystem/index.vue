@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeroSection style="z-index: 0; height: 700px">
+    <HeroSection style="z-index: 0; height: 650px">
       <template #title>
         <h1 class="has-text-primary is-uppercase title">
           Be Part of <br />
@@ -10,7 +10,7 @@
 
       <template #subtitle>
         <div class="subtitle" data-aos="fade-up" data-aos-delay="150">
-          <EcosystemStatisticsBlock class="has-text-primary" />
+          <EcosystemStatisticsBlock class="has-text-black" />
         </div>
       </template>
 
@@ -19,7 +19,15 @@
           class="is-flex is-size-3 is-align-items-center is-primary has-text-white is-in-front"
           data-aos="fade-left"
           data-aos-delay="550"
-        ></div>
+        >
+          <div class="is-flex is-justify-content-center">
+            <div class="button is-primary has-text-white mt-5">
+              <nuxt-link to="/marketplace" class="has-text-white"
+                >Explore the Marketplace</nuxt-link
+              >
+            </div>
+          </div>
+        </div>
       </template>
     </HeroSection>
 

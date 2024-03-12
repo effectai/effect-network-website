@@ -201,10 +201,13 @@ const morphToBrainAnimation = () => {
 const morphToBlob = () => {
   material.normalMap = null;
   material.needsUpdate = true;
+
   material.normalScale = new Vector2(0, 0);
 
   animateUniforms(blobState.uniforms);
   animateProperties(blobState.properties);
+
+  geometry.computeVertexNormals();
 
   isRotating.value = false;
 };
@@ -214,6 +217,8 @@ const morphToPlanet = () => {
   // animateProperties(planetState.properties);
 
   material.normalMap = normalMap;
+  material.map = null;
+  material.needsUpdate = true;
 
   animate({
     from: 0,
@@ -236,7 +241,7 @@ onLoop(({ elapsed, delta, clock }) => {
   updateUniforms(elapsed);
 
   if (isRotating.value) {
-    blobMesh.rotation.y += 0.01;
+    blobMesh.rotation.y += 0.005;
   }
 });
 
