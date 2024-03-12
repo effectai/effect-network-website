@@ -183,6 +183,10 @@ client.connect();`;
 const { data: tutorials } = await useAsyncData("tutorials", async () =>
   queryContent<Tutorial>(`/tutorials`).find()
 );
+
+definePageMeta({
+  layout: "top",
+});
 </script>
 
 <style lang="scss"></style>

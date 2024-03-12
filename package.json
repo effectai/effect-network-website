@@ -30,10 +30,11 @@
     "glslify": "^7.1.1",
     "motion": "^10.17.0",
     "nuxt": "^3.10.3",
+    "popmotion": "^11.0.5",
     "three": "^0.161.0",
-    "vue3-lottie": "3.2.0",
     "vue": "^3.4.19",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vue3-lottie": "3.2.0"
   },
   "devDependencies": {
     "@nuxt/content": "^2.12.0",

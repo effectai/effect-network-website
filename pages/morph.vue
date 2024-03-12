@@ -149,8 +149,6 @@ material.onBeforeCompile = (shader: any) => {
           attribute vec3 positionEnd;
           attribute vec3 normalStart;
           attribute vec3 normalEnd;
-          attribute vec2 uvStart;
-          attribute vec2 uvEnd;
 
           ${shader.vertexShader}
         `.replace(

@@ -105,6 +105,12 @@ uniform float fixNormals;
 uniform float surfacePoleAmount;
 uniform float gooPoleAmount;
 
+uniform float morphRatio;
+attribute vec3 positionStart;
+attribute vec3 positionEnd;
+attribute vec3 normalStart;
+attribute vec3 normalEnd;
+
 #define M_PI 3.1415926538
 #define NOISE_PERIOD 10. // avoid noise artifacts after long duration
 

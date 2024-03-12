@@ -4,9 +4,6 @@
       style="min-height: 750px"
       :title="'Decentralizing Artificial Intelligence'"
     >
-      <template #canvas>
-        <BlobScene />
-      </template>
       <template #subtitle>
         <p class="subtitle pr-6" data-aos="fade-up" data-aos-delay="150">
           <span class="pr-6 has-text-black">
@@ -99,7 +96,9 @@ useHead({
 });
 
 //use layout
-definePageMeta({});
+definePageMeta({
+  layout: "top",
+});
 </script>
 
 <style lang="scss">

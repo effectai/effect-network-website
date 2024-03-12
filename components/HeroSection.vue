@@ -1,5 +1,5 @@
 <template>
-  <div id="hero" data-aos="fade-in" class="has-background-smoke">
+  <div id="hero" data-aos="fade-in" class="">
     <div class="three-canvas">
       <slot name="canvas" class="three-canvas"> </slot>
     </div>
@@ -7,7 +7,7 @@
     <section class="section">
       <div class="container mt-6">
         <div class="columns is-vcentered">
-          <div class="column is-half" data-aos="fade-up" data-aos-delay="500">
+          <div class="column is-half" data-aos="fade-in" data-aos-delay="0">
             <h1 v-if="title" class="mt-3 title is-spaced keep-all">
               <span class="is-uppercase has-text-primary">{{ title }}</span>
             </h1>

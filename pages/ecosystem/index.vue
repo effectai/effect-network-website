@@ -1,10 +1,6 @@
 <template>
   <div>
-    <HeroSection style="z-index: 0">
-      <template #canvas>
-        <PlanetScene />
-      </template>
-
+    <HeroSection style="z-index: 0; height: 700px">
       <template #title>
         <h1 class="has-text-primary is-uppercase title">
           Be Part of <br />
@@ -136,9 +132,12 @@
 <script setup lang="ts">
 import { dapps } from "@/constants/dapps";
 import { communities } from "@/constants/socials";
-import { reddit, discord, telegram } from "@/constants/socials";
 
 const featuredDapps = dapps.filter((dapp) => dapp.featured);
+
+definePageMeta({
+  layout: "top",
+});
 
 useSeoMeta({
   title: "Ecosystem",

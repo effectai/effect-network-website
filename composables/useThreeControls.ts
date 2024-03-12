@@ -37,12 +37,12 @@ export const useDisplacement = (material: Material) => {
       max: 10,
     },
     frequency: {
-      value: 1.5,
+      value: 2.9,
       min: 0,
       max: 10,
     },
     surfaceDistort: {
-      value: 1,
+      value: 1.5,
       min: 0,
       max: 10,
     },
@@ -62,7 +62,7 @@ export const useDisplacement = (material: Material) => {
       max: 10,
     },
     surfacePoleAmount: {
-      value: 3,
+      value: 0.3,
       min: 0,
       max: 1,
     },
@@ -96,6 +96,11 @@ export const useDisplacement = (material: Material) => {
     uniforms.time.value = elapsed * uniforms.speed.value;
     uniforms.surfaceTime.value = elapsed * uniforms.surfaceSpeed.value;
 
+    uniforms.morphRatio.value = controls.morphRatio.value.value;
+
+    uniforms.speed.value = controls.speed.value.value;
+    uniforms.surfaceSpeed.value = controls.surfaceSpeed.value.value;
+
     uniforms.distort.value = controls.distort.value.value;
     uniforms.frequency.value = controls.frequency.value.value;
     uniforms.gooPoleAmount.value = controls.gooPoleAmount.value.value;
@@ -108,6 +113,8 @@ export const useDisplacement = (material: Material) => {
   const attachShader = () => {
     material.onBeforeCompile = (shader: any) => {
       shader.uniforms.time = uniforms.time;
+
+      shader.uniforms.morphRatio = uniforms.morphRatio;
 
       shader.uniforms.distort = uniforms.distort;
       shader.uniforms.frequency = uniforms.frequency;
@@ -130,12 +137,25 @@ export const useDisplacement = (material: Material) => {
         `
           void main() {
             ${displacement}
+
+            vec3 pStart = positionStart;
+            vec3 pEnd = positionEnd;
+
+            float distRatio = sin(morphRatio * PI);
+
+            // Calculate morphed normal
+            vec3 normal = normalize(mix(normalStart, normalEnd, morphRatio));
+    
+            // Calculate morphed position
+            vec3 pos = mix(pStart, pEnd, morphRatio);
         `
       );
 
       shader.vertexShader = shader.vertexShader.replace(
         "#include <displacementmap_vertex>",
-        `transformed = displacedPosition;`
+
+        `#include <displacementmap_vertex>
+        transformed = pos + normalize(pos) * f(pos);`
       );
 
       //fix normals: https://codepen.io/marco_fugaro/pen/xxZWPWJ?editors=1010
@@ -159,16 +179,18 @@ export const useDisplacement = (material: Material) => {
     resetShader,
     attachShader,
     updateUniforms,
-    ...controls,
+    controls,
     uniforms,
   };
 };
 
 export const useBlob = () => {
-  const geometry = new IcosahedronGeometry(1, 64);
+  const geometry = new IcosahedronGeometry(4, 150);
   const material = new MeshStandardMaterial({
-    metalness: 0.9,
+    metalness: 0.75,
     roughness: 0.2,
+    envMapIntensity: 0.2,
+    flatShading: true,
   });
 
   const mesh = new Mesh(geometry, material);
