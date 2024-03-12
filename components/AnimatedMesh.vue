@@ -14,7 +14,6 @@ import {
 import { useBlob } from "~/composables/useThreeControls";
 import { useTexture } from "@tresjs/core";
 import { animate, cubicBezier, easeOut } from "popmotion";
-import blob from "~/pages/blob.vue";
 
 const gradient = await useTexture(["../gradients/zinc.jpg"]);
 const envMap = await useTexture(["../envmap.jpg"]);

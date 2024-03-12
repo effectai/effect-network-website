@@ -37,7 +37,7 @@ const formattedMillions = new Intl.NumberFormat().format(
   }
 
   &.disabled {
-    opacity: 0.25;
+    opacity: 0.22;
     pointer-events: none;
   }
   .logo-wrapper {
