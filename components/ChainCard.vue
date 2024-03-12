@@ -1,5 +1,6 @@
 <template>
   <div
+    :class="['p-5 has-text-centered token-card', { disabled: props.disabled }]"
     class="p-5 has-text-centered token-card has-background-white has-text-black"
   >
     <div class="logo-wrapper">
@@ -7,10 +8,10 @@
     </div>
     <slot class="link" name="address"></slot>
 
-    <h3 class="is-size-6 is-family-monospace">
+    <h3 class="is-size-6 is-family-monospace" v-if="supply">
       Current supply: {{ formattedMillions }}M
     </h3>
-
+    <h3 v-else>Current Supply: -</h3>
     <a class="button mt-auto is-primary mt-5">Buy EFX on {{ chain }}</a>
   </div>
 </template>
@@ -19,7 +20,8 @@
 const props = defineProps<{
   chain: string;
   logo: string;
-  supply: number;
+  disabled?: boolean;
+  supply?: number;
 }>();
 
 const formattedMillions = new Intl.NumberFormat().format(
@@ -27,13 +29,17 @@ const formattedMillions = new Intl.NumberFormat().format(
 );
 </script>
 
-<style scoped lang="scss">
-#logo {
-  width: 100%;
-  min-height: 50px;
-}
-
+<style lang="scss">
 .token-card {
+  #logo {
+    width: 100%;
+    min-height: 50px;
+  }
+
+  &.disabled {
+    opacity: 0.25;
+    pointer-events: none;
+  }
   .logo-wrapper {
     min-height: 75px;
   }

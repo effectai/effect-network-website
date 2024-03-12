@@ -13,20 +13,6 @@
       </ChainCard>
     </div>
     <div class="column is-one-third p-5 has-text-centered">
-      <ChainCard
-        :supply="50000000"
-        class="solana recommended"
-        chain="Solana"
-        :logo="solanaLogo"
-      >
-        <template #address>
-          <a class="is-family-monospace has-text-black is-block"
-            >e34pa...jsa4</a
-          >
-        </template>
-      </ChainCard>
-    </div>
-    <div class="column is-one-third p-5 has-text-centered">
       <ChainCard :supply="45194866" class="bsc" chain="BSC" :logo="bscLogo">
         <template #address>
           <a
@@ -38,6 +24,14 @@
         </template>
       </ChainCard>
     </div>
+    <div class="column is-one-third p-5 has-text-centered">
+      <div
+        class="card token-card disabled token-card p-5 is-fullheight is-flex is-justify-content-center has-gap-1 is-align-items-center"
+      >
+        <p class="has-text-grey">Loading additional chain</p>
+        <span class="bulma-loader-mixin"></span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -47,4 +41,8 @@ import eosLogo from "@/assets/img/icons/eosio.svg";
 import bscLogo from "@/assets/img/icons/bsc.svg";
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.bulma-loader-mixin {
+  @include loader;
+}
+</style>
