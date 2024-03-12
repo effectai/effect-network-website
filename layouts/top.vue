@@ -17,11 +17,7 @@
     <div>
       <div class="three-canvas is-absolute is-fullwidth" style="height: 750px">
         <TresCanvas preset="realistic" ref="canvas" :alpha="true">
-          <TresPerspectiveCamera
-            ref="camera"
-            visible
-            :position="[-5, -1, 15]"
-          />
+          <TresPerspectiveCamera ref="camera" visible :position="[0, 0, 15]" />
 
           <TresAmbientLight :color="'#101D56'" :intensity="2" />
 
@@ -36,7 +32,7 @@
           />
 
           <Suspense>
-            <AnimatedMesh />
+            <AnimatedMesh :position="[5, 0, 0]" />
           </Suspense>
         </TresCanvas>
       </div>

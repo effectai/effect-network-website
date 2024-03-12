@@ -8,11 +8,13 @@ import {
   EquirectangularReflectionMapping,
   Texture,
   Vector2,
+  Vector3,
 } from "three";
 
 import { useBlob } from "~/composables/useThreeControls";
 import { useTexture } from "@tresjs/core";
 import { animate, cubicBezier, easeOut } from "popmotion";
+import blob from "~/pages/blob.vue";
 
 const gradient = await useTexture(["../gradients/zinc.jpg"]);
 const envMap = await useTexture(["../envmap.jpg"]);
@@ -30,7 +32,8 @@ material.envMap = envMap;
 material.needsUpdate = true;
 
 const brain = nodes["finalstlcleanermaterialmergergles"];
-const brainBufferGeometry = mergeModel(brain, 0.05);
+const brainBufferGeometry = mergeAndExtractModel(brain, 0.05);
+
 brain.material = material;
 
 brain.traverse((child) => {
@@ -83,55 +86,116 @@ attachShader();
 const normalMap = await useTexture(["/textures/earth-normalmap.jpg"]);
 
 type BlobState = {
-  morphRatio: number;
-  distort: number;
-  surfaceDistort?: number;
-  normalMap?: Texture;
+  properties?: {
+    rotation?: Vector3;
+    position?: Vector3;
+    scale?: Vector3;
+  };
+  uniforms: {
+    [key: string]: {
+      value: number;
+      easing: (v: number) => number;
+    };
+  };
 };
 
 const brainState: BlobState = {
-  morphRatio: 1,
-  distort: 0,
+  properties: {
+    rotation: new Vector3(0, -6.6, 0),
+  },
+  uniforms: {
+    morphRatio: {
+      value: 1,
+      easing: cubicBezier(0, 0.42, 0, 1),
+    },
+    distort: {
+      value: 0,
+      easing: cubicBezier(0, 0.42, 0, 1),
+    },
+    surfaceDistort: {
+      value: 1.5,
+      easing: cubicBezier(0, 0.42, 0, 1),
+    },
+  },
 };
 
 const blobState: BlobState = {
-  morphRatio: 0,
-  distort: 0.3,
+  properties: {
+    rotation: new Vector3(0, 0, 0),
+  },
+  uniforms: {
+    morphRatio: {
+      value: 0,
+      easing: cubicBezier(0, 0.42, 0, 1),
+    },
+    distort: {
+      value: 0.3,
+      easing: cubicBezier(0, 0.42, 0, 1),
+    },
+    surfaceDistort: {
+      value: 1.5,
+      easing: cubicBezier(0, 0.42, 0, 1),
+    },
+  },
 };
 
 const planetState: BlobState = {
-  morphRatio: 0,
-  distort: 0,
-  surfaceDistort: 0,
-  normalMap,
+  uniforms: {
+    morphRatio: {
+      value: 0,
+      easing: cubicBezier(0, 0.42, 0, 1),
+    },
+    distort: {
+      value: 0,
+      easing: cubicBezier(0, 0.42, 0, 1),
+    },
+    surfaceDistort: {
+      value: 0,
+      easing: cubicBezier(0, 0.42, 0, 1),
+    },
+  },
 };
 
 const ANIMATION_DURATION = 2000;
+
+const animateUniforms = (uniforms: BlobState["uniforms"]) => {
+  Object.keys(uniforms).forEach((key) => {
+    animate({
+      from: controls[key].value.value,
+      to: uniforms[key].value,
+      duration: ANIMATION_DURATION,
+      ease: uniforms[key].easing,
+      onUpdate: (value) => {
+        controls[key].value.value = value;
+      },
+    });
+  });
+};
+
+const animateProperties = (properties: BlobState["properties"]) => {
+  Object.keys(properties).forEach((key) => {
+    Object.keys(properties[key]).forEach((coord) => {
+      animate({
+        from: blobMesh[key][coord],
+        to: properties[key][coord],
+        duration: ANIMATION_DURATION,
+        ease: easeOut,
+        onUpdate: (value) => {
+          blobMesh[key][coord] = value;
+        },
+      });
+    });
+  });
+};
 
 const morphToBrainAnimation = () => {
   material.normalMap = null;
   material.needsUpdate = true;
   material.normalScale = new Vector2(0, 0);
 
-  animate({
-    from: controls.morphRatio.value.value,
-    to: brainState.morphRatio,
-    duration: ANIMATION_DURATION,
-    ease: cubicBezier(0, 0.42, 0, 1),
-    onUpdate: (morphRatio) => {
-      controls.morphRatio.value.value = morphRatio;
-    },
-  });
-
-  animate({
-    from: controls.distort.value.value,
-    to: brainState.distort,
-    duration: ANIMATION_DURATION,
-    ease: cubicBezier(0, 0.1, 0, 1),
-    onUpdate: (distort) => {
-      controls.distort.value.value = distort;
-    },
-  });
+  animateUniforms(brainState.uniforms);
+  animateProperties(brainState.properties);
+  isRotating.value = false;
 };
 
 const morphToBlob = () => {
@@ -139,57 +203,15 @@ const morphToBlob = () => {
   material.needsUpdate = true;
   material.normalScale = new Vector2(0, 0);
 
-  animate({
-    from: controls.morphRatio.value.value,
-    to: blobState.morphRatio,
-    duration: ANIMATION_DURATION,
-    ease: cubicBezier(0, 0.42, 0, 1),
-    onUpdate: (morphRatio) => {
-      controls.morphRatio.value.value = morphRatio;
-    },
-  });
+  animateUniforms(blobState.uniforms);
+  animateProperties(blobState.properties);
 
-  animate({
-    from: controls.distort.value.value,
-    to: blobState.distort,
-    duration: ANIMATION_DURATION,
-    ease: cubicBezier(0, 0.42, 0, 1),
-    onUpdate: (distort) => {
-      controls.distort.value.value = distort;
-    },
-  });
+  isRotating.value = false;
 };
 
 const morphToPlanet = () => {
-  animate({
-    from: controls.morphRatio.value.value,
-    to: planetState.morphRatio,
-    duration: ANIMATION_DURATION,
-    ease: cubicBezier(0, 0.42, 0, 1),
-    onUpdate: (morphRatio) => {
-      controls.morphRatio.value.value = morphRatio;
-    },
-  });
-
-  animate({
-    from: controls.distort.value.value,
-    to: planetState.distort,
-    duration: ANIMATION_DURATION,
-    ease: cubicBezier(0.2, 1.11, 0.87, -0.3),
-    onUpdate: (distort) => {
-      controls.distort.value.value = distort;
-    },
-  });
-
-  animate({
-    from: controls.surfaceDistort.value.value,
-    to: planetState.surfaceDistort,
-    duration: ANIMATION_DURATION,
-    ease: cubicBezier(0, 0.42, 0, 1),
-    onUpdate: (surfaceDistort) => {
-      controls.surfaceDistort.value.value = surfaceDistort;
-    },
-  });
+  animateUniforms(planetState.uniforms);
+  // animateProperties(planetState.properties);
 
   material.normalMap = normalMap;
 
@@ -203,13 +225,20 @@ const morphToPlanet = () => {
       material.needsUpdate = true;
     },
   });
+
+  isRotating.value = true;
 };
+
+const route = useRouter().currentRoute;
+const isRotating = ref(false);
 
 onLoop(({ elapsed, delta, clock }) => {
   updateUniforms(elapsed);
-});
 
-const route = useRouter().currentRoute;
+  if (isRotating.value) {
+    blobMesh.rotation.y += 0.01;
+  }
+});
 
 watch(
   route,
