@@ -104,11 +104,11 @@
         <div class="columns">
           <div class="column is-one-third">
             <div
-              class="card is-flat always-light p-5 h-full is-flex is-flex-direction-column"
+              class="card is-flat always-light p-5 is-fullheight is-flex is-flex-direction-column"
             >
               <img
                 src="~assets/img/icons/github.svg"
-                class="self-baseline"
+                class="is-self-baseline"
                 style="height: 50px"
               />
               <h3 class="subtitle is-4 mt-4 mb-2">Github</h3>
@@ -125,7 +125,7 @@
             </div>
           </div>
           <div class="column is-one-third">
-            <div class="card is-flat always-light p-5">
+            <div class="card is-flat always-light p-5 is-fullheight">
               <img src="~assets/img/icons/api.svg" style="height: 50px" />
               <h3 class="subtitle is-4 mt-4 mb-2">SDK Documentation</h3>
               <p class="block">
@@ -142,11 +142,11 @@
           </div>
           <div class="column is-one-third">
             <div
-              class="card is-flat always-light p-5 h-full is-flex is-flex-direction-column"
+              class="card is-flat always-light p-5 is-fullheight is-flex is-flex-direction-column"
             >
               <img
                 src="~assets/img/icons/whitepaper.svg"
-                class="self-baseline"
+                class="is-self-baseline"
                 style="height: 50px"
               />
               <h3 class="subtitle is-4 mt-4 mb-2">Effect Whitepaper</h3>

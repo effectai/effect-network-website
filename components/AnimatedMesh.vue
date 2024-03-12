@@ -94,7 +94,7 @@ type BlobState = {
   uniforms: {
     [key: string]: {
       value: number;
-      easing: (v: number) => number;
+      easing?: (v: number) => number;
     };
   };
 };
@@ -106,15 +106,12 @@ const brainState: BlobState = {
   uniforms: {
     morphRatio: {
       value: 1,
-      easing: cubicBezier(0, 0.42, 0, 1),
     },
     distort: {
       value: 0,
-      easing: cubicBezier(0, 0.42, 0, 1),
     },
     surfaceDistort: {
       value: 1.5,
-      easing: cubicBezier(0, 0.42, 0, 1),
     },
   },
 };
@@ -126,15 +123,12 @@ const blobState: BlobState = {
   uniforms: {
     morphRatio: {
       value: 0,
-      easing: cubicBezier(0, 0.42, 0, 1),
     },
     distort: {
       value: 0.3,
-      easing: cubicBezier(0, 0.42, 0, 1),
     },
     surfaceDistort: {
       value: 1.5,
-      easing: cubicBezier(0, 0.42, 0, 1),
     },
   },
 };
@@ -143,20 +137,19 @@ const planetState: BlobState = {
   uniforms: {
     morphRatio: {
       value: 0,
-      easing: cubicBezier(0, 0.42, 0, 1),
     },
     distort: {
       value: 0,
-      easing: cubicBezier(0, 0.42, 0, 1),
+      easing: cubicBezier(0.31, -1.33, 0.37, 1.07),
     },
     surfaceDistort: {
       value: 0,
-      easing: cubicBezier(0, 0.42, 0, 1),
+      easing: cubicBezier(1, 0.01, 0.4, 1.07),
     },
   },
 };
 
-const ANIMATION_DURATION = 2000;
+const ANIMATION_DURATION = 2500;
 
 const animateUniforms = (uniforms: BlobState["uniforms"]) => {
   Object.keys(uniforms).forEach((key) => {
@@ -164,7 +157,7 @@ const animateUniforms = (uniforms: BlobState["uniforms"]) => {
       from: controls[key].value.value,
       to: uniforms[key].value,
       duration: ANIMATION_DURATION,
-      ease: uniforms[key].easing,
+      ease: uniforms[key].easing || cubicBezier(0, 0.42, 0, 1),
       onUpdate: (value) => {
         controls[key].value.value = value;
       },
