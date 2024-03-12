@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeroSection style="z-index: 0; height: 650px">
+    <HeroSection style="height: 650px">
       <template #title>
         <h1 class="has-text-primary is-uppercase title">
           Be Part of <br />

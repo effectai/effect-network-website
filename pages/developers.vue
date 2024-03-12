@@ -1,8 +1,9 @@
 <template>
   <div>
-    <HeroSection title="Unleash the power of a decentralized workforce">
-      <template #canvas> </template>
-
+    <HeroSection
+      style="min-height: 650px"
+      title="Unleash the power of a decentralized workforce"
+    >
       <template #subtitle>
         <p class="block is-size-5 has-text-black">
           A collection of resources for joining the Effect.AI ecosystem. By
@@ -21,7 +22,7 @@
       </template>
     </HeroSection>
 
-    <SimpleSection>
+    <SimpleSection class="has-background-white">
       <div class="columns">
         <div class="column">
           <h2 class="is-3 title">Get Started With The SDK</h2>
