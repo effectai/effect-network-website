@@ -41,7 +41,7 @@
       data-aos-delay="300"
       id="news"
     >
-      <NewsCardList :posts="featuredPosts" />
+      <NewsCardList v-if="news" :items="news" />
     </SimpleSection>
 
     <SimpleSection :centered="true" title="How to use Effect AI?" class="">
@@ -78,7 +78,8 @@ import { posts } from "@/constants/posts";
 import { dapps } from "@/constants/dapps";
 import { discord, github, twitter } from "@/constants/socials";
 
-const featuredPosts = posts.filter((post) => post.featured).slice(0, 3);
+import type { News } from "@/types/news";
+
 const featuredDapps = dapps.filter((dapp) => dapp.featured);
 
 useSeoMeta({
@@ -95,6 +96,17 @@ useHead({
       content: `Effect AI is a decentralized network for artificial intelligence and AI related services. We are creating a platform that will allow anyone in the world to contribute to AI development.`,
     },
   ],
+});
+
+//fetch news content and sort by created
+const { data: news } = useAsyncData("news", async () => {
+  const data = await queryContent<News>(`/news`)
+    .where({ published: true })
+    .limit(3)
+    .find();
+  return data.sort((a, b) => {
+    return new Date(b.created).getTime() - new Date(a.created).getTime();
+  });
 });
 
 //use layout

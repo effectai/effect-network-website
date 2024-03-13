@@ -15,8 +15,10 @@ import { useBlob } from "~/composables/useThreeControls";
 import { useTexture } from "@tresjs/core";
 import { animate, cubicBezier, easeOut } from "popmotion";
 
-const gradient = await useTexture(["../gradients/zinc.jpg"]);
-const envMap = await useTexture(["../envmap.jpg"]);
+//load textures
+const gradient = await useTexture(["/img/gradients/zinc.jpg"]);
+const envMap = await useTexture(["/img/textures/envmap.jpg"]);
+const normalMap = await useTexture(["/img/textures/earth-normalmap.jpg"]);
 
 //TODO::reduce brain poly's..
 const { nodes } = await useGLTF("/models/brain.glb", {
@@ -55,8 +57,6 @@ const { updateUniforms, resetShader, attachShader, controls } =
   useDisplacement(material);
 
 attachShader();
-
-const normalMap = await useTexture(["/textures/earth-normalmap.jpg"]);
 
 type AnimatedObjectState = {
   properties?: {

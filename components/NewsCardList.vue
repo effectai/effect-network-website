@@ -3,21 +3,21 @@
     <div class="columns p-4 is-gapless-mobile is-multiline">
       <div
         class="column is-full-mobile is-one-third-tablet"
-        v-for="(post, i) in posts"
+        v-for="(item, i) in items"
         data-aos="fade-up"
         :data-aos-delay="300 + i * 250"
       >
-        <NewsCard class="news-card is-fullheight" :post="post" />
+        <NewsCard class="news-card is-fullheight" :news="item" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { Post } from "@/types/post";
+import type { News } from "~/types/news";
 
 const props = defineProps<{
-  posts: Post[];
+  items: News[];
 }>();
 </script>
 

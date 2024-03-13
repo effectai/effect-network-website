@@ -1,9 +1,12 @@
 ---
 title: "Effect AI: Roadmap 2024"
-description: ""
+description: "Hey there, everyone! Today, we're thrilled to unveil the 2024 roadmap for Effect AI. This year is going to be nothing short of groundbreaking, packed with progress and achievements."
 author: "Jesse"
 lastUpdated: "2024-02-21"
 created: "2024-02-21"
+image:
+  src: "/img/news/roadmap2022.png"
+published: true
 ---
 
 ## Roadmap
