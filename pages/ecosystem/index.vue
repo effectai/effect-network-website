@@ -156,11 +156,11 @@ useSeoMeta({
 const { useDaoStatistics, useEfxPrice } = useStatistics();
 const { data: price } = useEfxPrice();
 
-const { currentCycle, feePoolBalance } = useDaoStatistics();
+const { currentCycle, feePoolBalance, proposalsCreated } = useDaoStatistics();
 
 const daoStats = computed(() => [
-  { label: "status", value: "voting" },
-  { label: "cycle", value: currentCycle },
+  { label: "cycle", value: currentCycle.value },
+  { label: "proposal", value: proposalsCreated.value },
   {
     label: "rewards",
     value: `$${new Intl.NumberFormat().format(

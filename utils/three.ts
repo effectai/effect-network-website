@@ -7,10 +7,6 @@ export function mergeAndExtractModel(model: Object3D, scale = 1) {
   const recursiveMergeAndExtract = (childObject: any) => {
     if (childObject.isMesh) {
       let geometry = childObject.geometry.clone().toNonIndexed();
-      let matrixWorld = childObject.matrixWorld;
-
-      // Handle positions
-      geometry.applyMatrix4(matrixWorld);
 
       // Remove other attributes
       for (let attributeKey in geometry.attributes) {

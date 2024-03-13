@@ -7719,7 +7719,6 @@
       <Vue3Lottie
         ref="lottie"
         class="tokenomics-animation"
-        @onAnimationLoaded="handleAnimation"
         :animationData="tokenomics"
       />
     </div>
@@ -7730,10 +7729,6 @@
 import tokenomics from "@/assets/tokenomics.json";
 
 const lottie = ref(null);
-
-const handleAnimation = (anim: any) => {
-  console.log(lottie.value);
-};
 </script>
 <style lang="scss" scoped>
 .tokenomics-container {
@@ -8682,7 +8677,6 @@ const handleAnimation = (anim: any) => {
   fill-rule: evenodd;
   clip-rule: evenodd;
   fill: #fff;
-
 }
 .st245 {
   clip-path: url(#SVGID_498_);
@@ -8738,7 +8732,6 @@ const handleAnimation = (anim: any) => {
   clip-rule: evenodd;
 
   fill: #fff;
-
 }
 .st259 {
   clip-path: url(#SVGID_530_);

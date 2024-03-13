@@ -81,17 +81,19 @@ import { discord, github, twitter } from "@/constants/socials";
 const featuredPosts = posts.filter((post) => post.featured).slice(0, 3);
 const featuredDapps = dapps.filter((dapp) => dapp.featured);
 
+useSeoMeta({
+  title: "Effect.AI | Home",
+  description:
+    "Effect.AI is a decentralized network for artificial intelligence and AI related services. We are creating a platform that will allow anyone in the world to contribute to AI development.",
+});
+
 useHead({
-  title: "Effect Network | Home",
   meta: [
     {
       hid: "description",
       name: "description",
       content: `Effect.AI is a decentralized network for artificial intelligence and AI related services. We are creating a platform that will allow anyone in the world to contribute to AI development.`,
     },
-  ],
-  script: [
-    { src: "https://files.coinmarketcap.com/static/widget/currency.js" },
   ],
 });
 

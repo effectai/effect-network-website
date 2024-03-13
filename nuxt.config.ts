@@ -7,8 +7,8 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     head: {
-      titleTemplate: "%s - Effect Network",
-      title: "Effect Network",
+      titleTemplate: "%s - Effect.AI",
+      title: "Effect.AI",
       htmlAttrs: {
         lang: "en",
       },
@@ -21,7 +21,6 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@nuxt/content", "@tresjs/nuxt", "@vueuse/nuxt"],
-  content: {},
   build: {
     transpile: ["vue-countup-v3"],
   },

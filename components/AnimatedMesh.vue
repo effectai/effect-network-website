@@ -28,7 +28,6 @@ const { material, geometry, mesh: blobMesh } = useBlob();
 material.map = gradient;
 envMap.mapping = EquirectangularReflectionMapping;
 material.envMap = envMap;
-material.needsUpdate = true;
 
 const brain = nodes["finalstlcleanermaterialmergergles"];
 const brainBufferGeometry = mergeAndExtractModel(brain, 0.05);
@@ -41,30 +40,7 @@ brain.traverse((child) => {
   }
 });
 
-const { morphToBrain } = useControls({
-  MorphToBlob: {
-    type: "button",
-    label: "Morph To Blob",
-    onClick: () => {
-      morphToBlob();
-    },
-  },
-  morphToPlanet: {
-    type: "button",
-    label: "Morph To Planet",
-    onClick: () => {
-      morphToPlanet();
-    },
-  },
-  morphToBrain: {
-    type: "button",
-    label: "Morph To Brain",
-    onClick: () => {
-      morphToBrainAnimation();
-    },
-  },
-});
-
+//set morph positions for shader
 geometry.setAttribute(
   "positionStart",
   new Float32BufferAttribute(geometry.attributes.position.array, 3)
@@ -82,7 +58,7 @@ attachShader();
 
 const normalMap = await useTexture(["/textures/earth-normalmap.jpg"]);
 
-type BlobState = {
+type AnimatedObjectState = {
   properties?: {
     rotation?: Vector3;
     position?: Vector3;
@@ -96,7 +72,7 @@ type BlobState = {
   };
 };
 
-const brainState: BlobState = {
+const brainState: AnimatedObjectState = {
   properties: {
     rotation: new Vector3(0, -6.6, 0),
   },
@@ -113,7 +89,7 @@ const brainState: BlobState = {
   },
 };
 
-const blobState: BlobState = {
+const blobState: AnimatedObjectState = {
   properties: {
     rotation: new Vector3(0, 0, 0),
   },
@@ -130,7 +106,7 @@ const blobState: BlobState = {
   },
 };
 
-const planetState: BlobState = {
+const planetState: AnimatedObjectState = {
   uniforms: {
     morphRatio: {
       value: 0,
@@ -148,7 +124,7 @@ const planetState: BlobState = {
 
 const ANIMATION_DURATION = 2500;
 
-const animateUniforms = (uniforms: BlobState["uniforms"]) => {
+const animateUniforms = (uniforms: AnimatedObjectState["uniforms"]) => {
   Object.keys(uniforms).forEach((key) => {
     animate({
       from: controls[key].value.value,
@@ -162,16 +138,18 @@ const animateUniforms = (uniforms: BlobState["uniforms"]) => {
   });
 };
 
-const animateProperties = (properties: BlobState["properties"]) => {
+const animateProperties = (properties: AnimatedObjectState["properties"]) => {
+  if (!properties) return;
   Object.keys(properties).forEach((key) => {
-    Object.keys(properties[key]).forEach((coord) => {
+    const propertyKey = key as keyof AnimatedObjectState["properties"];
+    Object.keys(properties[propertyKey]).forEach((coord) => {
       animate({
-        from: blobMesh[key][coord],
-        to: properties[key][coord],
+        from: blobMesh[propertyKey][coord],
+        to: properties[propertyKey][coord],
         duration: ANIMATION_DURATION,
         ease: easeOut,
         onUpdate: (value) => {
-          blobMesh[key][coord] = value;
+          blobMesh[propertyKey][coord] = value;
         },
       });
     });
@@ -185,6 +163,7 @@ const morphToBrainAnimation = () => {
 
   animateUniforms(brainState.uniforms);
   animateProperties(brainState.properties);
+
   isRotating.value = false;
 };
 
@@ -207,7 +186,8 @@ const morphToPlanet = () => {
   // animateProperties(planetState.properties);
 
   material.normalMap = normalMap;
-  material.map = null;
+
+  material.bumpScale = 5000;
   material.needsUpdate = true;
 
   animate({

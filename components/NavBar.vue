@@ -9,7 +9,7 @@
       <div class="container">
         <div class="navbar-brand">
           <nuxt-link class="navbar-item" to="/">
-            <img src="/img/logo.svg" class="logo" />
+            <img src="/img/effect-logo.png" class="logo" />
           </nuxt-link>
 
           <a
