@@ -1,7 +1,13 @@
 <template>
   <div class="columns">
     <div class="column is-one-third p-5 has-text-centered">
-      <ChainCard :supply="163812894" class="eos" chain="EOS" :logo="eosLogo">
+      <ChainCard
+        href="https://eos.defibox.io/marketDetail/191"
+        :supply="163812894"
+        class="eos"
+        chain="EOS"
+        :logo="eosLogo"
+      >
         <template #address>
           <a
             class="is-family-monospace has-text-black is-block"
@@ -13,7 +19,13 @@
       </ChainCard>
     </div>
     <div class="column is-one-third p-5 has-text-centered">
-      <ChainCard :supply="45194866" class="bsc" chain="BSC" :logo="bscLogo">
+      <ChainCard
+        href="https://pancakeswap.finance/swap?outputCurrency=0xc51ef828319b131b595b7ec4b28210ecf4d05ad0"
+        :supply="45194866"
+        class="bsc"
+        chain="BSC"
+        :logo="bscLogo"
+      >
         <template #address>
           <a
             class="is-family-monospace has-text-black is-block"

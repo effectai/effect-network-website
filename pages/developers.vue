@@ -96,7 +96,11 @@
       You can start playing with Effect Force in your browser using our online
       sandboxes:
 
-      <a href="#" class="is-capital is-block mt-5">Open on StackBlitz</a>
+      <a
+        href="https://stackblitz.com/edit/vitejs-vite-bf8uzg?file=main.js"
+        class="is-capital is-block mt-5"
+        >Open on StackBlitz</a
+      >
     </SimpleSection>
 
     <SimpleSection :title="'Resources'">

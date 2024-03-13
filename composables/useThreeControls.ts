@@ -185,7 +185,7 @@ export const useDisplacement = (material: Material) => {
 };
 
 export const useBlob = () => {
-  const geometry = new IcosahedronGeometry(4, 130);
+  const geometry = new IcosahedronGeometry(4, 137);
   const material = new MeshStandardMaterial({
     metalness: 0.75,
     roughness: 0.2,

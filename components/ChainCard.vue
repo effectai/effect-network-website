@@ -12,12 +12,15 @@
       Current supply: {{ formattedMillions }}M
     </h3>
     <h3 v-else>Current Supply: -</h3>
-    <a class="button mt-auto is-primary mt-5">Buy EFX on {{ chain }}</a>
+    <a :href="href" class="button mt-auto is-primary mt-5"
+      >Buy EFX on {{ chain }}</a
+    >
   </div>
 </template>
 
 <script setup lang="ts">
 const props = defineProps<{
+  href: string;
   chain: string;
   logo: string;
   disabled?: boolean;

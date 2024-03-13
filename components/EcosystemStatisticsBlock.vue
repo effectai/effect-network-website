@@ -24,25 +24,38 @@
 <script setup lang="ts">
 import { dapps } from "@/constants/dapps";
 import CountUp from "vue-countup-v3";
+import { formatNumber } from "~/utils/format";
 
-const statistics = [
-  {
-    label: "Dapps in Ecosystem",
-    value: dapps.length,
-    decimalPlaces: 0,
-  },
-  {
-    label: "Tasks Completed",
-    value: 8.53,
-    decimalPlaces: 1,
-    suffix: "M",
-  },
-  {
-    label: "Proposals created",
-    value: 325,
-    decimalPlaces: 0,
-  },
-];
+const { useDaoStatistics, useForceStatistics } = useStatistics();
+const { tasksCompleted } = useForceStatistics();
+const { proposalsCreated } = useDaoStatistics();
+
+const formattedTasksCompleted = computed(() => {
+  return tasksCompleted.value && formatNumber(tasksCompleted.value);
+});
+
+const statistics = computed(
+  () =>
+    proposalsCreated.value &&
+    tasksCompleted.value && [
+      {
+        label: "Dapps in Ecosystem",
+        value: dapps.length,
+        decimalPlaces: 0,
+      },
+      {
+        label: "Tasks Completed",
+        value: formattedTasksCompleted.value.value,
+        decimalPlaces: 1,
+        suffix: formattedTasksCompleted.value.suffix,
+      },
+      {
+        label: "Proposals created",
+        value: proposalsCreated.value,
+        decimalPlaces: 0,
+      },
+    ]
+);
 </script>
 
 <style></style>

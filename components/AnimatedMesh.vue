@@ -19,7 +19,7 @@ const gradient = await useTexture(["../gradients/zinc.jpg"]);
 const envMap = await useTexture(["../envmap.jpg"]);
 
 //TODO::reduce brain poly's..
-const { nodes } = await useGLTF("/models/scene.gltf", {
+const { nodes } = await useGLTF("/models/brain.glb", {
   draco: true,
 });
 
@@ -75,10 +75,8 @@ geometry.setAttribute(
   new Float32BufferAttribute(brainBufferGeometry.attributes.position.array, 3)
 );
 
-const { uniforms, updateUniforms, resetShader, attachShader, controls } =
+const { updateUniforms, resetShader, attachShader, controls } =
   useDisplacement(material);
-
-const { onLoop } = useRenderLoop();
 
 attachShader();
 
@@ -228,6 +226,7 @@ const morphToPlanet = () => {
 
 const route = useRouter().currentRoute;
 const isRotating = ref(false);
+const { onLoop } = useRenderLoop();
 
 onLoop(({ elapsed, delta, clock }) => {
   updateUniforms(elapsed);

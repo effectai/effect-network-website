@@ -156,9 +156,9 @@ useSeoMeta({
 const { useDaoStatistics, useEfxPrice } = useStatistics();
 const { data: price } = useEfxPrice();
 
-const { currentCycle, feePoolBalance } = await useDaoStatistics();
+const { currentCycle, feePoolBalance } = useDaoStatistics();
 
-const daoStats = ref([
+const daoStats = computed(() => [
   { label: "status", value: "voting" },
   { label: "cycle", value: currentCycle },
   {
