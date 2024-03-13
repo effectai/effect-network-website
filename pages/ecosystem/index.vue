@@ -34,7 +34,7 @@
     <SimpleSection class="has-background-light has-text-primary">
       <div class="columns is-variable is-6">
         <div class="column is-5" data-aos="fade-up" data-aos-delay="100">
-          <h2 class="title is-3 has-text-primary mb-0">The EFFECT.AI</h2>
+          <h2 class="title is-3 has-text-primary mb-0">The EFFECT AI</h2>
           <h2
             class="title is-1 has-text-primary is-uppercase"
             style="font-size: 3rem"
@@ -50,7 +50,7 @@
           </p>
           <br />
           <p class="has-text-weight-bold">
-            Join the DAO and have a voice on the development of the EFFECT.AI
+            Join the DAO and have a voice on the development of the EFFECT AI
             Ecosystem.
           </p>
         </div>
@@ -90,8 +90,8 @@
         <div class="my-5">
           <h2 class="title is-1 has-text-primary mt-6">Powered By EFX</h2>
           <p>
-            EFX is the cryptographic token that fuels the Effect Network. It
-            offers developers and organizations a reliable option to build,
+            EFX is the cryptographic token that fuels the Effect AI ecosystem.
+            It offers developers and organizations a reliable option to build,
             monetize and power AI solutions. EFX can be earned or bought and can
             be used in a decentralized ecosystem of AI-related services.
           </p>
@@ -116,7 +116,7 @@
         <div class="my-5">
           <h2 class="title is-1 has-text-primary mt-6">Marketplace</h2>
           <p>
-            Effect.AI is a decentralized platform for AI related services. The
+            Effect AI is a decentralized platform for AI related services. The
             marketplace is a place where you can find AI services and
             applications that are built on the network.
           </p>

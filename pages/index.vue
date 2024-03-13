@@ -44,10 +44,10 @@
       <NewsCardList :posts="featuredPosts" />
     </SimpleSection>
 
-    <SimpleSection :centered="true" title="How to use Effect.AI?" class="">
+    <SimpleSection :centered="true" title="How to use Effect AI?" class="">
       <template #subtitle>
         <p class="is-size-5">
-          Founded in 2017, Effect.AI is a decentralized network for AI related
+          Founded in 2017, Effect AI is a decentralized network for AI related
           services. Together with our community, we are creating a platform that
           will allow anyone in the world to contribute to AI development in a
           100% decentralized manner.
@@ -82,9 +82,9 @@ const featuredPosts = posts.filter((post) => post.featured).slice(0, 3);
 const featuredDapps = dapps.filter((dapp) => dapp.featured);
 
 useSeoMeta({
-  title: "Effect.AI | Home",
+  title: "Effect AI | Home",
   description:
-    "Effect.AI is a decentralized network for artificial intelligence and AI related services. We are creating a platform that will allow anyone in the world to contribute to AI development.",
+    "Effect AI is a decentralized network for artificial intelligence and AI related services. We are creating a platform that will allow anyone in the world to contribute to AI development.",
 });
 
 useHead({
@@ -92,7 +92,7 @@ useHead({
     {
       hid: "description",
       name: "description",
-      content: `Effect.AI is a decentralized network for artificial intelligence and AI related services. We are creating a platform that will allow anyone in the world to contribute to AI development.`,
+      content: `Effect AI is a decentralized network for artificial intelligence and AI related services. We are creating a platform that will allow anyone in the world to contribute to AI development.`,
     },
   ],
 });

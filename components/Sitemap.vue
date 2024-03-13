@@ -3,7 +3,7 @@
     <div class="columns is-mobile is-multiline">
       <div class="column is-half-mobile is-narrow">
         <div class="menu">
-          <p class="menu-label">Effect.AI</p>
+          <p class="menu-label">Effect AI</p>
           <ul class="menu-list">
             <li><nuxt-link to="/">Home</nuxt-link></li>
             <li><nuxt-link to="/developers">Build</nuxt-link></li>
@@ -84,7 +84,7 @@
             />
             <div>
               <div class="menu-label mb-0">Office</div>
-              <u>Effect.AI B.V.</u>
+              <u>Effect AI B.V.</u>
               <div>Arlandaweg 92</div>
               <div>Amsterdam, 1043 EX</div>
               <div>&nbsp;</div>

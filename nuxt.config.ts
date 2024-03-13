@@ -7,8 +7,8 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     head: {
-      titleTemplate: "%s - Effect.AI",
-      title: "Effect.AI",
+      titleTemplate: "%s - Effect AI",
+      title: "Effect AI",
       htmlAttrs: {
         lang: "en",
       },

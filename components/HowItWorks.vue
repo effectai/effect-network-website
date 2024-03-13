@@ -18,7 +18,7 @@
             Complete tasks and earn EFX directly to your wallet.
           </h2>
           <p class="has-text-aligned block">
-            Effect.AI is the platform for the Future-of-Work. You can work from
+            Effect AI is the platform for the Future-of-Work. You can work from
             anywhere, at any time, from any device. Simply create an Effect
             Account and start completing tasks while collecting $EFX directly to
             your wallet!

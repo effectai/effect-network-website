@@ -6,7 +6,7 @@
     >
       <template #subtitle>
         <p class="block is-size-5 has-text-black">
-          A collection of resources for joining the Effect.AI ecosystem. By
+          A collection of resources for joining the Effect AI ecosystem. By
           developers for developers.
         </p>
       </template>
@@ -27,7 +27,7 @@
         <div class="column">
           <h2 class="is-3 title">Get Started With The SDK</h2>
           <p>
-            The Effect.AI SDK offers a collection of tools and libraries that
+            The Effect AI SDK offers a collection of tools and libraries that
             developers can use to build applications on top of the Effect
             Network protocol.
           </p>
@@ -117,7 +117,7 @@
               />
               <h3 class="subtitle is-4 mt-4 mb-2">Github</h3>
               <p class="block">
-                Join the Effect.AI development effort by contributing to one of
+                Join the Effect AI development effort by contributing to one of
                 the open-source projects on the public Effect repositories.
               </p>
               <a
@@ -178,7 +178,7 @@ import type { Tutorial } from "~/types/tutorials";
 useSeoMeta({
   title: "Developers",
   description:
-    "A collection of resources for joining the Effect.AI ecosystem. By developers for developers.",
+    "A collection of resources for joining the Effect AI ecosystem. By developers for developers.",
 });
 
 const content = `import { EffectClient } from '@effectai/effect-js';

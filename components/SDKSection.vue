@@ -13,7 +13,7 @@
       <div class="column is-1/3">
         <h2 class="title">Node.js SDK</h2>
         <p class="block">
-          The Effect.AI SDK is a collection of tools and libraries that allow
+          The Effect AI SDK is a collection of tools and libraries that allow
           developers to build applications on top of the Effect Network
           protocol.
         </p>

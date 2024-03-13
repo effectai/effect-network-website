@@ -4,8 +4,8 @@
       <Sitemap />
       <div class="has-text-centered has-text-white">
         <small class="is-size-7"
-          >&copy; {{ new Date().getFullYear() }} <b>EFFECT NETWORK</b> by
-          EFFECT.AI</small
+          >&copy; {{ new Date().getFullYear() }} <b>EFFECT NETWORK</b> by EFFECT
+          AI</small
         >
       </div>
     </div>
