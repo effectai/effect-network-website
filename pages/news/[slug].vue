@@ -22,7 +22,7 @@
             <div class="column">
               <NuxtPicture
                 :src="data.image.src"
-                class="image is-5by3"
+                class="image is-5by3 has-rounded-corners"
               ></NuxtPicture>
             </div>
           </div>
@@ -64,9 +64,11 @@ const { data } = await useAsyncData("page-data", () =>
     line-height: 32px;
   }
 
-  img {
-    display: flex;
-    margin: 80px auto;
+  #content {
+    img {
+      display: flex;
+      margin: 80px auto;
+    }
   }
 
   h1,

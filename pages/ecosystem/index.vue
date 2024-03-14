@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeroSection style="height: 650px">
+    <HeroSection style="height: 550px">
       <template #title>
         <h1 class="has-text-primary is-uppercase title">
           Be Part of <br />
@@ -42,7 +42,7 @@
             Ecosystem
           </h2>
           <p>
-            Effect Network's ecosystem is a collection of all the applications
+            Effect AI's ecosystem is a collection of all the applications
             running on the network. You may use $EFX tokens to buy a number of
             services that boost productivity, including social media engagement,
             translations, subtitles and graphics, to help your business grow in
@@ -60,10 +60,10 @@
             <div class="card-content has-text-centered">
               <img
                 src="@/assets/img/dapps/effect-dao.png"
-                width="200"
+                width="150"
                 class=""
               />
-              <h4 class="subtitle">Vote, Stake and Earn EFX</h4>
+              <h4 class="subtitle is-6">Vote, Stake and Earn EFX</h4>
 
               <div class="columns">
                 <div v-for="stat in daoStats" class="column is-4">
@@ -156,7 +156,7 @@ definePageMeta({
 useSeoMeta({
   title: "Ecosystem",
   description:
-    "Effect Network's ecosystem is a collection of all the applications running on the network.",
+    "Effect AI's ecosystem is a collection of all the applications running on the network.",
 });
 
 const { useDaoStatistics, useEfxPrice } = useStatistics();

@@ -18,7 +18,7 @@
 
           <span>News</span>
         </div>
-        <div class="title is-4 is-family-sans-serif">
+        <div class="title has-text-primary is-4 is-family-sans-serif">
           {{ news.title }}
         </div>
         <p>

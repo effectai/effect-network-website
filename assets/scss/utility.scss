@@ -78,3 +78,11 @@
 .is-whitespace-pre {
   white-space: pre;
 }
+
+.has-rounded-corners {
+  border-radius: 10px;
+
+  img {
+    border-radius: 10px;
+  }
+}
