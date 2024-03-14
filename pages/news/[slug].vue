@@ -4,7 +4,7 @@
       <div class="has-background-smoke">
         <div class="container">
           <div style="padding: 5rem 2rem" class="columns is-vcentered">
-            <div class="column is-two-thirds">
+            <div class="column is-7">
               <h1 class="is-size-1 mt-5 has-text-primary title">
                 {{ data.title }}
               </h1>

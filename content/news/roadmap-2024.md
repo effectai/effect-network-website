@@ -25,11 +25,11 @@ Looking ahead, we're excited to launch a series of ambitious long-term growth in
 
 Our recent decision to revert to our original identity, "Effect AI," marks a pivotal moment in our journey, driven by [Proposal #149](https://dao.effect.network/proposals/149) from our DAO. This shift represents a recommitment to our foundational values and mission in the realm of decentralizing artificial intelligence.
 
-Over the past few weeks, Jeffrey has been hard at work revamping our website, giving it some much needed love and attention. Our goal is to position our website as the go-to hub for all things related to news, tutorials, documentation, and for those eager to become part of our dynamic ecosystem.
+Meanwhile Jeffrey has been hard at work revamping our website, giving it some much needed love and attention. Our goal is to position our website as the go-to hub for all things related to news, tutorials, documentation, and for those eager to become part of our dynamic ecosystem.
 
 #### V2 Release
 
-The highly anticipated V2 release is currently in the final stages of preparation, guaranteed to bring a significant enhancement to our platform for both developers and users. Among the key improvements V2 will introduce are:
+The highly anticipated V2 release is currently in the final stages of preparation, guaranteed to bring a significant upgrade to our platform for both developers and users. Among the key improvements V2 will introduce are:
 
 - ???
 - ???
@@ -42,7 +42,7 @@ Once the bridge is operational, our attention will shift towards migrating key c
 
 #### Major DAO Updates & Staking Revamp
 
-With migrations wrapping up, our focus now shifts to the DAO's evolution. Expect practical upgrades, including pull request integration for enhanced collaboration.
+With migrations wrapping up, our focus now shifts to the DAO's evolution.
 
 We're also revamping the EFX/NFX staking mechanism, ensuring it's more intuitive and rewarding. These changes aim to streamline operations and better serve the EFX community.
 

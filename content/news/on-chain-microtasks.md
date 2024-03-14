@@ -5,6 +5,7 @@ author: "Jesse"
 lastUpdated: "2024-03-09"
 created: "2024-03-09"
 image:
+  # src: "/img/news/effect-protocol-grey.jpeg"
   src: "/img/news/on-chain-microtasks.webp"
 published: true
 ---

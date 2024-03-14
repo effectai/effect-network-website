@@ -6,7 +6,8 @@
           <p class="menu-label">Effect AI</p>
           <ul class="menu-list">
             <li><nuxt-link to="/">Home</nuxt-link></li>
-            <li><nuxt-link to="/developers">Build</nuxt-link></li>
+            <li><nuxt-link to="/developers">Developers</nuxt-link></li>
+            <li><nuxt-link to="/ecosystem">Ecosystem</nuxt-link></li>
             <li>
               <a target="_blank" href="https://dao.effect.network">DAO</a>
             </li>
