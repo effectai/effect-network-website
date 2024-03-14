@@ -2,8 +2,8 @@
 title: "Tech Blog: On-Chain Microtasks"
 description: "In this article, we’ll take a look at Effect Force’s new task creation mechanism. This technology makes it simple for people and businesses to add microtasks to the blockchain."
 author: "Jesse"
-lastUpdated: "2021-09-21"
-created: "2021-09-21"
+lastUpdated: "2024-03-09"
+created: "2024-03-09"
 image:
   src: "/img/news/on-chain-microtasks.webp"
 published: true

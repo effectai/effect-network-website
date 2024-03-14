@@ -34,7 +34,7 @@
           />
 
           <Suspense>
-            <AnimatedMesh :position="[5, 0, 0]" />
+            <AnimatedMesh />
           </Suspense>
         </TresCanvas>
       </div>

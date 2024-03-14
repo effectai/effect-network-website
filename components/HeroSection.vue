@@ -1,5 +1,5 @@
 <template>
-  <div id="hero" data-aos="fade-in">
+  <div id="hero" data-aos="fade-in" class="mt-5">
     <section class="section">
       <div class="container mt-6">
         <div class="columns is-vcentered">

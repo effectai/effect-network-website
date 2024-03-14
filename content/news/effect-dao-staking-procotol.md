@@ -13,8 +13,8 @@ head:
       content: "Laurens - Effect.AI"
     - name: "copyright"
       content: "© 2024 Effect.AI"
-lastUpdated: "2020-09-20"
-created: "2020-09-20"
+lastUpdated: "2024-03-07"
+created: "2024-03-07"
 published: true
 ---
 

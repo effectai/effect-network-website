@@ -16,7 +16,7 @@ const normalMap = await useTexture(["/img/textures/earth-normalmap.jpg"]);
 
 const { material, geometry, mesh: blobMesh } = useBlob();
 material.envMap = envMap;
-
+blobMesh.position.set(5, 0, 0);
 const { loadBrain } = useBrain();
 loadBrain(material, geometry);
 
