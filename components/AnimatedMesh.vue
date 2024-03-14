@@ -3,13 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import {
-  Float32BufferAttribute,
-  EquirectangularReflectionMapping,
-  Texture,
-  Vector2,
-  Vector3,
-} from "three";
+import { EquirectangularReflectionMapping, Vector2, Vector3 } from "three";
 
 import { useBlob } from "~/composables/useThreeControls";
 import { useTexture } from "@tresjs/core";
@@ -17,15 +11,14 @@ import { animate, cubicBezier, easeOut } from "popmotion";
 import { distortPingPong } from "~/utils/animate";
 
 const envMap = await useTexture(["/img/textures/envmap.jpg"]);
+envMap.mapping = EquirectangularReflectionMapping;
 const normalMap = await useTexture(["/img/textures/earth-normalmap.jpg"]);
 
 const { material, geometry, mesh: blobMesh } = useBlob();
+material.envMap = envMap;
 
 const { loadBrain } = useBrain();
 loadBrain(material, geometry);
-
-envMap.mapping = EquirectangularReflectionMapping;
-material.envMap = envMap;
 
 const { updateUniforms, attachShader, controls } = useDisplacement(material);
 
@@ -93,8 +86,10 @@ const planetState: AnimatedObjectState = {
 const ANIMATION_DURATION = 2500;
 
 const animateUniforms = (uniforms: AnimatedObjectState["uniforms"]) => {
+  const stopFns = [];
+
   Object.keys(uniforms).forEach((key) => {
-    animate({
+    const anim = animate({
       from: controls[key].value.value,
       to: uniforms[key].value,
       duration: uniforms[key].duration || ANIMATION_DURATION,
@@ -103,7 +98,15 @@ const animateUniforms = (uniforms: AnimatedObjectState["uniforms"]) => {
         controls[key].value.value = value;
       },
     });
+
+    stopFns.push(anim.stop);
   });
+
+  return {
+    stopAll: () => {
+      stopFns.forEach((fn) => fn());
+    },
+  };
 };
 
 const animateProperties = (properties: AnimatedObjectState["properties"]) => {
@@ -128,12 +131,15 @@ const morphToBrain = () => {
   material.normalMap = null;
   material.normalScale = new Vector2(0, 0);
 
-  animateUniforms(brainState.uniforms);
+  const { stopAll } = animateUniforms(brainState.uniforms);
+
   animateProperties(brainState.properties);
 
   distortPingPong(controls.distort.value);
 
   isRotating.value = false;
+
+  return stopAll;
 };
 
 const morphToBlob = () => {
@@ -141,14 +147,16 @@ const morphToBlob = () => {
   material.needsUpdate = true;
   material.normalScale = new Vector2(0, 0);
 
-  animateUniforms(blobState.uniforms);
+  const { stopAll } = animateUniforms(blobState.uniforms);
   animateProperties(blobState.properties);
 
   isRotating.value = false;
+
+  return stopAll;
 };
 
 const morphToPlanet = () => {
-  animateUniforms(planetState.uniforms);
+  const { stopAll } = animateUniforms(planetState.uniforms);
   // animateProperties(planetState.properties);
   material.normalMap = normalMap;
   material.needsUpdate = true;
@@ -166,6 +174,8 @@ const morphToPlanet = () => {
   });
 
   isRotating.value = true;
+
+  return stopAll;
 };
 
 const route = useRouter().currentRoute;
@@ -180,19 +190,29 @@ onLoop(({ elapsed, delta, clock }) => {
   }
 });
 
-watch(
-  route,
-  () => {
-    if (route.value.name == "index") {
-      morphToBlob();
-    } else if (route.value.name == "developers") {
-      morphToBrain();
-    } else if (route.value.name == "ecosystem") {
-      morphToPlanet();
-    }
-  },
-  { immediate: true }
-);
+const stopAllCurrent: Ref<Function | null> = ref(null);
+
+const handleRouteChange = () => {
+  if (stopAllCurrent.value) {
+    stopAllCurrent.value();
+  }
+
+  switch (route.value.name) {
+    case "index":
+      stopAllCurrent.value = morphToBlob();
+      break;
+    case "developers":
+      stopAllCurrent.value = morphToBrain();
+      break;
+    case "ecosystem":
+      stopAllCurrent.value = morphToPlanet();
+      break;
+    default:
+      break;
+  }
+};
+
+watch(route, handleRouteChange, { immediate: true });
 </script>
 
 <style></style>

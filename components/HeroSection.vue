@@ -4,7 +4,10 @@
       <div class="container mt-6">
         <div class="columns is-vcentered">
           <div class="column is-half" data-aos="fade-in" data-aos-delay="0">
-            <h1 v-if="title" class="mt-3 title is-spaced keep-all is-in-front">
+            <h1
+              v-if="title"
+              class="mt-3 title is-spaced is-auto-phrase is-in-front"
+            >
               <span
                 class="is-uppercase has-text-primary is-block is-in-front"
                 >{{ title }}</span

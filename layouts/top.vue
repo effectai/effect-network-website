@@ -8,8 +8,8 @@
     >
       <button @click="close" class="cursor-pointer delete"></button>
       <i class="fas fa-exclamation-triangle mx-2"></i>
-      We've just announced an official <b>bridge</b> to the
-      <b>Solana Network</b>, read more about it <a href="#">here</a> 👈
+      Our brand new <b>website</b> and <b>roadmap</b> are out, read more about
+      it <nuxt-link to="/news/roadmap-2024">here</nuxt-link> 👈
     </div>
 
     <NavBar :is-scrolling="isScrolling" />
