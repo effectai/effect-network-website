@@ -2,15 +2,14 @@
   <div>
     <HeroSection
       style="min-height: 750px"
-      :title="'Decentralizing Artificial Intelligence'"
+      :title="'Handcrafted Data for Artificial Intelligence'"
     >
       <template #subtitle>
         <p class="subtitle pr-6" data-aos="fade-up" data-aos-delay="150">
           <span class="pr-6 has-text-black">
-            Bringing AI To the Masses, the Decentralized Scalable Workforce
-            On-Demand. Enabling the Birth of next-gen transparent AI
-            models.</span
-          >
+	    Effect AI is the data network for training next-gen transparent AI models.
+	    Join the workforce by collecting and enriching datasets and get paid instantly.
+          </span>
         </p>
       </template>
 

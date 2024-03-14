@@ -9,7 +9,7 @@
               class="mt-3 title is-spaced is-auto-phrase is-in-front"
             >
               <span
-                class="is-uppercase has-text-primary is-block is-in-front"
+                class="has-text-primary is-block is-in-front"
                 >{{ title }}</span
               >
             </h1>

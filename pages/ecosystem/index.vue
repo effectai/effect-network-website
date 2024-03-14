@@ -2,9 +2,9 @@
   <div>
     <HeroSection style="height: 550px">
       <template #title>
-        <h1 class="has-text-primary is-uppercase title">
-          Be Part of <br />
-          the AI future
+        <h1 class="has-text-primary title">
+          Be Part of the <br />
+	  AI Future
         </h1>
       </template>
 
@@ -34,9 +34,9 @@
     <SimpleSection class="has-background-light has-text-primary">
       <div class="columns is-variable is-6">
         <div class="column is-5" data-aos="fade-up" data-aos-delay="100">
-          <h2 class="title is-3 has-text-primary mb-0">The EFFECT AI</h2>
+          <h2 class="title is-3 has-text-primary mb-0">The Effect AI</h2>
           <h2
-            class="title is-1 has-text-primary is-uppercase"
+            class="title is-1 has-text-primary "
             style="font-size: 3rem"
           >
             Ecosystem

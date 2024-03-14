@@ -2,7 +2,7 @@
   <div>
     <HeroSection
       style="min-height: 650px"
-      title="Unleash the power of a decentralized workforce"
+      title="Unleash the Power of a Global Workforce"
     >
       <template #subtitle>
         <p class="block is-size-5 has-text-black">
