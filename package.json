@@ -29,6 +29,7 @@
     "glslify": "^7.1.1",
     "nuxt": "^3.10.3",
     "popmotion": "^11.0.5",
+    "remark-unwrap-images": "^4.0.0",
     "three": "^0.161.0",
     "vue": "^3.4.19",
     "vue-router": "^4.2.5",

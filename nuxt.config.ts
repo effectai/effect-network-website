@@ -21,6 +21,11 @@ export default defineNuxtConfig({
     },
   },
   modules: ["@nuxt/content", "@tresjs/nuxt", "@vueuse/nuxt", "@nuxt/image"],
+  content: {
+    markdown: {
+      remarkPlugins: ["remark-unwrap-images"],
+    },
+  },
   build: {
     transpile: ["vue-countup-v3"],
   },

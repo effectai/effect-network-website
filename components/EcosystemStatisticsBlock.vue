@@ -5,7 +5,7 @@
         <ClientOnly>
           <div class="is-flex">
             <count-up
-              class="is-flex whitespace-pre"
+              class="is-flex is-whitespace-pre"
               :decimal-places="statistic.decimalPlaces"
               :end-val="statistic.value"
             >

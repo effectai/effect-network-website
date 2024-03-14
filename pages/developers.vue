@@ -32,7 +32,7 @@
             Network protocol.
           </p>
 
-          <div class="mt-5 is-flex has-gap-1">
+          <div class="mt-5 is-flex has-gap-1 is-flex-wrap-wrap">
             <a
               class="button is-primary"
               href="https://developer.effect.network/quickstart/"

@@ -1,24 +1,30 @@
 <template>
   <div
     :class="['p-5 has-text-centered token-card', { disabled: props.disabled }]"
-    class="p-5 has-text-centered token-card has-background-white has-text-black"
+    class="p-5 has-text-centered token-card has-background-white is-fullheight has-text-black"
   >
     <div class="logo-wrapper">
       <img id="logo" :src="logo" />
     </div>
-    <slot class="link" name="address"></slot>
 
-    <h3 class="is-size-6 is-family-monospace" v-if="formattedSupply">
-      <span class="is-flex-center">
-        Current supply:
+    <slot name="address"></slot>
 
-        <span class="is-uppercase mx-1">
-          {{ formattedSupply.value }}{{ formattedSupply.suffix }}</span
+    <div class="my-3 is-fullwidth">
+      <div v-for="stat in stats" class="is-fullwidth">
+        <div
+          v-if="stat.value"
+          class="is-flex is-justify-content-center has-gap-1 is-lowercase is-family-monospace"
         >
-      </span>
-    </h3>
-    <h3 v-else>Current Supply: -</h3>
-    <a :href="href" class="button mt-auto is-primary mt-5"
+          <label>{{ stat.name }}</label>
+          <span class="is-uppercase"
+            >{{ formatNumber(stat.value).value
+            }}{{ formatNumber(stat.value).suffix }}</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <a target="_blank" :href="href" class="button mt-auto is-primary mt-5"
       >Buy EFX on {{ chain }}</a
     >
   </div>
@@ -31,14 +37,8 @@ const props = defineProps<{
   logo: string;
   disabled?: boolean;
   supply?: number;
+  stats?: Array<{ name: string; value: number }>;
 }>();
-
-const formattedSupply = computed(() => {
-  if (props.supply) {
-    return formatNumber(props.supply);
-  }
-  return null;
-});
 </script>
 
 <style lang="scss">

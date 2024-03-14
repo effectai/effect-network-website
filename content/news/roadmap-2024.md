@@ -5,7 +5,7 @@ author: "Jesse"
 lastUpdated: "2024-02-21"
 created: "2024-02-21"
 image:
-  src: "/img/news/roadmap2022.png"
+  src: "/img/news/roadmap2024.webp"
 published: true
 ---
 

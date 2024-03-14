@@ -36,12 +36,7 @@
       </template>
     </HeroSection>
 
-    <SimpleSection
-      class="p-0"
-      data-aos="fade-left"
-      data-aos-delay="300"
-      id="news"
-    >
+    <SimpleSection data-aos="fade-left" data-aos-delay="300" id="news">
       <NewsCardList v-if="news" :items="news" />
     </SimpleSection>
 
@@ -75,16 +70,16 @@
 </template>
 
 <script setup lang="ts">
-import { posts } from "@/constants/posts";
 import { dapps } from "@/constants/dapps";
 import { discord, github, twitter } from "@/constants/socials";
-
 import type { News } from "@/types/news";
 
-const featuredDapps = dapps.filter((dapp) => dapp.featured);
+definePageMeta({
+  layout: "top",
+});
 
 useSeoMeta({
-  title: "Effect AI | Home",
+  title: "Home",
   description:
     "Effect AI is a decentralized network for artificial intelligence and AI related services. We are creating a platform that will allow anyone in the world to contribute to AI development.",
 });
@@ -99,20 +94,19 @@ useHead({
   ],
 });
 
+const featuredDapps = dapps.filter((dapp) => dapp.featured);
+
 //fetch news content and sort by created
-const { data: news } = useAsyncData("news", async () => {
+const { data: news } = await useAsyncData("news", async () => {
   const data = await queryContent<News>(`/news`)
     .where({ published: true })
     .limit(3)
     .find();
+
+  //sort on created date
   return data.sort((a, b) => {
     return new Date(b.created).getTime() - new Date(a.created).getTime();
   });
-});
-
-//use layout
-definePageMeta({
-  layout: "top",
 });
 </script>
 

@@ -1,4 +1,4 @@
-export function formatNumber(num) {
+export function formatNumber(num: number) {
   const suffixes = ["", "k", "m", "b", "t"]; // List of suffixes for thousands, millions, billions, etc.
   let suffixIndex = 0;
   while (Math.abs(num) >= 1000 && suffixIndex < suffixes.length - 1) {
@@ -8,3 +8,9 @@ export function formatNumber(num) {
   const formattedNum = num.toFixed(1).replace(/\.0$/, ""); // Removes decimal places if unnecessary
   return { value: formattedNum, suffix: suffixes[suffixIndex] };
 }
+
+export const limitText = (description: string, limit = 200) => {
+  return description.length > limit
+    ? description.substring(0, limit) + "..."
+    : description;
+};

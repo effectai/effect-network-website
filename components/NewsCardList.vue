@@ -1,6 +1,6 @@
 <template>
   <div class="my-6" id="latest">
-    <div class="columns p-4 is-gapless-mobile is-multiline">
+    <div class="columns is-multiline">
       <div
         class="column is-full-mobile is-one-third-tablet"
         v-for="(item, i) in items"

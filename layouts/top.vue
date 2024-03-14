@@ -7,9 +7,8 @@
       class="notification is-light is-fixed-top z-1 has-text-centered"
     >
       <button @click="close" class="cursor-pointer delete"></button>
-      <i class="fas fa-exclamation-triangle mx-2"></i>
-      Our brand new <b>website</b> and <b>roadmap</b> are out, read more about
-      it <nuxt-link to="/news/roadmap-2024">here</nuxt-link> 👈
+      🚀 Our <b>brand new</b> <b>website</b> and <b>roadmap</b> are out! 🔥
+      Check it out <nuxt-link to="/news/roadmap-2024">here</nuxt-link> 👈
     </div>
 
     <NavBar :is-scrolling="isScrolling" />

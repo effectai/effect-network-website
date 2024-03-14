@@ -22,7 +22,7 @@
             <div class="column">
               <NuxtPicture
                 :src="data.image.src"
-                class="image is-5by3 background-image"
+                class="image is-5by3"
               ></NuxtPicture>
             </div>
           </div>
@@ -62,6 +62,11 @@ const { data } = await useAsyncData("page-data", () =>
 #nuxt-news {
   p {
     line-height: 32px;
+  }
+
+  img {
+    display: flex;
+    margin: 80px auto;
   }
 
   h1,

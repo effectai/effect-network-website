@@ -1,19 +1,20 @@
 ---
-title: "AI Deepdive: Humans and AI as Collaborators"
-description: "In the ever-evolving landscape of technology, the integration of Artificial Intelligence (AI) into various industries is surrounded by discussions about its impact on the future of work"
+title: "The Effect DAO: Effect Staking Protocol 2.0"
+description: "By staking EFX, holders can improve their rank in The Effect DAO. Achieving a high rank has many benefits like vote casting, fee reward collection, and gaining privileges on the dApp level."
 image:
-  src: "/assets/image.jpg"
-author: "Gabrielle"
+  src: "/img/news/effect-staking.webp"
+
+author: "Laurens"
 head:
   meta:
     - name: "keywords"
-      content: "AI, EFX, deepdive, technology"
+      content: "AI, EFX, deepdive, technology, staking"
     - name: "author"
-      content: "Gabrielle - Effect.AI"
+      content: "Laurens - Effect.AI"
     - name: "copyright"
       content: "© 2024 Effect.AI"
-lastUpdated: "2023-02-21"
-created: "2023-02-21"
+lastUpdated: "2020-09-20"
+created: "2020-09-20"
 published: true
 ---
 

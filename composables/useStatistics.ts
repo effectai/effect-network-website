@@ -257,6 +257,14 @@ export const useStatistics = () => {
       return eosSupplyQuery.data?.value;
     });
 
+    const lockedEosSupply = computed(() => {
+      const daoBalanceValue = daoBalance.value ?? 0;
+      const stakeBalanceValue = stakeBalance.value ?? 0;
+      const liquidityBalanceValue = liquidityBalance.value ?? 0;
+
+      return daoBalanceValue + stakeBalanceValue + liquidityBalanceValue;
+    });
+
     const liquidEosSupply = computed(() => {
       const circulatingEosSupplyValue = circulatingEosSupply.value ?? 0;
       const daoBalanceValue = daoBalance.value ?? 0;
@@ -276,6 +284,7 @@ export const useStatistics = () => {
 
     return {
       bscSupply,
+      lockedEosSupply,
       liquidityBalance,
       liquidEosSupply,
       circulatingEosSupply,

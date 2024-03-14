@@ -42,10 +42,12 @@ type AnimatedObjectState = {
 const blobState: AnimatedObjectState = {
   properties: {
     rotation: new Vector3(0, 0, 0),
+    scale: new Vector3(1, 1, 1),
   },
   uniforms: {
     morphRatio: {
       value: 0,
+      duration: 600,
     },
     distort: {
       value: 0.3,
@@ -59,6 +61,7 @@ const blobState: AnimatedObjectState = {
 const brainState: AnimatedObjectState = {
   properties: {
     rotation: new Vector3(0, -6.6, 0),
+    scale: new Vector3(1, 1, 1),
   },
   uniforms: {
     morphRatio: {
@@ -71,6 +74,9 @@ const brainState: AnimatedObjectState = {
 };
 
 const planetState: AnimatedObjectState = {
+  properties: {
+    scale: new Vector3(1.2, 1.2, 1.2),
+  },
   uniforms: {
     morphRatio: {
       value: 0,
@@ -128,10 +134,10 @@ const animateProperties = (properties: AnimatedObjectState["properties"]) => {
 };
 
 const morphToBrain = () => {
+  const { stopAll } = animateUniforms(brainState.uniforms);
+
   material.normalMap = null;
   material.normalScale = new Vector2(0, 0);
-
-  const { stopAll } = animateUniforms(brainState.uniforms);
 
   animateProperties(brainState.properties);
 
@@ -143,11 +149,12 @@ const morphToBrain = () => {
 };
 
 const morphToBlob = () => {
+  const { stopAll } = animateUniforms(blobState.uniforms);
+
   material.normalMap = null;
   material.needsUpdate = true;
   material.normalScale = new Vector2(0, 0);
 
-  const { stopAll } = animateUniforms(blobState.uniforms);
   animateProperties(blobState.properties);
 
   isRotating.value = false;
@@ -157,7 +164,8 @@ const morphToBlob = () => {
 
 const morphToPlanet = () => {
   const { stopAll } = animateUniforms(planetState.uniforms);
-  // animateProperties(planetState.properties);
+
+  animateProperties(planetState.properties);
   material.normalMap = normalMap;
   material.needsUpdate = true;
 
