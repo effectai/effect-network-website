@@ -35,9 +35,11 @@
       </template>
     </HeroSection>
 
-    <SimpleSection data-aos="fade-left" data-aos-delay="300" id="news">
-      <NewsCardList v-if="news" :items="news" />
-    </SimpleSection>
+    <div class="mt-6">
+      <SimpleSection data-aos="fade-left" data-aos-delay="300" id="news">
+        <NewsCardList v-if="news" :items="news" />
+      </SimpleSection>
+    </div>
 
     <SimpleSection :centered="true" title="How to use Effect AI?" class="">
       <template #subtitle>
