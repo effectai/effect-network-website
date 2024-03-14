@@ -3,7 +3,7 @@
     <div class="column is-one-third p-5 has-text-centered">
       <ChainCard
         href="https://eos.defibox.io/marketDetail/191"
-        :supply="163812894"
+        :supply="liquidEosSupply"
         class="eos"
         chain="EOS"
         :logo="eosLogo"
@@ -21,7 +21,7 @@
     <div class="column is-one-third p-5 has-text-centered">
       <ChainCard
         href="https://pancakeswap.finance/swap?outputCurrency=0xc51ef828319b131b595b7ec4b28210ecf4d05ad0"
-        :supply="45194866"
+        :supply="bscSupply"
         class="bsc"
         chain="BSC"
         :logo="bscLogo"
@@ -51,6 +51,9 @@
 import solanaLogo from "@/assets/img/icons/Solana-sol-logo-horizontal.svg";
 import eosLogo from "@/assets/img/icons/eosio.svg";
 import bscLogo from "@/assets/img/icons/bsc.svg";
+
+const { useSupplyStatistics } = useStatistics();
+const { liquidEosSupply, bscSupply } = useSupplyStatistics();
 </script>
 
 <style lang="scss">

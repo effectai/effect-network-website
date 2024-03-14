@@ -68,7 +68,13 @@
               <div class="columns">
                 <div v-for="stat in daoStats" class="column is-4">
                   <p class="has-text-weight-bold">{{ stat.label }}</p>
-                  <p>{{ stat.value }}</p>
+                  <p class="is-flex-center">
+                    <span v-if="stat.prefix">{{ stat.prefix }}</span>
+                    {{ stat.value }}
+                    <span v-if="stat.suffix" class="is-capitalized">{{
+                      stat.suffix
+                    }}</span>
+                  </p>
                 </div>
               </div>
 
@@ -158,14 +164,18 @@ const { data: price } = useEfxPrice();
 
 const { currentCycle, feePoolBalance, proposalsCreated } = useDaoStatistics();
 
-const daoStats = computed(() => [
-  { label: "cycle", value: currentCycle.value },
-  { label: "proposal", value: proposalsCreated.value },
-  {
-    label: "rewards",
-    value: `$${new Intl.NumberFormat().format(
-      (feePoolBalance.value * price.value) / 1000
-    )}`,
-  },
-]);
+const daoStats = computed(
+  () =>
+    feePoolBalance.value &&
+    price.value && [
+      { label: "cycle", value: currentCycle.value },
+      { label: "proposals", value: proposalsCreated.value },
+      {
+        label: "rewards",
+        prefix: "$",
+        value: formatNumber(feePoolBalance.value * price.value).value,
+        suffix: formatNumber(feePoolBalance.value).suffix,
+      },
+    ]
+);
 </script>

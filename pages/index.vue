@@ -8,7 +8,8 @@
         <p class="subtitle pr-6" data-aos="fade-up" data-aos-delay="150">
           <span class="pr-6 has-text-black">
             Bringing AI To the Masses, the Decentralized Scalable Workforce
-            On-Demand. Enabling the Birth of next-gen AI models.</span
+            On-Demand. Enabling the Birth of next-gen transparent AI
+            models.</span
           >
         </p>
       </template>

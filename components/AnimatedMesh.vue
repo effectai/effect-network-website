@@ -14,47 +14,20 @@ import {
 import { useBlob } from "~/composables/useThreeControls";
 import { useTexture } from "@tresjs/core";
 import { animate, cubicBezier, easeOut } from "popmotion";
+import { distortPingPong } from "~/utils/animate";
 
-//load textures
-const gradient = await useTexture(["/img/gradients/zinc.jpg"]);
 const envMap = await useTexture(["/img/textures/envmap.jpg"]);
 const normalMap = await useTexture(["/img/textures/earth-normalmap.jpg"]);
 
-//TODO::reduce brain poly's..
-const { nodes } = await useGLTF("/models/brain.glb", {
-  draco: true,
-});
-
 const { material, geometry, mesh: blobMesh } = useBlob();
 
-material.map = gradient;
+const { loadBrain } = useBrain();
+loadBrain(material, geometry);
+
 envMap.mapping = EquirectangularReflectionMapping;
 material.envMap = envMap;
 
-const brain = nodes["finalstlcleanermaterialmergergles"];
-const brainBufferGeometry = mergeAndExtractModel(brain, 0.05);
-
-brain.material = material;
-
-brain.traverse((child) => {
-  if (child.isMesh) {
-    child.material = material;
-  }
-});
-
-//set morph positions for shader
-geometry.setAttribute(
-  "positionStart",
-  new Float32BufferAttribute(geometry.attributes.position.array, 3)
-);
-
-geometry.setAttribute(
-  "positionEnd",
-  new Float32BufferAttribute(brainBufferGeometry.attributes.position.array, 3)
-);
-
-const { updateUniforms, resetShader, attachShader, controls } =
-  useDisplacement(material);
+const { updateUniforms, attachShader, controls } = useDisplacement(material);
 
 attachShader();
 
@@ -68,25 +41,9 @@ type AnimatedObjectState = {
     [key: string]: {
       value: number;
       easing?: (v: number) => number;
+      duration?: number;
     };
   };
-};
-
-const brainState: AnimatedObjectState = {
-  properties: {
-    rotation: new Vector3(0, -6.6, 0),
-  },
-  uniforms: {
-    morphRatio: {
-      value: 1,
-    },
-    distort: {
-      value: 0,
-    },
-    surfaceDistort: {
-      value: 1.5,
-    },
-  },
 };
 
 const blobState: AnimatedObjectState = {
@@ -106,14 +63,25 @@ const blobState: AnimatedObjectState = {
   },
 };
 
+const brainState: AnimatedObjectState = {
+  properties: {
+    rotation: new Vector3(0, -6.6, 0),
+  },
+  uniforms: {
+    morphRatio: {
+      value: 1,
+    },
+    surfaceDistort: {
+      value: 1.5,
+    },
+  },
+};
+
 const planetState: AnimatedObjectState = {
   uniforms: {
     morphRatio: {
       value: 0,
-    },
-    distort: {
-      value: 0,
-      easing: cubicBezier(0.31, -1.33, 0.37, 1.07),
+      duration: 600,
     },
     surfaceDistort: {
       value: 0,
@@ -129,7 +97,7 @@ const animateUniforms = (uniforms: AnimatedObjectState["uniforms"]) => {
     animate({
       from: controls[key].value.value,
       to: uniforms[key].value,
-      duration: ANIMATION_DURATION,
+      duration: uniforms[key].duration || ANIMATION_DURATION,
       ease: uniforms[key].easing || cubicBezier(0, 0.42, 0, 1),
       onUpdate: (value) => {
         controls[key].value.value = value;
@@ -156,13 +124,14 @@ const animateProperties = (properties: AnimatedObjectState["properties"]) => {
   });
 };
 
-const morphToBrainAnimation = () => {
+const morphToBrain = () => {
   material.normalMap = null;
-  material.needsUpdate = true;
   material.normalScale = new Vector2(0, 0);
 
   animateUniforms(brainState.uniforms);
   animateProperties(brainState.properties);
+
+  distortPingPong(controls.distort.value);
 
   isRotating.value = false;
 };
@@ -170,13 +139,10 @@ const morphToBrainAnimation = () => {
 const morphToBlob = () => {
   material.normalMap = null;
   material.needsUpdate = true;
-
   material.normalScale = new Vector2(0, 0);
 
   animateUniforms(blobState.uniforms);
   animateProperties(blobState.properties);
-
-  geometry.computeVertexNormals();
 
   isRotating.value = false;
 };
@@ -184,11 +150,10 @@ const morphToBlob = () => {
 const morphToPlanet = () => {
   animateUniforms(planetState.uniforms);
   // animateProperties(planetState.properties);
-
   material.normalMap = normalMap;
-
-  material.bumpScale = 5000;
   material.needsUpdate = true;
+
+  distortPingPong(controls.distort.value);
 
   animate({
     from: 0,
@@ -197,7 +162,6 @@ const morphToPlanet = () => {
     ease: easeOut,
     onUpdate: (value) => {
       material.normalScale = new Vector2(value, value);
-      material.needsUpdate = true;
     },
   });
 
@@ -212,7 +176,7 @@ onLoop(({ elapsed, delta, clock }) => {
   updateUniforms(elapsed);
 
   if (isRotating.value) {
-    blobMesh.rotation.y += 0.005;
+    blobMesh.rotateY(0.002 % Math.PI);
   }
 });
 
@@ -222,7 +186,7 @@ watch(
     if (route.value.name == "index") {
       morphToBlob();
     } else if (route.value.name == "developers") {
-      morphToBrainAnimation();
+      morphToBrain();
     } else if (route.value.name == "ecosystem") {
       morphToPlanet();
     }

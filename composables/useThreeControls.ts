@@ -4,6 +4,7 @@ import {
   IcosahedronGeometry,
   MeshStandardMaterial,
   Mesh,
+  Float32BufferAttribute,
 } from "three";
 
 import displacement from "@/glsl/shaders/displacement.glsl";
@@ -184,8 +185,49 @@ export const useDisplacement = (material: Material) => {
   };
 };
 
+export const useBrain = () => {
+  //TODO::reduce brain poly's..
+
+  const loadBrain = async (
+    material: Material,
+    geometry: IcosahedronGeometry
+  ) => {
+    const brainData = useGLTF("/models/brain.glb", {
+      draco: true,
+    }).then(({ scene, nodes }) => {
+      const brain = nodes["finalstlcleanermaterialmergergles"];
+      const brainBufferGeometry = mergeAndExtractModel(brain, 0.05);
+
+      brain.material = material;
+
+      brain.traverse((child) => {
+        if (child.isMesh) {
+          child.material = material;
+        }
+      });
+
+      geometry.setAttribute(
+        "positionStart",
+        new Float32BufferAttribute(geometry.attributes.position.array, 3)
+      );
+
+      geometry.setAttribute(
+        "positionEnd",
+        new Float32BufferAttribute(
+          brainBufferGeometry.attributes.position.array,
+          3
+        )
+      );
+    });
+  };
+
+  return {
+    loadBrain,
+  };
+};
+
 export const useBlob = () => {
-  const geometry = new IcosahedronGeometry(4, 137);
+  const geometry = new IcosahedronGeometry(4, 136);
   const material = new MeshStandardMaterial({
     metalness: 0.8,
     roughness: 0.2,

@@ -20,7 +20,7 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
-  modules: ["@nuxt/content", "@tresjs/nuxt", "@vueuse/nuxt"],
+  modules: ["@nuxt/content", "@tresjs/nuxt", "@vueuse/nuxt", "@nuxt/image"],
   build: {
     transpile: ["vue-countup-v3"],
   },

@@ -20,7 +20,10 @@
               </span>
             </div>
             <div class="column">
-              <img src="https://placeholder.com/480x270" />
+              <NuxtPicture
+                :src="data.image.src"
+                class="image is-5by3 background-image"
+              ></NuxtPicture>
             </div>
           </div>
         </div>

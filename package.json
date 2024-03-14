@@ -13,10 +13,11 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
+    "@nuxt/image": "^1.4.0",
     "@speed-highlight/core": "^1.2.6",
     "@tanstack/vue-query": "^5.25.0",
-    "@tresjs/core": "^3.7.0",
     "@tresjs/cientos": "^3.8.0",
+    "@tresjs/core": "^3.7.0",
     "@tresjs/leches": "^0.14.0",
     "@tresjs/nuxt": "^2.1.1",
     "@tresjs/post-processing": "^0.7.0",

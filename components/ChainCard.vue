@@ -8,8 +8,14 @@
     </div>
     <slot class="link" name="address"></slot>
 
-    <h3 class="is-size-6 is-family-monospace" v-if="supply">
-      Current supply: {{ formattedMillions }}M
+    <h3 class="is-size-6 is-family-monospace" v-if="formattedSupply">
+      <span class="is-flex-center">
+        Current supply:
+
+        <span class="is-uppercase mx-1">
+          {{ formattedSupply.value }}{{ formattedSupply.suffix }}</span
+        >
+      </span>
     </h3>
     <h3 v-else>Current Supply: -</h3>
     <a :href="href" class="button mt-auto is-primary mt-5"
@@ -27,9 +33,12 @@ const props = defineProps<{
   supply?: number;
 }>();
 
-const formattedMillions = new Intl.NumberFormat().format(
-  props.supply / 1000000
-);
+const formattedSupply = computed(() => {
+  if (props.supply) {
+    return formatNumber(props.supply);
+  }
+  return null;
+});
 </script>
 
 <style lang="scss">

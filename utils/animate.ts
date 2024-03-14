@@ -1,3 +1,28 @@
+import { animate, cubicBezier, easeIn } from "popmotion";
+
+export const distortPingPong = (distort: any) => {
+  animate({
+    from: distort.value,
+    to: 0.3,
+    duration: 1,
+    ease: easeIn,
+    onUpdate: (value) => {
+      distort.value = value;
+    },
+    onComplete: () => {
+      animate({
+        from: distort.value,
+        to: 0,
+        duration: 3000,
+        ease: cubicBezier(0.31, -1.33, 0.37, 1.07),
+        onUpdate: (value) => {
+          distort.value = value;
+        },
+      });
+    },
+  });
+};
+
 var s = 1.70158;
 
 export function easeInOutQuad(t, b, c, d) {
