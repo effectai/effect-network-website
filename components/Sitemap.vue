@@ -18,6 +18,13 @@
           <p class="menu-label">SOCIALS</p>
           <ul class="menu-list">
             <li>
+              <a href="https://github.com/effectai" target="_blank"
+                ><i class="fab fa-github"></i> GitHub</a
+              >
+            </li>
+          </ul>
+          <ul class="menu-list">
+            <li>
               <a href="https://twitter.com/effectaix" target="_blank"
                 ><i class="fab fa-twitter"></i> Twitter</a
               >
@@ -32,42 +39,6 @@
                 ><i class="fab fa-discord"></i> Discord</a
               >
             </li>
-            <li>
-              <a
-                href="https://www.youtube.com/channel/UCWzHpI310baipgvVMCxcwHA"
-                target="_blank"
-                ><i class="fab fa-youtube"></i> YouTube</a
-              >
-            </li>
-            <li>
-              <a href="https://www.facebook.com/effectai" target="_blank"
-                ><i class="fab fa-facebook"></i> Facebook</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/company/effectai"
-                target="_blank"
-                ><i class="fab fa-linkedin"></i> LinkedIn</a
-              >
-            </li>
-          </ul>
-          <ul class="menu-list">
-            <li>
-              <a href="https://github.com/effectai" target="_blank"
-                ><i class="fab fa-github"></i> GitHub</a
-              >
-            </li>
-            <li>
-              <a href="https://medium.com/effect-ai" target="_blank"
-                ><i class="fab fa-medium"></i> Medium</a
-              >
-            </li>
-            <li>
-              <a href="https://www.reddit.com/r/effectai" target="_blank"
-                ><i class="fab fa-reddit"></i> Reddit</a
-              >
-            </li>
           </ul>
         </div>
       </div>
@@ -76,20 +47,6 @@
           <div
             class="column is-half is-flex is-align-items-start is-justify-content-center"
           >
-            <img
-              width="30"
-              src="~assets/img/icons/pin.svg"
-              contain
-              class="mr-4 mt-2"
-            />
-            <div>
-              <div class="menu-label mb-0">Office</div>
-              <u>Effect AI B.V.</u>
-              <div>Arlandaweg 92</div>
-              <div>Amsterdam, 1043 EX</div>
-              <div>&nbsp;</div>
-              <div>The Netherlands</div>
-            </div>
           </div>
           <div
             class="column is-half is-flex is-align-items-start is-justify-content-center"
@@ -121,27 +78,6 @@
                 href="https://t.me/effectai"
               >
                 <i class="fab fa-telegram"></i>
-              </a>
-              <a
-                class="is-size-3 mx-2 has-text-primary"
-                target="_blank"
-                href="http://facebook.com/effectai"
-              >
-                <i class="fab fa-facebook"></i>
-              </a>
-              <a
-                class="is-size-3 mx-2 has-text-primary"
-                target="_blank"
-                href="https://medium.com/effect-ai"
-              >
-                <i class="fab fa-medium"></i>
-              </a>
-              <a
-                class="is-size-3 mx-2 has-text-primary"
-                target="_blank"
-                href="https://www.youtube.com/@effectai"
-              >
-                <i class="fab fa-youtube"></i>
               </a>
               <a
                 class="is-size-3 mx-2 has-text-primary"
