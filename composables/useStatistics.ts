@@ -24,7 +24,7 @@ export const useStatistics = () => {
     const query = useQuery({
       queryKey: ["efx-price"],
       queryFn: fetchEfxPrice,
-      staleTime: 60000,
+      staleTime: STATISTICS_STALE_TIME,
     });
 
     return query;

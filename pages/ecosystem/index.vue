@@ -119,7 +119,7 @@
         <Tokenomics class="has-background-white" />
       </div>
 
-      <SimpleSection class="section px-0">
+      <SimpleSection class="section px-0" id="token">
         <div class="my-5">
           <h2 class="title is-1 has-text-primary mt-6">Powered By EFX</h2>
           <p>
@@ -142,7 +142,7 @@
             community today!
           </p>
         </div>
-        <SocialCardList :socials="communities" />
+        <SocialCardList :socials="[discord, telegram, reddit]" />
       </SimpleSection>
 
       <SimpleSection class="px-0">
@@ -174,7 +174,7 @@
 
 <script setup lang="ts">
 import { dapps } from "@/constants/dapps";
-import { communities } from "@/constants/socials";
+import { communities, discord, reddit, telegram } from "@/constants/socials";
 
 const featuredDapps = dapps.filter((dapp) => dapp.featured);
 
