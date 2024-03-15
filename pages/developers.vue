@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeroSection
-      style="min-height: 650px"
+      style="min-height: 645px"
       title="Unleash the Power of a Global Workforce"
     >
       <template #subtitle>
@@ -55,7 +55,7 @@
                 <CodeBlock
                   :codes="[
                     {
-                      language: 'terminal',
+                      language: 'bash',
                       code: 'yarn add @effectai/effect-js',
                     },
                   ]"

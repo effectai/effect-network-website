@@ -3,14 +3,18 @@
     <div
       class="toolbar has-text-white is-flex is-justify-content-space-between px-2 p-2 has-background-primary"
     >
-      <div class="tab" v-for="code in codes">
-        <i v-if="code.language == 'terminal'" class="fas fa-terminal mr-2"></i>
+      <div class="tab is-flex-center" v-for="code in codes">
+        <img
+          v-if="code.language == 'bash'"
+          class="mr-1"
+          src="@/assets/img/icons/terminal.svg"
+        />
         <i v-else class="fab fa-js mr-2"></i>
         <span> {{ code.language }} </span>
       </div>
       <i @click="doCopy" class="is-clickable fa fa-copy"></i>
     </div>
-    <div class="shj-lang-js border-xs m-0">
+    <div :class="`shj-lang-${currentTab.language} border-xs m-0`">
       {{ currentTab?.code }}
     </div>
   </div>
