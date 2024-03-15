@@ -2,7 +2,7 @@
   <div>
     <HeroSection style="height: 550px">
       <template #title>
-        <h1 class="has-text-primary title">
+        <h1 class="has-text-primary title mb-3">
           Be Part of the <br />
           AI Future
         </h1>

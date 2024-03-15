@@ -1,10 +1,39 @@
 <template>
   <div>
-    <HeroSection
-      style="min-height: 750px"
-      :title="'Handcrafted Data for Artificial Intelligence'"
-    >
+    <HeroSection style="min-height: 750px">
+      <template #title>
+        <h1 class="title is-spaced has-text-primary is-auto-phrase is-in-front">
+          Handcrafted Data for Artificial Intelligence
+        </h1>
+      </template>
+
       <template #subtitle>
+        <div class="is-flex has-gap-1 mt-2 mb-6 is-very-small">
+          <nuxt-link to="https://github.com/effectai" class="">
+            <div class="control">
+              <div class="tags has-addons">
+                <span class="tag is-primary is-very-small"> open source</span>
+                <span class="tag is-dark is-very-small">
+                  <i class="fa fa-heart has-text-white"></i>
+                </span>
+              </div>
+            </div>
+          </nuxt-link>
+
+          <nuxt-link
+            to="https://github.com/effectai"
+            style="font-size: 10px"
+            class="badge"
+          >
+            <div class="control">
+              <div class="tags has-addons">
+                <span class="tag is-primary is-very-small">licence</span>
+                <span class="tag is-dark is-very-small">MIT</span>
+              </div>
+            </div>
+          </nuxt-link>
+        </div>
+
         <p class="subtitle pr-6" data-aos="fade-up" data-aos-delay="150">
           <span class="pr-6 has-text-black">
             Effect AI is the data network for training next-gen transparent AI
@@ -26,7 +55,7 @@
             class="button is-primary mr-5"
             >Launch App</a
           >
-          <div>
+          <div class="is-flex">
             <SocialBar
               class="has-text-primary"
               :socials="[github, twitter, discord]"

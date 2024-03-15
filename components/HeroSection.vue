@@ -8,13 +8,12 @@
               v-if="title"
               class="mt-3 title is-spaced is-auto-phrase is-in-front"
             >
-              <span
-                class="has-text-primary is-block is-in-front"
-                >{{ title }}</span
-              >
+              <span class="has-text-primary is-block is-in-front">{{
+                title
+              }}</span>
             </h1>
 
-            <h1 v-else-if="$slots.title" class="mt-3 title is-spaced keep-all">
+            <h1 v-else-if="$slots.title" class="mt-3 is-spaced keep-all">
               <slot name="title"> </slot>
             </h1>
 

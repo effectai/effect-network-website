@@ -13,11 +13,13 @@ published: true
 
 Hey there, everyone! Today, we're thrilled to unveil the 2024 roadmap for Effect AI. This year is going to be nothing short of groundbreaking, packed with progress and achievements. We're eager to share our plans with all of you.
 
-Let's dive right in. As many of you may have already gathered, we're embarking on an exciting journey to bridge with the Solana ecosystem. This pivotal move highlights our commitment to enhancing both <u>developer</u> and <u>general user experiences</u>. Solana's ecosystem promises robust support for both developers and users making it a great fit for our future goals.
+Let's dive right in. As many of you may have already gathered, we're embarking on an exciting journey to bridge with the Solana ecosystem. This pivotal move highlights our commitment to enhancing both <u>developer</u> and <u>general user</u> experiences. Solana's vibrant ecosystem is renowned for offering robust support to developers and users alike, harmonizing perfectly with our future-focused initiatives. In an attempt to streamline operations and minimize the intricacies of managing three different chains, the team is currently constructing a comprehensive plan for a **full migration**. So expect more information on this very soon!
+
+While nostalgia accompanies us as we bid adieu to our EOS home that has faithfully served us over the years, we stand firm in our belief that shifting to the Solana blockchain presents a greater prospect for our aspirations. It's a new chapter in our journey, and we wholeheartedly believe it will bring forth exponential benefits for both us and our valued community.
 
 But first things first, in a couple of weeks, our workforce can anticipate the long-awaited **V2 release**, significantly boosting their experience on the platform. Meanwhile, our DAO will play an increasingly pivotal role, stepping up as the primary ecosystem maintainer.
 
-We're also doubling down on our commitment to developers, aiming to streamline their journey on the platform. Expect significant DX updates to our SDK, enabling developers to harness the power of our workforce with just three to five lines of code. Furthermore, we're forging new partnerships with some very exciting Solana projects looking to leverage our platform for tasks.
+With the choice to migrate to Solana we are doubling down on our commitment to developers, aiming to streamline their journey on the platform. Expect significant DX updates to our SDK, enabling developers to harness the power of our workforce with just three to five lines of code. Furthermore, we're forging new partnerships with some very exciting Solana projects looking to leverage our platform for tasks.
 
 Looking ahead, we're excited to launch a series of ambitious long-term growth initiatives that will propel Effect AI to new heights. Stay tuned for an exciting journey ahead as we chart the course for Effect AI's evolution in 2024.
 
@@ -36,7 +38,7 @@ The highly anticipated V2 release is currently in the final stages of preparatio
 
 #### Solana Bridge and Migration
 
-Following the anticipated V2 release, our sights are set on creating a bridge to the Solana Ecosystem.
+Following the anticipated V2 release, our sights are set on creating the bridge to the Solana Ecosystem.
 
 Once the bridge is operational, our attention will shift towards migrating key core contracts over to the Solana ecosystem. This move not only promises to attract a wave of new users to our platform but will allow us to leverage the robust and thriving developer tools within the Solana ecosystem.
 
@@ -48,7 +50,7 @@ We're also revamping the EFX/NFX staking mechanism, ensuring it's more intuitive
 
 #### Mobile app
 
-It's been a long time coming, but the wait is almost over. Once the migration is complete and Effect Force is running seamlessly, we're turning our attention to a game-changing endeavor: the development of a mobile app.
+It's been a long time coming, but the wait is almost over. Once the migration is complete and Effect Force is running seamlessly, we're turning our attention to the development of a mobile app.
 
 Imagine the convenience of completing simple tasks and training AI models from anywhere, at any time. With our upcoming mobile app, this vision becomes a reality. Whether you're on your morning commute or taking a break at the park, you'll have the power to contribute to our ecosystem on the go.
 
