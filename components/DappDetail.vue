@@ -4,8 +4,8 @@
       <div class="columns">
         <div class="p-4 column is-one-fifth is-one-whole-mobile">
           <figure>
-            <img
-              :src="useGetImageUrl(dapp.image_url)"
+            <NuxtImg
+              :src="`img/ecosystem/${dapp.image_url}`"
               v-bind:alt="dapp.image_url"
             />
           </figure>
@@ -59,7 +59,6 @@
 </template>
 
 <script setup lang="ts">
-import { useGetImageUrl } from "~/composables/useGetImage";
 import type { Dapp } from "~/types/dapp";
 
 const props = defineProps<{

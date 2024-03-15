@@ -1,7 +1,7 @@
 <template>
   <div v-if="dapp" class="is-shadowless is-fullheight p-4">
     <div class="card-image mx-auto">
-      <img class="" :src="useGetImageUrl(dapp.image_url)" />
+      <NuxtImg :src="`img/ecosystem/${dapp.image_url}`" />
     </div>
 
     <div class="card-content p-2">

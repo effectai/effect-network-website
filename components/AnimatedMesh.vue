@@ -5,7 +5,6 @@
 <script setup lang="ts">
 import { EquirectangularReflectionMapping, Vector2, Vector3 } from "three";
 
-import { useBlob } from "~/composables/useThreeControls";
 import { useTexture } from "@tresjs/core";
 import { animate, cubicBezier, easeOut } from "popmotion";
 import { distortPingPong } from "~/utils/animate";
@@ -226,3 +225,4 @@ watch(route, handleRouteChange, { immediate: true });
 </script>
 
 <style></style>
+~/composables/useThree
