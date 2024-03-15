@@ -3,10 +3,9 @@
     <div class="container">
       <Sitemap />
       <div class="has-text-centered has-text-white">
-        <small class="is-size-7"
-          >&copy; {{ new Date().getFullYear() }} <b>EFFECT NETWORK</b> by EFFECT
-          AI</small
-        >
+        <small class="is-size-7">
+	  &copy; {{ new Date().getFullYear() }} EFFECT AI
+	</small>
       </div>
     </div>
   </footer>

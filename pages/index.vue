@@ -2,15 +2,14 @@
   <div>
     <HeroSection
       style="min-height: 750px"
-      :title="'Decentralizing Artificial Intelligence'"
+      :title="'Handcrafted Data for Artificial Intelligence'"
     >
       <template #subtitle>
         <p class="subtitle pr-6" data-aos="fade-up" data-aos-delay="150">
           <span class="pr-6 has-text-black">
-            Bringing AI To the Masses, the Decentralized Scalable Workforce
-            On-Demand. Enabling the Birth of next-gen transparent AI
-            models.</span
-          >
+	    Effect AI is the data network for training next-gen transparent AI models.
+	    Join the workforce by collecting and enriching datasets and get paid instantly.
+          </span>
         </p>
       </template>
 
@@ -36,9 +35,11 @@
       </template>
     </HeroSection>
 
-    <SimpleSection data-aos="fade-left" data-aos-delay="300" id="news">
-      <NewsCardList v-if="news" :items="news" />
-    </SimpleSection>
+    <div class="mt-6">
+      <SimpleSection data-aos="fade-left" data-aos-delay="300" id="news">
+        <NewsCardList v-if="news" :items="news" />
+      </SimpleSection>
+    </div>
 
     <SimpleSection :centered="true" title="How to use Effect AI?" class="">
       <template #subtitle>
