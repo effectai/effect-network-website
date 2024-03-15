@@ -137,9 +137,9 @@
           <h2 class="title is-1 has-text-primary mt-6">Communities</h2>
 
           <p>
-            Come talk to us on our social channels. We are active on Reddit,
-            Discord and Telegram. We are always looking for new members to join
-            our community and would love to hear from you.
+            Your thoughts and interaction matter to us, and we always love to
+            connect and hear from you. Don't hesitate, become a part of our
+            community today!
           </p>
         </div>
         <SocialCardList :socials="communities" />
@@ -149,9 +149,11 @@
         <div class="my-5">
           <h2 class="title is-1 has-text-primary mt-6">Marketplace</h2>
           <p>
-            Effect AI is a decentralized platform for AI related services. The
-            marketplace is a place where you can find AI services and
-            applications that are built on the network.
+            The Effect AI Marketplace is a vibrant hub of innovative
+            applications, all either created or powered by Effect AI. This space
+            represents the amazing potential and versatility of our development
+            community, bringing together a diverse spectrum of AI solutions
+            right at your fingertips.
           </p>
         </div>
         <div class="has-background-light">
