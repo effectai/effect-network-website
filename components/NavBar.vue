@@ -1,7 +1,6 @@
 <template>
   <nav
     class="navbar has-background-white pt-2 pb-1 is-sticky top-0"
-    :class="{ 'is-scrolling': isScrolling }"
     role="navigation"
     aria-label="main navigation"
   >
@@ -62,7 +61,6 @@
               </a>
             </div>
           </div>
-          <!-- <darkmode-switcher class="ml-4" /> -->
         </div>
       </div>
     </div>
@@ -70,12 +68,7 @@
 </template>
 
 <script setup lang="ts">
-const loading = ref(false);
 const mobileMenu = ref(false);
-
-const props = defineProps<{
-  isScrolling: boolean;
-}>();
 </script>
 
 <style lang="scss">

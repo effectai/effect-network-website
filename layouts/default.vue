@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NavBar :is-scrolling="isScrolling" />
+    <NavBar />
 
     <div>
       <slot />
@@ -9,14 +9,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-const isScrolling = ref(false);
-const showNotification = ref(true);
-
-const close = () => {
-  showNotification.value = false;
-};
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 #app {

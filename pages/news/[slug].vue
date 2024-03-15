@@ -1,5 +1,5 @@
 <template>
-  <main id="nuxt-news" class="has-header-top">
+  <main id="nuxt-news">
     <ContentRenderer v-if="data" :value="data">
       <div class="has-background-smoke">
         <div class="container">

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NavBar :is-scrolling="isScrolling" />
+    <NavBar />
 
     <div
       v-if="showNotification"
@@ -44,7 +44,6 @@
 </template>
 
 <script setup lang="ts">
-const isScrolling = ref(false);
 const showNotification = ref(true);
 
 const close = () => {
