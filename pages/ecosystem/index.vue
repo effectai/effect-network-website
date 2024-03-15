@@ -2,7 +2,7 @@
   <div>
     <HeroSection style="height: 550px">
       <template #title>
-        <h1 class="has-text-primary title mb-3">
+        <h1 class="has-text-primary title mb-5">
           Be Part of the <br />
           AI Future
         </h1>
@@ -10,7 +10,7 @@
 
       <template #subtitle>
         <div class="subtitle" data-aos="fade-up" data-aos-delay="150">
-          <EcosystemStatisticsBlock class="has-text-black" />
+          <EcosystemStatisticsBlock class="has-text-dark" />
         </div>
       </template>
 
@@ -43,7 +43,7 @@
             running on the network. Powering this dynamic network is our digital
             currency, the EFX token, making everything from transactions to
             application operations smooth and efficient. Our ecosystem is not
-            just a network; it's a community. It is maintained and governed by a
+            just a network; it's a community maintained and governed by a
             Decentralized Autonomous Organization (DAO).
           </p>
           <br />
@@ -88,7 +88,7 @@
                   </g>
                 </g>
               </svg>
-              <h4 class="subtitle is-6 has-text-black has-text-weight-bold">
+              <h4 class="subtitle is-6 has-text-dark has-text-weight-bold">
                 Vote, Stake and Earn EFX
               </h4>
 
