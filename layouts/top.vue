@@ -1,17 +1,16 @@
 <template>
   <div id="app">
+    <NavBar :is-scrolling="isScrolling" />
+
     <div
       v-if="showNotification"
       id="news-notification"
-      style="top: 75px"
-      class="notification is-light is-fixed-top z-1 has-text-centered"
+      class="notification is-light is-fixed-top z-1 has-text-centered mb-0"
     >
       <button @click="close" class="cursor-pointer delete"></button>
       🚀 Our <b>brand new</b> <b>website</b> and <b>roadmap</b> are out! 🔥
       Check it out <nuxt-link to="/news/roadmap-2024">here</nuxt-link> 👈
     </div>
-
-    <NavBar :is-scrolling="isScrolling" />
 
     <div class="is-relative">
       <div

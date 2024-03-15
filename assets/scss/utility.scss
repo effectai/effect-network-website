@@ -33,7 +33,6 @@
 
 .is-sticky {
   position: sticky;
-  top: 75px;
 }
 
 .is-self-center {
@@ -89,4 +88,8 @@
   img {
     border-radius: 10px;
   }
+}
+
+.top-0 {
+  top: 0;
 }
