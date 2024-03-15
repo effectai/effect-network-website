@@ -74,6 +74,4 @@ The EFX that you currently have staked combined with your Stake AGE will be carr
 
 While this blog post outlines the high-level inner workings of the new Staking Protocol 2.0, the exact implementation, parameters, and details are being finalized in a Technical Paper. This paper will cover the mathematical formulas, among other things, for EFX Power with limited Stake AGE, the DAO level requirement formulas, dilution of the Stake AGE when topping up your stake, voting allocations, and more. Keep an eye out for this Technical Paper if you are interested in learning more about the specifics.
 
-If you are interested in buying EFX please go to KUCOIN cryptocurrency exchange.
-
 Thanks for reading!

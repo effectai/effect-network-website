@@ -2,8 +2,8 @@
   <main id="nuxt-news">
     <ContentRenderer v-if="data" :value="data">
       <div class="has-background-smoke">
-        <div class="container">
-          <div style="padding: 5rem 2rem" class="columns is-vcentered">
+        <div class="container blog-padding">
+          <div class="columns is-vcentered">
             <div class="column is-7">
               <h1 class="is-size-1 mt-5 has-text-primary title">
                 {{ data.title }}
@@ -31,11 +31,7 @@
       <div class="container">
         <div class="columns">
           <div class="column content is-medium" id="content">
-            <ContentRendererMarkdown
-              :value="data"
-              class=""
-              style="padding: 5rem 2rem"
-            />
+            <ContentRendererMarkdown :value="data" class="blog-padding" />
           </div>
         </div>
       </div>
@@ -58,6 +54,14 @@ const { data } = await useAsyncData("page-data", () =>
 
 <style lang="scss">
 @import "bulma/sass/utilities/mixins";
+
+.blog-padding {
+  padding: 2rem;
+
+  @include desktop {
+    padding: 5rem 10rem;
+  }
+}
 
 #nuxt-news {
   p {
