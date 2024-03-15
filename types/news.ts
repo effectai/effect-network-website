@@ -13,5 +13,13 @@ export interface News extends MarkdownParsedContent {
   created: string;
   published: boolean;
 
+  head?: {
+    meta: {
+      title: string;
+      description: string;
+      keywords: string;
+    };
+  };
+
   featured?: boolean;
 }

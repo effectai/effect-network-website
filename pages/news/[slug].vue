@@ -5,7 +5,7 @@
         <div class="container blog-padding">
           <div class="columns is-vcentered">
             <div class="column is-7">
-              <h1 class="is-size-1 mt-5 has-text-primary title">
+              <h1 class="is-size-1 has-text-primary title">
                 {{ data.title }}
               </h1>
 
@@ -43,13 +43,20 @@
 import { discord, telegram, twitter } from "~/constants/socials";
 import { useRoute } from "#vue-router";
 import type { Tutorial } from "~/types/tutorials";
+import type { News } from "~/types/news";
 
 const route = useRoute();
 const slug = route.params.slug;
 
 const { data } = await useAsyncData("page-data", () =>
-  queryContent<Tutorial>(`/news/${slug}`).findOne()
+  queryContent<News>(`/news/${slug}`).findOne()
 );
+
+useSeoMeta({
+  title: data.value?.title,
+  description: data.value?.description,
+  ogImage: data.value?.image.src,
+});
 </script>
 
 <style lang="scss">
