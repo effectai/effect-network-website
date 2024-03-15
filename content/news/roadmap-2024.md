@@ -2,12 +2,20 @@
 title: "Effect AI: Roadmap 2024"
 description: "Hey there, everyone! Today, we're thrilled to unveil the 2024 roadmap for Effect AI. This year is going to be nothing short of groundbreaking, packed with progress and achievements."
 author: "Jesse"
-lastUpdated: "2024-03-14"
-created: "2024-03-14"
+lastUpdated: "2024-03-15"
+created: "2024-03-15"
 image:
   src: "/img/news/roadmap2024.webp"
 published: true
 featured: true
+head:
+  meta:
+    - name: "keywords"
+      content: "AI, EFX, Roadmap, 2024, Artificial Intelligence, Bridge, Solana"
+    - name: "author"
+      content: "Jesse - Effect.AI"
+    - name: "copyright"
+      content: "© 2024 Effect.AI"
 ---
 
 ## Roadmap
