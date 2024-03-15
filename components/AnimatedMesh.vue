@@ -15,7 +15,7 @@ const normalMap = await useTexture(["/img/textures/earth-normalmap.jpg"]);
 
 const { material, geometry, mesh: blobMesh } = useBlob();
 material.envMap = envMap;
-blobMesh.position.set(5, 0, 0);
+blobMesh.position.set(6, 0, 0);
 const { loadBrain } = useBrain();
 loadBrain(material, geometry);
 
@@ -76,7 +76,7 @@ const brainState: AnimatedObjectState = {
 const planetState: AnimatedObjectState = {
   properties: {
     scale: new Vector3(1, 1, 1),
-    position: new Vector3(5, 1, 0),
+    position: new Vector3(6, 1, 0),
   },
   uniforms: {
     morphRatio: {
