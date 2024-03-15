@@ -4,7 +4,11 @@
       <div class="card-content">
         <i :class="social.faClass" class="has-text-primary"></i>
         <h2 class="title is-size-3 is-uppercase">{{ social.name }}</h2>
-        <a :href="social.link" target="_blank" class="button is-primary">
+        <a
+          :href="social.link"
+          target="_blank"
+          class="button is-primary is-capitalized"
+        >
           Join our {{ social.name }}
         </a>
       </div>
