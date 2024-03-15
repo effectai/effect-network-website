@@ -53,7 +53,7 @@
         </div>
         <div class="column"></div>
         <div class="column is-5" data-aos="fade-up" data-aos-delay="350">
-          <div class="box dao-card">
+          <div class="card has-background-smoke dao-card">
             <div class="card-content has-text-centered">
               <svg
                 width="150px"

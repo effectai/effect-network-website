@@ -14,7 +14,7 @@
               <div class="tags has-addons">
                 <span class="tag is-primary is-very-small"> open source</span>
                 <span class="tag is-dark is-very-small">
-                  <i class="fa fa-heart has-text-white"></i>
+                  <i class="fa fa-heart has-text-smoke"></i>
                 </span>
               </div>
             </div>
@@ -28,7 +28,9 @@
             <div class="control">
               <div class="tags has-addons">
                 <span class="tag is-primary is-very-small">licence</span>
-                <span class="tag is-dark is-very-small">MIT</span>
+                <span class="tag is-dark is-very-small"
+                  ><small style="height: 12px">MIT</small></span
+                >
               </div>
             </div>
           </nuxt-link>
