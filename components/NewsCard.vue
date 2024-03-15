@@ -1,6 +1,7 @@
 <template>
   <div>
     <nuxt-link
+      :class="{ 'is-featured': news.featured }"
       :to="`${news._path}`"
       class="news-card card is-hoverable is-fullheight is-flex is-flex-direction-column"
     >
@@ -41,6 +42,27 @@ const props = defineProps<{
 <style lang="scss" scoped>
 figure {
   background-size: cover;
+}
+
+.is-featured {
+  .card-image {
+    overflow: hidden;
+
+    &:after {
+      content: "HOT🔥";
+      position: absolute;
+      top: 15px;
+      right: -30px;
+      width: 120px;
+      display: flex;
+      justify-content: center;
+      transform: rotate(45deg);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+      background-color: $secondary;
+      font-weight: bold;
+      color: white;
+    }
+  }
 }
 
 .news-card {

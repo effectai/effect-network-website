@@ -8,7 +8,7 @@
       </template>
 
       <template #subtitle>
-        <div class="is-flex has-gap-1 mt-2 mb-6 is-very-small">
+        <div class="is-flex mt-2 mb-6 is-very-small">
           <nuxt-link to="https://github.com/effectai" class="">
             <div class="control">
               <div class="tags has-addons">
@@ -23,7 +23,7 @@
           <nuxt-link
             to="https://github.com/effectai/effect-network/blob/master/LICENSE"
             style="font-size: 10px"
-            class="badge"
+            class="badge mx-2"
           >
             <div class="control">
               <div class="tags has-addons">

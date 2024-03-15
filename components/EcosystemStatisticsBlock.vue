@@ -39,7 +39,7 @@ const statistics = computed(
     proposalsCreated.value &&
     tasksCompleted.value && [
       {
-        label: "Dapps in Ecosystem",
+        label: "Apps in Ecosystem",
         value: dapps.length,
         decimalPlaces: 0,
       },

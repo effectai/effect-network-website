@@ -7,6 +7,7 @@ created: "2024-03-14"
 image:
   src: "/img/news/roadmap2024.webp"
 published: true
+featured: true
 ---
 
 ## Roadmap

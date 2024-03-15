@@ -12,4 +12,6 @@ export interface News extends MarkdownParsedContent {
   type: string;
   created: string;
   published: boolean;
+
+  featured?: boolean;
 }

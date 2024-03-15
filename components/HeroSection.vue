@@ -1,19 +1,16 @@
 <template>
   <div id="hero" data-aos="fade-in">
     <section class="section">
-      <div class="container mt-6">
+      <div class="container mt-5">
         <div class="columns is-vcentered">
           <div class="column is-half" data-aos="fade-in" data-aos-delay="0">
-            <h1
-              v-if="title"
-              class="mt-3 title is-spaced is-auto-phrase is-in-front"
-            >
+            <h1 v-if="title" class="title is-spaced is-auto-phrase is-in-front">
               <span class="has-text-primary is-block is-in-front">{{
                 title
               }}</span>
             </h1>
 
-            <h1 v-else-if="$slots.title" class="mt-3 is-spaced keep-all">
+            <h1 v-else-if="$slots.title" class="is-spaced keep-all">
               <slot name="title"> </slot>
             </h1>
 
