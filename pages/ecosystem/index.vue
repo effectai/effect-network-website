@@ -40,16 +40,13 @@
           </h2>
           <p>
             Effect AI's ecosystem is a collection of all the applications
-            running on the network. You may use $EFX tokens to buy a number of
-            services that boost productivity, including social media engagement,
-            translations, subtitles and graphics, to help your business grow in
-            many ways.
+            running on the network. Powering this dynamic network is our digital
+            currency, the EFX token, making everything from transactions to
+            application operations smooth and efficient. Our ecosystem is not
+            just a network; it's a community. It is maintained and governed by a
+            Decentralized Autonomous Organization (DAO).
           </p>
           <br />
-          <p class="has-text-weight-bold">
-            Join the DAO and have a voice on the development of the EFFECT AI
-            Ecosystem.
-          </p>
         </div>
         <div class="column"></div>
         <div class="column is-5" data-aos="fade-up" data-aos-delay="350">
