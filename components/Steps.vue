@@ -1,6 +1,6 @@
 <template>
-  <div class="columns is-mobile">
-    <div class="column is-narrow">
+  <div class="columns is-mobile is-clipped px-2">
+    <div class="column is-narrow is-hidden-mobile">
       <div
         style="top: -50px"
         class="is-flex is-fullheight is-flex-direction-column is-justify-content-space-between is-relative"

@@ -50,6 +50,10 @@ const props = defineProps({
       height: 100%;
     }
   }
+  .title {
+    font-size: 3rem;
+  }
+
   @include desktop {
     .title {
       font-size: 54px;

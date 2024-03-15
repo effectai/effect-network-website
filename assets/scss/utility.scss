@@ -93,3 +93,10 @@
 .top-0 {
   top: 0;
 }
+
+.is-reverse-col-mobile {
+  @include mobile {
+    align-items: baseline !important;
+    flex-direction: column-reverse;
+  }
+}

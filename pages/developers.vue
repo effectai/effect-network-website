@@ -82,8 +82,10 @@
     </SimpleSection>
 
     <SimpleSection id="tutorials">
-      <div class="is-flex has-gap-1 is-align-items-center mb-5">
-        <h2 class="title is-2 m-0">Tutorials & Guides</h2>
+      <div
+        class="is-flex has-gap-1 is-align-items-center mb-5 is-reverse-col-mobile"
+      >
+        <h2 class="title is-2 m-0 is-auto-phrase">Tutorials & Guides</h2>
         <div class="tag is-warning">coming soon</div>
       </div>
       <TutorialCardList

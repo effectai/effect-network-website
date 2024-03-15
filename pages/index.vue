@@ -145,10 +145,9 @@ const { data: news } = await useAsyncData("news", async () => {
 
 <style lang="scss">
 #news {
-  margin-top: -220px;
-
-  @include mobile {
-    margin-top: -300px;
+  margin-top: -200px;
+  @include desktop {
+    margin-top: -230px;
   }
 }
 </style>
