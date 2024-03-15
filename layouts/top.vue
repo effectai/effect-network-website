@@ -18,7 +18,7 @@
         style="height: 750px"
       >
         <TresCanvas preset="realistic" ref="canvas" :alpha="true">
-          <TresPerspectiveCamera ref="camera" visible :position="[0, 0, 15]" />
+          <TresPerspectiveCamera ref="camera" visible :position="[0, -1, 15]" />
 
           <TresAmbientLight :color="'#101D56'" :intensity="2" />
 
