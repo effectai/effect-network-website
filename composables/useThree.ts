@@ -154,9 +154,7 @@ export const useDisplacement = (material: Material) => {
 
       shader.vertexShader = shader.vertexShader.replace(
         "#include <displacementmap_vertex>",
-
-        `#include <displacementmap_vertex>
-        transformed = pos + normalize(pos) * f(pos);`
+        `transformed = pos + normalize(pos) * f(pos);`
       );
 
       //fix normals: https://codepen.io/marco_fugaro/pen/xxZWPWJ?editors=1010

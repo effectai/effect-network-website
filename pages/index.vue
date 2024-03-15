@@ -7,8 +7,9 @@
       <template #subtitle>
         <p class="subtitle pr-6" data-aos="fade-up" data-aos-delay="150">
           <span class="pr-6 has-text-black">
-	    Effect AI is the data network for training next-gen transparent AI models.
-	    Join the workforce by collecting and enriching datasets and get paid instantly.
+            Effect AI is the data network for training next-gen transparent AI
+            models. Join the workforce by collecting and enriching datasets and
+            get paid instantly.
           </span>
         </p>
       </template>
@@ -35,7 +36,7 @@
       </template>
     </HeroSection>
 
-    <div class="mt-6">
+    <div class="mt-5">
       <SimpleSection data-aos="fade-left" data-aos-delay="300" id="news">
         <NewsCardList v-if="news" :items="news" />
       </SimpleSection>
