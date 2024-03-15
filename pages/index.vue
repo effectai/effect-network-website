@@ -21,7 +21,7 @@
           </nuxt-link>
 
           <nuxt-link
-            to="https://github.com/effectai"
+            to="https://github.com/effectai/effect-network/blob/master/LICENSE"
             style="font-size: 10px"
             class="badge"
           >

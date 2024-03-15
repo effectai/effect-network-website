@@ -5,7 +5,7 @@
     <div
       v-if="showNotification"
       id="news-notification"
-      class="notification is-dark is-fixed-top z-1 has-text-centered mb-0"
+      class="notification is-primary is-dark is-fixed-top z-1 has-text-centered mb-0"
     >
       <button @click="close" class="cursor-pointer delete"></button>
       🚀 Our <b>brand new</b> <b>website</b> and <b>roadmap</b> are out! 🔥
