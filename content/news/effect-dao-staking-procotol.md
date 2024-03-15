@@ -72,6 +72,6 @@ The EFX that you currently have staked combined with your Stake AGE will be carr
 
 ## More details: Technical Paper
 
-While this blog post outlines the high-level inner workings of the new Staking Protocol 2.0, the exact implementation, parameters, and details are being finalized in a Technical Paper. This paper will cover the mathematical formulas, among other things, for EFX Power with limited Stake AGE, the DAO level requirement formulas, dilution of the Stake AGE when topping up your stake, voting allocations, and more. Keep an eye out for this Technical Paper if you are interested in learning more about the specifics.
+While this blog post outlines the high-level inner workings of the new Staking Protocol 2.0, the exact implementation, parameters, and details can be found in the <a href="/download/effect_staking_protocol.pdf" target="_blank">Technical Paper</a> about the Effect Staking Protocol. This paper covers the mathematical formulas, among other things, for EFX Power with limited Stake AGE, the DAO level requirement formulas, dilution of the Stake AGE when topping up your stake, voting allocations, and more.
 
 Thanks for reading!

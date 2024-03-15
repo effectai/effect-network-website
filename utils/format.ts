@@ -5,7 +5,7 @@ export function formatNumber(num: number) {
     num /= 1000; // Divide the number by 1000 for the next suffix
     suffixIndex++;
   }
-  const formattedNum = num.toFixed(1).replace(/\.0$/, ""); // Removes decimal places if unnecessary
+  const formattedNum = num.toFixed(3).replace(/\.0$/, ""); // Removes decimal places if unnecessary
   return { value: formattedNum, suffix: suffixes[suffixIndex] };
 }
 
