@@ -1,9 +1,6 @@
 import { useQuery, type QueryFunction } from "@tanstack/vue-query";
 import { experimental_createPersister } from "@tanstack/query-persist-client-core";
 
-//TODO:: get these vars from env.
-const STATISTICS_STALE_TIME = 600_000; // 10 minutes
-
 import {
   fetchProposalConfig,
   fetchDaoProposals,
@@ -24,6 +21,9 @@ export const usePersister = () => {
 
   return persister;
 };
+
+const config = useRuntimeConfig();
+const STATISTICS_STALE_TIME = parseInt(config.public.statisticsStaleTime);
 
 export const useStatistics = () => {
   const useStatisticQuery = (
@@ -148,7 +148,6 @@ export const useStatistics = () => {
     const { value: currentCycle } = useStatisticQuery(
       ["proposal-config"],
       fetchProposalConfig,
-      //pick current cycle
       "current_cycle"
     );
 
