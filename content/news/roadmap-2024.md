@@ -20,19 +20,19 @@ head:
 
 Today, we're thrilled to bring forward the plans that Effect AI has in store for 2024. This year is bound to be a transformative one for Effect AI, as some of the most exciting and groundbreaking updates to the network in years are close on the horizon.
 
-Let's dive right in. We will start by taking a look at the rebrand that was [initiated by the DAO](https://dao.effect.network/proposals/149) and has already been put in the works, as is evident from the website you are reading from right now. Then we will cover the most anticipated update: the arrival of Effect AI's new platform. In a couple of weeks, our workforce will  be able to pre-register for the long-awaited **V2 release**, which embodies a significant iteration on every element of the platform. Meanwhile, our DAO will play an increasingly important role, stepping up its role as an ecosystem maintainer, and we will look into the discussion that have been going on around a Solana migration of part of the network.
+Let's dive right in. We will start by taking a look at the rebrand that was [initiated by the DAO](https://dao.effect.network/proposals/149) and has already been put in the works, as is evident from the website you are reading from right now. Then we will cover the most anticipated update: the arrival of Effect AI's new platform. In a couple of weeks, our workforce will  be able to pre-register for the long-awaited **V2 release**, which embodies a significant iteration on every element of the platform. Meanwhile, our DAO will play an increasingly important role, stepping up as an ecosystem maintainer, and we will look into the prospect of a migration to the Solana ecosystem.
 
 Looking ahead, we're excited to launch a series of ambitious long-term growth initiatives that will propel Effect AI to new heights. Stay tuned for an exciting journey ahead as we chart the course for Effect AI's evolution in 2024.
 
 #### New Website & Rebrand
 
-The decision to revert to our original identity, "Effect AI," was driven by [Proposal #149](https://dao.effect.network/proposals/149) from the DAO. This shift allows us to provide clear messaging towards  our target audience around the AI industry. It also represents a recommitment to our foundational values around decentralizing artificial intelligence. 
+The decision to revert to our original identity, "Effect AI," was driven by [Proposal #149](https://dao.effect.network/proposals/149) from the DAO. This shift allows us to provide clear messaging towards  our target audience with a strong focus on the AI industry. It also represents a recommitment to our foundational values around decentralizing artificial intelligence. 
 
-Jeffrey has been hard at work revamping the website, giving it much needed love and attention. The goal is to position the website as the go-to hub for all things related to news, tutorials, documentation, and an anchor for those eager to become part of our dynamic ecosystem.
+Jeffrey has been hard at work revamping the website, giving it much needed love and attention. The goal is to position the website as the go-to hub for all things related to news, tutorials, documentation, and an anchor for those eager to become part of our dynamic ecosystem. A lot more updates will come out on this, so stay tuned!
 
 #### V2 Release
 
-The highly anticipated V2 release is in the final stages of preparation, and is completely revamp the experience of both developers and users. Among the key elements that V2 will introduce are:
+The highly anticipated V2 release is in the final stages of preparation, and will completely revamp the experience of both developers and users. Among the key elements that V2 will introduce are:
 
 - Python SDK for convenient publishing and retrieval of datasets
 - Integrations with ML frameworks
@@ -41,7 +41,7 @@ The highly anticipated V2 release is in the final stages of preparation, and is 
 - Support for large and encrypted datasets 
 - New and performant UIs for data annotation
 
-With the V2 release we are doubling down on our commitment to developers, aiming to streamline their journey on the platform. Expect significant DX updates to our SDK, enabling developers to harness the power of our workforce with just three to five lines of code. 
+With the V2 release we are doubling down on our commitment to developers, aiming to streamline their journey on the platform. Expect significant DX updates to our SDK, enabling developers to harness the power of our workforce with just three to five lines of code. The V2 release will see a slow roll out over the coming weeks, with an early access registration opening soon.
 
 #### Major DAO & Protocol Updates
 
@@ -55,7 +55,7 @@ These working groups aim to streamline operations and better serve the EFX commu
 
 #### Solana Bridge
 
-As many of you may have noticed, the community is discussing the exciting opportunity to integrate with the Solana ecosystem. Solana has proven to be a vibrant space for both DePIN and AI projects, and will provide many opportunities when it comes to collaborating with other projects and providing services. 
+As many of you may have noticed, the community is discussing the exciting opportunity to integrate with the Solana ecosystem. Solana has proven to be a vibrant space for both DePIN and AI projects, and will provide many opportunities when it comes to partnerships with other projects and providing data related services.
 
 Following the V2 release, a working group will be established to implement the bridge that enables EFX token utilities on Solana. Once a bridge is operational, efforts will be made to migrate some key functionalities over to the Solana ecosystem. This move not only promises to attract a wave of new users to our platform, but will allow us to leverage the robust and thriving developer tools within the Solana ecosystem.
 
@@ -64,3 +64,7 @@ Following the V2 release, a working group will be established to implement the b
 This has been on the agenda for a long time, but the wait is almost over. Once V2 is running seamlessly, Effect will finally be able to provide a work-from-anywhere experience with the development of a mobile app.
 
 Imagine the convenience of completing simple tasks and training AI models from anywhere, at any time. With the mobile app, this vision becomes a reality. Being on your morning commute or taking a break at the park, you'll have the power to contribute to the ecosystem and earn on the go.
+
+### Join us!
+
+We hope you are exited for all the milestones that are lined up over the coming months. If you would like to join our efforts in building the largest data network for AI-training, we recommend that you [join our dao](dao.effect.network), and follow us on socials to get alerted when the V2 registrations open.
