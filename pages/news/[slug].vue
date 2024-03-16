@@ -30,7 +30,7 @@
       </div>
       <div class="container">
         <div class="columns">
-          <div class="column content is-medium" id="content">
+          <div class="column is-10 content is-medium" id="content">
             <ContentRendererMarkdown :value="data" class="blog-padding" />
           </div>
         </div>
