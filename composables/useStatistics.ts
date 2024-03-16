@@ -115,29 +115,18 @@ export const useStatistics = () => {
     });
 
     const lockedEosSupply = computed(() => {
-      const daoBalanceValue = daoBalance.value ?? 0;
-      const stakeBalanceValue = stakeBalance.value ?? 0;
-      const liquidityBalanceValue = liquidityBalance.value ?? 0;
-
-      return daoBalanceValue + stakeBalanceValue + liquidityBalanceValue;
+      return daoBalance.value + stakeBalance.value + liquidityBalance.value;
     });
 
-    const liquidEosSupply = computed(() => {
-      const circulatingEosSupplyValue = circulatingEosSupply.value ?? 0;
-      const daoBalanceValue = daoBalance.value ?? 0;
-      const stakeBalanceValue = stakeBalance.value ?? 0;
-      const liquidityBalanceValue = liquidityBalance.value ?? 0;
-      const bscSupplyValue = bscSupply.value ?? 0;
-
-      return (
-        circulatingEosSupplyValue -
-        daoBalanceValue -
-        stakeBalanceValue -
-        liquidityBalanceValue -
-        foundationBalance -
-        bscSupplyValue
-      );
-    });
+    const liquidEosSupply = computed(
+      () =>
+        circulatingEosSupply.value -
+        daoBalance.value -
+        stakeBalance.value -
+        liquidityBalance.value -
+        bscSupply.value -
+        foundationBalance
+    );
 
     return {
       bscSupply,
