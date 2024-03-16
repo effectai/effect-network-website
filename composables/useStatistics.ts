@@ -34,7 +34,7 @@ export const useStatistics = () => {
     queryKey: string[];
     queryFn: QueryFunction;
     enabled?: Ref<boolean> | undefined;
-    pick?: string;
+    pick?: Function;
   }) => {
     const query = useQuery({
       queryKey,
@@ -45,12 +45,12 @@ export const useStatistics = () => {
     });
 
     const value = computed(() => {
-      if (pick && query.data?.value) {
-        return query.data?.value?.[pick];
+      if (pick) {
+        return pick(query.data.value);
       } else {
-        return query.data?.value;
+        return query.data.value;
       }
-    }) as Ref<number>;
+    });
 
     return {
       isLoading: query.isLoading,
@@ -143,19 +143,18 @@ export const useStatistics = () => {
     const { value: currentCycle } = useStatisticQuery({
       queryFn: fetchProposalConfig,
       queryKey: ["proposal-config"],
-      pick: "current_cycle",
-    });
-
-    const proposalsQuery = useQuery({
-      queryKey: ["proposals"],
-      queryFn: () => {
-        return fetchDaoProposals();
+      pick: (data: any) => {
+        return data.current_cycle;
       },
-      staleTime: STATISTICS_STALE_TIME,
     });
 
-    const { data: proposalsData } = proposalsQuery;
-    const proposalsCreated = computed(() => proposalsData?.value?.[0]?.id);
+    const { value: proposalsCreated } = useStatisticQuery({
+      queryKey: ["proposals"],
+      queryFn: fetchDaoProposals,
+      pick: (data: any) => {
+        return data?.[0].id;
+      },
+    });
 
     const { value: feePoolBalance } = useStatisticQuery({
       queryFn: () => fetchFeePoolBalance(),
