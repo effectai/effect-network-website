@@ -67,4 +67,4 @@ Imagine the convenience of completing simple tasks and training AI models from a
 
 ### Join us!
 
-We hope you are exited for all the milestones that are lined up over the coming months. If you would like to join our efforts in building the largest data network for AI-training, we recommend that you [join our dao](dao.effect.network), and follow us on socials to get alerted when the V2 registrations open.
+We hope you are exited for all the milestones that are lined up over the coming months. If you would like to join our efforts in building the largest data network for AI-training, we recommend that you [join our DAO](dao.effect.network), and follow us on socials to get alerted when the V2 registrations open.
