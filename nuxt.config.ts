@@ -37,7 +37,7 @@ export default defineNuxtConfig({
     },
   },
   build: {
-    transpile: ["vue-countup-v3"],
+    transpile: ["vue-countup-v3", "@fortawesome/fontawesome-free"],
   },
   plugins: [{ src: "~/plugins/aos.client.ts", mode: "client" }],
   css: [

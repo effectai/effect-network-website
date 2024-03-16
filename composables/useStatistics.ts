@@ -26,7 +26,11 @@ export const usePersister = () => {
 };
 
 export const useStatistics = () => {
-  const useStatisticQuery = (queryKey: string[], queryFn: QueryFunction) => {
+  const useStatisticQuery = (
+    queryKey: string[],
+    queryFn: QueryFunction,
+    pick?: string
+  ) => {
     const query = useQuery({
       queryKey,
       queryFn,
@@ -35,7 +39,11 @@ export const useStatistics = () => {
     });
 
     const value = computed(() => {
-      return query.data?.value;
+      if (pick && query.data?.value) {
+        return query.data?.value?.[pick];
+      } else {
+        return query.data?.value;
+      }
     }) as Ref<number>;
 
     return {
@@ -137,15 +145,11 @@ export const useStatistics = () => {
   };
 
   const useDaoStatistics = () => {
-    const proposalConfigQuery = useQuery({
-      queryKey: ["proposal-config"],
-      queryFn: fetchProposalConfig,
-    });
-
-    const { data: proposalConfigData } = proposalConfigQuery;
-
-    const currentCycle = computed(
-      () => proposalConfigData?.value?.current_cycle
+    const { value: currentCycle } = useStatisticQuery(
+      ["proposal-config"],
+      fetchProposalConfig,
+      //pick current cycle
+      "current_cycle"
     );
 
     const proposalsQuery = useQuery({

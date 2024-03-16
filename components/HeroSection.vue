@@ -10,9 +10,9 @@
               }}</span>
             </h1>
 
-            <h1 v-else-if="$slots.title" class="is-spaced keep-all">
+            <div v-else-if="$slots.title" class="is-spaced keep-all">
               <slot name="title"> </slot>
-            </h1>
+            </div>
 
             <slot name="subtitle"></slot>
             <slot name="footer"></slot>
