@@ -18,7 +18,6 @@ export const usePersister = () => {
   const persister = experimental_createPersister({
     storage: window?.localStorage ? localStorage : undefined,
   });
-
   return persister;
 };
 
@@ -26,14 +25,21 @@ export const useStatistics = () => {
   const config = useRuntimeConfig();
   const STATISTICS_STALE_TIME = parseInt(config.public.statisticsStaleTime);
 
-  const useStatisticQuery = (
-    queryKey: string[],
-    queryFn: QueryFunction,
-    pick?: string
-  ) => {
+  const useStatisticQuery = ({
+    queryKey,
+    queryFn,
+    pick,
+    enabled,
+  }: {
+    queryKey: string[];
+    queryFn: QueryFunction;
+    enabled?: Ref<boolean> | undefined;
+    pick?: string;
+  }) => {
     const query = useQuery({
       queryKey,
       queryFn,
+      enabled,
       staleTime: STATISTICS_STALE_TIME,
       persister: usePersister() as any,
     });
@@ -83,30 +89,30 @@ export const useStatistics = () => {
   const useSupplyStatistics = () => {
     const foundationBalance = 100_000_000; // 100M
 
-    const { value: bscSupply } = useStatisticQuery(
-      ["bsc-supply"],
-      fetchBscSupply
-    );
+    const { value: bscSupply } = useStatisticQuery({
+      queryKey: ["bsc-supply"],
+      queryFn: fetchBscSupply,
+    });
 
-    const { value: liquidityBalance } = useStatisticQuery(
-      ["liquidity-balance"],
-      fetchLiquidityBalance
-    );
+    const { value: liquidityBalance } = useStatisticQuery({
+      queryKey: ["liquidity-balance"],
+      queryFn: fetchLiquidityBalance,
+    });
 
-    const { value: stakeBalance } = useStatisticQuery(
-      ["stake-balance"],
-      fetchStakeBalance
-    );
+    const { value: stakeBalance } = useStatisticQuery({
+      queryKey: ["stake-balance"],
+      queryFn: fetchStakeBalance,
+    });
 
-    const { value: daoBalance } = useStatisticQuery(
-      ["dao-balance"],
-      fetchDaoBalance
-    );
+    const { value: daoBalance } = useStatisticQuery({
+      queryKey: ["dao-balance"],
+      queryFn: fetchDaoBalance,
+    });
 
-    const { value: circulatingEosSupply } = useStatisticQuery(
-      ["eos-supply"],
-      fetchEosSupply
-    );
+    const { value: circulatingEosSupply } = useStatisticQuery({
+      queryKey: ["eos-supply"],
+      queryFn: fetchEosSupply,
+    });
 
     const lockedEosSupply = computed(() => {
       const daoBalanceValue = daoBalance.value ?? 0;
@@ -145,11 +151,11 @@ export const useStatistics = () => {
   };
 
   const useDaoStatistics = () => {
-    const { value: currentCycle } = useStatisticQuery(
-      ["proposal-config"],
-      fetchProposalConfig,
-      "current_cycle"
-    );
+    const { value: currentCycle } = useStatisticQuery({
+      queryFn: fetchProposalConfig,
+      queryKey: ["proposal-config"],
+      pick: "current_cycle",
+    });
 
     const proposalsQuery = useQuery({
       queryKey: ["proposals"],
@@ -162,19 +168,9 @@ export const useStatistics = () => {
     const { data: proposalsData } = proposalsQuery;
     const proposalsCreated = computed(() => proposalsData?.value?.[0]?.id);
 
-    const feePoolConfigQuery = useQuery({
+    const { value: feePoolBalance } = useStatisticQuery({
+      queryFn: () => fetchFeePoolBalance(),
       queryKey: ["fee-pool"],
-      queryFn: () => {
-        return fetchFeePoolBalance(currentCycle.value);
-      },
-      enabled: computed(() => !!currentCycle.value),
-      staleTime: STATISTICS_STALE_TIME,
-    });
-
-    const { data: feePoolConfigData } = feePoolConfigQuery;
-
-    const feePoolBalance = computed(() => {
-      return feePoolConfigData?.value;
     });
 
     return {

@@ -63,25 +63,39 @@ export const fetchDaoProposals = async () => {
   return result.rows;
 };
 
-export const fetchFeePoolBalance = async (currentCycle: number) => {
+export const fetchFeePoolBalance = async () => {
   const config = useRuntimeConfig();
 
-  const result = await safeFetch(
-    `${config.public.rpcUrl}/v1/chain/get_table_rows`,
-    {
+  const getTableRows = async (lowerBound: number) => {
+    return await safeFetch(`${config.public.rpcUrl}/v1/chain/get_table_rows`, {
       method: "POST",
       body: JSON.stringify({
         json: true,
         code: config.public.contracts.feePool,
         scope: config.public.contracts.feePool,
         table: "balance",
-        lowerBound: 5,
-        upperBound: currentCycle,
+        limit: 75,
+        lower_bound: lowerBound,
       }),
-    }
-  );
+    });
+  };
 
-  return result.rows.reduce((acc: any, row: any) => {
+  const results = [];
+
+  //start at cycle 3
+  let i = 3;
+  while (true) {
+    const result = await getTableRows(i);
+    results.push(...result.rows);
+
+    if (!result.more || !result.next_key) {
+      break;
+    }
+
+    i = parseInt(result.next_key);
+  }
+
+  return results.reduce((acc: any, row: any) => {
     return acc + row.balance[0].value * 0.0001;
   }, 0);
 };

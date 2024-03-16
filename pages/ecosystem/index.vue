@@ -200,7 +200,8 @@ const rewards = computed(() => {
 
 const daoStats = computed(
   () =>
-    rewards.value && [
+    rewards.value &&
+    price.value && [
       { label: "cycle", value: currentCycle.value },
       { label: "proposals", value: proposalsCreated.value },
       {
