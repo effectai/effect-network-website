@@ -18,19 +18,18 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
     head: {
       titleTemplate: "%s - Effect AI",
-      title: "Effect AI",
-      htmlAttrs: {
-        lang: "en",
-      },
       meta: [
-        { charset: "utf-8" },
+        { name: "lang", content: "en" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { hid: "description", name: "description", content: "" },
+        { charset: "utf-8" },
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
   modules: ["@nuxt/content", "@tresjs/nuxt", "@vueuse/nuxt", "@nuxt/image"],
+  tres: {
+    devtools: true,
+  },
   content: {
     markdown: {
       remarkPlugins: ["remark-unwrap-images"],
@@ -54,5 +53,8 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+  devtools: {
+    enabled: true,
   },
 });

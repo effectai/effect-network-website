@@ -6,8 +6,7 @@
     >
       <template #subtitle>
         <p class="block is-size-5 has-text-black">
-          A collection of resources for joining the Effect AI ecosystem. By
-          developers for developers.
+          {{ description }}
         </p>
       </template>
 
@@ -177,10 +176,13 @@
 <script setup lang="ts">
 import type { Tutorial } from "~/types/tutorials";
 
+const description = `A collection of resources for joining the Effect AI ecosystem. By developers for developers.`;
+
 useSeoMeta({
   title: "Developers",
-  description:
-    "A collection of resources for joining the Effect AI ecosystem. By developers for developers.",
+  ogTitle: "Developers",
+  description,
+  ogDescription: description,
 });
 
 const content = `import { EffectClient } from '@effectai/effect-js';

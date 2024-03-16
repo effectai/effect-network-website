@@ -97,12 +97,12 @@ const animateUniforms = (uniforms: AnimatedObjectState["uniforms"]) => {
 
   Object.keys(uniforms).forEach((key) => {
     const anim = animate({
-      from: controls[key].value.value,
+      from: controls[key].value,
       to: uniforms[key].value,
       duration: uniforms[key].duration || ANIMATION_DURATION,
       ease: uniforms[key].easing || cubicBezier(0, 0.42, 0, 1),
       onUpdate: (value) => {
-        controls[key].value.value = value;
+        controls[key].value = value;
       },
     });
 
@@ -142,7 +142,7 @@ const morphToBrain = () => {
 
   animateProperties(brainState.properties);
 
-  distortPingPong(controls.distort.value);
+  distortPingPong(controls.distort);
 
   isRotating.value = false;
 
@@ -153,8 +153,8 @@ const morphToBlob = () => {
   const { stopAll } = animateUniforms(blobState.uniforms);
 
   material.normalMap = null;
-  material.needsUpdate = true;
   material.normalScale = new Vector2(0, 0);
+  material.needsUpdate = true;
 
   animateProperties(blobState.properties);
 
@@ -170,7 +170,7 @@ const morphToPlanet = () => {
   material.normalMap = normalMap;
   material.needsUpdate = true;
 
-  distortPingPong(controls.distort.value);
+  distortPingPong(controls.distort);
 
   animate({
     from: 0,
@@ -225,4 +225,3 @@ watch(route, handleRouteChange, { immediate: true });
 </script>
 
 <style></style>
-~/composables/useThree

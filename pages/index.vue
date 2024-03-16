@@ -113,18 +113,7 @@ definePageMeta({
 
 useSeoMeta({
   title: "Home",
-  description:
-    "Effect AI is a decentralized network for artificial intelligence and AI related services. We are creating a platform that will allow anyone in the world to contribute to AI development.",
-});
-
-useHead({
-  meta: [
-    {
-      hid: "description",
-      name: "description",
-      content: `Effect AI is a decentralized network for artificial intelligence and AI related services. We are creating a platform that will allow anyone in the world to contribute to AI development.`,
-    },
-  ],
+  ogTitle: "Home",
 });
 
 const featuredDapps = dapps.filter((dapp) => dapp.featured);

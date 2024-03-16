@@ -1,6 +1,6 @@
 import { animate, cubicBezier, easeIn } from "popmotion";
 
-export const distortPingPong = (distort: any) => {
+export const distortPingPong = (distort: Ref<number>) => {
   animate({
     from: distort.value,
     to: 0.3,

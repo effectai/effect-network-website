@@ -11,112 +11,52 @@ import displacement from "@/glsl/shaders/displacement.glsl";
 import headers from "@/glsl/shaders/headers.glsl";
 
 export const useDisplacement = (material: Material) => {
-  const controls = useControls({
-    metalness: {
-      value: 0.8,
-      min: 0,
-      max: 1,
-    },
-    roughness: {
-      value: 0.2,
-      min: 0,
-      max: 1,
-    },
-    speed: {
-      value: 0.2,
-      min: 0,
-      max: 10,
-    },
-    gooPoleAmount: {
-      value: 12,
-      min: 0,
-      max: 1,
-    },
-    distort: {
-      value: 0.3,
-      min: 0,
-      max: 10,
-    },
-    frequency: {
-      value: 2.9,
-      min: 0,
-      max: 10,
-    },
-    surfaceDistort: {
-      value: 1.5,
-      min: 0,
-      max: 10,
-    },
-    surfaceFrequency: {
-      value: 1.65,
-      min: 0,
-      max: 10,
-    },
-    surfaceSpeed: {
-      value: 0.8,
-      min: 0,
-      max: 10,
-    },
-    numberOfWaves: {
-      value: 1,
-      min: 0,
-      max: 10,
-    },
-    surfacePoleAmount: {
-      value: 0.3,
-      min: 0,
-      max: 1,
-    },
-    morphRatio: {
-      value: 0,
-      min: 0,
-      step: 0.001,
-      max: 1,
-    },
-  });
+  const metalness = ref(0.8);
+  const roughness = ref(0.2);
+  const speed = ref(0.2);
+  const gooPoleAmount = ref(12);
+  const distort = ref(0.3);
+  const frequency = ref(2.9);
+  const surfaceDistort = ref(1.5);
+  const surfaceFrequency = ref(1.65);
+  const surfaceSpeed = ref(0.8);
+  const numberOfWaves = ref(1);
+  const surfacePoleAmount = ref(0.3);
+  const morphRatio = ref(0);
 
   const uniforms = {
     time: { value: 0.1 },
     surfaceTime: { value: 0.1 },
 
-    morphRatio: { value: controls.morphRatio.value.value },
+    morphRatio: { value: morphRatio.value },
 
-    distort: { value: controls.distort.value.value },
-    frequency: { value: controls.frequency.value.value },
-    speed: { value: controls.speed.value.value },
+    distort: { value: distort.value },
+    frequency: { value: frequency.value },
+    speed: { value: speed.value },
 
-    surfaceDistort: { value: controls.surfaceDistort.value.value },
-    surfaceFrequency: { value: controls.surfaceFrequency.value.value },
-    surfaceSpeed: { value: controls.surfaceSpeed.value.value },
-    numberOfWaves: { value: controls.numberOfWaves.value.value },
-    surfacePoleAmount: { value: controls.surfacePoleAmount.value.value },
-    gooPoleAmount: { value: controls.gooPoleAmount.value.value },
+    surfaceDistort: { value: surfaceDistort.value },
+    surfaceFrequency: { value: surfaceFrequency.value },
+    surfaceSpeed: { value: surfaceSpeed.value },
+    numberOfWaves: { value: numberOfWaves.value },
+    surfacePoleAmount: { value: surfacePoleAmount.value },
+    gooPoleAmount: { value: gooPoleAmount.value },
   };
 
   const updateUniforms = (elapsed: number) => {
     uniforms.time.value = elapsed * uniforms.speed.value;
     uniforms.surfaceTime.value = elapsed * uniforms.surfaceSpeed.value;
 
-    uniforms.morphRatio.value = controls.morphRatio.value.value;
+    uniforms.morphRatio.value = morphRatio.value;
 
-    uniforms.speed.value = controls.speed.value.value;
-    uniforms.surfaceSpeed.value = controls.surfaceSpeed.value.value;
-
-    uniforms.distort.value = controls.distort.value.value;
-    uniforms.frequency.value = controls.frequency.value.value;
-    uniforms.gooPoleAmount.value = controls.gooPoleAmount.value.value;
-    uniforms.surfaceDistort.value = controls.surfaceDistort.value.value;
-    uniforms.surfaceFrequency.value = controls.surfaceFrequency.value.value;
-    uniforms.numberOfWaves.value = controls.numberOfWaves.value.value;
-    uniforms.surfacePoleAmount.value = controls.surfacePoleAmount.value.value;
+    uniforms.distort.value = distort.value;
+    uniforms.frequency.value = frequency.value;
+    uniforms.surfaceDistort.value = surfaceDistort.value;
   };
 
   const attachShader = () => {
     material.onBeforeCompile = (shader: any) => {
       shader.uniforms.time = uniforms.time;
-
       shader.uniforms.morphRatio = uniforms.morphRatio;
-
       shader.uniforms.distort = uniforms.distort;
       shader.uniforms.frequency = uniforms.frequency;
       shader.uniforms.speed = uniforms.speed;
@@ -178,14 +118,26 @@ export const useDisplacement = (material: Material) => {
     resetShader,
     attachShader,
     updateUniforms,
-    controls,
     uniforms,
+
+    controls: {
+      metalness,
+      roughness,
+      speed,
+      gooPoleAmount,
+      distort,
+      frequency,
+      surfaceDistort,
+      surfaceFrequency,
+      surfaceSpeed,
+      numberOfWaves,
+      surfacePoleAmount,
+      morphRatio,
+    },
   };
 };
 
 export const useBrain = () => {
-  //TODO::reduce brain poly's..
-
   const loadBrain = async (
     material: Material,
     geometry: IcosahedronGeometry

@@ -39,12 +39,7 @@
             Ecosystem
           </h2>
           <p>
-            Effect AI's ecosystem is a collection of all the applications
-            running on the network. Powering this dynamic network is our digital
-            currency, the EFX token, making everything from transactions to
-            application operations smooth and efficient. Our ecosystem is not
-            just a network; it's a community maintained and governed by a
-            Decentralized Autonomous Organization (DAO).
+            {{ description }}
           </p>
           <br />
         </div>
@@ -174,9 +169,16 @@
 
 <script setup lang="ts">
 import { dapps } from "@/constants/dapps";
-import { communities, discord, reddit, telegram } from "@/constants/socials";
+import { discord, reddit, telegram } from "@/constants/socials";
 
 const featuredDapps = dapps.filter((dapp) => dapp.featured);
+
+const description = `Effect AI's ecosystem is a collection of all the applications
+running on the network. Powering this dynamic network is our digital
+currency, the EFX token, making everything from transactions to
+application operations smooth and efficient. Our ecosystem is not
+just a network; it's a community maintained and governed by a
+Decentralized Autonomous Organization (DAO).`;
 
 definePageMeta({
   layout: "top",
@@ -184,8 +186,9 @@ definePageMeta({
 
 useSeoMeta({
   title: "Ecosystem",
-  description:
-    "Effect AI's ecosystem is a collection of all the applications running on the network.",
+  ogTitle: "Ecosystem",
+  description,
+  ogDescription: description,
 });
 
 const { useDaoStatistics, useEfxPrice } = useStatistics();
