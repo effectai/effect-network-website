@@ -3,9 +3,12 @@
     <div class="column is-one-third" v-for="statistic in statistics">
       <div class="has-text-weight-bold" style="font-size: 2.5rem">
         <ClientOnly>
-          <div class="is-flex">
-            <count-up class="is-flex is-whitespace-pre" :decimal-places="statistic.decimalPlaces"
-              :end-val="statistic.value">
+          <div class="is-flex is-capitalized">
+            <count-up
+              class="is-flex is-whitespace-pre"
+              :decimal-places="statistic.decimalPlaces"
+              :end-val="statistic.value"
+            >
             </count-up>
             {{ statistic.suffix }}
           </div>
@@ -43,7 +46,7 @@ const statistics = computed(
       {
         label: "Tasks Completed",
         value: formattedTasksCompleted.value.value,
-        decimalPlaces: 3,
+        decimalPlaces: 1,
         suffix: formattedTasksCompleted.value.suffix,
       },
       {

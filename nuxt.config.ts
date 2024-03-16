@@ -1,9 +1,19 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import glsl from "vite-plugin-glsl";
-import { templateCompilerOptions } from "@tresjs/core";
 
 export default defineNuxtConfig({
-  ssr: false,
+  runtimeConfig: {
+    public: {
+      rpcUrl: process.env.EOS_RPC_URL || "https://eos.greymass.com",
+      statisticsStaleTime: process.env.STATISTICS_CACHE_TIME_MS || "600000",
+      contracts: {
+        force: process.env.FORCE_CONTRACT || "force.efx",
+        daoProposals: process.env.DAO_PROPOSALS_CONTRACT || "daoproposals",
+        efx: process.env.EFX_TOKEN_CONTRACT || "efx.token",
+        feePool: process.env.FEE_POOL_CONTRACT || "feepool.efx",
+      },
+    },
+  },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
     head: {

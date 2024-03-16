@@ -193,17 +193,21 @@ const { useDaoStatistics, useEfxPrice } = useStatistics();
 const { data: price } = useEfxPrice();
 const { currentCycle, feePoolBalance, proposalsCreated } = useDaoStatistics();
 
+const rewards = computed(() => {
+  if (!feePoolBalance.value) return 0;
+  return formatNumber(feePoolBalance.value * price.value, 0);
+});
+
 const daoStats = computed(
   () =>
-    feePoolBalance.value &&
-    price.value && [
+    rewards.value && [
       { label: "cycle", value: currentCycle.value },
       { label: "proposals", value: proposalsCreated.value },
       {
         label: "rewards",
         prefix: "$",
-        value: formatNumber(feePoolBalance.value * price.value).value,
-        suffix: formatNumber(feePoolBalance.value).suffix,
+        value: rewards.value.value,
+        suffix: rewards.value.suffix,
       },
     ]
 );
