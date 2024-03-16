@@ -22,10 +22,10 @@ export const usePersister = () => {
   return persister;
 };
 
-const config = useRuntimeConfig();
-const STATISTICS_STALE_TIME = parseInt(config.public.statisticsStaleTime);
-
 export const useStatistics = () => {
+  const config = useRuntimeConfig();
+  const STATISTICS_STALE_TIME = parseInt(config.public.statisticsStaleTime);
+
   const useStatisticQuery = (
     queryKey: string[],
     queryFn: QueryFunction,

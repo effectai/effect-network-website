@@ -6,14 +6,14 @@
 
 <script setup lang="ts">
 onMounted(() => {
+  const nuxtApp = useNuxtApp();
+
   useNuxtApp().$aos().init({
     once: true,
   });
-});
 
-const nuxtApp = useNuxtApp();
-
-nuxtApp.hook("page:finish", () => {
-  window.scrollTo(0, 0);
+  nuxtApp.hook("page:finish", () => {
+    window.scrollTo(0, 0);
+  });
 });
 </script>

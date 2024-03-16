@@ -9,9 +9,9 @@ import { useTexture } from "@tresjs/core";
 import { animate, cubicBezier, easeOut } from "popmotion";
 import { distortPingPong } from "~/utils/animate";
 
-const envMap = await useTexture(["/img/textures/envmap.jpg"]);
+const envMap = await useTexture(["img/textures/envmap.jpg"]);
 envMap.mapping = EquirectangularReflectionMapping;
-const normalMap = await useTexture(["/img/textures/earth-normalmap.jpg"]);
+const normalMap = await useTexture(["img/textures/earth-normalmap.jpg"]);
 
 const { material, geometry, mesh: blobMesh } = useBlob();
 material.envMap = envMap;
