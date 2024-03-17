@@ -1,41 +1,39 @@
 # [Effect Network Website](https://effect.network)
 
-This repo contains the source code for the Effect Network website. The website is built using [Nuxt.js](https://nuxtjs.org/).
+This repo contains the source code for the Effect Network website. Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Development
+## Setup
 
-The node version needed for this project is **V12.X.Y**.
-[NVM](https://github.com/nvm-sh/nvm) can be used to set the correct Node version.
-A `.nvmrc` file is included in the project to make this easier.
-Just run the following command in the root of the project to set the correct Node version:
+Make sure to install the dependencies:
 
 ```bash
-nvm use
+# npm
+npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
 ```
 
-Docker is also provided to run the project locally. To run the project with Docker, run the following command in the root of the project:
+## Development Server
+
+Start the development server on `http://localhost:3000`:
 
 ```bash
-docker-compose up
+# npm
+npm run dev
+
+# pnpm
+pnpm run dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
 ```
-
-The website will be available at [http://localhost:3000](http://localhost:3000).
-
-## Build Setup
-
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For a detailed explanation of how things work, check out [Nuxt.js docs](https://nuxtjs.org).

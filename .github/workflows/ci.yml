@@ -14,7 +14,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v2.1.4
         with:
-          node-version: '12.x'
+          node-version: '18.x'
 
       - name: Cache dependencies
         uses: actions/cache@v2.1.3
@@ -24,8 +24,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - run: npm ci
-      - run: npm run generate
+      - run: yarn
+      - run: yarn generate
 
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
