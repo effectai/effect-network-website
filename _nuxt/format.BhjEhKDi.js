@@ -1,0 +1,1 @@
+function r(t,e=2){const s=["","k","m","b","t"];let f=0;for(;Math.abs(t)>=1e3&&f<s.length-1;)t/=1e3,f++;return{value:t.toFixed(e).replace(/\.0$/,""),suffix:s[f]}}const u=(t,e=200)=>t.length>e?t.substring(0,e)+"...":t;export{r as f,u as l};
