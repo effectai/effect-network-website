@@ -111,7 +111,7 @@ const animateUniforms = (uniforms: AnimatedObjectState["uniforms"]) => {
   });
 
   return {
-    stopAll: () => {
+    stopUniforms: () => {
       stopFns.forEach((fn) => fn());
     },
   };
@@ -136,41 +136,49 @@ const animateProperties = (properties: AnimatedObjectState["properties"]) => {
 };
 
 const morphToBrain = () => {
-  const { stopAll } = animateUniforms(brainState.uniforms);
+  const { stopUniforms } = animateUniforms(brainState.uniforms);
 
   material.normalMap = null;
   material.normalScale = new Vector2(0, 0);
 
   animateProperties(brainState.properties);
-
-  distortPingPong(controls.distort);
+  const { stopAll: stopPingPong } = distortPingPong(controls.distort);
 
   isRotating.value = false;
+
+  const stopAll = () => {
+    stopUniforms();
+    stopPingPong();
+  };
 
   return stopAll;
 };
 
 const morphToBlob = () => {
-  const { stopAll } = animateUniforms(blobState.uniforms);
+  const { stopUniforms } = animateUniforms(blobState.uniforms);
+  animateProperties(blobState.properties);
 
   material.normalMap = null;
   material.normalScale = new Vector2(0, 0);
   material.needsUpdate = true;
 
-  animateProperties(blobState.properties);
-
   isRotating.value = false;
+
+  const stopAll = () => {
+    stopUniforms();
+  };
 
   return stopAll;
 };
 
 const morphToPlanet = () => {
-  const { stopAll } = animateUniforms(planetState.uniforms);
+  const { stopUniforms } = animateUniforms(planetState.uniforms);
 
   animateProperties(planetState.properties);
   material.normalMap = normalMap;
   material.needsUpdate = true;
-  distortPingPong(controls.distort);
+
+  const { stopAll: stopPingPong } = distortPingPong(controls.distort);
 
   animate({
     from: 0,
@@ -182,6 +190,12 @@ const morphToPlanet = () => {
     },
   });
   isRotating.value = true;
+
+  const stopAll = () => {
+    stopUniforms();
+    stopPingPong();
+  };
+
   return stopAll;
 };
 

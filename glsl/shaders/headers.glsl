@@ -125,7 +125,7 @@ float f(vec3 point) {
     float morphProgress = abs(smoothstep(-1.0, 1.0, morphRatio));
 
     // blob noise
-    float goo = pnoise(vec3(point / (frequency) + mod(time, NOISE_PERIOD)), vec3(NOISE_PERIOD)) * pow(distort, morphProgress * 4.0);
+    float goo = pnoise(vec3(point / (frequency) + mod(time, NOISE_PERIOD)), vec3(NOISE_PERIOD)) * pow(distort, 2.0);
 
     // wave noise
     float surfaceNoise = pnoise(vec3(point / (surfaceFrequency) + mod(surfaceTime, NOISE_PERIOD)), vec3(NOISE_PERIOD));
