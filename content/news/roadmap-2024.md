@@ -45,13 +45,9 @@ With the V2 release we are doubling down on our commitment to developers, aiming
 
 #### Solana Bridge
 
-Today, we're excited to unveil the latest development in Effect AI's journey: our bridge to the Solana ecosystem. The anticipation surrounding this move has made everyone in our community very excited, and it's not hard to see why. Solana has quickly emerged as a thriving hub for both DePIN and AI projects, making it an ideal choice for Effect AI's expansion.
+As many of you may have noticed, the community is discussing the exciting opportunity to integrate with the Solana ecosystem. Solana has quickly emerged as a thriving hub for both DePIN and AI projects, making it an ideal choice for Effect AI's expansion. The Effect AI team has experience and strong connections within the Solana ecosystem, which opens up a world of possibilities for strategic partnerships and collaborations with like-minded projects, and helps us push the boundaries of decentralized and transparent AI.
 
-In addition, Solana's thriving developer community is a significant advantage for us. Having access to a large pool of talented developers is crucial for the growth and development of any open-source project. Solana's commitment to user and developer experience is one of the key factors that sets it apart from other blockchains.
-
-But it's not just about the user experience. Our core team has a wealth of experience and strong connections within the Solana ecosystem. This opens up a world of possibilities for strategic partnerships and collaborations with like-minded projects and industry leaders. By joining forces, we can collectively push the boundaries of decentralized and transparent AI and bring about groundbreaking advancements in the field.
-
-Following the V2 release, a working group will be established to implement the bridge that enables EFX token utilities on Solana. This bridge will pave the way for the migration of key functionalities to the Solana ecosystem, ultimately positioning us as a native Solana project. This move not only promises to attract a wave of new users to our platform, but will allow us to leverage the robust and thriving developer tools within the Solana ecosystem.
+Following the V2 release, a working group will be established to focus on the bridge that enables EFX token utilities on Solana. This bridge will pave the way for the migration of many utilities to the Solana ecosystem over time. The details of this migration path will soon be published in a DAO proposal for discussion and refinement, and we are more than excited to hear you input.
 
 #### Major DAO & Protocol Updates
 
