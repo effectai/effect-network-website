@@ -41,7 +41,7 @@ export const useStatistics = () => {
       queryFn,
       enabled,
       staleTime: STATISTICS_STALE_TIME,
-      persister: usePersister() as any,
+      persister: usePersister(),
     });
 
     const value = computed(() => {
@@ -63,7 +63,7 @@ export const useStatistics = () => {
       queryKey: ["efx-price"],
       queryFn: fetchEfxPrice,
       staleTime: STATISTICS_STALE_TIME,
-      persister: usePersister() as any,
+      persister: usePersister(),
     });
 
     return query;
@@ -74,7 +74,7 @@ export const useStatistics = () => {
       queryKey: ["force-statistics"],
       queryFn: fetchForceStatistics,
       staleTime: STATISTICS_STALE_TIME,
-      persister: usePersister() as any,
+      persister: usePersister(),
     });
 
     const tasksCompleted = computed(() => {

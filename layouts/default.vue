@@ -11,10 +11,4 @@
 
 <script setup lang="ts"></script>
 
-<style scoped lang="scss">
-#app {
-  /*background: url('~assets/img/grid.png');*/
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-</style>
+<style scoped lang="scss"></style>
