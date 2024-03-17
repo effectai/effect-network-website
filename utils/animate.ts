@@ -4,19 +4,23 @@ export const distortPingPong = (distort: Ref<number>) => {
   animate({
     from: distort.value,
     to: 0.3,
-    duration: 1,
+    duration: 200,
     ease: easeIn,
     onUpdate: (value) => {
-      distort.value = value;
+      if (value > 0) {
+        distort.value = value;
+      }
     },
     onComplete: () => {
       animate({
         from: distort.value,
         to: 0,
-        duration: 3000,
+        duration: 4000,
         ease: cubicBezier(0.31, -1.33, 0.37, 1.07),
         onUpdate: (value) => {
-          distort.value = value;
+          if (value > 0) {
+            distort.value = value;
+          }
         },
       });
     },

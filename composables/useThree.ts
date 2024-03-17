@@ -9,6 +9,7 @@ import {
 
 import displacement from "@/glsl/shaders/displacement.glsl";
 import headers from "@/glsl/shaders/headers.glsl";
+import { distance } from "popmotion";
 
 export const useDisplacement = (material: Material) => {
   const metalness = ref(0.8);
@@ -56,7 +57,9 @@ export const useDisplacement = (material: Material) => {
   const attachShader = () => {
     material.onBeforeCompile = (shader: any) => {
       shader.uniforms.time = uniforms.time;
+
       shader.uniforms.morphRatio = uniforms.morphRatio;
+
       shader.uniforms.distort = uniforms.distort;
       shader.uniforms.frequency = uniforms.frequency;
       shader.uniforms.speed = uniforms.speed;
@@ -77,18 +80,16 @@ export const useDisplacement = (material: Material) => {
         "void main() {",
         `
           void main() {
-            ${displacement}
 
             vec3 pStart = positionStart;
             vec3 pEnd = positionEnd;
+            vec3 centerStart = (pStart + pEnd) * 0.5;
 
-            float distRatio = sin(morphRatio * PI);
+            ${displacement}
 
-            // Calculate morphed normal
-            vec3 normal = normalize(mix(normalStart, normalEnd, morphRatio));
-    
             // Calculate morphed position
-            vec3 pos = mix(pStart, pEnd, morphRatio);
+            vec3 posRelative = mix(pStart - centerStart, pEnd - centerStart, smoothstep(0.25, 1.0, morphRatio));
+            vec3 pos = centerStart + posRelative;
         `
       );
 

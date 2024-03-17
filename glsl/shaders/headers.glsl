@@ -112,7 +112,7 @@ attribute vec3 normalStart;
 attribute vec3 normalEnd;
 
 #define M_PI 3.1415926538
-#define NOISE_PERIOD 10. // avoid noise artifacts after long duration
+#define NOISE_PERIOD 10. 
 
 float f(vec3 point) {
 
@@ -121,8 +121,11 @@ float f(vec3 point) {
     float wavePoleAmount = mix(amount * 1.0, 1.0, surfacePoleAmount);
     float gooPoleAmount = mix(amount * 1.0, 1.0, gooPoleAmount);
 
+    //calculate the morph progress using the morphRatio
+    float morphProgress = abs(smoothstep(-1.0, 1.0, morphRatio));
+
     // blob noise
-    float goo = pnoise(vec3(point / (frequency) + mod(time, NOISE_PERIOD)), vec3(NOISE_PERIOD)) * pow(distort, 2.0);
+    float goo = pnoise(vec3(point / (frequency) + mod(time, NOISE_PERIOD)), vec3(NOISE_PERIOD)) * pow(distort, morphProgress * 4.0);
 
     // wave noise
     float surfaceNoise = pnoise(vec3(point / (surfaceFrequency) + mod(surfaceTime, NOISE_PERIOD)), vec3(NOISE_PERIOD));

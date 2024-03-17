@@ -38,6 +38,8 @@ type AnimatedObjectState = {
   };
 };
 
+const ANIMATION_DURATION = 2500;
+
 const blobState: AnimatedObjectState = {
   properties: {
     rotation: new Vector3(0, 0, 0),
@@ -46,7 +48,7 @@ const blobState: AnimatedObjectState = {
   uniforms: {
     morphRatio: {
       value: 0,
-      duration: 600,
+      duration: 2000,
     },
     distort: {
       value: 0.3,
@@ -59,13 +61,14 @@ const blobState: AnimatedObjectState = {
 
 const brainState: AnimatedObjectState = {
   properties: {
-    rotation: new Vector3(0, -6.6, 0),
+    rotation: new Vector3(0, -0.3, 0),
     position: new Vector3(5, 0, 0),
     scale: new Vector3(1, 1, 1),
   },
   uniforms: {
     morphRatio: {
       value: 1,
+      duration: 2000,
     },
     surfaceDistort: {
       value: 1.5,
@@ -81,7 +84,7 @@ const planetState: AnimatedObjectState = {
   uniforms: {
     morphRatio: {
       value: 0,
-      duration: 600,
+      duration: 2000,
     },
     surfaceDistort: {
       value: 0,
@@ -89,8 +92,6 @@ const planetState: AnimatedObjectState = {
     },
   },
 };
-
-const ANIMATION_DURATION = 2500;
 
 const animateUniforms = (uniforms: AnimatedObjectState["uniforms"]) => {
   const stopFns = [];
@@ -169,7 +170,6 @@ const morphToPlanet = () => {
   animateProperties(planetState.properties);
   material.normalMap = normalMap;
   material.needsUpdate = true;
-
   distortPingPong(controls.distort);
 
   animate({
@@ -181,9 +181,7 @@ const morphToPlanet = () => {
       material.normalScale = new Vector2(value, value);
     },
   });
-
   isRotating.value = true;
-
   return stopAll;
 };
 
