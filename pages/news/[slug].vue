@@ -19,7 +19,7 @@
                 Posted on {{ data.created }} by {{ data.author }}
               </span>
             </div>
-            <div class="column">
+            <div class="column p-0">
               <NuxtPicture
                 :src="data.image.src"
                 class="image is-5by3 has-rounded-corners"
@@ -30,7 +30,7 @@
       </div>
       <div class="container">
         <div class="columns">
-          <div class="column is-10 content is-medium" id="content">
+          <div class="column content is-medium" id="content">
             <ContentRendererMarkdown :value="data" class="blog-padding" />
           </div>
         </div>
@@ -42,7 +42,6 @@
 <script setup lang="ts">
 import { discord, telegram, twitter } from "~/constants/socials";
 import { useRoute } from "#vue-router";
-import type { Tutorial } from "~/types/tutorials";
 import type { News } from "~/types/news";
 
 const route = useRoute();
@@ -66,7 +65,7 @@ useSeoMeta({
   padding: 2rem;
 
   @include desktop {
-    padding: 5rem 10rem;
+    padding: 5rem 15rem;
   }
 }
 

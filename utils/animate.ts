@@ -1,6 +1,6 @@
 import { animate, cubicBezier, easeIn } from "popmotion";
 
-export const distortPingPong = (distort: Ref<number>) => {
+export const distortPingPong = (distort: Ref<number>, stopValue?: number) => {
   const isStopped = ref(false);
   const stopAll = () => {
     isStopped.value = true;
@@ -9,7 +9,7 @@ export const distortPingPong = (distort: Ref<number>) => {
   animate({
     from: distort.value,
     to: 0.3,
-    duration: 200,
+    duration: 100,
     ease: easeIn,
     onUpdate: (value) => {
       if (value > 0) {
@@ -19,8 +19,8 @@ export const distortPingPong = (distort: Ref<number>) => {
     onComplete: () => {
       animate({
         from: distort.value,
-        to: 0,
-        duration: 4000,
+        to: stopValue || 0,
+        duration: 3000,
         ease: cubicBezier(0.31, -1.33, 0.37, 1.07),
         onComplete: () => {},
         onUpdate: (value) => {

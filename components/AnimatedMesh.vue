@@ -156,7 +156,9 @@ const morphToBrain = () => {
 
 const morphToBlob = () => {
   const { stopUniforms } = animateUniforms(blobState.uniforms);
+
   animateProperties(blobState.properties);
+  // const { stopAll: stopPingPong } = distortPingPong(controls.distort, 0.3);
 
   material.normalMap = null;
   material.normalScale = new Vector2(0, 0);
@@ -166,6 +168,7 @@ const morphToBlob = () => {
 
   const stopAll = () => {
     stopUniforms();
+    // stopPingPong();
   };
 
   return stopAll;
