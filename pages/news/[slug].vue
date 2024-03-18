@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="container">
-        <div class="columns">
+        <div class="columns is-gapless">
           <div class="column content is-medium" id="content">
             <ContentRendererMarkdown :value="data" class="blog-padding" />
           </div>

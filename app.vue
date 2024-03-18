@@ -27,8 +27,8 @@ useSeoMeta({
   ogDescription: description,
   twitterDescription: description,
   description,
-  ogImage: "https://effect.ai/logo.png",
-  twitterImage: "https://effect.ai/logo.png",
+  ogImage: "https://effect.ai/logo_icon.png",
+  twitterImage: "https://effect.ai/logo_icon.png",
 
   ogUrl: "https://effect.ai",
   ogSiteName: "Effect AI",

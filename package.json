@@ -12,10 +12,6 @@
     "generate": "nuxt generate --dotenv .env.production"
   },
   "dependencies": {
-    "nuxt": "^3.10.3",
-    "vue": "^3.4.19",
-    "vue-router": "^4.2.5",
-    "three": "^0.161.0",
     "@fortawesome/fontawesome-free": "^5.15.2",
     "@nuxt/image": "^1.4.0",
     "@speed-highlight/core": "^1.2.6",
@@ -30,8 +26,12 @@
     "bulma": "^0.9.4",
     "glsl-noise": "^0.0.0",
     "glslify": "^7.1.1",
+    "nuxt": "^3.10.3",
     "popmotion": "^11.0.5",
     "remark-unwrap-images": "^4.0.0",
+    "three": "^0.161.0",
+    "vue": "^3.4.19",
+    "vue-router": "^4.2.5",
     "vue3-lottie": "3.2.0"
   },
   "devDependencies": {
@@ -42,6 +42,7 @@
     "push-dir": "^0.4.1",
     "sass": "1.72.0",
     "tweakpane": "^4.0.3",
+    "vite-plugin-dynamic-import": "^1.5.0",
     "vite-plugin-glsl": "^1.2.1",
     "vue-countup-v3": "^1.4.1"
   }

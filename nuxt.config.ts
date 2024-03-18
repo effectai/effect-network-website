@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import glsl from "vite-plugin-glsl";
+import dynamicImport from "vite-plugin-dynamic-import";
 
 export default defineNuxtConfig({
   runtimeConfig: {
@@ -44,7 +45,14 @@ export default defineNuxtConfig({
     "@/assets/scss/global.scss",
   ],
   vite: {
-    plugins: [glsl()],
+    plugins: [
+      glsl(),
+      dynamicImport({
+        filter(id: string) {
+          if (id.includes("@speed-highlight/core")) return true;
+        },
+      }),
+    ],
     css: {
       preprocessorOptions: {
         scss: {
