@@ -51,6 +51,10 @@ const { data } = await useAsyncData("page-data", () =>
   queryContent<News>(`/news/${slug}`).findOne()
 );
 
+onBeforeRouteLeave(() => {
+  data.value = null;
+});
+
 useSeoMeta({
   title: data.value?.title,
   description: data.value?.description,
