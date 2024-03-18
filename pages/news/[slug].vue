@@ -1,12 +1,12 @@
 <template>
   <main id="nuxt-news">
-    <ContentRenderer v-if="data" :value="data">
+    <ContentRenderer v-if="article" :value="article">
       <div class="has-background-smoke">
         <div class="container blog-padding">
           <div class="columns is-vcentered">
             <div class="column is-7">
               <h1 class="is-size-1 has-text-primary title">
-                {{ data.title }}
+                {{ article.title }}
               </h1>
 
               <div class="is-flex is-align-items-center">
@@ -16,12 +16,12 @@
                 />
               </div>
               <span class="is-size-5 mt-5 is-block">
-                Posted on {{ data.created }} by {{ data.author }}
+                Posted on {{ article.created }} by {{ article.author }}
               </span>
             </div>
             <div class="column p-0">
               <NuxtPicture
-                :src="data.image.src"
+                :src="article.image.src"
                 class="image is-5by3 has-rounded-corners"
               ></NuxtPicture>
             </div>
@@ -31,7 +31,7 @@
       <div class="container">
         <div class="columns is-gapless">
           <div class="column content is-medium" id="content">
-            <ContentRendererMarkdown :value="data" class="blog-padding" />
+            <ContentRendererMarkdown :value="article" class="blog-padding" />
           </div>
         </div>
       </div>
@@ -47,18 +47,14 @@ import type { News } from "~/types/news";
 const route = useRoute();
 const slug = route.params.slug;
 
-const { data } = await useAsyncData("page-data", () =>
-  queryContent<News>(`/news/${slug}`).findOne()
-);
+const article = ref<News | null>(null);
 
-onBeforeRouteLeave(() => {
-  data.value = null;
-});
+article.value = await queryContent<News>(`/news/${slug}`).findOne();
 
 useSeoMeta({
-  title: data.value?.title,
-  description: data.value?.description,
-  ogImage: data.value?.image.src,
+  title: article.value?.title,
+  description: article.value?.description,
+  ogImage: article.value?.image.src,
 });
 </script>
 
