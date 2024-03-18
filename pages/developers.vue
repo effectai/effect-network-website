@@ -157,7 +157,7 @@
               <h3 class="subtitle is-4 mt-4 mb-2">Effect Whitepaper</h3>
               <p class="block">
                 Read the original Effect Whitepaper for a technical and
-                mathematical description of the Effect Network.
+                mathematical description of Effect AI.
               </p>
               <a
                 href="/download/effect_whitepaper.pdf"

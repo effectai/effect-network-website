@@ -88,7 +88,7 @@
     <SimpleSection
       :centered="true"
       title="Ecosystem Spotlight"
-      subtitle="Check out some of the hottest projects built on the Effect Network Ecosystem."
+      subtitle="Check out some of the hottest projects built on the Effect AI Ecosystem."
     >
       <DappCardList :dapps="featuredDapps" />
       <div class="is-flex is-justify-content-center mt-5">

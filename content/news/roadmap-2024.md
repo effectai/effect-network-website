@@ -47,7 +47,7 @@ With the V2 release we are doubling down on our commitment to developers, aiming
 
 As many of you may have noticed, the community is discussing the exciting opportunity to integrate with the Solana ecosystem. Solana has quickly emerged as a thriving hub for both DePIN and AI projects, making it an ideal choice for Effect AI's expansion. The Effect AI team has experience and strong connections within the Solana ecosystem, which opens up a world of possibilities for strategic partnerships and collaborations with like-minded projects, and helps us push the boundaries of decentralized and transparent AI.
 
-Following the V2 release, a working group will be established to focus on the bridge that enables EFX token utilities on Solana. This bridge will pave the way for the migration of many utilities to the Solana ecosystem over time. The details of this migration path will soon be published in a DAO proposal for discussion and refinement, and we are more than excited to hear you input.
+Following the V2 release, a working group will be established to focus on the bridge that enables EFX token utilities on Solana. This bridge will pave the way for the migration of many utilities to the Solana ecosystem over time. The details of this migration path will soon be published in a DAO proposal for discussion and refinement, and we are more than excited to hear your input.
 
 #### Major DAO & Protocol Updates
 
@@ -67,4 +67,4 @@ Imagine the convenience of completing simple tasks and training AI models from a
 
 ### Join us!
 
-We hope you are exited for all the milestones that are lined up over the coming months. If you would like to join our efforts in building the largest data network for AI-training, we recommend that you [join our DAO](dao.effect.network), and follow us on socials to get alerted when the V2 registrations open.
+We hope you are excited for all the milestones that are lined up over the coming months. If you would like to join our efforts in building the largest data network for AI-training, we recommend that you [join our DAO](dao.effect.network), and follow us on socials to get alerted when the V2 registrations open.
