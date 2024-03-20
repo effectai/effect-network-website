@@ -1,12 +1,12 @@
 <template>
   <main id="nuxt-news">
-    <ContentRenderer v-if="article" :value="article">
+    <ContentRenderer v-if="data" :value="data">
       <div class="has-background-smoke">
         <div class="container blog-padding">
           <div class="columns is-vcentered">
             <div class="column is-7">
               <h1 class="is-size-1 has-text-primary title">
-                {{ article.title }}
+                {{ data.title }}
               </h1>
 
               <div class="is-flex is-align-items-center">
@@ -16,12 +16,12 @@
                 />
               </div>
               <span class="is-size-5 mt-5 is-block">
-                Posted on {{ article.created }} by {{ article.author }}
+                Posted on {{ data.created }} by {{ data.author }}
               </span>
             </div>
             <div class="column p-0">
               <NuxtPicture
-                :src="article.image.src"
+                :src="data.image.src"
                 class="image is-5by3 has-rounded-corners"
               ></NuxtPicture>
             </div>
@@ -31,7 +31,7 @@
       <div class="container">
         <div class="columns is-gapless">
           <div class="column content is-medium" id="content">
-            <ContentRendererMarkdown :value="article" class="blog-padding" />
+            <ContentRendererMarkdown :value="data" class="blog-padding" />
           </div>
         </div>
       </div>
@@ -45,16 +45,16 @@ import { useRoute } from "#vue-router";
 import type { News } from "~/types/news";
 
 const route = useRoute();
-const slug = route.params.slug;
+const slug = route.params.slug as string;
 
-const article = ref<News | null>(null);
-
-article.value = await queryContent<News>(`/news/${slug}`).findOne();
+const { data } = await useAsyncData(slug, () =>
+  queryContent<News>(`/news/${slug}`).findOne()
+);
 
 useSeoMeta({
-  title: article.value?.title,
-  description: article.value?.description,
-  ogImage: article.value?.image.src,
+  title: data.value?.title,
+  description: data.value?.description,
+  ogImage: data.value?.image.src,
 });
 </script>
 

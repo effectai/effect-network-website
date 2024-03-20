@@ -19,13 +19,6 @@
           <p class="menu-label">SOCIALS</p>
           <ul class="menu-list">
             <li>
-              <a href="https://github.com/effectai" target="_blank"
-                ><i class="fab fa-github"></i> GitHub</a
-              >
-            </li>
-          </ul>
-          <ul class="menu-list">
-            <li>
               <a href="https://twitter.com/effectaix" target="_blank"
                 ><i class="fab fa-twitter"></i> Twitter</a
               >
@@ -47,8 +40,7 @@
         <div class="columns">
           <div
             class="column is-half is-flex is-align-items-start is-justify-content-center"
-          >
-          </div>
+          ></div>
           <div
             class="column is-half is-flex is-align-items-start is-justify-content-center"
           >
@@ -109,6 +101,12 @@
 
 .social-menu {
   flex-direction: column;
+
+  li a {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
 }
 
 @media all and (max-width: 770px) {
