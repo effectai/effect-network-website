@@ -1,6 +1,11 @@
 <template>
-  <div class="columns is-centered is-size-1 is-vcentered is-6">
-    <div class="column is-one-third" v-for="statistic in statistics">
+  <div
+    class="columns is-centered is-size-1 is-vcentered is-6 is-mobile is-multiline"
+  >
+    <div
+      class="column is-two-third is-one-third-tablet"
+      v-for="statistic in statistics"
+    >
       <div class="has-text-weight-bold" style="font-size: 2.5rem">
         <ClientOnly>
           <div class="is-flex is-capitalized">

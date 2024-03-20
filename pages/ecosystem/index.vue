@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeroSection style="height: 550px">
+    <HeroSection style="height: 650px" class="">
       <template #title>
         <h1 class="has-text-primary title mb-5">
           Be Part of the <br />

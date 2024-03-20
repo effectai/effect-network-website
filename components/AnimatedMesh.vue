@@ -62,7 +62,7 @@ const blobState: AnimatedObjectState = {
 const brainState: AnimatedObjectState = {
   properties: {
     rotation: new Vector3(0, -0.3, 0),
-    position: new Vector3(5, 0, 0),
+    position: new Vector3(6, 0, 0),
     scale: new Vector3(1, 1, 1),
   },
   uniforms: {

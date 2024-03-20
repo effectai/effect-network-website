@@ -43,6 +43,10 @@
   opacity: 0.5;
 }
 
+.is-heavily-dimmed {
+  opacity: 0.2;
+}
+
 .has-header-top {
   padding-top: 75px;
 }
@@ -98,5 +102,11 @@
   @include mobile {
     align-items: baseline !important;
     flex-direction: column-reverse;
+  }
+}
+
+.is-justify-content-start-tablet {
+  @include tablet {
+    justify-content: flex-start;
   }
 }

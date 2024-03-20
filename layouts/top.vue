@@ -14,11 +14,16 @@
 
     <div class="is-relative">
       <div
+        :class="{ 'is-earth': route.name == 'ecosystem' }"
         class="three-canvas is-absolute is-fullwidth has-background-smoke"
         style="height: 750px"
       >
         <TresCanvas preset="realistic" ref="canvas" :alpha="true">
-          <TresPerspectiveCamera ref="camera" visible :position="[0, -1, 15]" />
+          <TresPerspectiveCamera
+            ref="camera"
+            visible
+            :position="[posX, -1, 15]"
+          />
 
           <TresAmbientLight :color="'#101D56'" :intensity="2" />
 
@@ -45,8 +50,42 @@
 
 <script setup lang="ts">
 const showNotification = ref(true);
+const route = useRoute();
+
+const WIDESCREEN = 1408;
+const MOBILE = 768;
+
+const screenSize = useWindowSize().width;
+const posX = computed(() => {
+  if (screenSize.value <= MOBILE) {
+    return 6;
+  } else if (screenSize.value >= WIDESCREEN) {
+    return 0;
+  } else {
+    return 6 - ((screenSize.value - MOBILE) / (WIDESCREEN - MOBILE)) * 8;
+  }
+});
+//create a value of 0-6 that when the screen size is 300 (mobile) the number is 0 but when the screenSize is 1400+ the number is 6 and stays there
 
 const close = () => {
   showNotification.value = false;
 };
 </script>
+
+<style lang="scss">
+.three-canvas {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+  opacity: 0.2;
+
+  @include desktop {
+    opacity: 0.5;
+  }
+
+  @include widescreen {
+    opacity: 1;
+  }
+}
+</style>

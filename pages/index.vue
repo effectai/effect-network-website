@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="is-clipped">
     <HeroSection style="min-height: 750px">
       <template #title>
         <h1 class="title is-spaced has-text-primary is-auto-phrase is-in-front">

@@ -3,7 +3,11 @@
     <section class="section">
       <div class="container mt-5">
         <div class="columns is-vcentered">
-          <div class="column is-half" data-aos="fade-in" data-aos-delay="0">
+          <div
+            class="column is-full-mobile is-three-fifths-tablet is-half-widescreen"
+            data-aos="fade-in"
+            data-aos-delay="0"
+          >
             <h1 v-if="title" class="title is-spaced is-auto-phrase is-in-front">
               <span class="has-text-primary is-block is-in-front">{{
                 title
@@ -16,9 +20,6 @@
 
             <slot name="subtitle"></slot>
             <slot name="footer"></slot>
-          </div>
-          <div class="column is-half is-vcentered">
-            <slot name="side"></slot>
           </div>
         </div>
       </div>
@@ -58,14 +59,6 @@ const props = defineProps({
     .title {
       font-size: 54px;
     }
-  }
-  .three-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
   }
 }
 </style>
