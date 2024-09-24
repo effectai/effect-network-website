@@ -18,6 +18,18 @@ export const twitter = {
   activeMembers: 12500,
 };
 
+export const twitterDao = {
+  name: "Twitter DAO",
+  faClass: "fab fa-twitter",
+  link: "https://twitter.com/EffectDAO",
+};
+
+export const daoWebsite = {
+  name: "DAO Website",
+  faClass: "fas fa-globe",
+  link: "https://dao.effect.network",
+};
+
 export const discord = {
   name: "Discord",
   faClass: "fab fa-discord",

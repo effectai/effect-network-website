@@ -24,6 +24,11 @@
               >
             </li>
             <li>
+              <a href="https://twitter.com/effectDAO" target="_blank"
+                ><i class="fab fa-twitter"></i> DAO Twitter</a
+              >
+            </li>
+            <li>
               <a href="https://t.me/effectai" target="_blank"
                 ><i class="fab fa-telegram"></i> Telegram</a
               >
