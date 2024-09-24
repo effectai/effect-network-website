@@ -28,7 +28,7 @@
           </div>
           <div class="navbar-item" exact-active-class="is-active">
             <div @click="mobileMenu = false">
-              <a href="https://app.effect.network" target="_blank" class="button is-outlined is-primary"
+              <a href="https://app.effect.ai/" target="_blank" class="button is-outlined is-primary"
                 exact-active-class="is-active">
                 Launch App
               </a>

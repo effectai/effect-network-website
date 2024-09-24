@@ -53,7 +53,7 @@
         >
           <a
             target="_blank"
-            href="https://app.effect.network"
+            href="https://app.effect.ai/"
             class="button is-primary mr-5"
             >Launch App</a
           >
